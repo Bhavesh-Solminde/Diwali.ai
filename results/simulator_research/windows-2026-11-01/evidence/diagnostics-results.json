@@ -1,0 +1,128 @@
+[
+  {
+    "id": "v04_equal_price_does_not_match",
+    "evidence": "isolated_extracted_CSharp",
+    "observed": "40/40 leave locked bid and ask at same price without execution",
+    "reproduced": true,
+    "cases": 40
+  },
+  {
+    "id": "v04_aggregate_depth_counters_wrong",
+    "evidence": "isolated_extracted_CSharp",
+    "observed": "40/40 disagree with sum of actual levels after buy consumes asks",
+    "reproduced": true,
+    "cases": 40
+  },
+  {
+    "id": "v04_player_marker_no_book_impact",
+    "evidence": "isolated_extracted_CSharp",
+    "observed": "40/40 same-side repeat ignored; depth unchanged",
+    "reproduced": true,
+    "cases": 40
+  },
+  {
+    "id": "v05_equality_matching_control",
+    "evidence": "isolated_extracted_CSharp",
+    "observed": "40/40 execute at equal price with ordinary volume q",
+    "reproduced": true,
+    "cases": 40
+  },
+  {
+    "id": "v05_player_volume_100x",
+    "evidence": "isolated_extracted_CSharp",
+    "observed": "40/40 add 100*q volume",
+    "reproduced": true,
+    "cases": 40
+  },
+  {
+    "id": "v05_partial_fill_position_overstated",
+    "evidence": "isolated_extracted_CSharp",
+    "observed": "40/40 1 coin executed but 10 nominal position units recorded",
+    "reproduced": true,
+    "cases": 40
+  },
+  {
+    "id": "v05_no_reservation_on_resting_orders",
+    "evidence": "isolated_extracted_CSharp",
+    "observed": "40/40 lock remains zero after 2 sell orders against 1 coin",
+    "reproduced": true,
+    "cases": 40
+  },
+  {
+    "id": "v05_portfolio_can_be_negative",
+    "evidence": "isolated_extracted_CSharp",
+    "observed": "40/40 execution makes seller BTC -1",
+    "reproduced": true,
+    "cases": 40
+  },
+  {
+    "id": "v05_sweep_intermediate_low_omitted",
+    "evidence": "isolated_extracted_CSharp",
+    "observed": "40/40 candle misses executed p-100 because only terminal sweep price recorded",
+    "reproduced": true,
+    "cases": 40
+  },
+  {
+    "id": "v05_pnl_missing_quantity",
+    "evidence": "isolated_extracted_CSharp",
+    "observed": "40/40 record 100 price units instead of quantity-scaled 1000 for size 10",
+    "reproduced": true,
+    "cases": 40
+  },
+  {
+    "id": "v05_empty_book_divide_by_zero",
+    "evidence": "isolated_extracted_CSharp",
+    "observed": "40/40 zero-filled player orders throw DivideByZeroException",
+    "reproduced": true,
+    "cases": 40
+  },
+  {
+    "id": "v05_snapshot_invalid_cast",
+    "evidence": "isolated_extracted_CSharp",
+    "observed": "40/40 long[] tradeHistory cloned then cast to int[] throws InvalidCastException",
+    "reproduced": true,
+    "cases": 40
+  },
+  {
+    "id": "v05_book_bins_saturate",
+    "evidence": "isolated_extracted_CSharp",
+    "observed": "40/40 two distinct ordinary ask distances collapse into last bin",
+    "reproduced": true,
+    "cases": 40
+  },
+  {
+    "id": "v05_label_alignment",
+    "evidence": "isolated_extracted_CSharp",
+    "observed": "40/40 first label is anchor, final label only +24; current book is 25 candles later than input-price anchor",
+    "reproduced": true,
+    "cases": 40
+  },
+  {
+    "id": "v04_small_level_removal_control",
+    "evidence": "isolated_extracted_CSharp",
+    "observed": "40/40 sole 30-unit levels deleted by forced random removal",
+    "reproduced": true,
+    "cases": 40
+  },
+  {
+    "id": "v04_large_wall_removal_immunity",
+    "evidence": "isolated_extracted_CSharp",
+    "observed": "40/40 sole 31-unit levels survive 100 forced random-removal calls each; this does not protect against fills or price-band pruning",
+    "reproduced": true,
+    "cases": 40
+  },
+  {
+    "id": "v05_large_wall_removal_control",
+    "evidence": "isolated_extracted_CSharp",
+    "observed": "40/40 sole 31-unit levels deleted by forced random removal",
+    "reproduced": true,
+    "cases": 40
+  },
+  {
+    "id": "v05_no_100_lot_limit_in_position_method",
+    "evidence": "isolated_extracted_CSharp",
+    "observed": "40/40 Long method accepts 101 nominal lots; fixture tests bookkeeping only, not 101 real market fills",
+    "reproduced": true,
+    "cases": 40
+  }
+]

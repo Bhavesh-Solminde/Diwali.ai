@@ -1,0 +1,38 @@
+# Completion audit — research remains incomplete
+
+**Current update:** see [Windows 11 continuation](CONTINUE-ON-WINDOWS-11.md) and [manual v0.4 evidence](USER-ASSISTED-v04.md). Keyboard S interventions now have manual visual verification: Long to Flat, then Flat to Short. Space was sent once afterward; pause remains unverified. The live-access history below predates this progress. User instructions prohibit automatic screenshots and runtime troubleshooting.
+
+Authoritative requirements: original WINDOWS-AI-PROMPT.md, the cloned frozen/model protocols, and the user's clarification that the running simulators should visibly be used. Evidence was rechecked after the request about missing button clicks. The DLL-host work is useful evidence but does not replace the live requirement.
+
+| Requirement | Current evidence | Completion finding |
+|---|---|---|
+| Read folder/repository documents | Source ledger and reviewed original 13 repository Markdown files; duplicate Windows prompt line-compared | Complete for supplied documents at clone commit; does not prove every referenced source visually reviewed |
+| Source ledger, timestamps, version correction and coverage gaps | SOURCE-REVIEW.md; four personally read transcripts and selected browser frames; inherited eight-video ledger explicitly labeled | Deliverable exists; visual coverage remains sampled and Patreon images are not locally available |
+| Preserve originals, identify builds/environment/logs | Archive/assembly hashes, archive-entry matching, file/process inventory, Windows/GPU details and preserved earlier log | Verified local evidence; current scene parameters and current graphics backend not directly captured |
+| Actual installed v0.4 operation | Manual screenshots verify Long-to-Flat and Flat-to-Short after assistant S inputs; historical depth overlay visible | **Partial; remaining controls and measured book tests open** |
+| Actual installed v0.5 operation | Process 17072 revalidated; code-mapped controls; user reports updating charts; no live Buy/Sell sent | **Incomplete** |
+| Chart rendering, scales, candle/book display and units | User reports both charts update; code identifies five sweeps/base candle and raw-cent display; user-uploaded v0.4 chart images now preserved | **Partial; scale/scene and v0.5 verification remain open** |
+| Pause/speed, pan/zoom, toggles, sizes and live fills | Code paths inspected; live Unity controls not exposed in accessibility tree | **Incomplete as an operating validation** |
+| State restore, seed, export/batch capability | Original v0.5 snapshot exception reproduced; omitted state documented; no native exporter found in scripts | Code capability assessment verified; actual UI exposure and supported interfaces still unknown |
+| Preregistered design and run manifest/raw evidence | PREREGISTRATION.md and explicit host amendment; 720 unique final scenario rows, 25,200 candle rows; all copied CSV hashes valid | Complete for stated host design; not proof live-app runs occurred |
+| 10 pilots then 30 main independent states | Recorded seeds and phase labels; 40 parents/build; sibling conditions paired; repeat CSV hashes identical | Verified for configured .NET host; not native Unity initial states or adequate power proof |
+| Untouched baseline, both versions | Host baseline paths and diagnostics | Host experiment complete; native baseline validation missing |
+| Persistent-depth bounce/failure study | Host bid submissions, retained failures and removal-size fixtures | Does not fulfill natural persistent-wall strata or prospective bounce calibration; **incomplete** |
+| Removal versus execution / thin liquidity | Source paths and exhaustion/removal diagnostics | Per-event cancellation/fill classification in live sessions missing |
+| Absorption/replenishment | Source mechanism identified; no hidden reserve found | Quantitative event-level study not completed |
+| Pattern versus pre-event book | Definitions in plan; vendor feature/label faults diagnosed | Predictive comparison not run; no superiority claim permitted |
+| Large-trade impact / schedule / aftermath | Both signs and normalized sizes in host; exact transfer ledger; 1/5/15/30 outcomes and uncertainty | Host studies complete; live scene confirmation missing |
+| Round-trip PnL / partial fills / portfolios / supply convention | Source, original method calls and host ledgers; defects and failed examples retained | Algorithm evidence verified; **live UI accounting reconciliation missing** |
+| Mechanism assumptions / conservation / liquidation claims | Ordinary baseline aggregate conservation checked while individual balances become negative; audio-only LiqCycle; synthetic clock limits documented | Verified within inspected code/profile; real market validity not established |
+| Per-experiment report, metrics, uncertainty, failures | EXPERIMENT-REPORT.md, NUMERICAL-RESULTS.md, host-statistics.json, fixture results | Exists with incomplete/unavailable experiments explicitly identified |
+| Feature/data dictionary and export verdict | DATA-DICTIONARY.md; observable versus diagnostic state and future labels separated | Deliverable complete at current evidence level; no certified training dataset |
+| Research-to-model changes and revised plan for review | RESEARCH-TO-MODEL-CHANGELOG.md, MODEL-HANDOFF-v1.1.md | Draft deliverables complete; final live findings still need incorporation |
+| Stop before model training / no unauthorized publication | No new training; user explicitly authorized GitHub push for cross-PC continuation; paid code/transcripts remain outside Git clone | Satisfied within authorized transfer scope |
+
+## Current access evidence and next required action
+
+The last goal turn made progress through evidence/handoff creation, then reported missing live access. This continuation revalidated both running processes and retried a different safe recovery action. v0.4's accessible Maximize control returned `coordinate input geometry is unavailable`; a subsequent documented Escape/windowed-mode request still produced `window capture timed out: timed out waiting on channel`. Accessibility continues to expose only the title bar. Chrome was reported minimized by native capture selection, and the project-folder window returned no accessibility state; these checks do not establish that all desktop capture is broken.
+
+No Buy/Sell was sent during these recovery attempts. Original DLL experiments must retain their separate evidence type. The overall goal remains unachieved. A current user-supplied simulator screenshot can support inspection and a user-assisted test sequence; The user-authorized manual screenshot workflow now supports keyboard interventions and visual verification; automated capture must not be requested. Do not keep repeating equivalent capture attempts or claim native research complete.
+
+The third consecutive goal-turn check selected the still-present v0.4 window anew and requested a fresh screenshot; capture again timed out. No new user screenshot or access change was available. The blocked-audit threshold is now met for this same access condition. The previous turn established new failure evidence and completed this audit, but did not remove the blocker. Remaining live tests require user input or repaired native capture; they cannot be completed by another rehosted experiment or status-only document.

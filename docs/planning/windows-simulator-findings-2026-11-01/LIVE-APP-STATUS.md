@@ -1,0 +1,17 @@
+# Live application testing remains open
+
+The user clarified that visible simulator use is expected. Do not mark the whole research goal complete based on the original-DLL host alone.
+
+Completed: original-DLL numerical mechanics experiments, code inspection, operating-guide drafts, raw evidence, reproducibility checks and proposed ML handoff. These are explicitly outside the live Unity sessions.
+
+Not completed: observed live Buy/Sell interventions, live PnL/portfolio reconciliation, serialized scene parameter verification and native chart measurements. No live-app Buy/Sell was sent during this work. v0.5 received Esc once to request windowed mode. v0.4 was raised to the foreground after the user's question about clicking; fresh native screenshot capture still returned `window capture timed out: timed out waiting on channel`. Window inventory and accessibility remain readable, but the app exposes only its system title bar, not its Unity controls.
+
+The user confirms both charts are visible and updating. The capture failure is a tool-access limitation, not evidence that the simulators are frozen or blank. Do not silently substitute host results for these outstanding live tests. Request a current user screenshot or a restored capture path and continue without modifying binaries or starting model training.
+
+Continuation check: both original simulator processes remain running. An attempt to use v0.4's accessibility Maximize control failed with `coordinate input geometry is unavailable`; Escape was then sent to request its documented windowed mode, and fresh capture still timed out. No Buy/Sell input was sent. See COMPLETION-AUDIT.md for the full requirement audit. This is the second goal turn encountering the same live-access blocker, not a completed live experiment.
+
+Third consecutive goal-turn audit: current window inventory still contains v0.4 (133210) and v0.5 (264270). A newly selected v0.4 window again exposes only the title bar, and its fresh screenshot request again timed out. No new screenshot or restored capture access has arrived. The same external access problem now prevents the required next action. Stop automatic retries and mark the goal blocked, not complete. Resume measured live tests when capture access is restored, or use current user screenshots for an explicitly user-assisted workflow.
+
+Update, 1 November 2026, user desktop screenshots at 18:53–18:54: user-assisted visual evidence is now available. First image shows blank position and zero PnL at $10.45; second shows Long, floating 0.23 and total 0.23 at $10.51, with historical order bars visible. No assistant-operated Buy/Sell occurred. Exact user input sequence, entry price and pause state are not established. See USER-ASSISTED-v04.md in the repository findings directory. Earlier statements about no observed live position apply to the period before these attachments; live accounting and causal order-book tests remain open.
+
+Manual-workflow update: assistant sent s once to v0.4 without screenshot capture. User screenshots at 18:56 and 18:57 show Long -> Flat, floating 0.51 -> 0.00, total 0.51 -> 1.88. This supersedes earlier no-assistant-Buy/Sell statements for the current session. Exact exit price and accounting reconciliation remain unverified. Evidence and limitations: USER-ASSISTED-v04.md in repository findings.

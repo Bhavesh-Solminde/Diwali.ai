@@ -1,0 +1,15 @@
+# Simulator-logic handoff for the next AI
+
+Research performed 1 November 2026 against the preserved Windows v0.4/v0.5 packages. This adds evidence to the frozen BTC specification; no new model training or live trading occurred.
+
+**Continue on the other PC:** read [the Windows 11 continuation handoff](CONTINUE-ON-WINDOWS-11.md) first and [the verified user-assisted v0.4 tests](USER-ASSISTED-v04.md). Preserve the user's manual screenshot workflow; do not call automatic capture. **Live-app testing is still open.** The user expects visible interventions; host tests do not satisfy that part of the request. Read [live-app status](LIVE-APP-STATUS.md). Do not mark the overall research complete until those tests are performed or their access limitation is explicitly resolved.
+
+Start with [the experiment report](EXPERIMENT-REPORT.md), then the [v0.4 order-book guide](OPERATING-GUIDE-v04.md), [v0.5 whale/PnL/portfolio guide](OPERATING-GUIDE-v05.md), [numerical results](NUMERICAL-RESULTS.md), [data dictionary](DATA-DICTIONARY.md), [decision changes](RESEARCH-TO-MODEL-CHANGELOG.md), and [proposed ML handoff v1.1](MODEL-HANDOFF-v1.1.md). [Source review](SOURCE-REVIEW.md) and [preregistration](PREREGISTRATION.md) distinguish direct measurements, inherited notes and unresolved access.
+
+720 scenario records came from **original DLL methods executed in a configured CLR host outside Unity**: 120 v0.4 and 600 v0.5; ten pilot plus thirty main parents per version, with paired sibling conditions. 25,200 base-candle observations and numeric fill/balance ledgers are retained. This is not a native export from the user's running windows. The user confirms both live charts update, but automated native screenshots time out, leaving scene settings unverified. Later manual screenshots verify v0.4 Long-to-Flat and Flat-to-Short keyboard outcomes; v0.5 live control/accounting checks remain open.
+
+Useful mechanisms: stateful depth, consumption, replenishment, execution impact, slippage and cash/coin transfers. Important artifacts: v0.4 matching at equality, wrong-side depth counters and large-level deletion immunity; v0.5 missing collateral reservation, partial-fill position overstatement, volume weighting, missing intratrade extrema, quantity-defective PnL, zero-fill exceptions and broken/incomplete backup. Do not train directly on these displays or reuse the built-in bot vectors.
+
+Shareable numeric evidence is under [results/simulator_research/windows-2026-11-01](../../../results/simulator_research/windows-2026-11-01). Original research tooling is under [research/simulator_mechanics](../../../research/simulator_mechanics). Local paid decompilation, full transcripts, registry preferences and app logs remain outside this repository. In copied documents, `evidence/...` and `reports/host-statistics.json` refer to that results directory; paid-code and transcript references describe local-only evidence, not included files.
+
+No claim of calibrated bounce probabilities, real whale detection, liquidation cascades or BTC profitability follows. Read and review v1.1 before the next AI begins fitting.

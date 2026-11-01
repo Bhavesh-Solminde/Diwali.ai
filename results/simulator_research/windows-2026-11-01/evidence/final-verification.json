@@ -1,0 +1,10 @@
+{
+  "copied_hashes_valid": true,
+  "scenario_rows": 720,
+  "unique_run_ids": 720,
+  "candle_rows": 25200,
+  "status_ok": 720,
+  "fingerprints_matched": 720,
+  "pilot_rows": 180,
+  "main_rows": 540
+}

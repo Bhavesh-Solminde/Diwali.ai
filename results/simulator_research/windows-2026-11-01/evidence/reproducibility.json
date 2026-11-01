@@ -1,0 +1,32 @@
+[
+  {
+    "file": "candles-v04.csv",
+    "identical": true,
+    "sha256": "7D74CF5A02CB84351AF70E2D9EEE3152599FCCC558B713A477FFDC3E79F4D2D7"
+  },
+  {
+    "file": "candles-v05.csv",
+    "identical": true,
+    "sha256": "B576D076713BBC1F23CFF77D011582EBC1506557ECBCE7E44ACB0CC44CD293FC"
+  },
+  {
+    "file": "fills-v04.csv",
+    "identical": true,
+    "sha256": "D3CA9F6F08875D1F39A140197BF6EDAF9D49AB7C68E6B2515C1004BFBAFCC73C"
+  },
+  {
+    "file": "fills-v05.csv",
+    "identical": true,
+    "sha256": "EAFD5C96BF1924A83DA6A1BAAF65316E82C9CE7E24FBD7F34111592D326885BB"
+  },
+  {
+    "file": "runs-v04.csv",
+    "identical": true,
+    "sha256": "5ED5E3619CF6F4B748E1A318B06969F246B465A2240F3C915EDCF7B0D785B68D"
+  },
+  {
+    "file": "runs-v05.csv",
+    "identical": true,
+    "sha256": "FEC179C036AECD01C31580366C566C52D83F8190E2F1F4CFB04314A6F9AF923C"
+  }
+]

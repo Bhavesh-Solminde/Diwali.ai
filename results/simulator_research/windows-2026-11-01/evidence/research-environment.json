@@ -1,0 +1,8 @@
+{
+  "runtime": ".NET 10.0.11",
+  "pwsh": "7.6.5",
+  "date_local": "2026-11-01T17:12:47.5682171+05:30",
+  "profile": "200 agents; activity 0.1; maker per-request 0.1; initial raw price 10000; 5 sweeps per candle; warmup100; followup34",
+  "source": "original_DLL_CLR_host; no Unity native constructors/audio/rendering/bots",
+  "repository_commit": "2e2a5e522d6886e0d6eca93bd6348e2bce4690d6"
+}

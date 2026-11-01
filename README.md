@@ -10,13 +10,16 @@ Research on BTC next-minute candle generation, order-book forecasting and Krafer
 - [Visual coverage ledger](docs/planning/krafer-visual-review-pass-2026-11-01.md) — exhaustive viewing remains incomplete.
 - [Windows simulator research prompt](docs/planning/windows-simulator-research/WINDOWS-AI-PROMPT.md)
 - [Simulator rendering diagnosis](docs/planning/simulator-diagnostics-2026-11-01/report.md)
+- [Windows simulator mechanics and ML handoff v1.1](docs/planning/windows-simulator-findings-2026-11-01/README.md) — v0.4 book logic; v0.5 whale impact, accounting defects and reproducible original-DLL host experiments.
+
+- [Continue simulator research on Windows 11](docs/planning/windows-simulator-findings-2026-11-01/CONTINUE-ON-WINDOWS-11.md) — current state, verified manual tests, remaining work and screenshot workflow.
 
 ## Existing experiments
 
 - [Candle generation prototype](research/next_candle/README.md) and [first saved forecast](results/next_candle/kronos-btc-1m-first/forecast.json).
 - [Order-book benchmark](research/orderbook_benchmark/README.md), [protocol](research/orderbook_benchmark/PROTOCOL.md), [results](results/orderbook_benchmark/btc-60s-v1/report.md) and [ten-case charts](results/orderbook_benchmark/btc-60s-v1/ten-cases.png).
 
-The limited benchmark did not establish a winning neural model; the simple imbalance baseline beat both tested neural entries. Read the report for exact scope, scores and unavailable models. The new simulator-informed model has not been trained, and Windows simulator pilots have not been conducted.
+The limited benchmark did not establish a winning neural model; the simple imbalance baseline beat both tested neural entries. Read the report for exact scope, scores and unavailable models. The new simulator-informed model has not been trained. Windows original-DLL mechanics experiments are now documented separately from live Unity UI testing, whose automated frame capture remains unavailable.
 
 ## Migration and reproducibility
 

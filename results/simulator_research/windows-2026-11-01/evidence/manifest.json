@@ -1,0 +1,120 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Calcutta",
+  "evidence_type": "original_DLL_CLR_host",
+  "runtime": ".NET 10.0.11",
+  "pwsh": "7.6.5",
+  "node": "v24.20.0",
+  "builds": [
+    {
+      "archive": "Kat-05(Win).zip",
+      "entry": "Market Simulation/MarketSimulation.exe",
+      "bytes": 646656,
+      "sha256": "CBC971A4F1B4DFF2A5C4FF7D77D12A69B864C0AD5A0D68FB3DAC59FF66E88D32"
+    },
+    {
+      "archive": "Kat-05(Win).zip",
+      "entry": "Market Simulation/MarketSimulation_Data/Managed/Assembly-CSharp.dll",
+      "bytes": 55296,
+      "sha256": "067EB14F626E4E5B33A8BA9D2551A1B343246AB300F2D49635471F9604E4A56C"
+    },
+    {
+      "archive": "Kat-05(Win).zip",
+      "entry": "Market Simulation/UnityPlayer.dll",
+      "bytes": 26935720,
+      "sha256": "A5114CAB8805899589B332188B224615F1A4E88C0B8D4BEE8C8CEFAF6325A1FC"
+    },
+    {
+      "archive": "Kat0-4(Win).zip",
+      "entry": "Kat 0.4/MarketSimulation.exe",
+      "bytes": 646656,
+      "sha256": "3707AB1A9340B1B9F73C14EA95DD0D6E3524DC37993775F33E10AE06762FB6A3"
+    },
+    {
+      "archive": "Kat0-4(Win).zip",
+      "entry": "Kat 0.4/MarketSimulation_Data/Managed/Assembly-CSharp.dll",
+      "bytes": 48640,
+      "sha256": "F1F99D934A6F8AE98360C931F90F8E1294E1B9384F5E914A2970F7C2B9FA8024"
+    },
+    {
+      "archive": "Kat0-4(Win).zip",
+      "entry": "Kat 0.4/UnityPlayer.dll",
+      "bytes": 24650944,
+      "sha256": "E7F84F3E8ECE9242A8A86A51044817C21F61825092962229029EB54DE205D573"
+    }
+  ],
+  "profile": {
+    "num_agents": 200,
+    "activity_probability_per_sweep": 0.1,
+    "maker_probability_per_request": 0.1,
+    "initial_price_raw": 10000,
+    "raw_price_units_per_dollar": 100,
+    "sweeps_per_base_candle": 5,
+    "warmup_base_candles": 100,
+    "followup_base_candles": 34,
+    "drop_probability_per_base_candle": 0.1,
+    "pilot_seeds": "10000..10009",
+    "main_seeds": "20000..20029",
+    "v04_pruning_factors": [
+      0.67,
+      1.33
+    ],
+    "v04_pruning_budget": 64,
+    "v05_initial_cash_raw": "100000..999999",
+    "v05_initial_coins": "10..99",
+    "fees": "none applied by original v05 player matching methods"
+  },
+  "scope_exclusions": [
+    "Unity scene serialization",
+    "native lifecycle",
+    "frame-time scheduling",
+    "audio",
+    "graphics",
+    "chart retention",
+    "bot evaluation/training"
+  ],
+  "scenario_count": 720,
+  "pilot_scenarios": 180,
+  "main_scenarios": 540,
+  "parents_per_version": 40,
+  "main_parents_per_version": 30,
+  "completed_status_count": 720,
+  "excluded_scenarios": 0,
+  "observed_candles": 25200,
+  "full_repeat_csv_hashes_match": true,
+  "paid_assemblies_unchanged": true,
+  "files": [
+    {
+      "path": "evidence/original-host/candles-v04.csv",
+      "sha256": "7D74CF5A02CB84351AF70E2D9EEE3152599FCCC558B713A477FFDC3E79F4D2D7",
+      "bytes": 473053
+    },
+    {
+      "path": "evidence/original-host/candles-v05.csv",
+      "sha256": "B576D076713BBC1F23CFF77D011582EBC1506557ECBCE7E44ACB0CC44CD293FC",
+      "bytes": 2547826
+    },
+    {
+      "path": "evidence/original-host/fills-v04.csv",
+      "sha256": "D3CA9F6F08875D1F39A140197BF6EDAF9D49AB7C68E6B2515C1004BFBAFCC73C",
+      "bytes": 87
+    },
+    {
+      "path": "evidence/original-host/fills-v05.csv",
+      "sha256": "EAFD5C96BF1924A83DA6A1BAAF65316E82C9CE7E24FBD7F34111592D326885BB",
+      "bytes": 60045
+    },
+    {
+      "path": "evidence/original-host/runs-v04.csv",
+      "sha256": "5ED5E3619CF6F4B748E1A318B06969F246B465A2240F3C915EDCF7B0D785B68D",
+      "bytes": 30983
+    },
+    {
+      "path": "evidence/original-host/runs-v05.csv",
+      "sha256": "FEC179C036AECD01C31580366C566C52D83F8190E2F1F4CFB04314A6F9AF923C",
+      "bytes": 153799
+    }
+  ],
+  "prior_repository_commit": "2e2a5e522d6886e0d6eca93bd6348e2bce4690d6",
+  "interpretation": "Exploratory mechanism/validity research; not a training dataset, native app export or live BTC experiment"
+}
