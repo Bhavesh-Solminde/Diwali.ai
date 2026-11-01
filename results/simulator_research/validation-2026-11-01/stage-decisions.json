@@ -1,0 +1,8 @@
+{
+  "A": "ready_for_data_pipeline_implementation",
+  "B": "conditional_on_real_dataset_chronology_and_leakage_checks",
+  "C": "not_ready_uncorrected_synthetic_labels",
+  "D": "not_ready_ordering_and_calibration",
+  "E": "deferred_until_frozen_forecasts_and_matured_outcomes",
+  "training_authorized": false
+}

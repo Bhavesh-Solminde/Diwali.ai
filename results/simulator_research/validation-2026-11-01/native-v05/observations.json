@@ -1,0 +1,112 @@
+[
+  {
+    "image": "03-baseline-pause-verified.jpg",
+    "action": "none",
+    "last_price_display": 102.96,
+    "floating_display": 0,
+    "total_pnl_display": 0,
+    "evidence_type": "manual_transcription_of_native_capture",
+    "fill_quantity": null,
+    "fill_vwap": null
+  },
+  {
+    "image": "04-buy-one.jpg",
+    "action": "B",
+    "last_price_display": 103.39,
+    "floating_display": 0.22,
+    "total_pnl_display": 0,
+    "evidence_type": "manual_transcription_of_native_capture",
+    "fill_quantity": null,
+    "fill_vwap": null
+  },
+  {
+    "image": "05-buy-repeat.jpg",
+    "action": "B",
+    "last_price_display": 104,
+    "floating_display": 1.16,
+    "total_pnl_display": 0,
+    "evidence_type": "manual_transcription_of_native_capture",
+    "fill_quantity": null,
+    "fill_vwap": null
+  },
+  {
+    "image": "06-refresh-two-lots.jpg",
+    "action": "Space resume",
+    "last_price_display": 103.8,
+    "floating_display": 0.76,
+    "total_pnl_display": 0,
+    "evidence_type": "manual_transcription_of_native_capture",
+    "fill_quantity": null,
+    "fill_vwap": null
+  },
+  {
+    "image": "07-pause-two-lots.jpg",
+    "action": "Space pause",
+    "last_price_display": 102.98,
+    "floating_display": -0.88,
+    "total_pnl_display": 0,
+    "evidence_type": "manual_transcription_of_native_capture",
+    "fill_quantity": null,
+    "fill_vwap": null
+  },
+  {
+    "image": "08-sell-reduce.jpg",
+    "action": "S",
+    "last_price_display": 102.43,
+    "floating_display": -0.99,
+    "total_pnl_display": -0.81,
+    "evidence_type": "manual_transcription_of_native_capture",
+    "fill_quantity": null,
+    "fill_vwap": null
+  },
+  {
+    "image": "09-sell-close.jpg",
+    "action": "S",
+    "last_price_display": 102.13,
+    "floating_display": 0,
+    "total_pnl_display": -1.98,
+    "evidence_type": "manual_transcription_of_native_capture",
+    "fill_quantity": null,
+    "fill_vwap": null
+  },
+  {
+    "image": "10-sell-open-short.jpg",
+    "action": "S",
+    "last_price_display": 101.89,
+    "floating_display": 0.12,
+    "total_pnl_display": -1.98,
+    "evidence_type": "manual_transcription_of_native_capture",
+    "fill_quantity": null,
+    "fill_vwap": null
+  },
+  {
+    "image": "11-buy-close-short.jpg",
+    "action": "B",
+    "last_price_display": 103.29,
+    "floating_display": 0,
+    "total_pnl_display": -3.11,
+    "evidence_type": "manual_transcription_of_native_capture",
+    "fill_quantity": null,
+    "fill_vwap": null
+  },
+  {
+    "image": "12-final-stats-refresh.jpg",
+    "action": "Space resume",
+    "last_price_display": 103.4,
+    "floating_display": 0,
+    "total_pnl_display": -3.11,
+    "evidence_type": "manual_transcription_of_native_capture",
+    "fill_quantity": null,
+    "fill_vwap": null
+  },
+  {
+    "image": "14-final-verified.jpg",
+    "action": "none",
+    "last_price_display": 103.8,
+    "floating_display": 0,
+    "total_pnl_display": -3.11,
+    "evidence_type": "manual_transcription_of_native_capture",
+    "fill_quantity": null,
+    "fill_vwap": null
+  }
+]

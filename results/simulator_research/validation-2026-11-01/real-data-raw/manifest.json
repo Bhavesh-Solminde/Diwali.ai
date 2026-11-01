@@ -1,0 +1,21 @@
+{
+  "venue": "Binance USD-M futures",
+  "instrument": "BTCUSDT perpetual",
+  "scope": "bounded_engineering_capture_not_training_dataset",
+  "requested_seconds": 300,
+  "start_utc_ns": 1793550493046644300,
+  "end_utc_ns": 1793550802804748700,
+  "counts": {
+    "rest": 5,
+    "connection": 2,
+    "public": 2925,
+    "market": 1884
+  },
+  "errors": [],
+  "complete_ordered_execution_feed": false,
+  "reason": "aggTrade excludes insurance/ADL trades and is aggregated; exact all-trade coverage not certified",
+  "reconnect_policy": "No silent reconnection. A connection failure terminates that stream and is retained; gaps invalidate derived book segments.",
+  "credentials_used": false,
+  "orders_placed": false,
+  "raw_sha256": "4529b3b1fe03084b50486eb2d522c33bb3e1f4b86632b9747749926b1a45c966"
+}

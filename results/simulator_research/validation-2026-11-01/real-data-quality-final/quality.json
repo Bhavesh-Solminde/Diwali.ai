@@ -1,0 +1,264 @@
+{
+  "venue": "Binance USD-M futures",
+  "instrument": "BTCUSDT perpetual",
+  "capture_manifest": {
+    "venue": "Binance USD-M futures",
+    "instrument": "BTCUSDT perpetual",
+    "scope": "bounded_engineering_capture_not_training_dataset",
+    "requested_seconds": 300,
+    "start_utc_ns": 1793550493046644300,
+    "end_utc_ns": 1793550802804748700,
+    "counts": {
+      "rest": 5,
+      "connection": 2,
+      "public": 2925,
+      "market": 1884
+    },
+    "errors": [],
+    "complete_ordered_execution_feed": false,
+    "reason": "aggTrade excludes insurance/ADL trades and is aggregated; exact all-trade coverage not certified",
+    "reconnect_policy": "No silent reconnection. A connection failure terminates that stream and is retained; gaps invalidate derived book segments.",
+    "credentials_used": false,
+    "orders_placed": false,
+    "raw_sha256": "4529b3b1fe03084b50486eb2d522c33bb3e1f4b86632b9747749926b1a45c966"
+  },
+  "counts": {
+    "depthUpdate": 2925,
+    "kline": 518,
+    "aggTrade": 1366,
+    "bootstrap_stale_dropped": 2,
+    "depth_applied": 2923,
+    "valid_book_updates": 2923
+  },
+  "last_book_update": 11984966159168,
+  "book_currently_synchronized": true,
+  "quality_events": [],
+  "top20_sample_count": 34,
+  "latency_ms": {
+    "min": -18.010986328125,
+    "max": 232.294189453125,
+    "mean": 4.351326736002807
+  },
+  "exchange_symbol_metadata": {
+    "symbol": "BTCUSDT",
+    "pair": "BTCUSDT",
+    "contractType": "PERPETUAL",
+    "deliveryDate": 4133404800000,
+    "onboardDate": 1567965300000,
+    "status": "TRADING",
+    "maintMarginPercent": "2.5000",
+    "requiredMarginPercent": "5.0000",
+    "baseAsset": "BTC",
+    "quoteAsset": "USDT",
+    "marginAsset": "USDT",
+    "pricePrecision": 2,
+    "quantityPrecision": 3,
+    "baseAssetPrecision": 8,
+    "quotePrecision": 8,
+    "underlyingType": "COIN",
+    "underlyingSubType": [
+      "PoW",
+      "Crypto"
+    ],
+    "triggerProtect": "0.0300",
+    "liquidationFee": "0.012500",
+    "marketTakeBound": "0.03",
+    "maxMoveOrderLimit": 10000,
+    "filters": [
+      {
+        "tickSize": "0.10",
+        "minPrice": "556.80",
+        "filterType": "PRICE_FILTER",
+        "maxPrice": "4529764"
+      },
+      {
+        "minQty": "0.001",
+        "maxQty": "1000",
+        "stepSize": "0.001",
+        "filterType": "LOT_SIZE"
+      },
+      {
+        "stepSize": "0.001",
+        "minQty": "0.001",
+        "filterType": "MARKET_LOT_SIZE",
+        "maxQty": "120"
+      },
+      {
+        "limit": 200,
+        "filterType": "MAX_NUM_ORDERS"
+      },
+      {
+        "filterType": "MIN_NOTIONAL",
+        "notional": "50"
+      },
+      {
+        "multiplierDecimal": "4",
+        "filterType": "PERCENT_PRICE",
+        "multiplierDown": "0.9700",
+        "multiplierUp": "1.0300"
+      },
+      {
+        "positionControlSide": "NONE",
+        "filterType": "POSITION_RISK_CONTROL"
+      }
+    ],
+    "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+    ],
+    "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+    ],
+    "permissionSets": [
+      "GRID",
+      "COPY",
+      "DCA",
+      "PSB"
+    ]
+  },
+  "candle_checks": [
+    {
+      "minute_utc_ms": 1793550480000,
+      "complete_capture_window": false,
+      "aggtrade_events": 321,
+      "reconstructed": {
+        "open": "78075.80",
+        "high": "78098.00",
+        "low": "78075.70",
+        "close": "78097.90",
+        "base_volume": "36.849"
+      },
+      "exchange_rest_comparison": {
+        "ohlc_match": [
+          false,
+          true,
+          true,
+          true
+        ],
+        "base_volume_difference": "-2.401"
+      }
+    },
+    {
+      "minute_utc_ms": 1793550540000,
+      "complete_capture_window": true,
+      "aggtrade_events": 357,
+      "reconstructed": {
+        "open": "78098.00",
+        "high": "78098.00",
+        "low": "78068.70",
+        "close": "78068.70",
+        "base_volume": "18.799"
+      },
+      "exchange_rest_comparison": {
+        "ohlc_match": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "base_volume_difference": "0.000"
+      }
+    },
+    {
+      "minute_utc_ms": 1793550600000,
+      "complete_capture_window": true,
+      "aggtrade_events": 192,
+      "reconstructed": {
+        "open": "78068.80",
+        "high": "78068.80",
+        "low": "78068.70",
+        "close": "78068.70",
+        "base_volume": "10.893"
+      },
+      "exchange_rest_comparison": {
+        "ohlc_match": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "base_volume_difference": "0.000"
+      }
+    },
+    {
+      "minute_utc_ms": 1793550660000,
+      "complete_capture_window": true,
+      "aggtrade_events": 301,
+      "reconstructed": {
+        "open": "78068.70",
+        "high": "78068.80",
+        "low": "78046.70",
+        "close": "78046.70",
+        "base_volume": "19.714"
+      },
+      "exchange_rest_comparison": {
+        "ohlc_match": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "base_volume_difference": "0.000"
+      }
+    },
+    {
+      "minute_utc_ms": 1793550720000,
+      "complete_capture_window": true,
+      "aggtrade_events": 161,
+      "reconstructed": {
+        "open": "78046.60",
+        "high": "78049.20",
+        "low": "78046.60",
+        "close": "78049.20",
+        "base_volume": "17.354"
+      },
+      "exchange_rest_comparison": {
+        "ohlc_match": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "base_volume_difference": "0.001"
+      }
+    },
+    {
+      "minute_utc_ms": 1793550780000,
+      "complete_capture_window": false,
+      "aggtrade_events": 34,
+      "reconstructed": {
+        "open": "78049.20",
+        "high": "78049.20",
+        "low": "78049.10",
+        "close": "78049.10",
+        "base_volume": "1.154"
+      },
+      "exchange_rest_comparison": {
+        "ohlc_match": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "base_volume_difference": "-0.079"
+      }
+    }
+  ],
+  "verdict": "engineering_sample_only_not_training_ready",
+  "limitations": [
+    "Finite snapshot depth; unchanged levels outside snapshot unknown.",
+    "aggTrade aggregation and insurance/ADL exclusions prevent certification of every execution.",
+    "No reconnect/resnapshot daemon; any sequence gap invalidates book until fresh bootstrap.",
+    "Five-minute capture provides no training split,1440-minute synchronized context or forward forecasts.",
+    "Receipt latency includes local clock skew; exchange and local times retained separately."
+  ]
+}

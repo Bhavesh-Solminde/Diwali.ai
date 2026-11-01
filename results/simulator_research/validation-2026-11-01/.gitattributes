@@ -1,0 +1,5 @@
+# Checksum-cataloged raw evidence must survive cross-platform checkout byte-for-byte.
+v04/** -text
+v05/** -text
+real-data-raw/** -text
+native-v05/*.jpg -text

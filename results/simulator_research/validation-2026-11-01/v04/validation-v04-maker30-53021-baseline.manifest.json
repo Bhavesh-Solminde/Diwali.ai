@@ -1,0 +1,1 @@
+{"run_id":"validation-v04-maker30-53021-baseline","profile":"maker30","seed":53021,"scenario":"baseline","version":"04","status":"ok","error":"","evidence_type":"original_DLL_CLR_validation_host","agents":200,"activity":0.1,"maker":0.3,"fingerprint":"","matched_baseline":true,"completed_observations":600,"total_requested":0,"total_filled":0,"total_notional":0,"initial_depth10":0}

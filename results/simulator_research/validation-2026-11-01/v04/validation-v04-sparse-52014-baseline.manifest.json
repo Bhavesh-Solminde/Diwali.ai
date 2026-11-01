@@ -1,0 +1,1 @@
+{"run_id":"validation-v04-sparse-52014-baseline","profile":"sparse","seed":52014,"scenario":"baseline","version":"04","status":"ok","error":"","evidence_type":"original_DLL_CLR_validation_host","agents":100,"activity":0.05,"maker":0.1,"fingerprint":"","matched_baseline":true,"completed_observations":600,"total_requested":0,"total_filled":0,"total_notional":0,"initial_depth10":0}

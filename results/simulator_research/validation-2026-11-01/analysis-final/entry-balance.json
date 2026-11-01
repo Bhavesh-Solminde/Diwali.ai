@@ -1,0 +1,158 @@
+{
+  "standard": {
+    "bid": {
+      "strong": 60,
+      "weak": 60,
+      "matched_pairs": 52,
+      "covariates": {
+        "distance_bp": {
+          "before_mean_difference": 0.4296345030508206,
+          "before_smd": 0.16363608237066152,
+          "after_mean_difference": 0.029314334678304764,
+          "after_smd": 0.011165031788642924
+        },
+        "volatility_bp": {
+          "before_mean_difference": -1.5215281455465117,
+          "before_smd": -0.15103790685469753,
+          "after_mean_difference": -0.20190489461709582,
+          "after_smd": -0.020042542595050686
+        },
+        "volume_ratio": {
+          "before_mean_difference": -0.045641346697651075,
+          "before_smd": -0.14457170136752007,
+          "after_mean_difference": 0.012055804311385752,
+          "after_smd": 0.038187482770761914
+        }
+      }
+    },
+    "ask": {
+      "strong": 58,
+      "weak": 60,
+      "matched_pairs": 47,
+      "covariates": {
+        "distance_bp": {
+          "before_mean_difference": 0.8994828328085465,
+          "before_smd": 0.3256255469348778,
+          "after_mean_difference": 0.1598994892753887,
+          "after_smd": 0.05788588369978209
+        },
+        "volatility_bp": {
+          "before_mean_difference": -0.5667679333439821,
+          "before_smd": -0.0635756625822094,
+          "after_mean_difference": -0.8932413744682242,
+          "after_smd": -0.10019693932330292
+        },
+        "volume_ratio": {
+          "before_mean_difference": 0.06645855827209901,
+          "before_smd": 0.16968016482815468,
+          "after_mean_difference": 0.04562827352530606,
+          "after_smd": 0.11649685418843093
+        }
+      }
+    }
+  },
+  "sparse": {
+    "bid": {
+      "strong": 60,
+      "weak": 60,
+      "matched_pairs": 52,
+      "covariates": {
+        "distance_bp": {
+          "before_mean_difference": 0.7496924688173117,
+          "before_smd": 0.2574468482236282,
+          "after_mean_difference": 0.17449748055220018,
+          "after_smd": 0.05992300611209024
+        },
+        "volatility_bp": {
+          "before_mean_difference": -0.2267844464403197,
+          "before_smd": -0.048887977807304694,
+          "after_mean_difference": -0.29613318317083426,
+          "after_smd": -0.06383750170747306
+        },
+        "volume_ratio": {
+          "before_mean_difference": 0.023336027015702476,
+          "before_smd": 0.05109558548012623,
+          "after_mean_difference": 0.002329873548594448,
+          "after_smd": 0.005101393351147055
+        }
+      }
+    },
+    "ask": {
+      "strong": 59,
+      "weak": 60,
+      "matched_pairs": 47,
+      "covariates": {
+        "distance_bp": {
+          "before_mean_difference": 0.5969094920126681,
+          "before_smd": 0.2325050474515056,
+          "after_mean_difference": -0.04042365691652647,
+          "after_smd": -0.015745610340103123
+        },
+        "volatility_bp": {
+          "before_mean_difference": 0.3885447738295582,
+          "before_smd": 0.08735652288106899,
+          "after_mean_difference": 0.2010358652075935,
+          "after_smd": 0.04519889428914677
+        },
+        "volume_ratio": {
+          "before_mean_difference": -0.029190686559144585,
+          "before_smd": -0.06982409825032955,
+          "after_mean_difference": -0.008334274871876678,
+          "after_smd": -0.019935578641498832
+        }
+      }
+    }
+  },
+  "maker30": {
+    "bid": {
+      "strong": 60,
+      "weak": 60,
+      "matched_pairs": 46,
+      "covariates": {
+        "distance_bp": {
+          "before_mean_difference": -0.40172651763781,
+          "before_smd": -0.14510990744042146,
+          "after_mean_difference": -0.10228969943766217,
+          "after_smd": -0.036948640843495716
+        },
+        "volatility_bp": {
+          "before_mean_difference": 0.6921227199933178,
+          "before_smd": 0.11883595984666952,
+          "after_mean_difference": -0.15884212978343756,
+          "after_smd": -0.027272846868957427
+        },
+        "volume_ratio": {
+          "before_mean_difference": 0.03428819436343422,
+          "before_smd": 0.11279404718027725,
+          "after_mean_difference": -0.009139248732795589,
+          "after_smd": -0.03006436681479389
+        }
+      }
+    },
+    "ask": {
+      "strong": 60,
+      "weak": 60,
+      "matched_pairs": 44,
+      "covariates": {
+        "distance_bp": {
+          "before_mean_difference": -1.2249777908948776,
+          "before_smd": -0.43901669447916253,
+          "after_mean_difference": -0.18266305398582985,
+          "after_smd": -0.06546415025675317
+        },
+        "volatility_bp": {
+          "before_mean_difference": 0.8861543951627908,
+          "before_smd": 0.135969535562538,
+          "after_mean_difference": 0.19023719222897714,
+          "after_smd": 0.029189566530721196
+        },
+        "volume_ratio": {
+          "before_mean_difference": 0.05765685925296005,
+          "before_smd": 0.18047883249019422,
+          "after_mean_difference": -0.003325996058744799,
+          "after_smd": -0.01041110968108155
+        }
+      }
+    }
+  }
+}
