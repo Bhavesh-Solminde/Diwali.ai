@@ -1,0 +1,32 @@
+[
+  {
+    "path": "Krafer Agent Trader Sim/Kat-05(Linux).zip",
+    "bytes": 32186225,
+    "sha256": "D3CF286A3D95D78301805E0222D4D110CFDAC9EB0E75911553113260FEBD1B4B"
+  },
+  {
+    "path": "Krafer Agent Trader Sim/Kat-05(Mac).app.zip",
+    "bytes": 43314342,
+    "sha256": "8602F01B15B95310DF6341D808CD1416008D9BA9F7B8202228877D551EF68CA3"
+  },
+  {
+    "path": "Krafer Agent Trader Sim/Kat-05(Win).zip",
+    "bytes": 30068396,
+    "sha256": "E225CCEEE9C74AE6AD973DE2B137E57CECECF676A1014C8C9A5EAC7AF3381724"
+  },
+  {
+    "path": "Krafer Agent Trader Sim/Kat0-4(Mac).zip",
+    "bytes": 40456522,
+    "sha256": "D1B5E77F9EF589473C6FA7933D915101AEC224DCB4D22BFA196AA85D974BF093"
+  },
+  {
+    "path": "Krafer Agent Trader Sim/Kat0-4(Win).zip",
+    "bytes": 27517754,
+    "sha256": "B1552AF43084FFA28D9D4E288EB18145606E591DDC2D6FB95EAAF415F178C22E"
+  },
+  {
+    "path": "transfer/research-markdown-2026-11-01.zip",
+    "bytes": 97236,
+    "sha256": "2A1323F0AB0B7BF549C12C648AAF1B3CE93A9A33D7359FB4E3B7B407A4EDC7EE"
+  }
+]
