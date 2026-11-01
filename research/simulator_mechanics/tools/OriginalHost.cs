@@ -29,7 +29,7 @@ public static class OriginalHost {
    return Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(s.ToString())));
   }
  }
- static State Init(int seed) {
+ public static State Init(int seed) {
   var s=new State();s.m=RuntimeHelpers.GetUninitializedObject(mt);s.b=Activator.CreateInstance(bt);s.last=10000;
   mt.GetField("orderBook").SetValue(s.m,s.b);bt.GetField("market").SetValue(s.b,s.m);
   mt.GetField("chart").SetValue(s.m,RuntimeHelpers.GetUninitializedObject(ct));
@@ -39,7 +39,7 @@ public static class OriginalHost {
   for(int i=0;i<200;i++) {var t=Activator.CreateInstance(tt,new[]{s.b});rng.SetValue(t,new Random(unchecked(seed*1009+i*7919)));if(v05){Set(t,"USD",cap.Next(100000,1000000));Set(t,"BTC",cap.Next(10,100));}s.agents.Add(t);s.acts.Add((Action<int>)attempt.CreateDelegate(typeof(Action<int>),t));}
   Reset(s);return s;
  }
- static void Reset(State s) {mt.GetField("liveCandlestick").SetValue(s.m,Activator.CreateInstance(lt,new[]{Price(s.last)}));}
+ public static void Reset(State s) {mt.GetField("liveCandlestick").SetValue(s.m,Activator.CreateInstance(lt,new[]{Price(s.last)}));}
  static void Step(State s) {
   for(int j=0;j<5;j++)foreach(var a in s.acts)a(s.candle);
   var live=Get(s.m,"liveCandlestick");s.last=L(live,"close");Set(s.m,"lastPrice",s.last);record.Invoke(s.b,new[]{Price(s.last)});
@@ -62,11 +62,14 @@ public static class OriginalHost {
   long cash=s.Cash(),coins=s.Coins();long vw=Convert.ToInt64(place.Invoke(s.b,new object[]{buy?long.MaxValue:1L,q,buy,null}));
   return ((int)Math.Abs(s.Coins()-coins),Math.Abs(s.Cash()-cash),vw);
  }
- public static void Run(string managed,string version,string output) {
-  Directory.CreateDirectory(output);v05=version=="05";
+ public static void Configure(string managed,string version) {
+  v05=version=="05";
   Assembly.LoadFrom(Path.Combine(managed,"UnityEngine.CoreModule.dll"));asm=Assembly.LoadFrom(Path.Combine(managed,"Assembly-CSharp.dll"));
   string suffix=v05?"":"Real";mt=asm.GetType("MarketSimulator"+suffix);bt=asm.GetType("OrderBook"+suffix);tt=asm.GetType("Trader"+suffix);ct=asm.GetType("GPUCandlestickChart");lt=asm.GetType("LiveCandlestick"+suffix);
   place=bt.GetMethod("PlaceOrder");remove=bt.GetMethod("RandomlyRemoveOrders");prune=bt.GetMethod("TruncateAroundAnchorEdges");record=bt.GetMethod("RecordTrade");attempt=tt.GetMethod("TryPlaceOrders");rng=tt.GetField("rng",flags);
+ }
+ public static void Run(string managed,string version,string output) {
+  Directory.CreateDirectory(output);Configure(managed,version);
   using(var manifest=new StreamWriter(Path.Combine(output,"runs-v"+version+".csv")))
   using(var candles=new StreamWriter(Path.Combine(output,"candles-v"+version+".csv")))
   using(var fills=new StreamWriter(Path.Combine(output,"fills-v"+version+".csv"))) {

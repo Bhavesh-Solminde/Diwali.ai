@@ -1,0 +1,1 @@
+{"run_id":"repeat-v05-42006-buy_repeat100","phase":"main","seed":42006,"scenario":"buy_repeat100","evidence_type":"original_DLL_CLR_repeated_intervention_host","status":"ok","error":"","fingerprint":"10556ED2E280C66746887B1A3C68177527ED11EF418ED9375369A2E3D62B6715","matched_baseline":true,"completed_observations":51,"filled_total":500,"notional_total":5081584}

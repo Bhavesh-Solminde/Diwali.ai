@@ -1,5 +1,7 @@
 # Live application testing remains open
 
+**Current-PC update:** capture now works after foreground activation, and the user explicitly replaced the manual screenshot restriction. Both versions received verified live B/S inputs. See LIVE-CONTROL-RESULTS-CURRENT-PC.md for paused v0.4 round trips, v0.5 accumulation/unwind, nominal lot 100 and supply reconciliation. v0.4 is closed; v0.5 is paused/flat at last $101.68 and displayed total -3.44. Earlier no-live-trade/access-blocker paragraphs below are historical. Exact fills/cash and event-level studies remain open.
+
 The user clarified that visible simulator use is expected. Do not mark the whole research goal complete based on the original-DLL host alone.
 
 Completed: original-DLL numerical mechanics experiments, code inspection, operating-guide drafts, raw evidence, reproducibility checks and proposed ML handoff. These are explicitly outside the live Unity sessions.

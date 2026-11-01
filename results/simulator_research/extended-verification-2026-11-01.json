@@ -1,0 +1,32 @@
+{
+  "evidence_type": "verification_of_recorded_diagnostics",
+  "checks": {
+    "flow_hash_catalog": true,
+    "flow_unique_scenarios": true,
+    "flow_pilot_parents": true,
+    "flow_main_parents": true,
+    "flow_completed": true,
+    "flow_record_checks": true,
+    "repeat_hash_catalog": true,
+    "repeat_unique_scenarios": true,
+    "repeat_pilot_parents": true,
+    "repeat_main_parents": true,
+    "repeat_completed": true,
+    "repeat_record_checks": true,
+    "flow_pilot_rerun_equal": true,
+    "flow_reference_scheduler_both_phases": true,
+    "initial_failure_preserved": true,
+    "original_evidence_and_binaries_preserved": true,
+    "refactored_original_host_all_six_csvs_match": true
+  },
+  "passed": true,
+  "new_distinct_parent_states": 80,
+  "new_scenario_identities": 240,
+  "new_observations": 34200,
+  "raw_dirs": [
+    "flow-2026-11-01/raw-validated",
+    "repeat-2026-11-01/raw"
+  ],
+  "exclusions": "One initial technical failure and repeated pilot files preserved, not counted as new parent states",
+  "native_access": "Window activation failed twice; no new native input/capture; previous native control evidence remains separate"
+}

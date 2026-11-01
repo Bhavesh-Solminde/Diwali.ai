@@ -1,5 +1,7 @@
 # Windows v0.5 operating guide
 
+Current-PC update: both builds' input handlers and button callbacks were rechecked read-only; see [controls review](CONTROLS-CURRENT-PC.md). Direct capture now works for both versions. [Live results](LIVE-CONTROL-RESULTS-CURRENT-PC.md) verify v0.5 B/S, pause, accumulation, reduction, scene nominal lot 100, lagging statistics and net supply reconciliation. Older capture-failure and no-live-trade text below is historical; exact fill/cash accounting remains unverified.
+
 Evidence: hashed installed assembly, read-only decompilation and isolated execution diagnostics. Running executable detected; live chart rendering remains unverified. Both native capture interfaces time out. Esc was sent once to request documented windowed mode; capture still timed out. No live player trades have been submitted during this research.
 
 Executable: `Krafer Agent Trader Sim/Kat-05(Win)/Market Simulation/MarketSimulation.exe`.

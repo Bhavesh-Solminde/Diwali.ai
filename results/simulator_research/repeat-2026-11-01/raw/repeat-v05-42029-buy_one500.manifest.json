@@ -1,0 +1,1 @@
+{"run_id":"repeat-v05-42029-buy_one500","phase":"main","seed":42029,"scenario":"buy_one500","evidence_type":"original_DLL_CLR_repeated_intervention_host","status":"ok","error":"","fingerprint":"FE5332C26B379169A34696208E2BC4EEFC44277DE534403B84F697791B5835AA","matched_baseline":true,"completed_observations":51,"filled_total":500,"notional_total":5014440}

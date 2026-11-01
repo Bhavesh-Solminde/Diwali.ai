@@ -1,5 +1,7 @@
 # Continue the simulator research on Windows 11
 
+**Superseding current-PC update:** the user explicitly requested direct Computer Use on Windows 11 instead of the inherited manual workflow. Foreground screenshots now work for both builds. Read CONTROLS-CURRENT-PC.md and LIVE-CONTROL-RESULTS-CURRENT-PC.md first. v0.4 was tested and closed after preserving its log; v0.5 live control/supply checks were performed and it is left paused/flat. The manual-only instruction and no-v0.5-interaction statements below describe the older handoff and no longer apply to this session. Event-level research remains incomplete.
+
 This is the current continuation handoff, written 1 November 2026. Research is **incomplete**. The user requested pushing all research so work can continue on another PC. No new model training has started. Read this file before older access-status notes.
 
 ## Start here

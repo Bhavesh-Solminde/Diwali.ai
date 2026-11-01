@@ -1,5 +1,7 @@
 # Read-only original-DLL mechanics research
 
+Extended tools: `run-flow-host.ps1` records untouched v0.4 boundary books and cause-tagged net changes; `run-repeat-host.ps1` compares v0.5 immediate500 versus five100-unit schedules. Both use ten pilot plus thirty main parents; see preregistrations B/C and RESEARCH-REVIEW-EXTENDED.md in the findings directory. `analyze-flow.py`/`analyze-repeat.py` produce parent-grouped diagnostics; `verify-extended-evidence.py` checks catalogs, ledgers, parent counts and original evidence. Four causal/ambiguity checks run with `test-research-analysis.py`. These extend the host; they do not instrument the native app or authorize training.
+
 This tooling invokes the supplied, preserved Windows managed assemblies in a separately initialized CLR process. It does not modify binaries, attach to the running Unity apps, render charts or run bot training. Purchased binaries must be acquired separately. Evidence and limitations: [research handoff](../../docs/planning/windows-simulator-findings-2026-11-01/README.md).
 
 Run from repository root. `-WorkspaceRoot` points to the parent folder containing `Krafer Agent Trader Sim`, not this Git repository. Use separate fresh PowerShell processes because both versions contain assemblies with the same identity. Choose a fresh output folder; completed manifests cannot be overwritten.

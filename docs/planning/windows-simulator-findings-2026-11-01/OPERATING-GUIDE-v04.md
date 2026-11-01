@@ -1,5 +1,7 @@
 # Windows v0.4 operating guide
 
+Current-PC update: direct capture now works under the user's explicit instruction. See [controls review](CONTROLS-CURRENT-PC.md) for fresh installed-code checks, live button/MA/order-history/zoom verification and the Space/button-focus interaction. The capture-failure text below describes the previous research environment; it is not the current access status.
+
 Evidence: hashed installed assembly, read-only decompilation; executable process detected. Runtime chart rendering and interactive control outcomes remain unverified because captures time out. This is a code-verified guide with explicit runtime gaps.
 
 Executable: `Krafer Agent Trader Sim/Kat0-4(Win)/Kat 0.4/MarketSimulation.exe`. Relevant classes use the suffix `Real`; the name does not mean live exchange data.

@@ -1,5 +1,9 @@
 # Handoff for the model-building AI — proposed specification v1.1
 
+Extended research supplement for review: [RESEARCH-REVIEW-EXTENDED.md](RESEARCH-REVIEW-EXTENDED.md). New fixed-rule v0.4 depth diagnostics and v0.5 size-500 schedules use 30 main parents each after 10 pilots. Retain book/persistence and execution-size hypotheses; absorption, universal wall probabilities and repeated-impact weakening remain unsupported. The supplement includes a feature dictionary, all denominators, failures, cost/evaluation formulas and proposed ablations. It does not authorize fitting or substitute host evidence for outstanding native tests.
+
+Current-PC evidence update: LIVE-CONTROL-RESULTS-CURRENT-PC.md adds native tests, including v0.4 same-price display losses, v0.5 nominal scene lot 100, repeated accumulation/reduction, delayed stats and coin-supply reconciliation. Direct capture replaces the older manual workflow by explicit user instruction. These checks support the existing accounting cautions; they do not certify fill-level training labels or authorize fitting. Older capture/no-v0.5-test text below is historical.
+
 For the current cross-PC state and mandatory manual screenshot workflow, first read `CONTINUE-ON-WINDOWS-11.md` and `USER-ASSISTED-v04.md`. Research is still incomplete; no new model training has begun.
 
 Read `EXPERIMENT-REPORT.md`, both operating guides, DATA-DICTIONARY.md and RESEARCH-TO-MODEL-CHANGELOG.md before implementing. This handoff adds measured simulator findings to the repository's 1 November frozen specification. It does not authorize training or live execution. Present this revision for user review first.

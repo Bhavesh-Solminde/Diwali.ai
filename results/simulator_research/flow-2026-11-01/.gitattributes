@@ -1,0 +1,5 @@
+# Preserve the exact bytes used by the raw evidence checksum catalogs.
+raw/** -text
+raw-v2/** -text
+raw-validated/** -text
+compatibility-original-host/*.csv -text whitespace=cr-at-eol

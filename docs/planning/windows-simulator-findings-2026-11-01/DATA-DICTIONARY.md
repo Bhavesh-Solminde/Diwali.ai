@@ -1,5 +1,7 @@
 # Data dictionary and export feasibility
 
+New evidence and current access status: see [extended review](RESEARCH-REVIEW-EXTENDED.md) and the new flow/repeat results READMEs. Foreground native capture worked in the prior control pass; this continuation's activation failed twice. New numeric data are original-DLL host diagnostics, not native export. Per-sweep net changes now have explicit removal-call provenance; individual fills/order age/gross refill remain unavailable in v0.4. v0.5 synchronous transfer ledgers remain separate from defective native display labels. The older capture-only limitations below are historical where superseded.
+
 Scope: original Windows DLL methods invoked in a controlled CLR host outside Unity. Profile and seeds are in PREREGISTRATION.md. Files are `evidence/original-host/{runs,candles,fills}-v04.csv` and corresponding v05 files. The host never edits the paid DLLs or attaches to the running apps.
 
 | Field / concept | Unit and timing | Evidence quality / use |

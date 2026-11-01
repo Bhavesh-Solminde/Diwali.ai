@@ -1,5 +1,9 @@
 # Simulator-logic handoff for the next AI
 
+**New repeated research:** [extended review](RESEARCH-REVIEW-EXTENDED.md), preregistrations [B](PREREGISTRATION-B.md)/[C](PREREGISTRATION-C.md), and raw evidence READMEs under results/simulator_research/flow-2026-11-01 and repeat-2026-11-01. Added 80 new parent states, 240 scenario identities and 34,200 observations, explicitly original-DLL CLR diagnostics. Native activation failed twice during this continuation; no new native input/capture occurred. Full native/event-export requirements remain open. No training started.
+
+**Latest current-PC evidence:** the user authorized direct Computer Use, replacing the manual screenshot restriction. Both simulators now render in foreground captures. Read [controls](CONTROLS-CURRENT-PC.md) and [live test results](LIVE-CONTROL-RESULTS-CURRENT-PC.md) before historical access notes below. v0.4's live position test is complete and its session closed; v0.5 live accumulation/unwind and supply checks are recorded, with the app left paused/flat. Overall event-level research remains incomplete.
+
 Research performed 1 November 2026 against the preserved Windows v0.4/v0.5 packages. This adds evidence to the frozen BTC specification; no new model training or live trading occurred.
 
 **Continue on the other PC:** read [the Windows 11 continuation handoff](CONTINUE-ON-WINDOWS-11.md) first and [the verified user-assisted v0.4 tests](USER-ASSISTED-v04.md). Preserve the user's manual screenshot workflow; do not call automatic capture. **Live-app testing is still open.** The user expects visible interventions; host tests do not satisfy that part of the request. Read [live-app status](LIVE-APP-STATUS.md). Do not mark the overall research complete until those tests are performed or their access limitation is explicitly resolved.
