@@ -1,5 +1,7 @@
 # Follow-up request for the Windows research AI
 
+**Answered by external commit 0a3dbf4 and reviewed in VALIDATION-REVIEW-2026-11-01.md. Historical request: do not restart these experiments. The bounded simulator loop is closed; next-stage decisions remain subject to user review.**
+
 Continue from the latest evidence. Read TRAINING-READINESS.md first. Preserve existing runs and original conclusions. Do not repeat controls documentation or begin training.
 
 1. Reproduce the reviewer baseline figures using main/all origins only. Add reversal and pilot-selected majority baselines, per-class/balanced scores, coverage and paired parent-bootstrap book-minus-reversal uncertainty. Mark reversal post hoc; preregister and test the frozen comparisons on new independent seeds.
