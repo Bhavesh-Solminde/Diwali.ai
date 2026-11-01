@@ -1,0 +1,178 @@
+{
+  "protocol_sha256": "23666809edd2c6522630b5efb62130905ba8fe7b5e5765b47e0f328821e0b9d5",
+  "context_seconds": 128,
+  "horizon_seconds": 60,
+  "threshold_bps": 1.0,
+  "cases": [
+    {
+      "case": "rising",
+      "title": "Rising price",
+      "timestamp": "2023-01-20T14:44:00+00:00",
+      "position": 922791,
+      "rule": "max trend_5m_bps",
+      "measurements": {
+        "trend_5m_bps": 45.07907123318501,
+        "volatility_5m_bps": 1.355051104412543,
+        "imbalance": -0.8906038533477288,
+        "spread_1m_bps": 0.04807780632257948,
+        "depth_btc": 65.761,
+        "recorded_snapshots_1m": 239.0,
+        "midpoint_changes_1m": 56.0
+      }
+    },
+    {
+      "case": "falling",
+      "title": "Falling price",
+      "timestamp": "2023-01-20T16:59:00+00:00",
+      "position": 930889,
+      "rule": "min trend_5m_bps",
+      "measurements": {
+        "trend_5m_bps": -44.12650178640745,
+        "volatility_5m_bps": 1.0244413989737426,
+        "imbalance": -0.2627238364323624,
+        "spread_1m_bps": 0.04692469883200811,
+        "depth_btc": 26.191,
+        "recorded_snapshots_1m": 240.0,
+        "midpoint_changes_1m": 53.0
+      }
+    },
+    {
+      "case": "sideways",
+      "title": "Sideways price",
+      "timestamp": "2023-01-19T10:38:00+00:00",
+      "position": 821664,
+      "rule": "abs_min trend_5m_bps",
+      "measurements": {
+        "trend_5m_bps": 0.0,
+        "volatility_5m_bps": 0.2943313982396539,
+        "imbalance": 0.41791113782421746,
+        "spread_1m_bps": 0.04816723701589062,
+        "depth_btc": 43.257999999999996,
+        "recorded_snapshots_1m": 240.0,
+        "midpoint_changes_1m": 6.0
+      }
+    },
+    {
+      "case": "high_volatility",
+      "title": "High volatility",
+      "timestamp": "2023-01-19T13:34:00+00:00",
+      "position": 832220,
+      "rule": "max volatility_5m_bps",
+      "measurements": {
+        "trend_5m_bps": 1.3496740316697171,
+        "volatility_5m_bps": 1.514915457892265,
+        "imbalance": 0.041244119184527,
+        "spread_1m_bps": 0.048200710169714646,
+        "depth_btc": 38.26,
+        "recorded_snapshots_1m": 238.0,
+        "midpoint_changes_1m": 38.0
+      }
+    },
+    {
+      "case": "low_volatility",
+      "title": "Low volatility",
+      "timestamp": "2023-01-19T06:06:00+00:00",
+      "position": 805353,
+      "rule": "min volatility_5m_bps",
+      "measurements": {
+        "trend_5m_bps": -5.477096026937983,
+        "volatility_5m_bps": 0.09643369040640742,
+        "imbalance": -0.5785501827143706,
+        "spread_1m_bps": 0.04805269290913656,
+        "depth_btc": 58.83500000000001,
+        "recorded_snapshots_1m": 240.0,
+        "midpoint_changes_1m": 10.0
+      }
+    },
+    {
+      "case": "bid_imbalance",
+      "title": "Buy-side imbalance",
+      "timestamp": "2023-01-19T20:49:00+00:00",
+      "position": 858312,
+      "rule": "max imbalance",
+      "measurements": {
+        "trend_5m_bps": 19.081937052425044,
+        "volatility_5m_bps": 0.5689269256470239,
+        "imbalance": 0.9966193278261853,
+        "spread_1m_bps": 0.0474259946255429,
+        "depth_btc": 141.392,
+        "recorded_snapshots_1m": 240.0,
+        "midpoint_changes_1m": 17.0
+      }
+    },
+    {
+      "case": "ask_imbalance",
+      "title": "Sell-side imbalance",
+      "timestamp": "2023-01-19T18:45:00+00:00",
+      "position": 850874,
+      "rule": "min imbalance",
+      "measurements": {
+        "trend_5m_bps": 11.461510878798995,
+        "volatility_5m_bps": 0.8151995113986628,
+        "imbalance": -0.9949814052065421,
+        "spread_1m_bps": 0.04775403680707175,
+        "depth_btc": 100.028,
+        "recorded_snapshots_1m": 240.0,
+        "midpoint_changes_1m": 19.0
+      }
+    },
+    {
+      "case": "wide_spread",
+      "title": "Wide spread",
+      "timestamp": "2023-01-20T16:32:00+00:00",
+      "position": 929269,
+      "rule": "max spread_1m_bps",
+      "measurements": {
+        "trend_5m_bps": 31.3330699814953,
+        "volatility_5m_bps": 0.9947408562282708,
+        "imbalance": -0.3478735005452563,
+        "spread_1m_bps": 0.3205305820169803,
+        "depth_btc": 17.423000000000002,
+        "recorded_snapshots_1m": 238.0,
+        "midpoint_changes_1m": 40.0
+      }
+    },
+    {
+      "case": "thin_liquidity",
+      "title": "Thin liquidity",
+      "timestamp": "2023-01-19T22:24:00+00:00",
+      "position": 864010,
+      "rule": "min depth_btc",
+      "measurements": {
+        "trend_5m_bps": 1.8573197500779146,
+        "volatility_5m_bps": 0.46239754264358895,
+        "imbalance": -0.21553469538008466,
+        "spread_1m_bps": 0.04762392363953471,
+        "depth_btc": 16.299,
+        "recorded_snapshots_1m": 239.0,
+        "midpoint_changes_1m": 16.0
+      }
+    },
+    {
+      "case": "high_activity",
+      "title": "Rapid midpoint updates",
+      "timestamp": "2023-01-19T15:19:00+00:00",
+      "position": 838518,
+      "rule": "max midpoint_changes_1m",
+      "measurements": {
+        "trend_5m_bps": 42.41686371337475,
+        "volatility_5m_bps": 1.2164564170771959,
+        "imbalance": -0.6364249099842142,
+        "spread_1m_bps": 0.05890993167762434,
+        "depth_btc": 56.379000000000005,
+        "recorded_snapshots_1m": 239.0,
+        "midpoint_changes_1m": 58.0
+      }
+    }
+  ],
+  "split_counts": {
+    "train": 10973,
+    "validation": 1342,
+    "test": 2367
+  },
+  "split_boundaries": [
+    "2023-01-18T00:00:00+00:00",
+    "2023-01-19T00:00:00+00:00"
+  ],
+  "selection_uses_future_prices": false
+}

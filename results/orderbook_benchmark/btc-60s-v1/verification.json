@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "dataset_hash_verified": true,
+  "protocol_hash_verified": true,
+  "distinct_cases_and_spacing_verified": true,
+  "target_timestamps_and_actual_prices_verified": true,
+  "replay_used_only_history_through_prediction_time": true,
+  "models": {
+    "TLOB": {
+      "cases_replayed": 10,
+      "max_probability_difference": 9.399559020017989e-08,
+      "saved_case_and_full_test_scores_recomputed": true
+    },
+    "DeepLOB": {
+      "cases_replayed": 10,
+      "max_probability_difference": 6.307067873523309e-08,
+      "saved_case_and_full_test_scores_recomputed": true
+    }
+  },
+  "requested_models_without_predictions": [
+    "LOBERT",
+    "LOBS5"
+  ]
+}

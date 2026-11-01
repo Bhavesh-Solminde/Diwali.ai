@@ -1,0 +1,69 @@
+{
+  "symbol": "BTCUSDT",
+  "interval": "1m",
+  "forecast_open_time": "2024-03-31T23:59:00+00:00",
+  "forecast_close_time": "2024-04-01T00:00:00+00:00",
+  "context_candles": 128,
+  "last_observed_close": 71326.0,
+  "samples": 100,
+  "seed": 42,
+  "metadata": {
+    "model": "kronos-small",
+    "model_provenance": {
+      "repo": "NeoQuasar/Kronos-small",
+      "revision": "901c26c1332695a2a8f243eb2f37243a37bea320",
+      "downloaded_at": "2026-10-29T13:13:57.627072+00:00",
+      "files": {
+        "README.md": "33ba1550110c020dc30da869c91a65749009af7671dff0dce98fc0a914f3fc04",
+        "config.json": "5e0f6a605d5f81b5c9b559fe5cf716a1acb041c744e6f41bd05b097b7a685396",
+        "model.safetensors": "b082dfcbd8e8c142a725c8bbb99781802f38fec81210e13479effb32b3c3e020"
+      },
+      "pretraining_overlap": "unknown",
+      "evidence_type": "checkpoint_provenance_not_return_evidence"
+    },
+    "tokenizer_provenance": {
+      "repo": "NeoQuasar/Kronos-Tokenizer-base",
+      "revision": "0e0117387f39004a9016484a186a908917e22426",
+      "downloaded_at": "2026-10-29T13:14:01.571941+00:00",
+      "files": {
+        "README.md": "24d59758e911d355a79608b6686610a14f649270d6d852f3d86b2a1e8232ce89",
+        "config.json": "2366e7ccfec76cbc19cf3c4c1b9c5d901be336ca1e83f2d2292c9bff381b77a2",
+        "model.safetensors": "59d85f6af76a2c3b8240ea06cb21db4213b4eeca053f246b23e29cf832fc6bee"
+      },
+      "pretraining_overlap": "unknown",
+      "evidence_type": "checkpoint_provenance_not_return_evidence"
+    },
+    "raw_invalid_ohlc_fraction": 0.020000000000000018,
+    "amount_source": "ohlc_mean_times_base_volume_proxy",
+    "range_projection": "high=max(raw OHLC), low=min(raw OHLC); open/close preserved",
+    "pretraining_overlap": "unknown; historical forecasts are exploratory"
+  },
+  "point_candle": {
+    "open": 71326.0234375,
+    "high": 71353.96875,
+    "low": 71313.01953125,
+    "close": 71328.21484375
+  },
+  "marginal_p10_p90": {
+    "open": [
+      71317.71875,
+      71345.63984375
+    ],
+    "high": [
+      71330.58984375,
+      71372.4796875
+    ],
+    "low": [
+      71293.50703125,
+      71326.43828125
+    ],
+    "close": [
+      71308.0390625,
+      71353.534375
+    ]
+  },
+  "sample_fraction_close_above_previous_close": 0.57,
+  "sample_fraction_green_body": 0.59,
+  "input_context_sha256": "b8a2847d8e1023ac21a04959ec7aaad44dabfdd770cdf7bef1b807bd1823e4bb",
+  "note": "One-minute sampled forecast, not a measured confidence level. Intervals are marginal, not joint. Historical input produces a historical forecast, not a current market quote."
+}

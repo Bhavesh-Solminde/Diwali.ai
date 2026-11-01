@@ -1,0 +1,25 @@
+# Secrets and local state
+.env
+.env.*
+!.env.example
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+data/
+**/runtime/
+*.app/
+*.exe
+*.dll
+*.dmg
+*.zip
+*.plist
+# Purchased code and full source transcripts remain local
+*-selected-il.txt
+*-transcript.txt
+v05-player.log
+# Downloaded/trained weights remain local
+*.pt
+*.pth
+*.safetensors

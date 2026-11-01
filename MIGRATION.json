@@ -1,0 +1,19 @@
+{
+  "source_workspace": "100_TO_750k",
+  "date": "2026-11-01",
+  "moved_paths": [
+    "docs/planning/btc-model-frozen-spec-and-sol-handoff-2026-11-01.md",
+    "docs/planning/btc-model-training-protocol-2026-11-01.md",
+    "docs/planning/krafer-source-review-2026-11-01.md",
+    "docs/planning/krafer-visual-review-pass-2026-11-01.md",
+    "docs/planning/windows-simulator-research",
+    "docs/planning/windows-simulator-research-handoff.zip",
+    "docs/planning/simulator-diagnostics-2026-11-01",
+    "research/next_candle",
+    "research/orderbook_benchmark",
+    "tests/next_candle",
+    "results/next_candle",
+    "results/orderbook_benchmark"
+  ],
+  "scope": "BTC next-candle and order-book AI research, source review, simulator diagnostics and Windows research handoff"
+}

@@ -1,0 +1,6 @@
+# Optional standalone training/inference environment; does not change the broker bot.
+numpy>=2.0
+pandas>=2.2
+pyarrow>=18
+torch>=2.6
+# Kronos uses the separately pinned, already-installed foundation environment.

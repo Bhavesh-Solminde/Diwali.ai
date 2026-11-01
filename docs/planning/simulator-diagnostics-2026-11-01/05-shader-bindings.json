@@ -1,0 +1,37 @@
+[
+  {
+    "stage": "progVertex",
+    "name": "Candles",
+    "slot": 3
+  },
+  {
+    "stage": "progVertex",
+    "name": "OrderBars",
+    "slot": 6
+  },
+  {
+    "stage": "progVertex",
+    "name": "Scale",
+    "slot": 8
+  },
+  {
+    "stage": "progVertex",
+    "name": "TradeMarkers",
+    "slot": 7
+  },
+  {
+    "stage": "progVertex",
+    "name": "VolumeBars",
+    "slot": 5
+  },
+  {
+    "stage": "progVertex",
+    "name": "Wicks",
+    "slot": 4
+  },
+  {
+    "stage": "progFragment",
+    "name": "Color",
+    "slot": 0
+  }
+]
