@@ -1,0 +1,20 @@
+{
+  "preparation_items_completed": 3,
+  "original_checklist_completed": 11,
+  "original_checklist_total": 16,
+  "remaining_limitations": 5,
+  "tests_passed": 46,
+  "neural_training_started": false,
+  "test_targets_scored": false,
+  "code_sha256": {
+    "research/market_data/trade_alignment.py": "8ae3bf6c9baa86c1ec77800e7868b84de845b800baf3ad2b5e5e41eb2bc678cc",
+    "research/market_data/button_baselines.py": "7c5ceccd488be6ba09ea792d5f59902dac601b36ab5ddc38edc63a07f808f388"
+  },
+  "protocol_sha256": "2056a5fb4eac17240bd8ec46ada50812b72becdef6cd9737ebd5cc06189dcc3f",
+  "aggregate_sha256": {
+    "alignment-contract.json": "33a3c4d845213d2a77cc9d31cacab4e333223518d96a3cda574216d74958de3e",
+    "baseline-results.json": "cb27b1c97d0fc5b54456b6aaa2cf5b5404de040cad677ff3f7f51db914ff728f",
+    "frozen-protocol.json": "ce41d1dee4467113608b75871c4bf2509429ea07ff7a87f846d791ac3a25cc29",
+    "trade-alignment-probe.json": "f898ad871d05a85151d57730bf45d37fe79362cb8d6b89639deb94ff32cc3bbe"
+  }
+}

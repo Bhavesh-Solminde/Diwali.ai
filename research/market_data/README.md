@@ -27,3 +27,10 @@ invented as an observed receipt. `collect --snapshot-every 15` records immutable
 actual-receipt input requests; `audit_freezes` checks bytes and replay provenance.
 `frozen_inputs.prediction_record` rejects backdated or target-already-started
 results. No model inference, website UI or trading is introduced by these modules.
+
+Before every new model run, copy `docs/checklists/MODEL-TRAINING-CHECKLIST.md`.
+Current aligned trade inputs have FIVE fields (no individual/message counts): use
+`trade_alignment.transform` for history and `trade_alignment.live_features` for
+actual frozen requests, with `aligned-button-pilot-202610-v1/scalers.json`. Do not
+reuse the original eight-field trade scaler. Current protocol and new development
+baselines: `docs/planning/ALIGNED-EXPERIMENT-READINESS-2026-11-02.md`.

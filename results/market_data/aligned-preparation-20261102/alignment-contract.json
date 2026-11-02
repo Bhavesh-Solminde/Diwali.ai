@@ -1,0 +1,31 @@
+{
+  "state": "aligned_features_prepared",
+  "parent_dataset_fingerprint": "5520c1301c36f831493304005e0ce17a11b07fae0fd5d1877cbf511368e74a40",
+  "parent_dataset": "/Users/solminde/Developer/Personal/100_TO_750k/trading-ai/data/btc-perp/button-pilot-202610-v1",
+  "trade_names": [
+    "log1p_buy_btc",
+    "log1p_sell_btc",
+    "log1p_buy_usdt",
+    "log1p_sell_usdt",
+    "vwap_vs_candle_close_bp"
+  ],
+  "trade_width": 5,
+  "removed": [
+    "individual_execution_count",
+    "buy_execution_count",
+    "sell_execution_count",
+    "aggregate_message_count"
+  ],
+  "quantity_field_live": "q (not nq)",
+  "bucketing": "60 complete local receipt-second buckets before freeze",
+  "common_transform": "trade_alignment.transform, using latest input candle close as anchor",
+  "fit_origin_hash": "d3cf22f61e5efeb78bf5805155aafa0e1e586184d6e62374393a1a10ccf12396",
+  "scaler_sha256": "85d7086fc2e6af36e61bdd85b7028eba807816209c488dd4775a5917bc598044",
+  "code_sha256": "8ae3bf6c9baa86c1ec77800e7868b84de845b800baf3ad2b5e5e41eb2bc678cc",
+  "limitations": [
+    "Receipt-time grouping/latency can differ between recorders and aggregate/individual delivery.",
+    "Matching complete execution groups demonstrates additive definitions, not identical cross-recorder seconds.",
+    "Historical candle availability remains assumed."
+  ],
+  "neural_training_started": false
+}

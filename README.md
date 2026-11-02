@@ -4,6 +4,10 @@ Research on BTC next-minute candle generation, order-book forecasting and Krafer
 
 ## Start here
 
+- [Reusable model-training checklist](docs/checklists/MODEL-TRAINING-CHECKLIST.md) — copy for every new model/run; leave master unchecked.
+- [Current aligned pilot readiness and baseline results](docs/planning/ALIGNED-EXPERIMENT-READINESS-2026-11-02.md) — three preparation tasks complete, limitations retained.
+- [Frozen current experiment settings](configs/experiments/btc-button-pilot-v1.json)
+
 - [Frozen specification and handoff](docs/planning/btc-model-frozen-spec-and-sol-handoff-2026-11-01.md)
 - [Training and evaluation protocol](docs/planning/btc-model-training-protocol-2026-11-01.md)
 - [Krafer source review](docs/planning/krafer-source-review-2026-11-01.md)

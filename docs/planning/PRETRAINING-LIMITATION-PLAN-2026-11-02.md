@@ -185,3 +185,12 @@ Readiness is GO for a small exploratory comparison under the documented historic
 availability assumption; live-performance and historical timing-certification
 limitations remain. The insurance/ADL filtering correction is scoped to the new
 trade stream; the original full-year audit is not silently relabelled corrected.
+
+### Three preparation tasks completed
+
+The [aligned experiment readiness record](ALIGNED-EXPERIMENT-READINESS-2026-11-02.md)
+records completed input-definition alignment, the frozen experiment protocol, and
+seven new development baselines. A [reusable run checklist](../checklists/MODEL-TRAINING-CHECKLIST.md)
+must be copied and evidenced for future models. The original 16-item list now has
+11 completed items; the five observational/scope limitations remain. No neural
+training or final-test model scoring is claimed.

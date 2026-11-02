@@ -1,0 +1,17 @@
+{
+  "state": "pass",
+  "duration_seconds": 97.25,
+  "aggregate_messages": 2988,
+  "individual_ids_observed": 8824,
+  "complete_groups_matched": 2961,
+  "bundled_groups_matched": 1259,
+  "matched_executions": 7738,
+  "incomplete_groups_excluded": 27,
+  "mismatching_group_count": 0,
+  "groups_q_differs_from_nq": 0,
+  "errors": [],
+  "raw_sha256": "134f9f8ba5933d349ba26374aa266c6c1a20415b3764a8e5065a6efd11b82f5f",
+  "comparison": "exact Decimal buy/sell quantity and notional, same native execution-ID groups",
+  "not_proven": "Identical receipt-time buckets across recorders; historical arrival authenticity",
+  "acceptance": "at least 100 complete groups, 10 bundled, 95% complete coverage; zero mismatches/errors"
+}
