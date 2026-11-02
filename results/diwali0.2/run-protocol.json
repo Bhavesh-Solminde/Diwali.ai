@@ -1,0 +1,41 @@
+{
+  "model": "diwali0.2",
+  "task": "one next full calendar minute; no recursive generation",
+  "classes": [
+    "bearish",
+    "neutral",
+    "bullish"
+  ],
+  "primary_threshold_bp": 2.0,
+  "boundaries": "bearish <= -2; bullish >= +2; neutral strictly between",
+  "reference": "VWAP of latest nonempty complete received-second in 60-second input window; float32 archived additive amounts; NOT exact last trade or midpoint",
+  "reference_quality": "exclude windows without observed executions or with reference older than 2 seconds at cutoff; never fall back to stale candle close",
+  "secondary": "candle colour close vs own open; neutral exact equality; separate probabilities",
+  "inputs": "1440 candles, 60 book/trade seconds, observed reference displacement from last completed close",
+  "split": "fit Oct1-18; development Oct19-21; calibration Oct22-23; shared inspected benchmark Oct24-31, 2026 UTC",
+  "selection": "lowest mean three-seed primary development log loss; inference seed17 fixed; early stopping per seed on primary development log loss",
+  "architectures": [
+    "logistic",
+    "mlp",
+    "sequence"
+  ],
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "max_epochs": 20,
+  "patience": 4,
+  "batch": 128,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.0001,
+  "loss": "unweighted primary cross entropy + 0.25 secondary colour cross entropy",
+  "calibration": "per-head scalar temperature, calibration log loss minimized on fixed 161-point log grid [.1,10]",
+  "limitations": [
+    "Historical candle availability assumed; provider receipt clocks unverified.",
+    "October benchmark previously inspected; fresh confirmation required.",
+    "No trade win-rate, profitability, news, hidden orders or live accuracy claim.",
+    "Three outcomes do not identify a continuous price density or candle-path heatmap."
+  ],
+  "code_sha256": "a8c878e862fbe02348f30ceef0872eb371692e8fb2191212dfe3bd1ca2208c46"
+}

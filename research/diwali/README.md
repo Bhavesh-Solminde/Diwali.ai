@@ -1,4 +1,30 @@
-# diwali0.1
+# Diwali model experiments
+
+## diwali0.2 probability model
+
+Train the single next-full-minute bearish/neutral/bullish probabilities with:
+
+```sh
+python -m research.diwali.probability --output data/models/NEW-PROBABILITY-RUN
+python -m research.diwali.probability_serve --port 8742
+```
+
+The default completed run is `data/models/diwali0.2`. The probability server
+shows the report and ten checkpoint-backed Predict/Reveal examples. The original
+diwali0.1 UI remains on port 8741. Reference is explicitly the latest nonempty
+received-second execution VWAP, at most two seconds old, not exact last trade or
+absolute book midpoint. Primary neutral means closing within +/-2 basis points;
+secondary flat means target close equals its own open. They are different events.
+
+Selection compares three-seed development log loss for logistic, MLP and sequence
+models. Calibration uses a separate chronological block. October24–31 was already
+inspected in diwali0.1 and remains a disclosed shared historical benchmark.
+This run's high-confidence forecasts were all neutral; it establishes no
+80–20 bullish/bearish trading opportunities. A categorical model alone cannot
+draw a valid continuous future-price cloud. See the 3 November training record
+in `docs/planning/DIWALI0.2-PROBABILITY-TRAINING-2026-11-03.md`.
+
+## diwali0.1 candle model
 
 First small conditional historical BTCUSDT next-full-minute candle model. Local
 weights/data stay under ignored `data/`; the report and code are in Git. A Python

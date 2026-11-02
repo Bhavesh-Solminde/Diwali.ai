@@ -1,0 +1,7 @@
+{
+  "cases": 10,
+  "probability_max_abs_difference_cpu_vs_saved_mps": 5.20300806883256e-08,
+  "actual_hidden_before_predict_and_reveal": true,
+  "all_revealed_labels_match": true,
+  "reference_definition_verified": true
+}

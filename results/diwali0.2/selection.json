@@ -1,0 +1,10 @@
+{
+  "architecture": "sequence",
+  "seed": 17,
+  "development_means": {
+    "logistic": 1.0828630450558159,
+    "mlp": 1.098825484002102,
+    "sequence": 1.0791939874495193
+  },
+  "frozen_before_calibration_and_benchmark": true
+}
