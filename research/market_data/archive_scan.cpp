@@ -184,7 +184,8 @@ struct Scanner {
       bool bad=false;
       if(str(symbol,i)!="BTCUSDT"){counts.add("wrong_symbol_rows");bad=true;}
       bool parsed=fixed(str(price,i),p)&&fixed(str(qty,i),q);
-      bool non_market=parsed&&p==0&&q==0&&str(order_type,i)=="NA";
+      bool non_market=(parsed&&p==0&&q==0&&str(order_type,i)=="NA")
+          ||str(order_type,i)=="INSURANCE_FUND"||str(order_type,i)=="ADL";
       if(!non_market && (!parsed||p<=0||q<=0||maker->IsNull(i))){counts.add("invalid_trade_rows");bad=true;}
       if(t<hour/1000000-3600000 || t>hour/1000000+7200000 ||tid<0){counts.add("invalid_trade_clock_or_id_rows");bad=true;}
       if(last_trade>=0 && tid==last_trade){counts.add("adjacent_duplicate_trade_ids");bad=true;}
@@ -192,9 +193,9 @@ struct Scanner {
       if(last_trade>=0 && tid>last_trade+1){counts.add("trade_id_gap_events");counts.add("missing_trade_ids",tid-last_trade-1);bad=true;}
       last_trade=std::max(last_trade,tid);
       on_trade(r,e,t,tid,p,q,maker->IsValid(i)&&maker->Value(i),bad,non_market);
-      // Exchange NA events occupy trade IDs but are not executions. Preserve sequence,
+      // NA placeholders and insurance/ADL records occupy IDs but are not market executions. Preserve sequence,
       // exclude explicitly from OHLC/VWAP/volume/count rather than inventing a zero price.
-      if(non_market){counts.add("non_market_zero_events");continue;}
+      if(non_market){counts.add(str(order_type,i)=="NA"?"non_market_zero_events":"non_market_insurance_adl_events");continue;}
       I minute=t/60000*60000;auto& c=candles[minute];
       if(!c.n){c.o=c.h=c.l=c.c=p;c.min_id=c.max_id=tid;}
       ++c.n;c.h=std::max(c.h,p);c.l=std::min(c.l,p);

@@ -170,3 +170,18 @@ three selected bad/missing source minutes. This improves the recovery options;
 original receipt times and the 7,150-origin strict dataset remain unchanged until
 a versioned repair and availability review. Do not treat the earlier source
 inventory's lack of a second book sample as absence of recoverable execution data.
+
+### Implemented recovery/button follow-up
+
+See [recovered dataset and frozen input implementation](RECOVERED-BUTTON-DATASET-2026-11-02.md).
+All 85 selected candle-content defects now have reconciled reconstructions (84
+using official daily trades; one consistent official/provider native-ID union).
+The original strict dataset is preserved. The new explicitly conditional button
+cohort has 42,484 primary examples and all three development days represented,
+superseding the one-day coverage blocker for that new experiment only. No original
+receipt clock was recovered or fabricated. Six actual-receipt live input freezes
+passed hash/provenance/cutoff checks; no neural predictions or trades were made.
+Readiness is GO for a small exploratory comparison under the documented historical
+availability assumption; live-performance and historical timing-certification
+limitations remain. The insurance/ADL filtering correction is scoped to the new
+trade stream; the original full-year audit is not silently relabelled corrected.

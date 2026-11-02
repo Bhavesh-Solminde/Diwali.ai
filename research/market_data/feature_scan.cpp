@@ -45,7 +45,7 @@ struct FeatureScanner: Scanner {
         candle_available[trade_time/60000*60000],receipt);
     if(receipt<hour || receipt>=hour+3600*SEC)return;
     auto& f=flow[(receipt-hour)/SEC];f.max_receipt=std::max(f.max_receipt,receipt);
-    f.max_event=std::max(f.max_event,event*1000000LL);f.max_id=std::max(f.max_id,id);f.bad|=bad;
+    f.max_event=std::max(f.max_event,std::max(event,trade_time)*1000000LL);f.max_id=std::max(f.max_id,id);f.bad|=bad;
     if(non_market||bad)return;
     double q=qty/1e8,n=price/1e8*q;
     int side=maker?1:0;f.x[side]+=q;f.x[side+2]+=n;f.x[4]+=1;f.x[side+5]+=1;

@@ -15,6 +15,7 @@ class Book:
         self.last = None
         self.synced = False
         self.snapshot_id = None
+        self.bid_floor, self.ask_ceiling = None, None
 
     @staticmethod
     def levels(rows):
@@ -33,6 +34,8 @@ class Book:
             self.bids = self.levels(payload['bids'])
             self.asks = self.levels(payload['asks'])
             self.snapshot_id = int(payload['lastUpdateId'])
+            if self.bids and self.asks:
+                self.bid_floor, self.ask_ceiling = min(self.bids), max(self.asks)
         except Exception:
             self.invalidate()
             raise
@@ -72,6 +75,9 @@ class Book:
     def top(self, count=20):
         if not self.synced:
             raise BookGap('book unavailable')
-        return dict(update_id=self.last,
+        bids=sorted(self.bids, reverse=True)[:count];asks=sorted(self.asks)[:count]
+        bounded=(len(bids)==count and len(asks)==count and self.bid_floor is not None
+                 and bids[-1]>=self.bid_floor and asks[-1]<=self.ask_ceiling)
+        return dict(update_id=self.last, top20_within_snapshot_bounds=bounded,
                     bids=[[str(p), str(self.bids[p])] for p in sorted(self.bids, reverse=True)[:count]],
                     asks=[[str(p), str(self.asks[p])] for p in sorted(self.asks)[:count]])

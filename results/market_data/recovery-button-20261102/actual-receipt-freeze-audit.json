@@ -1,0 +1,68 @@
+{
+  "state": "frozen_requests_verified",
+  "quality": {
+    "raw_integrity_pass": true,
+    "counts": {
+      "rest": 8,
+      "connection": 2,
+      "unclosed_rest_candle_rows": 3,
+      "market": 9373,
+      "depth": 1758,
+      "book": 1751,
+      "input_snapshot_rejected": 5,
+      "input_snapshot": 6,
+      "book_invalidated": 1
+    },
+    "connections": 2,
+    "book_segments": 1,
+    "official_closed_minutes": 1501,
+    "missing_official_minutes": 0,
+    "duration_seconds": 191.942145,
+    "training_ready": false,
+    "reason": "Integrity/engineering audit only. Paired coverage, feature windows, trade coverage and chronological splits still need dataset validation.",
+    "candle_source": "exchange REST closed klines; aggregate-trade reconstruction is separate"
+  },
+  "requests_verified": 6,
+  "requests": [
+    {
+      "snapshot_utc_ns": 1793630028478623000,
+      "target_start_ns": 1793630040000000000,
+      "sha256": "d80eca466b39c85713e79d8084dd6052266d59dc71a521ce70a0ef62a60208b1",
+      "source_replay_identical": true
+    },
+    {
+      "snapshot_utc_ns": 1793630043541325000,
+      "target_start_ns": 1793630100000000000,
+      "sha256": "dbb36f32de7989690e0f9e24ea9b9283d06a5dafc8068502806fbcb8b7098afa",
+      "source_replay_identical": true
+    },
+    {
+      "snapshot_utc_ns": 1793630058572175000,
+      "target_start_ns": 1793630100000000000,
+      "sha256": "ab98f0c7d35050adb9f62cfe95b81a5c8cc3a9c707d1ad799138e0c38b3cbff8",
+      "source_replay_identical": true
+    },
+    {
+      "snapshot_utc_ns": 1793630073589455000,
+      "target_start_ns": 1793630100000000000,
+      "sha256": "ddd9c373c456223d47b011b00ae6280d37b269278da21f8e3a63904aa4c8b385",
+      "source_replay_identical": true
+    },
+    {
+      "snapshot_utc_ns": 1793630088605341000,
+      "target_start_ns": 1793630100000000000,
+      "sha256": "5d09037a02e807bb81d1a6873aa736b979a7cdc3e199b9d3f44132c2e4259dc4",
+      "source_replay_identical": true
+    },
+    {
+      "snapshot_utc_ns": 1793630103644641000,
+      "target_start_ns": 1793630160000000000,
+      "sha256": "7470b222a79606fb60f6f1b23ff590bf9d11175708660041b7085ae435467b18",
+      "source_replay_identical": true
+    }
+  ],
+  "neural_predictions_generated": 0,
+  "model_performance_tested": false,
+  "training_ready": false,
+  "scope": "Finite live input/provenance smoke check; not sustained coverage or model accuracy"
+}

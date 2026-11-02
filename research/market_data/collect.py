@@ -171,8 +171,12 @@ async def housekeeping(store):
         await asyncio.sleep(60)
 
 
-async def record(output, seconds):
-    store = Store(output)
+async def record(output, seconds, snapshot_every=None):
+    if snapshot_every is not None:
+        from .frozen_inputs import SnapshotStore
+        store = SnapshotStore(output)
+    else:
+        store = Store(output)
     tasks = []
     try:
         metadata = await rest(store, '/fapi/v1/exchangeInfo')
@@ -182,6 +186,8 @@ async def record(output, seconds):
         tasks = [asyncio.create_task(retry(store, 'depth', depth_session)),
                  asyncio.create_task(retry(store, 'market', market_session)),
                  asyncio.create_task(housekeeping(store))]
+        if snapshot_every is not None:
+            tasks.append(asyncio.create_task(store.snapshots(snapshot_every)))
         store.status('recording')
         await asyncio.sleep(seconds)
     finally:
@@ -195,7 +201,11 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('output', type=Path)
     parser.add_argument('--seconds', type=int, default=300)
+    parser.add_argument('--snapshot-every', type=int, default=None,
+        help='Freeze actual-receipt input requests at this interval; no model/trading')
     args = parser.parse_args()
     if args.seconds <= 0:
         parser.error('seconds must be positive')
-    asyncio.run(record(args.output, args.seconds))
+    if args.snapshot_every is not None and args.snapshot_every < 1:
+        parser.error('snapshot interval must be positive')
+    asyncio.run(record(args.output, args.seconds, args.snapshot_every))

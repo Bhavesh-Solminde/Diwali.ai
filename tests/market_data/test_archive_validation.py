@@ -242,3 +242,15 @@ def test_pilot_boundaries_cover_one_month_without_overlapping_targets():
     assert ranges[-1][1] == timestamp('2026-11-01')
     assert all(a[1] == b[0] for a, b in zip(ranges, ranges[1:]))
     assert sum((b-a)//60000 for a, b in ranges) == 31 * 1440
+
+
+def test_insurance_and_adl_ids_do_not_contaminate_market_candles(scanner,tmp_path):
+    rows=trades([1,2,3,4])
+    rows[1].update(price='0',quantity='0',order_type='INSURANCE_FUND')
+    rows[2].update(price='999',quantity='100',order_type='ADL')
+    q=scan(scanner,tmp_path,rows,'trades')[0]
+    assert q['counts']['non_market_insurance_adl_events']==2
+    assert not q['counts'].get('invalid_trade_rows')
+    assert not q['counts'].get('trade_id_gap_events')
+    assert q['candles'][0]['count']==2
+    assert q['candles'][0]['high']=='100.10000000'

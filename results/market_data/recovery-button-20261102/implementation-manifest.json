@@ -1,0 +1,22 @@
+{
+  "code_sha256": {
+    "research/market_data/recover_candles.py": "26f13aae23ff031c7d5a85bffc21eb26ec974baa185aebffbf9a5e4f5fe06d07",
+    "research/market_data/button_dataset.py": "96d2d4aff355a519bf88b2104b0c48f735ae3542410fc75cc86b08ed5bb74f2d",
+    "research/market_data/frozen_inputs.py": "540ac9b8fd8982aa1d211f8dc5d1004208b6df3290c6044fe5a2c468607dac83",
+    "research/market_data/audit_freezes.py": "8285427e717368cbaf7796a9460b8505c8071115bd2fc0267cc08de82c61c6d5",
+    "research/market_data/collect.py": "c843e66c9fe87fb5ce10036bdb148077389238c730787043c657ffe6ef676b26",
+    "research/market_data/book.py": "b866fe16b6a5684ab582ae1033845d3efd2fbc1fce36f4870871c53a12bb918a",
+    "research/market_data/feature_scan.cpp": "bffbb306b27d68a1004e067846e513db957bf65b44e3652f85248a4ca61887ce",
+    "research/market_data/archive_scan.cpp": "c8da51f348f5b8fbcdaa8033fdf7236ab174659fa7340891ff55fd8a97baeaf4"
+  },
+  "aggregate_sha256": {
+    "actual-receipt-freeze-audit.json": "9bcc2c9e64a68e957dbad9568830ebaaa9a7b100aaea5d54fd1b2134e06ca7f6",
+    "conditional-dataset-manifest.json": "86532dd91c5d4a85c1a69f8f66922a9358e2a8fb4f0ece21aefafba57edff744",
+    "content-recovery-summary.json": "c6434b88321a93df645e6544d4b4910c54d70afe61ffd3ad588997efc38880f9"
+  },
+  "original_strict_dataset_unchanged": true,
+  "historical_receipt_times_recovered": false,
+  "neural_training_started": false,
+  "model_forward_predictions_made": 0,
+  "stage_readiness": "small exploratory model comparison on the conditional historical cohort; no verified live performance claim"
+}

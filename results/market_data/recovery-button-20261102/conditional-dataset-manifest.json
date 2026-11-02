@@ -1,0 +1,1285 @@
+{
+  "state": "historical_button_dataset_complete",
+  "training_started": false,
+  "historical_candle_availability": "ASSUMED close time + grace; not measured receipt time",
+  "verified_leakage_free_live_test": false,
+  "original_dataset_changed": false,
+  "target": "next full calendar minute after input snapshot; reject results ready at/after target start",
+  "input_index_columns": [
+    "snapshot_ms",
+    "target_minute_ms",
+    "candle_end_exclusive_index",
+    "second_begin",
+    "second_end_exclusive"
+  ],
+  "context_candles": 1440,
+  "book_trade_seconds": 60,
+  "phases_seconds": [
+    0,
+    15,
+    30,
+    45
+  ],
+  "assumed_candle_finalization_grace_ms": [
+    1000,
+    5000,
+    30000,
+    60000
+  ],
+  "primary": "phase15-grace1000",
+  "partition_counts": {
+    "fit": {
+      "phase0-grace1000": {
+        "eligible": 24411,
+        "excluded": {
+          "outside_history": 2,
+          "invalid_book_or_trade_seconds": 1507
+        },
+        "days_represented": 18
+      },
+      "phase0-grace5000": {
+        "eligible": 24411,
+        "excluded": {
+          "outside_history": 2,
+          "invalid_book_or_trade_seconds": 1507
+        },
+        "days_represented": 18
+      },
+      "phase0-grace30000": {
+        "eligible": 24411,
+        "excluded": {
+          "outside_history": 2,
+          "invalid_book_or_trade_seconds": 1507
+        },
+        "days_represented": 18
+      },
+      "phase0-grace60000": {
+        "eligible": 24411,
+        "excluded": {
+          "outside_history": 3,
+          "invalid_book_or_trade_seconds": 1506
+        },
+        "days_represented": 18
+      },
+      "phase15-grace1000": {
+        "eligible": 24421,
+        "excluded": {
+          "outside_history": 2,
+          "invalid_book_or_trade_seconds": 1497
+        },
+        "days_represented": 18
+      },
+      "phase15-grace5000": {
+        "eligible": 24421,
+        "excluded": {
+          "outside_history": 2,
+          "invalid_book_or_trade_seconds": 1497
+        },
+        "days_represented": 18
+      },
+      "phase15-grace30000": {
+        "eligible": 24421,
+        "excluded": {
+          "outside_history": 2,
+          "invalid_book_or_trade_seconds": 1497
+        },
+        "days_represented": 18
+      },
+      "phase15-grace60000": {
+        "eligible": 24421,
+        "excluded": {
+          "outside_history": 2,
+          "invalid_book_or_trade_seconds": 1497
+        },
+        "days_represented": 18
+      },
+      "phase30-grace1000": {
+        "eligible": 24423,
+        "excluded": {
+          "outside_history": 2,
+          "invalid_book_or_trade_seconds": 1495
+        },
+        "days_represented": 18
+      },
+      "phase30-grace5000": {
+        "eligible": 24423,
+        "excluded": {
+          "outside_history": 2,
+          "invalid_book_or_trade_seconds": 1495
+        },
+        "days_represented": 18
+      },
+      "phase30-grace30000": {
+        "eligible": 24423,
+        "excluded": {
+          "outside_history": 2,
+          "invalid_book_or_trade_seconds": 1495
+        },
+        "days_represented": 18
+      },
+      "phase30-grace60000": {
+        "eligible": 24423,
+        "excluded": {
+          "outside_history": 2,
+          "invalid_book_or_trade_seconds": 1495
+        },
+        "days_represented": 18
+      },
+      "phase45-grace1000": {
+        "eligible": 24418,
+        "excluded": {
+          "outside_history": 2,
+          "invalid_book_or_trade_seconds": 1500
+        },
+        "days_represented": 18
+      },
+      "phase45-grace5000": {
+        "eligible": 24418,
+        "excluded": {
+          "outside_history": 2,
+          "invalid_book_or_trade_seconds": 1500
+        },
+        "days_represented": 18
+      },
+      "phase45-grace30000": {
+        "eligible": 24418,
+        "excluded": {
+          "outside_history": 2,
+          "invalid_book_or_trade_seconds": 1500
+        },
+        "days_represented": 18
+      },
+      "phase45-grace60000": {
+        "eligible": 24418,
+        "excluded": {
+          "outside_history": 2,
+          "invalid_book_or_trade_seconds": 1500
+        },
+        "days_represented": 18
+      }
+    },
+    "development": {
+      "phase0-grace1000": {
+        "eligible": 4079,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 241
+        },
+        "days_represented": 3
+      },
+      "phase0-grace5000": {
+        "eligible": 4079,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 241
+        },
+        "days_represented": 3
+      },
+      "phase0-grace30000": {
+        "eligible": 4079,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 241
+        },
+        "days_represented": 3
+      },
+      "phase0-grace60000": {
+        "eligible": 4079,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 241
+        },
+        "days_represented": 3
+      },
+      "phase15-grace1000": {
+        "eligible": 4079,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 241
+        },
+        "days_represented": 3
+      },
+      "phase15-grace5000": {
+        "eligible": 4079,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 241
+        },
+        "days_represented": 3
+      },
+      "phase15-grace30000": {
+        "eligible": 4079,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 241
+        },
+        "days_represented": 3
+      },
+      "phase15-grace60000": {
+        "eligible": 4079,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 241
+        },
+        "days_represented": 3
+      },
+      "phase30-grace1000": {
+        "eligible": 4078,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 242
+        },
+        "days_represented": 3
+      },
+      "phase30-grace5000": {
+        "eligible": 4078,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 242
+        },
+        "days_represented": 3
+      },
+      "phase30-grace30000": {
+        "eligible": 4078,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 242
+        },
+        "days_represented": 3
+      },
+      "phase30-grace60000": {
+        "eligible": 4078,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 242
+        },
+        "days_represented": 3
+      },
+      "phase45-grace1000": {
+        "eligible": 4077,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 243
+        },
+        "days_represented": 3
+      },
+      "phase45-grace5000": {
+        "eligible": 4077,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 243
+        },
+        "days_represented": 3
+      },
+      "phase45-grace30000": {
+        "eligible": 4077,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 243
+        },
+        "days_represented": 3
+      },
+      "phase45-grace60000": {
+        "eligible": 4077,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 243
+        },
+        "days_represented": 3
+      }
+    },
+    "calibration": {
+      "phase0-grace1000": {
+        "eligible": 2688,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 192
+        },
+        "days_represented": 2
+      },
+      "phase0-grace5000": {
+        "eligible": 2688,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 192
+        },
+        "days_represented": 2
+      },
+      "phase0-grace30000": {
+        "eligible": 2688,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 192
+        },
+        "days_represented": 2
+      },
+      "phase0-grace60000": {
+        "eligible": 2688,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 192
+        },
+        "days_represented": 2
+      },
+      "phase15-grace1000": {
+        "eligible": 2688,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 192
+        },
+        "days_represented": 2
+      },
+      "phase15-grace5000": {
+        "eligible": 2688,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 192
+        },
+        "days_represented": 2
+      },
+      "phase15-grace30000": {
+        "eligible": 2688,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 192
+        },
+        "days_represented": 2
+      },
+      "phase15-grace60000": {
+        "eligible": 2688,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 192
+        },
+        "days_represented": 2
+      },
+      "phase30-grace1000": {
+        "eligible": 2688,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 192
+        },
+        "days_represented": 2
+      },
+      "phase30-grace5000": {
+        "eligible": 2688,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 192
+        },
+        "days_represented": 2
+      },
+      "phase30-grace30000": {
+        "eligible": 2688,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 192
+        },
+        "days_represented": 2
+      },
+      "phase30-grace60000": {
+        "eligible": 2688,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 192
+        },
+        "days_represented": 2
+      },
+      "phase45-grace1000": {
+        "eligible": 2689,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 191
+        },
+        "days_represented": 2
+      },
+      "phase45-grace5000": {
+        "eligible": 2689,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 191
+        },
+        "days_represented": 2
+      },
+      "phase45-grace30000": {
+        "eligible": 2689,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 191
+        },
+        "days_represented": 2
+      },
+      "phase45-grace60000": {
+        "eligible": 2689,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 191
+        },
+        "days_represented": 2
+      }
+    },
+    "locked_test": {
+      "phase0-grace1000": {
+        "eligible": 11296,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 224
+        },
+        "days_represented": 8
+      },
+      "phase0-grace5000": {
+        "eligible": 11296,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 224
+        },
+        "days_represented": 8
+      },
+      "phase0-grace30000": {
+        "eligible": 11296,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 224
+        },
+        "days_represented": 8
+      },
+      "phase0-grace60000": {
+        "eligible": 11296,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 224
+        },
+        "days_represented": 8
+      },
+      "phase15-grace1000": {
+        "eligible": 11296,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 224
+        },
+        "days_represented": 8
+      },
+      "phase15-grace5000": {
+        "eligible": 11296,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 224
+        },
+        "days_represented": 8
+      },
+      "phase15-grace30000": {
+        "eligible": 11296,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 224
+        },
+        "days_represented": 8
+      },
+      "phase15-grace60000": {
+        "eligible": 11296,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 224
+        },
+        "days_represented": 8
+      },
+      "phase30-grace1000": {
+        "eligible": 11296,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 224
+        },
+        "days_represented": 8
+      },
+      "phase30-grace5000": {
+        "eligible": 11296,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 224
+        },
+        "days_represented": 8
+      },
+      "phase30-grace30000": {
+        "eligible": 11296,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 224
+        },
+        "days_represented": 8
+      },
+      "phase30-grace60000": {
+        "eligible": 11296,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 224
+        },
+        "days_represented": 8
+      },
+      "phase45-grace1000": {
+        "eligible": 11296,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 224
+        },
+        "days_represented": 8
+      },
+      "phase45-grace5000": {
+        "eligible": 11296,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 224
+        },
+        "days_represented": 8
+      },
+      "phase45-grace30000": {
+        "eligible": 11296,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 224
+        },
+        "days_represented": 8
+      },
+      "phase45-grace60000": {
+        "eligible": 11296,
+        "excluded": {
+          "invalid_book_or_trade_seconds": 224
+        },
+        "days_represented": 8
+      }
+    }
+  },
+  "daily_coverage": {
+    "fit:phase0-grace1000": {
+      "2026-10-01": 1412,
+      "2026-10-02": 1387,
+      "2026-10-03": 1416,
+      "2026-10-04": 1357,
+      "2026-10-05": 1357,
+      "2026-10-06": 1357,
+      "2026-10-07": 1357,
+      "2026-10-08": 1406,
+      "2026-10-09": 1370,
+      "2026-10-10": 1416,
+      "2026-10-11": 1416,
+      "2026-10-12": 1410,
+      "2026-10-13": 1357,
+      "2026-10-14": 1089,
+      "2026-10-15": 1112,
+      "2026-10-16": 1402,
+      "2026-10-17": 1382,
+      "2026-10-18": 1408
+    },
+    "fit:phase0-grace5000": {
+      "2026-10-01": 1412,
+      "2026-10-02": 1387,
+      "2026-10-03": 1416,
+      "2026-10-04": 1357,
+      "2026-10-05": 1357,
+      "2026-10-06": 1357,
+      "2026-10-07": 1357,
+      "2026-10-08": 1406,
+      "2026-10-09": 1370,
+      "2026-10-10": 1416,
+      "2026-10-11": 1416,
+      "2026-10-12": 1410,
+      "2026-10-13": 1357,
+      "2026-10-14": 1089,
+      "2026-10-15": 1112,
+      "2026-10-16": 1402,
+      "2026-10-17": 1382,
+      "2026-10-18": 1408
+    },
+    "fit:phase0-grace30000": {
+      "2026-10-01": 1412,
+      "2026-10-02": 1387,
+      "2026-10-03": 1416,
+      "2026-10-04": 1357,
+      "2026-10-05": 1357,
+      "2026-10-06": 1357,
+      "2026-10-07": 1357,
+      "2026-10-08": 1406,
+      "2026-10-09": 1370,
+      "2026-10-10": 1416,
+      "2026-10-11": 1416,
+      "2026-10-12": 1410,
+      "2026-10-13": 1357,
+      "2026-10-14": 1089,
+      "2026-10-15": 1112,
+      "2026-10-16": 1402,
+      "2026-10-17": 1382,
+      "2026-10-18": 1408
+    },
+    "fit:phase0-grace60000": {
+      "2026-10-01": 1412,
+      "2026-10-02": 1387,
+      "2026-10-03": 1416,
+      "2026-10-04": 1357,
+      "2026-10-05": 1357,
+      "2026-10-06": 1357,
+      "2026-10-07": 1357,
+      "2026-10-08": 1406,
+      "2026-10-09": 1370,
+      "2026-10-10": 1416,
+      "2026-10-11": 1416,
+      "2026-10-12": 1410,
+      "2026-10-13": 1357,
+      "2026-10-14": 1089,
+      "2026-10-15": 1112,
+      "2026-10-16": 1402,
+      "2026-10-17": 1382,
+      "2026-10-18": 1408
+    },
+    "fit:phase15-grace1000": {
+      "2026-10-01": 1413,
+      "2026-10-02": 1388,
+      "2026-10-03": 1416,
+      "2026-10-04": 1357,
+      "2026-10-05": 1357,
+      "2026-10-06": 1357,
+      "2026-10-07": 1357,
+      "2026-10-08": 1404,
+      "2026-10-09": 1373,
+      "2026-10-10": 1416,
+      "2026-10-11": 1416,
+      "2026-10-12": 1410,
+      "2026-10-13": 1357,
+      "2026-10-14": 1092,
+      "2026-10-15": 1113,
+      "2026-10-16": 1403,
+      "2026-10-17": 1383,
+      "2026-10-18": 1409
+    },
+    "fit:phase15-grace5000": {
+      "2026-10-01": 1413,
+      "2026-10-02": 1388,
+      "2026-10-03": 1416,
+      "2026-10-04": 1357,
+      "2026-10-05": 1357,
+      "2026-10-06": 1357,
+      "2026-10-07": 1357,
+      "2026-10-08": 1404,
+      "2026-10-09": 1373,
+      "2026-10-10": 1416,
+      "2026-10-11": 1416,
+      "2026-10-12": 1410,
+      "2026-10-13": 1357,
+      "2026-10-14": 1092,
+      "2026-10-15": 1113,
+      "2026-10-16": 1403,
+      "2026-10-17": 1383,
+      "2026-10-18": 1409
+    },
+    "fit:phase15-grace30000": {
+      "2026-10-01": 1413,
+      "2026-10-02": 1388,
+      "2026-10-03": 1416,
+      "2026-10-04": 1357,
+      "2026-10-05": 1357,
+      "2026-10-06": 1357,
+      "2026-10-07": 1357,
+      "2026-10-08": 1404,
+      "2026-10-09": 1373,
+      "2026-10-10": 1416,
+      "2026-10-11": 1416,
+      "2026-10-12": 1410,
+      "2026-10-13": 1357,
+      "2026-10-14": 1092,
+      "2026-10-15": 1113,
+      "2026-10-16": 1403,
+      "2026-10-17": 1383,
+      "2026-10-18": 1409
+    },
+    "fit:phase15-grace60000": {
+      "2026-10-01": 1413,
+      "2026-10-02": 1388,
+      "2026-10-03": 1416,
+      "2026-10-04": 1357,
+      "2026-10-05": 1357,
+      "2026-10-06": 1357,
+      "2026-10-07": 1357,
+      "2026-10-08": 1404,
+      "2026-10-09": 1373,
+      "2026-10-10": 1416,
+      "2026-10-11": 1416,
+      "2026-10-12": 1410,
+      "2026-10-13": 1357,
+      "2026-10-14": 1092,
+      "2026-10-15": 1113,
+      "2026-10-16": 1403,
+      "2026-10-17": 1383,
+      "2026-10-18": 1409
+    },
+    "fit:phase30-grace1000": {
+      "2026-10-01": 1412,
+      "2026-10-02": 1389,
+      "2026-10-03": 1416,
+      "2026-10-04": 1357,
+      "2026-10-05": 1357,
+      "2026-10-06": 1357,
+      "2026-10-07": 1357,
+      "2026-10-08": 1406,
+      "2026-10-09": 1372,
+      "2026-10-10": 1416,
+      "2026-10-11": 1416,
+      "2026-10-12": 1412,
+      "2026-10-13": 1357,
+      "2026-10-14": 1090,
+      "2026-10-15": 1114,
+      "2026-10-16": 1403,
+      "2026-10-17": 1383,
+      "2026-10-18": 1409
+    },
+    "fit:phase30-grace5000": {
+      "2026-10-01": 1412,
+      "2026-10-02": 1389,
+      "2026-10-03": 1416,
+      "2026-10-04": 1357,
+      "2026-10-05": 1357,
+      "2026-10-06": 1357,
+      "2026-10-07": 1357,
+      "2026-10-08": 1406,
+      "2026-10-09": 1372,
+      "2026-10-10": 1416,
+      "2026-10-11": 1416,
+      "2026-10-12": 1412,
+      "2026-10-13": 1357,
+      "2026-10-14": 1090,
+      "2026-10-15": 1114,
+      "2026-10-16": 1403,
+      "2026-10-17": 1383,
+      "2026-10-18": 1409
+    },
+    "fit:phase30-grace30000": {
+      "2026-10-01": 1412,
+      "2026-10-02": 1389,
+      "2026-10-03": 1416,
+      "2026-10-04": 1357,
+      "2026-10-05": 1357,
+      "2026-10-06": 1357,
+      "2026-10-07": 1357,
+      "2026-10-08": 1406,
+      "2026-10-09": 1372,
+      "2026-10-10": 1416,
+      "2026-10-11": 1416,
+      "2026-10-12": 1412,
+      "2026-10-13": 1357,
+      "2026-10-14": 1090,
+      "2026-10-15": 1114,
+      "2026-10-16": 1403,
+      "2026-10-17": 1383,
+      "2026-10-18": 1409
+    },
+    "fit:phase30-grace60000": {
+      "2026-10-01": 1412,
+      "2026-10-02": 1389,
+      "2026-10-03": 1416,
+      "2026-10-04": 1357,
+      "2026-10-05": 1357,
+      "2026-10-06": 1357,
+      "2026-10-07": 1357,
+      "2026-10-08": 1406,
+      "2026-10-09": 1372,
+      "2026-10-10": 1416,
+      "2026-10-11": 1416,
+      "2026-10-12": 1412,
+      "2026-10-13": 1357,
+      "2026-10-14": 1090,
+      "2026-10-15": 1114,
+      "2026-10-16": 1403,
+      "2026-10-17": 1383,
+      "2026-10-18": 1409
+    },
+    "fit:phase45-grace1000": {
+      "2026-10-01": 1413,
+      "2026-10-02": 1388,
+      "2026-10-03": 1416,
+      "2026-10-04": 1357,
+      "2026-10-05": 1357,
+      "2026-10-06": 1357,
+      "2026-10-07": 1357,
+      "2026-10-08": 1406,
+      "2026-10-09": 1371,
+      "2026-10-10": 1416,
+      "2026-10-11": 1416,
+      "2026-10-12": 1412,
+      "2026-10-13": 1357,
+      "2026-10-14": 1090,
+      "2026-10-15": 1113,
+      "2026-10-16": 1401,
+      "2026-10-17": 1382,
+      "2026-10-18": 1409
+    },
+    "fit:phase45-grace5000": {
+      "2026-10-01": 1413,
+      "2026-10-02": 1388,
+      "2026-10-03": 1416,
+      "2026-10-04": 1357,
+      "2026-10-05": 1357,
+      "2026-10-06": 1357,
+      "2026-10-07": 1357,
+      "2026-10-08": 1406,
+      "2026-10-09": 1371,
+      "2026-10-10": 1416,
+      "2026-10-11": 1416,
+      "2026-10-12": 1412,
+      "2026-10-13": 1357,
+      "2026-10-14": 1090,
+      "2026-10-15": 1113,
+      "2026-10-16": 1401,
+      "2026-10-17": 1382,
+      "2026-10-18": 1409
+    },
+    "fit:phase45-grace30000": {
+      "2026-10-01": 1413,
+      "2026-10-02": 1388,
+      "2026-10-03": 1416,
+      "2026-10-04": 1357,
+      "2026-10-05": 1357,
+      "2026-10-06": 1357,
+      "2026-10-07": 1357,
+      "2026-10-08": 1406,
+      "2026-10-09": 1371,
+      "2026-10-10": 1416,
+      "2026-10-11": 1416,
+      "2026-10-12": 1412,
+      "2026-10-13": 1357,
+      "2026-10-14": 1090,
+      "2026-10-15": 1113,
+      "2026-10-16": 1401,
+      "2026-10-17": 1382,
+      "2026-10-18": 1409
+    },
+    "fit:phase45-grace60000": {
+      "2026-10-01": 1413,
+      "2026-10-02": 1388,
+      "2026-10-03": 1416,
+      "2026-10-04": 1357,
+      "2026-10-05": 1357,
+      "2026-10-06": 1357,
+      "2026-10-07": 1357,
+      "2026-10-08": 1406,
+      "2026-10-09": 1371,
+      "2026-10-10": 1416,
+      "2026-10-11": 1416,
+      "2026-10-12": 1412,
+      "2026-10-13": 1357,
+      "2026-10-14": 1090,
+      "2026-10-15": 1113,
+      "2026-10-16": 1401,
+      "2026-10-17": 1382,
+      "2026-10-18": 1409
+    },
+    "development:phase0-grace1000": {
+      "2026-10-19": 1415,
+      "2026-10-20": 1303,
+      "2026-10-21": 1361
+    },
+    "development:phase0-grace5000": {
+      "2026-10-19": 1415,
+      "2026-10-20": 1303,
+      "2026-10-21": 1361
+    },
+    "development:phase0-grace30000": {
+      "2026-10-19": 1415,
+      "2026-10-20": 1303,
+      "2026-10-21": 1361
+    },
+    "development:phase0-grace60000": {
+      "2026-10-19": 1415,
+      "2026-10-20": 1303,
+      "2026-10-21": 1361
+    },
+    "development:phase15-grace1000": {
+      "2026-10-19": 1415,
+      "2026-10-20": 1304,
+      "2026-10-21": 1360
+    },
+    "development:phase15-grace5000": {
+      "2026-10-19": 1415,
+      "2026-10-20": 1304,
+      "2026-10-21": 1360
+    },
+    "development:phase15-grace30000": {
+      "2026-10-19": 1415,
+      "2026-10-20": 1304,
+      "2026-10-21": 1360
+    },
+    "development:phase15-grace60000": {
+      "2026-10-19": 1415,
+      "2026-10-20": 1304,
+      "2026-10-21": 1360
+    },
+    "development:phase30-grace1000": {
+      "2026-10-19": 1415,
+      "2026-10-20": 1303,
+      "2026-10-21": 1360
+    },
+    "development:phase30-grace5000": {
+      "2026-10-19": 1415,
+      "2026-10-20": 1303,
+      "2026-10-21": 1360
+    },
+    "development:phase30-grace30000": {
+      "2026-10-19": 1415,
+      "2026-10-20": 1303,
+      "2026-10-21": 1360
+    },
+    "development:phase30-grace60000": {
+      "2026-10-19": 1415,
+      "2026-10-20": 1303,
+      "2026-10-21": 1360
+    },
+    "development:phase45-grace1000": {
+      "2026-10-19": 1415,
+      "2026-10-20": 1302,
+      "2026-10-21": 1360
+    },
+    "development:phase45-grace5000": {
+      "2026-10-19": 1415,
+      "2026-10-20": 1302,
+      "2026-10-21": 1360
+    },
+    "development:phase45-grace30000": {
+      "2026-10-19": 1415,
+      "2026-10-20": 1302,
+      "2026-10-21": 1360
+    },
+    "development:phase45-grace60000": {
+      "2026-10-19": 1415,
+      "2026-10-20": 1302,
+      "2026-10-21": 1360
+    },
+    "calibration:phase0-grace1000": {
+      "2026-10-22": 1331,
+      "2026-10-23": 1357
+    },
+    "calibration:phase0-grace5000": {
+      "2026-10-22": 1331,
+      "2026-10-23": 1357
+    },
+    "calibration:phase0-grace30000": {
+      "2026-10-22": 1331,
+      "2026-10-23": 1357
+    },
+    "calibration:phase0-grace60000": {
+      "2026-10-22": 1331,
+      "2026-10-23": 1357
+    },
+    "calibration:phase15-grace1000": {
+      "2026-10-22": 1331,
+      "2026-10-23": 1357
+    },
+    "calibration:phase15-grace5000": {
+      "2026-10-22": 1331,
+      "2026-10-23": 1357
+    },
+    "calibration:phase15-grace30000": {
+      "2026-10-22": 1331,
+      "2026-10-23": 1357
+    },
+    "calibration:phase15-grace60000": {
+      "2026-10-22": 1331,
+      "2026-10-23": 1357
+    },
+    "calibration:phase30-grace1000": {
+      "2026-10-22": 1331,
+      "2026-10-23": 1357
+    },
+    "calibration:phase30-grace5000": {
+      "2026-10-22": 1331,
+      "2026-10-23": 1357
+    },
+    "calibration:phase30-grace30000": {
+      "2026-10-22": 1331,
+      "2026-10-23": 1357
+    },
+    "calibration:phase30-grace60000": {
+      "2026-10-22": 1331,
+      "2026-10-23": 1357
+    },
+    "calibration:phase45-grace1000": {
+      "2026-10-22": 1332,
+      "2026-10-23": 1357
+    },
+    "calibration:phase45-grace5000": {
+      "2026-10-22": 1332,
+      "2026-10-23": 1357
+    },
+    "calibration:phase45-grace30000": {
+      "2026-10-22": 1332,
+      "2026-10-23": 1357
+    },
+    "calibration:phase45-grace60000": {
+      "2026-10-22": 1332,
+      "2026-10-23": 1357
+    },
+    "locked_test:phase0-grace1000": {
+      "2026-10-24": 1415,
+      "2026-10-25": 1416,
+      "2026-10-26": 1415,
+      "2026-10-27": 1387,
+      "2026-10-28": 1415,
+      "2026-10-29": 1416,
+      "2026-10-30": 1416,
+      "2026-10-31": 1416
+    },
+    "locked_test:phase0-grace5000": {
+      "2026-10-24": 1415,
+      "2026-10-25": 1416,
+      "2026-10-26": 1415,
+      "2026-10-27": 1387,
+      "2026-10-28": 1415,
+      "2026-10-29": 1416,
+      "2026-10-30": 1416,
+      "2026-10-31": 1416
+    },
+    "locked_test:phase0-grace30000": {
+      "2026-10-24": 1415,
+      "2026-10-25": 1416,
+      "2026-10-26": 1415,
+      "2026-10-27": 1387,
+      "2026-10-28": 1415,
+      "2026-10-29": 1416,
+      "2026-10-30": 1416,
+      "2026-10-31": 1416
+    },
+    "locked_test:phase0-grace60000": {
+      "2026-10-24": 1415,
+      "2026-10-25": 1416,
+      "2026-10-26": 1415,
+      "2026-10-27": 1387,
+      "2026-10-28": 1415,
+      "2026-10-29": 1416,
+      "2026-10-30": 1416,
+      "2026-10-31": 1416
+    },
+    "locked_test:phase15-grace1000": {
+      "2026-10-24": 1415,
+      "2026-10-25": 1416,
+      "2026-10-26": 1415,
+      "2026-10-27": 1387,
+      "2026-10-28": 1415,
+      "2026-10-29": 1416,
+      "2026-10-30": 1416,
+      "2026-10-31": 1416
+    },
+    "locked_test:phase15-grace5000": {
+      "2026-10-24": 1415,
+      "2026-10-25": 1416,
+      "2026-10-26": 1415,
+      "2026-10-27": 1387,
+      "2026-10-28": 1415,
+      "2026-10-29": 1416,
+      "2026-10-30": 1416,
+      "2026-10-31": 1416
+    },
+    "locked_test:phase15-grace30000": {
+      "2026-10-24": 1415,
+      "2026-10-25": 1416,
+      "2026-10-26": 1415,
+      "2026-10-27": 1387,
+      "2026-10-28": 1415,
+      "2026-10-29": 1416,
+      "2026-10-30": 1416,
+      "2026-10-31": 1416
+    },
+    "locked_test:phase15-grace60000": {
+      "2026-10-24": 1415,
+      "2026-10-25": 1416,
+      "2026-10-26": 1415,
+      "2026-10-27": 1387,
+      "2026-10-28": 1415,
+      "2026-10-29": 1416,
+      "2026-10-30": 1416,
+      "2026-10-31": 1416
+    },
+    "locked_test:phase30-grace1000": {
+      "2026-10-24": 1415,
+      "2026-10-25": 1416,
+      "2026-10-26": 1415,
+      "2026-10-27": 1387,
+      "2026-10-28": 1415,
+      "2026-10-29": 1416,
+      "2026-10-30": 1416,
+      "2026-10-31": 1416
+    },
+    "locked_test:phase30-grace5000": {
+      "2026-10-24": 1415,
+      "2026-10-25": 1416,
+      "2026-10-26": 1415,
+      "2026-10-27": 1387,
+      "2026-10-28": 1415,
+      "2026-10-29": 1416,
+      "2026-10-30": 1416,
+      "2026-10-31": 1416
+    },
+    "locked_test:phase30-grace30000": {
+      "2026-10-24": 1415,
+      "2026-10-25": 1416,
+      "2026-10-26": 1415,
+      "2026-10-27": 1387,
+      "2026-10-28": 1415,
+      "2026-10-29": 1416,
+      "2026-10-30": 1416,
+      "2026-10-31": 1416
+    },
+    "locked_test:phase30-grace60000": {
+      "2026-10-24": 1415,
+      "2026-10-25": 1416,
+      "2026-10-26": 1415,
+      "2026-10-27": 1387,
+      "2026-10-28": 1415,
+      "2026-10-29": 1416,
+      "2026-10-30": 1416,
+      "2026-10-31": 1416
+    },
+    "locked_test:phase45-grace1000": {
+      "2026-10-24": 1415,
+      "2026-10-25": 1416,
+      "2026-10-26": 1415,
+      "2026-10-27": 1387,
+      "2026-10-28": 1415,
+      "2026-10-29": 1416,
+      "2026-10-30": 1416,
+      "2026-10-31": 1416
+    },
+    "locked_test:phase45-grace5000": {
+      "2026-10-24": 1415,
+      "2026-10-25": 1416,
+      "2026-10-26": 1415,
+      "2026-10-27": 1387,
+      "2026-10-28": 1415,
+      "2026-10-29": 1416,
+      "2026-10-30": 1416,
+      "2026-10-31": 1416
+    },
+    "locked_test:phase45-grace30000": {
+      "2026-10-24": 1415,
+      "2026-10-25": 1416,
+      "2026-10-26": 1415,
+      "2026-10-27": 1387,
+      "2026-10-28": 1415,
+      "2026-10-29": 1416,
+      "2026-10-30": 1416,
+      "2026-10-31": 1416
+    },
+    "locked_test:phase45-grace60000": {
+      "2026-10-24": 1415,
+      "2026-10-25": 1416,
+      "2026-10-26": 1415,
+      "2026-10-27": 1387,
+      "2026-10-28": 1415,
+      "2026-10-29": 1416,
+      "2026-10-30": 1416,
+      "2026-10-31": 1416
+    }
+  },
+  "content_invalid_minutes_remaining": 0,
+  "target_calendar_hashes": {
+    "fit": "55db8bea37c0cb88432d78c038c0b45ddbca5eb1e6401df4f533edb7135ca055",
+    "development": "f95d4ae2901afce59f97873f77f2a1b87fa758d107d90cd0a744b96f3c79ba04",
+    "calibration": "35fe1dc5c1d58b28314407e26c6fb391656a115a2eeb8b8aaa63eef7a6101fa7",
+    "locked_test": "3f837312a6c16f6652f01d77104ea467d84c6670c9b1f99e35ce8a1714a6db1d"
+  },
+  "book_source": "private: original pilot book-seconds.bin",
+  "trade_source": "private: button-pilot-202610-v1/corrected-trades/trades-seconds.bin",
+  "trade_feature_fingerprint": "7f88021383740629833d340a62e46b4b5c567373bbffee0c57cf8bc04396c5b7",
+  "source_feature_fingerprint": "640d56f62479e42c54899564eec340932d2c75963492185afe0f9204862349a1",
+  "recovery_fingerprint": "59c58736fe3922e83136d3df8574afe8caf38e981b28070875be086948bc144a",
+  "limitations": [
+    "Official recovered trade/candle content has no original receipt clock.",
+    "Grace settings are assumptions/sensitivity cases, not guaranteed finalization delays.",
+    "Book/trade receipt validity is relative to the historical provider, not our Mac.",
+    "Four snapshots per target are correlated; split/group and evaluate by target/day.",
+    "Next-full-minute target changes lead time versus original minute-open experiment.",
+    "No test outcomes were scored or used to select dates or phases."
+  ],
+  "fingerprint": "5520c1301c36f831493304005e0ce17a11b07fae0fd5d1877cbf511368e74a40",
+  "artifact_sha256": {
+    "calibration-phase0-grace1000-indices.npy": "1fe6d1fc6fa69505d785bfc2b76d0f468b43d27d236ccb737d488bbc052e6a5f",
+    "calibration-phase0-grace1000-targets.npy": "731035d33db3f5f07837d2e19ba3d0c89ffd7311ca4420355b06adcd5024e369",
+    "calibration-phase0-grace30000-indices.npy": "1fe6d1fc6fa69505d785bfc2b76d0f468b43d27d236ccb737d488bbc052e6a5f",
+    "calibration-phase0-grace30000-targets.npy": "731035d33db3f5f07837d2e19ba3d0c89ffd7311ca4420355b06adcd5024e369",
+    "calibration-phase0-grace5000-indices.npy": "1fe6d1fc6fa69505d785bfc2b76d0f468b43d27d236ccb737d488bbc052e6a5f",
+    "calibration-phase0-grace5000-targets.npy": "731035d33db3f5f07837d2e19ba3d0c89ffd7311ca4420355b06adcd5024e369",
+    "calibration-phase0-grace60000-indices.npy": "84464caae2391eecc13327cbe9d8fbcb5c69744d06fed64c4c4d3f842dfa82ce",
+    "calibration-phase0-grace60000-targets.npy": "731035d33db3f5f07837d2e19ba3d0c89ffd7311ca4420355b06adcd5024e369",
+    "calibration-phase15-grace1000-indices.npy": "147091060a31ffba1908610688d721de8d454d61fc3226c29137bfa1a6089b76",
+    "calibration-phase15-grace1000-targets.npy": "36a466231344e8bc0219fb394c612e0be337d4717e18e8c7f47853b5513cb8e4",
+    "calibration-phase15-grace30000-indices.npy": "b1cc20f2cfce5f6bf5bff665945d8447db53cb6155bd9661693817671ae0d2d8",
+    "calibration-phase15-grace30000-targets.npy": "36a466231344e8bc0219fb394c612e0be337d4717e18e8c7f47853b5513cb8e4",
+    "calibration-phase15-grace5000-indices.npy": "147091060a31ffba1908610688d721de8d454d61fc3226c29137bfa1a6089b76",
+    "calibration-phase15-grace5000-targets.npy": "36a466231344e8bc0219fb394c612e0be337d4717e18e8c7f47853b5513cb8e4",
+    "calibration-phase15-grace60000-indices.npy": "b1cc20f2cfce5f6bf5bff665945d8447db53cb6155bd9661693817671ae0d2d8",
+    "calibration-phase15-grace60000-targets.npy": "36a466231344e8bc0219fb394c612e0be337d4717e18e8c7f47853b5513cb8e4",
+    "calibration-phase30-grace1000-indices.npy": "da439f314eab5044a789b479060d1e35900ec5ac04b6f92c3e797cc3a76aae16",
+    "calibration-phase30-grace1000-targets.npy": "34d1af84169ca8ec23bfb91c14c7bc7a05db23116bc5367309251e282d34baf2",
+    "calibration-phase30-grace30000-indices.npy": "10242538aaa5c29b72f430cc2f263b90f9a567087a57e286654e9dd7b37aa41a",
+    "calibration-phase30-grace30000-targets.npy": "34d1af84169ca8ec23bfb91c14c7bc7a05db23116bc5367309251e282d34baf2",
+    "calibration-phase30-grace5000-indices.npy": "da439f314eab5044a789b479060d1e35900ec5ac04b6f92c3e797cc3a76aae16",
+    "calibration-phase30-grace5000-targets.npy": "34d1af84169ca8ec23bfb91c14c7bc7a05db23116bc5367309251e282d34baf2",
+    "calibration-phase30-grace60000-indices.npy": "10242538aaa5c29b72f430cc2f263b90f9a567087a57e286654e9dd7b37aa41a",
+    "calibration-phase30-grace60000-targets.npy": "34d1af84169ca8ec23bfb91c14c7bc7a05db23116bc5367309251e282d34baf2",
+    "calibration-phase45-grace1000-indices.npy": "4769594cc80dd0f5ad4aa8f5f6a9ec9d621a2242b5b877b737ca8356a9b179a7",
+    "calibration-phase45-grace1000-targets.npy": "6bb805cabb28d72e6dd65b13400637f51f26d76f9eb3f0fa81635c2a487ebe17",
+    "calibration-phase45-grace30000-indices.npy": "4769594cc80dd0f5ad4aa8f5f6a9ec9d621a2242b5b877b737ca8356a9b179a7",
+    "calibration-phase45-grace30000-targets.npy": "6bb805cabb28d72e6dd65b13400637f51f26d76f9eb3f0fa81635c2a487ebe17",
+    "calibration-phase45-grace5000-indices.npy": "4769594cc80dd0f5ad4aa8f5f6a9ec9d621a2242b5b877b737ca8356a9b179a7",
+    "calibration-phase45-grace5000-targets.npy": "6bb805cabb28d72e6dd65b13400637f51f26d76f9eb3f0fa81635c2a487ebe17",
+    "calibration-phase45-grace60000-indices.npy": "5201a9562630e57f12d4feb2210f96cc0fa39bfd6f902e997902ea34e1c5409b",
+    "calibration-phase45-grace60000-targets.npy": "6bb805cabb28d72e6dd65b13400637f51f26d76f9eb3f0fa81635c2a487ebe17",
+    "candle-content-valid.npy": "6bbd84371b95f84ee4c8364461f5ad6f46b971c89df272e189bf3d8bf630e15f",
+    "candle-features.npy": "d8905fdec6222059b356cca0f1123fb80c83e06b7fed7cc447a115a403842a0a",
+    "candle-raw.npy": "fd7274f7d31f3393a328433546f90b325e07db26063d4c853d5595a4ab98be2b",
+    "development-phase0-grace1000-indices.npy": "e2b5966e1f6070710fe65c756dd3aab709f3b482212aa02ef93f60ece1c76762",
+    "development-phase0-grace1000-targets.npy": "39c4f61fdf92f5b6085624c512c24c16de733a9d3361c441602043d3a5fb2b64",
+    "development-phase0-grace30000-indices.npy": "e2b5966e1f6070710fe65c756dd3aab709f3b482212aa02ef93f60ece1c76762",
+    "development-phase0-grace30000-targets.npy": "39c4f61fdf92f5b6085624c512c24c16de733a9d3361c441602043d3a5fb2b64",
+    "development-phase0-grace5000-indices.npy": "e2b5966e1f6070710fe65c756dd3aab709f3b482212aa02ef93f60ece1c76762",
+    "development-phase0-grace5000-targets.npy": "39c4f61fdf92f5b6085624c512c24c16de733a9d3361c441602043d3a5fb2b64",
+    "development-phase0-grace60000-indices.npy": "a468bd3b58b29df1decf0ab52ec671c99086f718adcc7ea23ca0820bb761a78c",
+    "development-phase0-grace60000-targets.npy": "39c4f61fdf92f5b6085624c512c24c16de733a9d3361c441602043d3a5fb2b64",
+    "development-phase15-grace1000-indices.npy": "708a14e4fc073edeb9347b8e64694f4faad4dbcafebcfe95bdb6de31f20cc0f9",
+    "development-phase15-grace1000-targets.npy": "ce6c81702e59c2a6dc6f4bd2b29d23740a482ee2ae6071074c76beacc3e59de9",
+    "development-phase15-grace30000-indices.npy": "f6eb98113fd9f8ff786ec8eddfdc31365bc1fc4938cbffb5e419df504a11e688",
+    "development-phase15-grace30000-targets.npy": "ce6c81702e59c2a6dc6f4bd2b29d23740a482ee2ae6071074c76beacc3e59de9",
+    "development-phase15-grace5000-indices.npy": "708a14e4fc073edeb9347b8e64694f4faad4dbcafebcfe95bdb6de31f20cc0f9",
+    "development-phase15-grace5000-targets.npy": "ce6c81702e59c2a6dc6f4bd2b29d23740a482ee2ae6071074c76beacc3e59de9",
+    "development-phase15-grace60000-indices.npy": "f6eb98113fd9f8ff786ec8eddfdc31365bc1fc4938cbffb5e419df504a11e688",
+    "development-phase15-grace60000-targets.npy": "ce6c81702e59c2a6dc6f4bd2b29d23740a482ee2ae6071074c76beacc3e59de9",
+    "development-phase30-grace1000-indices.npy": "40748d7a2e6b67e989056a1401e0b163c10b15c9e76bb29b88269b9cfa0b7672",
+    "development-phase30-grace1000-targets.npy": "db8ac1fbcd96ea8aa8ab6cbfcbe22b925e903654a1b518d51d90cb275237315b",
+    "development-phase30-grace30000-indices.npy": "da9110b09d31869f92c89b7d458a6dab71c5b062fecfc4c2eba7059f52b7fc93",
+    "development-phase30-grace30000-targets.npy": "db8ac1fbcd96ea8aa8ab6cbfcbe22b925e903654a1b518d51d90cb275237315b",
+    "development-phase30-grace5000-indices.npy": "40748d7a2e6b67e989056a1401e0b163c10b15c9e76bb29b88269b9cfa0b7672",
+    "development-phase30-grace5000-targets.npy": "db8ac1fbcd96ea8aa8ab6cbfcbe22b925e903654a1b518d51d90cb275237315b",
+    "development-phase30-grace60000-indices.npy": "da9110b09d31869f92c89b7d458a6dab71c5b062fecfc4c2eba7059f52b7fc93",
+    "development-phase30-grace60000-targets.npy": "db8ac1fbcd96ea8aa8ab6cbfcbe22b925e903654a1b518d51d90cb275237315b",
+    "development-phase45-grace1000-indices.npy": "6d93779c940a3d6b6874d41f530ade5dd6b5730c6be388a5c5fb7a4baec105f8",
+    "development-phase45-grace1000-targets.npy": "30d6d9b81846f165e0dba77628b780e7a8bbef21b0559a931fa85e6746ce7981",
+    "development-phase45-grace30000-indices.npy": "6d93779c940a3d6b6874d41f530ade5dd6b5730c6be388a5c5fb7a4baec105f8",
+    "development-phase45-grace30000-targets.npy": "30d6d9b81846f165e0dba77628b780e7a8bbef21b0559a931fa85e6746ce7981",
+    "development-phase45-grace5000-indices.npy": "6d93779c940a3d6b6874d41f530ade5dd6b5730c6be388a5c5fb7a4baec105f8",
+    "development-phase45-grace5000-targets.npy": "30d6d9b81846f165e0dba77628b780e7a8bbef21b0559a931fa85e6746ce7981",
+    "development-phase45-grace60000-indices.npy": "737298c316c77410d645dcc8badda98e2a53d3015bc8d49c5a4a29dd3b30837f",
+    "development-phase45-grace60000-targets.npy": "30d6d9b81846f165e0dba77628b780e7a8bbef21b0559a931fa85e6746ce7981",
+    "fit-phase0-grace1000-indices.npy": "f3f0279fc3c8e0777294ee7eabfb13fa1dfa573e884d5d56fecec11ffd9c0ddf",
+    "fit-phase0-grace1000-targets.npy": "806baf505fa80e324249f15ad23774fe97f1ae7554be008078a880088952c726",
+    "fit-phase0-grace30000-indices.npy": "f3f0279fc3c8e0777294ee7eabfb13fa1dfa573e884d5d56fecec11ffd9c0ddf",
+    "fit-phase0-grace30000-targets.npy": "806baf505fa80e324249f15ad23774fe97f1ae7554be008078a880088952c726",
+    "fit-phase0-grace5000-indices.npy": "f3f0279fc3c8e0777294ee7eabfb13fa1dfa573e884d5d56fecec11ffd9c0ddf",
+    "fit-phase0-grace5000-targets.npy": "806baf505fa80e324249f15ad23774fe97f1ae7554be008078a880088952c726",
+    "fit-phase0-grace60000-indices.npy": "8d6d797d5e3838e4b0325a7f11d6f2adbe507af6e9ad699f4282d2c7b2c2fbb8",
+    "fit-phase0-grace60000-targets.npy": "806baf505fa80e324249f15ad23774fe97f1ae7554be008078a880088952c726",
+    "fit-phase15-grace1000-indices.npy": "d3cf22f61e5efeb78bf5805155aafa0e1e586184d6e62374393a1a10ccf12396",
+    "fit-phase15-grace1000-targets.npy": "27b7ee431b5ca235d5615cb989c24b5096bf7045e6484d0cd68ec3e6c118ee8c",
+    "fit-phase15-grace30000-indices.npy": "934a61bfe6557a37e1bb6e15c8cd3b9b2a635dbd94b9878b97bd1922c1456a29",
+    "fit-phase15-grace30000-targets.npy": "27b7ee431b5ca235d5615cb989c24b5096bf7045e6484d0cd68ec3e6c118ee8c",
+    "fit-phase15-grace5000-indices.npy": "d3cf22f61e5efeb78bf5805155aafa0e1e586184d6e62374393a1a10ccf12396",
+    "fit-phase15-grace5000-targets.npy": "27b7ee431b5ca235d5615cb989c24b5096bf7045e6484d0cd68ec3e6c118ee8c",
+    "fit-phase15-grace60000-indices.npy": "934a61bfe6557a37e1bb6e15c8cd3b9b2a635dbd94b9878b97bd1922c1456a29",
+    "fit-phase15-grace60000-targets.npy": "27b7ee431b5ca235d5615cb989c24b5096bf7045e6484d0cd68ec3e6c118ee8c",
+    "fit-phase30-grace1000-indices.npy": "cb27651e74caeef327ba12d3083042842dbb9736ac364619694206ed497508da",
+    "fit-phase30-grace1000-targets.npy": "2b3eef62fa782b3ce432f67ccfe33f1c713744cb9f1d21def58e61abd646feca",
+    "fit-phase30-grace30000-indices.npy": "ff0002026610b21b557554ea8f0132a6ac4ea5ddca5efeebe4f38518b288ede7",
+    "fit-phase30-grace30000-targets.npy": "2b3eef62fa782b3ce432f67ccfe33f1c713744cb9f1d21def58e61abd646feca",
+    "fit-phase30-grace5000-indices.npy": "cb27651e74caeef327ba12d3083042842dbb9736ac364619694206ed497508da",
+    "fit-phase30-grace5000-targets.npy": "2b3eef62fa782b3ce432f67ccfe33f1c713744cb9f1d21def58e61abd646feca",
+    "fit-phase30-grace60000-indices.npy": "ff0002026610b21b557554ea8f0132a6ac4ea5ddca5efeebe4f38518b288ede7",
+    "fit-phase30-grace60000-targets.npy": "2b3eef62fa782b3ce432f67ccfe33f1c713744cb9f1d21def58e61abd646feca",
+    "fit-phase45-grace1000-indices.npy": "9d0c679af6a1c900e3a98bfca12e4b604058afad27124e2dc0810431016d682a",
+    "fit-phase45-grace1000-targets.npy": "f8c075216c0d9201f6781cec90e77e6a9cea18b94cc1cfb1d93be6eead61bc1a",
+    "fit-phase45-grace30000-indices.npy": "9d0c679af6a1c900e3a98bfca12e4b604058afad27124e2dc0810431016d682a",
+    "fit-phase45-grace30000-targets.npy": "f8c075216c0d9201f6781cec90e77e6a9cea18b94cc1cfb1d93be6eead61bc1a",
+    "fit-phase45-grace5000-indices.npy": "9d0c679af6a1c900e3a98bfca12e4b604058afad27124e2dc0810431016d682a",
+    "fit-phase45-grace5000-targets.npy": "f8c075216c0d9201f6781cec90e77e6a9cea18b94cc1cfb1d93be6eead61bc1a",
+    "fit-phase45-grace60000-indices.npy": "d8926a250b43861a2ae48412f9e62bccf0443f66eb962ed2cf76a58f8ae3be8e",
+    "fit-phase45-grace60000-targets.npy": "f8c075216c0d9201f6781cec90e77e6a9cea18b94cc1cfb1d93be6eead61bc1a",
+    "locked_test-phase0-grace1000-indices.npy": "8ffeecc45d5fde881d64dc125f899bb44fbc61243101b64ac80aa23adb33d9e5",
+    "locked_test-phase0-grace1000-targets.npy": "6df03294858d92b540c46c70c6a0e96fe960ca11ef9c48ccc2ccbe88f4f1eebf",
+    "locked_test-phase0-grace30000-indices.npy": "8ffeecc45d5fde881d64dc125f899bb44fbc61243101b64ac80aa23adb33d9e5",
+    "locked_test-phase0-grace30000-targets.npy": "6df03294858d92b540c46c70c6a0e96fe960ca11ef9c48ccc2ccbe88f4f1eebf",
+    "locked_test-phase0-grace5000-indices.npy": "8ffeecc45d5fde881d64dc125f899bb44fbc61243101b64ac80aa23adb33d9e5",
+    "locked_test-phase0-grace5000-targets.npy": "6df03294858d92b540c46c70c6a0e96fe960ca11ef9c48ccc2ccbe88f4f1eebf",
+    "locked_test-phase0-grace60000-indices.npy": "a1501ca61e5d8c8ac27673a69a4c410e8683d831ab2ca2895757d7ec50d1668e",
+    "locked_test-phase0-grace60000-targets.npy": "6df03294858d92b540c46c70c6a0e96fe960ca11ef9c48ccc2ccbe88f4f1eebf",
+    "locked_test-phase15-grace1000-indices.npy": "e06a22671ef8bb7f9b25f7cbd98c43e96f3a78142ec91238a628e26cc308b455",
+    "locked_test-phase15-grace1000-targets.npy": "73fbc202536564067480fe6a3d216ba46fb047d947f1418628c2b5f95acb7c36",
+    "locked_test-phase15-grace30000-indices.npy": "bb6d13ddb41a9c851082a8774f0f390d921c4eecb8740a7deecdb8bed46664be",
+    "locked_test-phase15-grace30000-targets.npy": "73fbc202536564067480fe6a3d216ba46fb047d947f1418628c2b5f95acb7c36",
+    "locked_test-phase15-grace5000-indices.npy": "e06a22671ef8bb7f9b25f7cbd98c43e96f3a78142ec91238a628e26cc308b455",
+    "locked_test-phase15-grace5000-targets.npy": "73fbc202536564067480fe6a3d216ba46fb047d947f1418628c2b5f95acb7c36",
+    "locked_test-phase15-grace60000-indices.npy": "bb6d13ddb41a9c851082a8774f0f390d921c4eecb8740a7deecdb8bed46664be",
+    "locked_test-phase15-grace60000-targets.npy": "73fbc202536564067480fe6a3d216ba46fb047d947f1418628c2b5f95acb7c36",
+    "locked_test-phase30-grace1000-indices.npy": "ed3ea97b04aadf4a0f0c73a45ae6637ff8cf988c187eafb5da6f32a9136e275c",
+    "locked_test-phase30-grace1000-targets.npy": "aa6d2b63607e5df268485ebaea42d41d1b230115d19da01e255c66d838bc1649",
+    "locked_test-phase30-grace30000-indices.npy": "d5ed1089b1cfab3910845220cf5148df88603af11c8f1b835275645735905b64",
+    "locked_test-phase30-grace30000-targets.npy": "aa6d2b63607e5df268485ebaea42d41d1b230115d19da01e255c66d838bc1649",
+    "locked_test-phase30-grace5000-indices.npy": "ed3ea97b04aadf4a0f0c73a45ae6637ff8cf988c187eafb5da6f32a9136e275c",
+    "locked_test-phase30-grace5000-targets.npy": "aa6d2b63607e5df268485ebaea42d41d1b230115d19da01e255c66d838bc1649",
+    "locked_test-phase30-grace60000-indices.npy": "d5ed1089b1cfab3910845220cf5148df88603af11c8f1b835275645735905b64",
+    "locked_test-phase30-grace60000-targets.npy": "aa6d2b63607e5df268485ebaea42d41d1b230115d19da01e255c66d838bc1649",
+    "locked_test-phase45-grace1000-indices.npy": "639c49b255191e29eaf63331cc5503559374cc538755c3ca60bf8697a5a2bfff",
+    "locked_test-phase45-grace1000-targets.npy": "54d1aed5d935eec66129103a0ce86e8b619048c0d9631f27821524713b72ae3e",
+    "locked_test-phase45-grace30000-indices.npy": "639c49b255191e29eaf63331cc5503559374cc538755c3ca60bf8697a5a2bfff",
+    "locked_test-phase45-grace30000-targets.npy": "54d1aed5d935eec66129103a0ce86e8b619048c0d9631f27821524713b72ae3e",
+    "locked_test-phase45-grace5000-indices.npy": "639c49b255191e29eaf63331cc5503559374cc538755c3ca60bf8697a5a2bfff",
+    "locked_test-phase45-grace5000-targets.npy": "54d1aed5d935eec66129103a0ce86e8b619048c0d9631f27821524713b72ae3e",
+    "locked_test-phase45-grace60000-indices.npy": "67a7bdc6fbbf9b75fa99ca3635ff171e4db3181878f67548d4e25f9727355992",
+    "locked_test-phase45-grace60000-targets.npy": "54d1aed5d935eec66129103a0ce86e8b619048c0d9631f27821524713b72ae3e",
+    "scalers.json": "b02312a15172cb425e22dad9770e310c502b80b8c09cf0b839ede2288a327c07"
+  }
+}

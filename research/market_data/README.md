@@ -17,3 +17,13 @@ Requires Python 3.11+ and `websockets` (tested local 17.3); quality/book use std
 The quality audit verifies hashes, row chronology, basic book integrity and closed exchange-candle bounds. It deliberately does not certify training readiness. Connection gaps, missing trade IDs, cross-stream alignment, actual paired feature windows and chronological holdout sufficiency need a subsequent dataset builder. Aggregate trades may differ from all exchange executions; do not use them to silently replace official candle volume.
 
 Official sequence reference, checked 2 November 2026: https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/How-to-manage-a-local-order-book-correctly . Stream routing reference: https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams .
+
+Recovery and button-timing implementation: see
+`docs/planning/RECOVERED-BUTTON-DATASET-2026-11-02.md`.
+`recover_candles` validates selected failed minutes against official individual
+trades and records native-ID source comparisons. `button_dataset` creates a NEW
+conditional historical cohort; official candle arrival time is assumed, not
+invented as an observed receipt. `collect --snapshot-every 15` records immutable
+actual-receipt input requests; `audit_freezes` checks bytes and replay provenance.
+`frozen_inputs.prediction_record` rejects backdated or target-already-started
+results. No model inference, website UI or trading is introduced by these modules.
