@@ -50,3 +50,34 @@ The historical arrival-time assumption remains. Short input-freeze/probe capture
 and this demo do not establish live model accuracy, strategy profitability,
 hidden liquidity or news/entry capability. The notebook-style charts use public
 reference candle summaries; raw vendor rows, weights and arrays are not published.
+
+## 15-candle recursive replay update
+
+The Predict button now runs 15 sequential model calls. Each generated OHLC is
+encoded and appended to the rolling 1,440-candle context before the next call.
+Book/trade arrays remain copied from the initial snapshot; traded volume, quote
+volume and execution count are carried from the last input candle, not read from
+future data. The original one-step checkpoint and reported one-step scores are
+unchanged. No one-step calibrated intervals are displayed as 15-step confidence.
+
+The initial task predicts the next FULL minute, leaving an unobserved in-progress
+minute between last completed context and first target. Before first predicted
+feedback is appended, a labelled flat-price bridge fills that context timestamp,
+using the last known close and carried volume/count. This bridge is synthetic,
+not a recovered or observed market candle. Every later forecast timestamp is
+consecutive. Subsequent-step lead/context differs from the trained one-step task,
+so this is explicitly experimental inference, not validated multi-step accuracy.
+
+Cases now exclude starts that would put any of the 15 comparison targets outside
+available October reference data. Ten cases are evenly selected among eligible
+starts, without inspecting rollout errors. `/api/predict` returns `candles`,
+`feedback`, assumptions and per-step input hashes; it does not read future raw
+rows. `/api/reveal` separately returns all 15 real candles/errors for its token.
+The UI displays blue generated candles, revealed real candles, per-step close
+errors and an example-only summary. Existing Accuracy & errors tab remains the
+ONE-STEP model evaluation and explicitly says it does not score this new rollout.
+
+Tests verify actual feedback, consecutive synthetic context, no mutation of source
+arrays, and invariance when future candle/book/trade rows are poisoned. All ten
+examples passed the actual API flow and desktop/mobile browser checks. Total
+market-data/model tests: 51 passed. See `results/diwali0.1/rollout-verification.json`.

@@ -11,6 +11,7 @@ import numpy as np
 import torch
 from .train import Data
 from .model import Diwali
+from .rollout import rollout
 from ..market_data.validate_archive import file_hash
 
 ROOT=Path(__file__).resolve().parents[2]
@@ -29,7 +30,9 @@ class Engine:
         torch.set_num_threads(4)
         self.data=Data(ROOT/'data/btc-perp/aligned-button-pilot-202610-v1',self.run/'ui-cache')
         self.indices=np.load(self.data.root/'locked_test-phase15-grace1000-indices.npy')
-        self.case_indices=np.linspace(0,len(self.indices)-1,10,dtype=int)
+        from ..market_data.build_pilot import STOP
+        candidates=np.flatnonzero(self.indices[:,1]+15*60000<=STOP)
+        self.case_indices=candidates[np.linspace(0,len(candidates)-1,10,dtype=int)]
         checkpoint=self.run/f"{report['architecture']}-17.pt"
         if file_hash(checkpoint)!=report['checkpoint_sha256']:raise ValueError('Model checkpoint checksum changed')
         saved=torch.load(checkpoint,map_location='cpu',weights_only=True)
@@ -51,25 +54,27 @@ class Engine:
     def predict(self,i):
         with self.lock:
             case,row=self.case(i);began=time.perf_counter()
-            x=self.data.feature(row);input_sha=hashlib.sha256(x.tobytes()).hexdigest()
-            with torch.inference_mode():bp=self.model(torch.from_numpy(x[None])).numpy()[0]
+            generated=rollout(self.data,self.model,row,15)
             ms=(time.perf_counter()-began)*1000
-            forecast=(case['anchor']*(1+bp/10000)).tolist()
-            token=uuid.uuid4().hex;self.requests[token]=(i,forecast)
+            token=uuid.uuid4().hex;self.requests[token]=(i,generated['candles'])
             if len(self.requests)>1000:self.requests.pop(next(iter(self.requests)))
-            return {'token':token,'forecast':forecast,'interval80':[[float(v-case['anchor']*self.intervals['0.8']['radius_bp'][k]/10000),
-                float(v+case['anchor']*self.intervals['0.8']['radius_bp'][k]/10000)] for k,v in enumerate(forecast)],
-                'calculation_ms':ms,'input_sha256':input_sha,'snapshot_ms':case['snapshot_ms'],'target_ms':case['target_ms'],
-                'mode':'historical_replay_calculated_now','model':'diwali0.1',
-                'note':'Calculated now from historical inputs; not a prediction published in the past.'}
+            return {**generated,'token':token,'calculation_ms':ms,'horizon':15,
+                'snapshot_ms':case['snapshot_ms'],'target_ms':case['target_ms'],
+                'mode':'experimental_recursive_historical_rollout','model':'diwali0.1',
+                'note':'Predictions feed back as inputs. No future actuals or fresh future book/trades are used. One-step accuracy/ranges do not validate this rollout.'}
     def reveal(self,token):
         if token not in self.requests:raise ValueError('Click Predict before revealing the real candle.')
         i,pred=self.requests[token];row=self.indices[self.case_indices[i]]
         from ..market_data.build_pilot import WARMUP
-        actual=self.data.raw[(int(row[1])-WARMUP)//60000,:4]
-        error=np.asarray(pred)-actual
-        return {'actual':actual.tolist(),'absolute_error_usdt':np.abs(error).tolist(),
-            'mean_error_usdt':float(np.abs(error).mean()),'candle_colour_correct':bool(np.sign(pred[3]-pred[0])==np.sign(actual[3]-actual[0]))}
+        candles=[]
+        for item in pred:
+            actual=self.data.raw[(item['time']-WARMUP)//60000,:4].copy()
+            errors=np.abs(np.asarray(item['ohlc'])-actual)
+            candles.append({'step':item['step'],'time':item['time'],'ohlc':actual.tolist(),
+                'absolute_error_usdt':errors.tolist(),'mean_error_usdt':float(errors.mean()),
+                'candle_colour_correct':bool(np.sign(item['ohlc'][3]-item['ohlc'][0])==np.sign(actual[3]-actual[0]))})
+        return {'candles':candles,'mean_error_usdt':float(np.mean([c['mean_error_usdt'] for c in candles])),
+            'candle_colour_accuracy':float(np.mean([c['candle_colour_correct'] for c in candles]))}
 
 
 def main():

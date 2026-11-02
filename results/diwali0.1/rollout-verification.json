@@ -1,0 +1,24 @@
+{
+  "mode": "experimental_15_step_recursive_rollout",
+  "horizon": 15,
+  "weights_changed": false,
+  "checkpoint_sha256": "2d94111b16dd11b52d947df233369b41680e038cf5754d241fe09635f8eff49c",
+  "future_actuals_used_for_generation": false,
+  "future_poisoning_invariance_test_passed": true,
+  "predictions_feed_back": true,
+  "consecutive_context_with_labelled_initial_flat_bridge": true,
+  "future_book_trade_policy": "frozen initial observations",
+  "future_volume_count_policy": "carry last input values",
+  "validated_multi_step_accuracy": false,
+  "one_step_confidence_intervals_reused": false,
+  "api_examples_checked": 10,
+  "steps_per_example": 15,
+  "browser_check": "Predict/reveal/switch cases passed desktop and 390px mobile; zero JS errors/page overflow",
+  "correctness_tests_passed": 51,
+  "source_sha256": {
+    "research/diwali/rollout.py": "bf8919742fd876ebe486255511603fe6c81a3b823b05ee808fced6ac37013ad3",
+    "research/diwali/serve.py": "72bde53291f90c6d23fc7a305ebb2d73cefca968122f50be3ab1a2d0487bf75c",
+    "ui/diwali/app.js": "f61ccc54f4d98434ee07ad5fe4a2818f829ce2dd87205910cf76e528e33eda09",
+    "ui/diwali/index.html": "1ac358e608a6f13f219b4f30b92f36973cee9ea3a1e521fd3e669d7f983cc7f9"
+  }
+}

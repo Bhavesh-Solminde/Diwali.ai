@@ -107,3 +107,22 @@ The existing server is detached for local use. Its PID/URL are recorded privatel
 in `data/models/diwali0.1/ui-process.json`; logs are `/tmp/diwali01-ui.log`.
 The UI needs this local Python server and private weights/data; Git alone does
 not contain large datasets or trained checkpoints.
+
+## Requested 15-step autoregressive UI extension
+
+The historical replay now generates 15 consecutive candles recursively using the
+same unchanged checkpoint. Each predicted OHLC enters the next model input; future
+actuals are not used. Unknown future book/trades remain fixed at the initial
+snapshot, volume/count inputs carry forward, and the initial unobserved current
+minute uses an explicitly synthetic flat-price bridge. Later steps differ from
+the one-step training lead/context. The UI labels this experiment and does not
+present the existing one-step scores or intervals as multi-step validation.
+
+All ten displayed cases have 15 real reference targets available for Reveal.
+Automated tests prove forecast feedback, no source mutation, and invariance to
+future-row poisoning. Desktop/mobile 15-step Predict/Reveal/case-switch flow
+passed with no JS errors or page overflow; 51 correctness tests passed. No retraining
+or parameter selection used these revealed 15-step examples. Multi-step confidence,
+representative holdout metrics, and future market-context generation are not
+established by this UI extension. Original one-step report/manifest are retained;
+new verification/preview are separate artifacts.
