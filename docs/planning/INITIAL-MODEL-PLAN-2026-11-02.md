@@ -1,5 +1,11 @@
 # Initial model plan v2 — 2 November 2026
 
+Later user steering: [Staged training decisions](STAGED-TRAINING-DECISIONS-2026-11-02.md)
+and [First build scope](PHASE-ONE-IMPLEMENTATION-2026-11-02.md) govern implementation
+authorization and initial data budgets. They defer news/fallback/entry work and
+replace conflicting full-dataset or split-size proposals below. The original status
+line is retained as historical context, not a new approval requirement.
+
 Status: design for review. No training or live trading authorized by this plan. Supersedes conflicting design choices in the earlier frozen proposal; retain historical research/provenance. Simulator research is sufficient to choose experiments, but its defective outputs are not approved training records. This is our independent design, not a verified reproduction of Tiger.
 
 ## 1. Product behavior

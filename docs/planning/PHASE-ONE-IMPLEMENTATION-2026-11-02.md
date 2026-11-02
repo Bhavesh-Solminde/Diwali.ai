@@ -1,5 +1,10 @@
 # First build scope and collection status
 
+Latest data-size/iteration decision: [Staged training decisions](STAGED-TRAINING-DECISIONS-2026-11-02.md).
+Start with a validated one-month pilot, then a proposed approximately three-month
+comparison before progressively expanding. The full-year archive is being validated;
+it is not the initial fitting dataset. Exact dates remain pending the audit.
+
 User steering: first build is only validated real BTC data → fixed baselines → small MLP versus sequence model. News, missing-book inference, entry-quality modeling and synthetic pretraining are deferred. Training is authorized within this first scope after sufficient paired data, chronology and leakage/label checks. Do not wait for profitable results to publish failures; further features should be reviewed after the initial held-out results.
 
 Implemented public recorder under research/market_data: sequence-aware decimal book, reconnect with backoff, fresh snapshot after invalidation, hourly append-only raw storage, timestamps/segment provenance, metadata and closed exchange candle acquisition, final hash manifest and engineering audit. It uses no account keys or order endpoints.
