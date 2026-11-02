@@ -76,3 +76,9 @@ Next after completion: review per-day/partition coverage, independently check th
 feature provenance on selected examples, freeze baseline/model budgets and only
 then fit the authorized small pilot. Training readiness is separate from source
 authenticity, live performance, probabilistic calibration or trading profitability.
+
+Completed-run update: all 744 book hours and 768 trade hours finished. The frozen
+feature build retains 7,150 origins at zero additional delay. See the
+[executed coverage/limitation review](OCTOBER-PRETRAINING-REVIEW-2026-11-02.md)
+for the severe day-level concentration, development-only baselines and readiness
+decision. Earlier statements about awaiting the full run are historical.

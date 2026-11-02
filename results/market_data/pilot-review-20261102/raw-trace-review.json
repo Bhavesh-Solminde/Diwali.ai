@@ -1,0 +1,125 @@
+{
+  "scope": "five candle cases, one independent native-sequence book replay; not archive-wide certification",
+  "candle_checks": [
+    {
+      "case": "source_or_clock_audit_rejection",
+      "minute_utc": "2026-09-30T09:32:00+00:00",
+      "raw_execution_rows": 15690,
+      "matches_official_reference": false,
+      "source_bad_flag": true,
+      "max_receipt_minus_next_open_ms": 9.568918,
+      "source_files": [
+        {
+          "remote_file": "binance_futures/2026-09-30/08/BTCUSDT_trades.parquet",
+          "sha256": "5b643e575e00ba784986f2acc92e7c3a5650cb681484b3284dab5102ae463a15"
+        },
+        {
+          "remote_file": "binance_futures/2026-09-30/09/BTCUSDT_trades.parquet",
+          "sha256": "8c55c1530a6e40c1272b37f9f50b7ad9f0660ea30ae3fdd169c477e4b40578d6"
+        },
+        {
+          "remote_file": "binance_futures/2026-09-30/10/BTCUSDT_trades.parquet",
+          "sha256": "99d406aedfd6b6a6590c2a5280cd767d4c660023b409afeccad381d853588e00"
+        }
+      ]
+    },
+    {
+      "case": "execution_reference_mismatch",
+      "minute_utc": "2026-09-30T16:29:00+00:00",
+      "raw_execution_rows": 3637,
+      "matches_official_reference": false,
+      "source_bad_flag": false,
+      "max_receipt_minus_next_open_ms": -44555.762246,
+      "source_files": [
+        {
+          "remote_file": "binance_futures/2026-09-30/15/BTCUSDT_trades.parquet",
+          "sha256": "ea68c7853035fd737da53f3b81d1b46d0c0f0c4e6d15a826a20f7fbca6d4ec10"
+        },
+        {
+          "remote_file": "binance_futures/2026-09-30/16/BTCUSDT_trades.parquet",
+          "sha256": "e194365a44c8f42fc8bc556c40b695986b2c369a675283f58e3d96398c5234b6"
+        },
+        {
+          "remote_file": "binance_futures/2026-09-30/17/BTCUSDT_trades.parquet",
+          "sha256": "efa5e4b4074c38009ccd8db568f3d3ae4e3812ae20f7a26f692c4df830db9d65"
+        }
+      ]
+    },
+    {
+      "case": "missing_execution_minute",
+      "minute_utc": "2026-09-30T21:15:00+00:00",
+      "raw_execution_rows": 0,
+      "matches_official_reference": false,
+      "source_bad_flag": null,
+      "max_receipt_minus_next_open_ms": null,
+      "source_files": [
+        {
+          "remote_file": "binance_futures/2026-09-30/20/BTCUSDT_trades.parquet",
+          "sha256": "c0d2bc2195affc20a747e319530bd251779aae7f306567a894feff9eb689188e"
+        },
+        {
+          "remote_file": "binance_futures/2026-09-30/21/BTCUSDT_trades.parquet",
+          "sha256": "95bdf77d1dba427b094fd95b82bf0fb21159244251ead8e83757a480eb9f5599"
+        },
+        {
+          "remote_file": "binance_futures/2026-09-30/22/BTCUSDT_trades.parquet",
+          "sha256": "1211d3a4d933a53846d8e968cdd0d4cd0d78f6072750bc5e91688e688bfd1cc4"
+        }
+      ]
+    },
+    {
+      "case": "retained_final_context",
+      "minute_utc": "2026-10-03T14:36:00+00:00",
+      "raw_execution_rows": 825,
+      "matches_official_reference": true,
+      "source_bad_flag": false,
+      "max_receipt_minus_next_open_ms": -422.300823,
+      "source_files": [
+        {
+          "remote_file": "binance_futures/2026-10-03/13/BTCUSDT_trades.parquet",
+          "sha256": "580a83f4df5ea5b76be633420102f47bf9c67ad7c62b3f73356b8a704356b393"
+        },
+        {
+          "remote_file": "binance_futures/2026-10-03/14/BTCUSDT_trades.parquet",
+          "sha256": "41a45f3b1bb7a1849bcb26c70670f061333330f98d584e364f0ee5bffaa638b5"
+        },
+        {
+          "remote_file": "binance_futures/2026-10-03/15/BTCUSDT_trades.parquet",
+          "sha256": "b1756726c14e4ca532eb965260c1259b03b34462501770aab67f34effa60479d"
+        }
+      ]
+    },
+    {
+      "case": "late_final_context",
+      "minute_utc": "2026-10-03T14:34:00+00:00",
+      "raw_execution_rows": 286,
+      "matches_official_reference": true,
+      "source_bad_flag": false,
+      "max_receipt_minus_next_open_ms": 68.149673,
+      "source_files": [
+        {
+          "remote_file": "binance_futures/2026-10-03/13/BTCUSDT_trades.parquet",
+          "sha256": "580a83f4df5ea5b76be633420102f47bf9c67ad7c62b3f73356b8a704356b393"
+        },
+        {
+          "remote_file": "binance_futures/2026-10-03/14/BTCUSDT_trades.parquet",
+          "sha256": "41a45f3b1bb7a1849bcb26c70670f061333330f98d584e364f0ee5bffaa638b5"
+        },
+        {
+          "remote_file": "binance_futures/2026-10-03/15/BTCUSDT_trades.parquet",
+          "sha256": "b1756726c14e4ca532eb965260c1259b03b34462501770aab67f34effa60479d"
+        }
+      ]
+    }
+  ],
+  "book_check": {
+    "origin_utc": "2026-10-03T15:03:00+00:00",
+    "grid_utc": "2026-10-03T15:02:59+00:00",
+    "sequence": 11726981172474,
+    "independent_replay_events": 6736,
+    "top20_price_quantity_features_match": true,
+    "source_clocks_match": true,
+    "remote_file": "binance_futures/2026-10-03/15/BTCUSDT_orderbook.parquet",
+    "sha256": "1cc18b8858aae2eeb93377dc95abcbd37fd1d30143b79a828597f354ad61b7fe"
+  }
+}

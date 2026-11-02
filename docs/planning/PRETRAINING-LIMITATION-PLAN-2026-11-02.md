@@ -115,3 +115,51 @@ subscription, mass redownload, model fitting or trading is implied by this plan.
 Related: [causal feature contract](CAUSAL-PILOT-FEATURES-2026-11-02.md),
 [October quality review](PILOT-QUALITY-REVIEW-2026-11-02.md),
 [staged training decisions](STAGED-TRAINING-DECISIONS-2026-11-02.md).
+
+## Execution record and limitation ledger — 2 November 2026
+
+The bounded local review is complete. See the
+[executed October review](OCTOBER-PRETRAINING-REVIEW-2026-11-02.md) and aggregate
+artifacts in `results/market_data/pilot-review-20261102/`. Completion of this
+review does **not** mean every limitation has been removed.
+
+| Plan item | Work completed | Disposition |
+| --- | --- | --- |
+| 1. Explain exclusions | Recomputed all partition/delay eligibility arrays; identical results. Generated full private per-origin ledger, public daily coverage and pre-origin condition summaries; five raw candle cases checked. | Complete within October scope. 85 invalid candle minutes propagate into 31,543 rejected candidates; 3,764 further late-context exclusions. |
+| 2. Strengthen source checks | Original hashes/reference evidence retained; selected raw files rehashed. Reviewed Tardis's collection documentation and tested October 1 public BTCUSDT book/trade file availability; both returned 404. | Source inventory complete; independent overlap comparison unresolved. No second-source agreement claimed or purchase implied. |
+| 3. Recover supported state | Separate Python book replay confirmed one native-sequence top-20 record against the C++ features. Reviewed dominant losses: candle context/availability, which a book-prefix replay cannot repair. | No examples reinstated. Earlier snapshot-free months remain deferred outside October. Unknown or omitted state remains excluded/uncertain, never guessed. |
+| 4. Audit availability | Recomputed 0/250/1,000 ms eligibility, checked a genuinely late last trade and a timely retained context directly; independent book source clocks matched. Existing future/boundary tests retained. | Implemented cutoff checks pass. Original historical receipt provenance remains unresolved; delay stresses do not certify it. |
+| 5. Record direct evidence | Existing public collector ran a fresh finite capture and integrity audit; raw messages, sequence state, UTC/monotonic times, server-time probes and shutdown manifest saved privately. | Collector smoke passes. Sustained busy/ordinary periods and observed reconnect coverage remain deferred; historical clock uncertainty cannot be repaired by this recording. |
+| 6. Freeze and review | All frozen origin hashes/indices matched. Targets remain partition-contained and preprocessing fit-only. No silent context/split changes; selected independent raw reader checks completed. | Same feature fingerprint and counts retained. Coverage is too concentrated for reliable model selection; no new manifest or recovered dataset claimed. |
+| 7. Publish readiness | Six predeclared fixed rules scored only on development, with class-aware direction and OHLC errors. Test/calibration target files unopened by the review program. | GO for pipeline/fixed exploratory baselines. DEFER reliable MLP/sequence selection until a quality-defined cohort has multiple usable development days. Not live-ready. |
+
+Status of the specific original limitations:
+
+- **Unchanged bytes versus authenticity:** hashes verified; authenticity unresolved.
+- **Candle agreement versus every book level:** candle reconciliation plus one
+  independent implementation check; archive-wide independent book certification unresolved.
+- **Checkpoints/corrected clocks versus original receipts:** strict cutoff handling
+  implemented; historical timing provenance unresolved. Do not relabel it fixed.
+- **Empty/halting snapshot omissions:** no fabricated recovery. Structural replay
+  cannot certify absence of unpublished resets; this remains a provider limitation.
+- **Uninitialized month prefixes:** excluded unless separately recovered; earlier
+  months deferred, not required to repair the present October candle-context losses.
+- **Every minute, hidden liquidity and trading efficacy:** exclusions/coverage
+  published; hidden liquidity outside scope; no profitability or forecast superiority claim.
+
+### Concrete continuation boundary
+
+The current month has 4,754 fitting examples across eight days, but only 468
+usable development examples on October 20. Retained fitting periods are quieter
+than excluded ones. The archive therefore supports an engineering pilot, while
+claims of broad model superiority would be premature. Fixed baselines are now
+recorded; no neural training has started.
+
+Next data work is to identify a new chronological cohort using only quality and
+pre-origin condition coverage, preserving the full context and untouched targets.
+Version any split/date change before fitting. Do not repeatedly tune this month's
+rules against its one development day or use the locked test to compensate.
+Sustained direct evidence and a suitable independent source are explicit deferred
+improvements; neither should become an endless demand for perfect data before an
+honestly labelled exploratory experiment. No news, inferred book, entry-quality
+model, simulator pretraining, deployment or trading is included.

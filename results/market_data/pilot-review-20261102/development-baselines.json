@@ -1,0 +1,143 @@
+{
+  "evaluation_partition": "development only",
+  "fit_majority_direction": 1,
+  "rules": "fixed persistence/momentum/reversal/fit-majority/book top20 imbalance/trade-flow; previous absolute move sets magnitude; previous wicks set excursions",
+  "scores": {
+    "persistence": {
+      "samples": 468,
+      "ohlc_mae_bp": [
+        0.0069656721658346655,
+        2.154438055026576,
+        2.0836589395639584,
+        2.8469135998376998
+      ],
+      "ohlc_rmse_bp": [
+        0.012237222297829241,
+        3.1727485803429993,
+        3.0663100305738684,
+        3.782389166205748
+      ],
+      "close_direction_accuracy": 0.01282051282051282,
+      "balanced_direction_accuracy": 0.3333333333333333,
+      "direction_classes": {
+        "-1": 228,
+        "0": 6,
+        "1": 234
+      }
+    },
+    "momentum": {
+      "samples": 468,
+      "ohlc_mae_bp": [
+        0.0069656721658346655,
+        2.4488665114910235,
+        2.480093060005282,
+        4.076001887367704
+      ],
+      "ohlc_rmse_bp": [
+        0.012237222297829241,
+        3.381671690305803,
+        3.456388678858072,
+        5.383904648879006
+      ],
+      "close_direction_accuracy": 0.46794871794871795,
+      "balanced_direction_accuracy": 0.31575198680461836,
+      "direction_classes": {
+        "-1": 228,
+        "0": 6,
+        "1": 234
+      }
+    },
+    "reversal": {
+      "samples": 468,
+      "ohlc_mae_bp": [
+        0.0069656721658346655,
+        2.3270609221688625,
+        2.2244116449323976,
+        3.7978159438811137
+      ],
+      "ohlc_rmse_bp": [
+        0.012237222297829241,
+        3.2766214390007566,
+        3.0520347881555026,
+        4.926781187780982
+      ],
+      "close_direction_accuracy": 0.5021367521367521,
+      "balanced_direction_accuracy": 0.33933123406807614,
+      "direction_classes": {
+        "-1": 228,
+        "0": 6,
+        "1": 234
+      }
+    },
+    "fit_majority": {
+      "samples": 468,
+      "ohlc_mae_bp": [
+        0.0069656721658346655,
+        2.621489378633309,
+        2.0836589395639584,
+        3.897059531587314
+      ],
+      "ohlc_rmse_bp": [
+        0.012237222297829241,
+        3.4793128519100676,
+        3.0663100305738684,
+        5.081328280255624
+      ],
+      "close_direction_accuracy": 0.4935897435897436,
+      "balanced_direction_accuracy": 0.32905982905982906,
+      "direction_classes": {
+        "-1": 228,
+        "0": 6,
+        "1": 234
+      }
+    },
+    "book_imbalance": {
+      "samples": 468,
+      "ohlc_mae_bp": [
+        0.0069656721658346655,
+        2.3409282913161107,
+        2.2016540535136206,
+        3.840205024526126
+      ],
+      "ohlc_rmse_bp": [
+        0.012237222297829241,
+        3.311457003622775,
+        3.159707101373447,
+        5.128363741558752
+      ],
+      "close_direction_accuracy": 0.5,
+      "balanced_direction_accuracy": 0.3373069425701005,
+      "direction_classes": {
+        "-1": 228,
+        "0": 6,
+        "1": 234
+      }
+    },
+    "trade_flow": {
+      "samples": 468,
+      "ohlc_mae_bp": [
+        0.0069656721658346655,
+        2.4100297954540526,
+        2.394722241875421,
+        3.8983229821897614
+      ],
+      "ohlc_rmse_bp": [
+        0.012237222297829241,
+        3.3845823295976833,
+        3.3887704929041536,
+        5.125695303538029
+      ],
+      "close_direction_accuracy": 0.5085470085470085,
+      "balanced_direction_accuracy": 0.34304243514769833,
+      "direction_classes": {
+        "-1": 228,
+        "0": 6,
+        "1": 234
+      }
+    }
+  },
+  "test_targets_opened": false,
+  "calibration_targets_opened": false,
+  "training_started": false,
+  "probability_or_trade_success_claim": false
+}

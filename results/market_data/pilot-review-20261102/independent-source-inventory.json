@@ -1,0 +1,17 @@
+{
+  "checked_utc": "2026-11-02T12:12:15.625939+00:00",
+  "sources": [
+    {
+      "type": "incremental_book_L2",
+      "url": "https://datasets.tardis.dev/v1/binance-futures/incremental_book_L2/2026/10/01/BTCUSDT.csv.gz",
+      "error": "HTTP Error 404: Not Found",
+      "comparison_run": false
+    },
+    {
+      "type": "trades",
+      "url": "https://datasets.tardis.dev/v1/binance-futures/trades/2026/10/01/BTCUSDT.csv.gz",
+      "error": "HTTP Error 404: Not Found",
+      "comparison_run": false
+    }
+  ]
+}

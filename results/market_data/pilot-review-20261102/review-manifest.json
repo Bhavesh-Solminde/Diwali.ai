@@ -1,0 +1,21 @@
+{
+  "stage_decision": "pipeline_and_fixed_baselines_ready; reliable_neural_selection_deferred_for_coverage",
+  "feature_fingerprint": "640d56f62479e42c54899564eec340932d2c75963492185afe0f9204862349a1",
+  "code_sha256": {
+    "research/market_data/review_pilot.py": "e1c73a91e8da074cf63566884372fa273e8a54d283594d023b5ca48ad10b88a7",
+    "research/market_data/trace_pilot.py": "71f81483795df7ce30a295b1546623a32e0baf7d052caacf4b9d6dc61f486338",
+    "research/market_data/build_pilot.py": "063d213ba7a9b8c44af1005ae94ffd5666efdf88fe8301fc0c6ebfb124d25b1d",
+    "research/market_data/feature_scan.cpp": "f97d78d6d33d35d2d1dfcb9100122004ae89b141ffea8dea2958520b122dd8b8",
+    "research/market_data/archive_scan.cpp": "395644da461449b8be7496b0f155f77b1e31f78c00250c647ae4ea82b0ed8d17"
+  },
+  "aggregate_sha256": {
+    "coverage-review.json": "7a28c1115a743fcf5c3bfe1ceff788b64dd97519aa52d2a8746a734c8140d35c",
+    "development-baselines.json": "5cc0a73deda5cd37cf0ad46ade8d462f0c06a70f7c95c8037a357811bcb2e329",
+    "direct-capture-review.json": "724b7da459bdc2b32ff1d98fd6bf2374bbb3770f7933c012c10d8495e21e6e71",
+    "independent-source-inventory.json": "7ae38f604273a2e58a7deb1ffb6af6fff1e53b53cf2ed5c21a0217c270493a92",
+    "raw-trace-review.json": "4759dddf931c33e948e2fffc0f2166c5ae8271bd189998b376a6dec574fad8e9"
+  },
+  "neural_training_started": false,
+  "test_performance_evaluated": false,
+  "paid_raw_data_published": false
+}

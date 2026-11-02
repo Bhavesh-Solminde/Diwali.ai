@@ -1,0 +1,37 @@
+{
+  "raw_integrity_pass": true,
+  "counts": {
+    "rest": 6,
+    "connection": 2,
+    "unclosed_rest_candle_rows": 2,
+    "market": 1042,
+    "depth": 875,
+    "book": 872,
+    "book_invalidated": 1
+  },
+  "connections": 2,
+  "book_segments": 1,
+  "official_closed_minutes": 1500,
+  "missing_official_minutes": 0,
+  "duration_seconds": 100.013722,
+  "training_ready": false,
+  "reason": "Integrity/engineering audit only. Paired coverage, feature windows, trade coverage and chronological splits still need dataset validation.",
+  "candle_source": "exchange REST closed klines; aggregate-trade reconstruction is separate",
+  "server_time_probe_bounds": [
+    {
+      "local_minus_server_ms_bounds": [
+        -99.112060546875,
+        143.68505859375
+      ],
+      "request_round_trip_ms": 242.797119140625
+    },
+    {
+      "local_minus_server_ms_bounds": [
+        -95.2841796875,
+        68.818115234375
+      ],
+      "request_round_trip_ms": 164.102294921875
+    }
+  ],
+  "scope": "90-second requested recording plus setup/shutdown; no sustained capture or recovery claim"
+}
