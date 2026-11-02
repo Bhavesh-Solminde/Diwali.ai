@@ -73,3 +73,16 @@ slower than the earlier phone's measured 7.02 MB/s dual-route average. Condition
 changed between sessions; this does not establish a permanent ranking of phones.
 The archive remains PAUSED while the user chooses whether to switch back or use
 Wi-Fi alone. No year-download traffic was running during these comparisons.
+
+## Third phone test and resumption
+
+The user connected phone 3. With archive workers still paused, the same five-file
+batch measured Wi-Fi alone at 27.860 seconds (2.86 MB/s). Two three-USB/two-Wi-Fi
+batches took 12.430 and 10.867 seconds (6.40 and 7.33 MB/s); aggregate 6.83 MB/s,
+2.39× the contemporaneous Wi-Fi baseline (+139%). All fifteen hashes passed.
+This was close to the earlier phone 1 result (7.02 MB/s), with about 3% difference,
+too small in this short test to establish a reliable ranking. The new result is
+substantially better than phone 2's earlier 3.20 MB/s combined result, subject to
+changing network conditions. Following the user's instruction to continue if the
+improvement is significant, the year archive was resumed on phone 3 plus Wi-Fi,
+three USB workers and two Wi-Fi workers, from 2,711 saved files. Plexo is not used.
