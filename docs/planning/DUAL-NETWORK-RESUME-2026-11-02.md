@@ -58,3 +58,18 @@ Validation: 11 market-data tests passed, including transfer-interface selection,
 credentials absent from process arguments, year partition uniqueness and both
 archive encodings. Actual USB full-file checksum and all 20 benchmark checksums
 also passed. No training readiness is implied by faster or completed downloads.
+
+## Subsequent phone switch
+
+User requested another pause to switch the tethered phone. Workers drained cleanly
+at 2,711 saved files (30,031,847,365 bytes). After the user reported ready, a repeat
+matched-file test used five concurrent transfers per batch, with Wi-Fi only first
+and the same three-USB/two-Wi-Fi assignment twice afterward. All 15 hashes matched.
+
+Wi-Fi: 19.307 seconds for 79,605,335 bytes (4.12 MB/s). New phone plus Wi-Fi:
+26.644 and 23.085 seconds for the same batch size each; aggregate 3.20 MB/s.
+This new dual-route setup was 22% slower than the current Wi-Fi-only test and 54%
+slower than the earlier phone's measured 7.02 MB/s dual-route average. Conditions
+changed between sessions; this does not establish a permanent ranking of phones.
+The archive remains PAUSED while the user chooses whether to switch back or use
+Wi-Fi alone. No year-download traffic was running during these comparisons.
