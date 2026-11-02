@@ -3,6 +3,7 @@ from collections import Counter
 
 from research.market_data.archive_sample import build_jobs
 from research.market_data.archive_sample import inspect_file
+from research.market_data.archive_sample import curl_transfer
 import pyarrow as pa
 import pyarrow.parquet as pq
 
@@ -40,3 +41,18 @@ def test_both_provider_encodings_are_read_without_changing_raw_file(tmp_path):
         assert meta.schema_arrow == table.schema
     assert wrapped.read_bytes() == original
     assert not list(tmp_path.glob('*.decoded'))
+
+
+def test_bound_transfer_keeps_auth_out_of_arguments_and_uses_interface(tmp_path, monkeypatch):
+    import subprocess
+    def fake_run(argv, **kwargs):
+        assert argv[argv.index('--interface') + 1] == 'feth0'
+        assert all('test-private-token' not in arg for arg in argv)
+        assert 'Authorization: Bearer test-private-token' in kwargs['input']
+        (tmp_path / 'file.part').write_bytes(b'data')
+        return subprocess.CompletedProcess(argv, 0, stdout='200', stderr='')
+    monkeypatch.setattr(subprocess, 'run', fake_run)
+    status, _ = curl_transfer('https://api.cryptohftdata.com/v1/download?file=test',
+                             'test-private-token', tmp_path / 'file.part', 'feth0')
+    assert status == 200
+    assert not list(tmp_path.glob('*.headers'))

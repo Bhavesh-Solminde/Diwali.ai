@@ -3,7 +3,7 @@
 This preserves provider files; a successful download is not training approval.
 """
 import argparse
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor, as_completed, CancelledError
 from datetime import date, timedelta
 import hashlib
 import json
@@ -15,6 +15,7 @@ import threading
 import fcntl
 from itertools import zip_longest
 import tempfile
+import subprocess
 
 import pyarrow as pa
 import pyarrow.parquet as pq
@@ -27,6 +28,37 @@ class ArchiveHTTPError(RuntimeError):
     def __init__(self, status):
         super().__init__(f'Archive HTTP {status}')
         self.status = status
+
+
+class DownloadPaused(Exception):
+    pass
+
+
+def curl_transfer(url, token, path, interface):
+    """Bind a whole file to a tested interface; keep credentials off process arguments."""
+    if not interface.replace('_', '').isalnum():
+        raise ValueError('Invalid network interface')
+    configuration = 'url = ' + json.dumps(url) + '\nheader = ' + json.dumps(
+        'Authorization: Bearer ' + token) + '\n'
+    with tempfile.NamedTemporaryFile(dir=path.parent, suffix='.headers') as headers:
+        result = subprocess.run([
+            '/usr/bin/curl', '--silent', '--show-error', '--location',
+            '--proto', '=https', '--proto-redir', '=https',
+            '--interface', interface, '--connect-timeout', '20', '--max-time', '240',
+            '--max-filesize', str(4 * 1024**3), '--output', str(path),
+            '--dump-header', headers.name, '--write-out', '%{http_code}', '--config', '-'],
+            input=configuration, capture_output=True, text=True)
+        status = int(result.stdout.strip() or 0)
+        retry_after = 5.0
+        for line in Path(headers.name).read_text(errors='replace').splitlines():
+            if line.lower().startswith('retry-after:'):
+                try:
+                    retry_after = max(1, float(line.split(':', 1)[1]))
+                except ValueError:
+                    retry_after = 60.0
+    if result.returncode:
+        raise requests.ConnectionError('Bound transfer failed; private response withheld')
+    return status, retry_after
 
 
 def inspect_file(path):
@@ -72,6 +104,7 @@ def main():
     parser.add_argument("--workers", type=int, default=4, choices=range(1, 9))
     parser.add_argument("--monthly", action="store_true")
     parser.add_argument("--key-ring", type=Path)
+    parser.add_argument('--interfaces', nargs='+', help='Interface per worker; repeats give more workers to a route')
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
     if (args.output / 'PAUSE').exists():
@@ -118,8 +151,22 @@ def main():
         token_for(slot)
     print(json.dumps({'authenticated_slots': len(keys), 'month_assignments':
                      {month: slot + 1 for month, slot in assignments.items()}}), flush=True)
+    thread_state = threading.local()
+    route_lock = threading.Lock()
+    route_counter = [0]
+
+    def current_interface():
+        if not args.interfaces:
+            return None
+        if not hasattr(thread_state, 'interface'):
+            with route_lock:
+                thread_state.interface = args.interfaces[route_counter[0] % len(args.interfaces)]
+                route_counter[0] += 1
+        return thread_state.interface
 
     def download(job):
+        if (args.output / 'PAUSE').exists():
+            raise DownloadPaused()
         day, hour, kind = job
         remote = f"binance_futures/{day}/{hour:02d}/BTCUSDT_{kind}.parquet"
         root = args.output / str(day)[:7] if args.monthly else args.output
@@ -140,10 +187,60 @@ def main():
             raise RuntimeError(f"Existing file lacks metadata: {remote}")
         part = dest.with_suffix(".parquet.part")
         started = time.monotonic()
+        interface = current_interface()
         for attempt in range(4):
             slot = assignments[str(day)[:7]]
             token = token_for(slot)
             throttle(slot)
+            if (args.output / 'PAUSE').exists():
+                raise DownloadPaused()
+            if interface:
+                if shutil.disk_usage(args.output).free < 30 * 1024**3:
+                    raise RuntimeError('Less than 30 GiB disk space remains')
+                try:
+                    from urllib.parse import urlencode
+                    status, retry_after = curl_transfer(BASE + '/download?' + urlencode({'file': remote}),
+                                                       token, part, interface)
+                except requests.RequestException:
+                    time.sleep(2 ** attempt)
+                    continue
+                if status == 401:
+                    token_for(slot, refresh=True)
+                    continue
+                if status == 429 or status >= 500:
+                    if status == 429:
+                        with cooldown_lock:
+                            cooldown_until[0] = max(cooldown_until[0], time.monotonic() + retry_after)
+                    time.sleep(retry_after)
+                    continue
+                if status != 200:
+                    raise ArchiveHTTPError(status)
+                size = part.stat().st_size
+                with part.open('rb') as source:
+                    digest = hashlib.file_digest(source, 'sha256')
+            else:
+                size, digest = download_unbound(remote, token, part, slot)
+            metadata, encoding = inspect_file(part)
+            record = {
+                'provider': 'CryptoHFTData', 'remote_file': remote, 'bytes': size,
+                'sha256': digest.hexdigest(), 'rows': metadata.metadata.num_rows,
+                'schema': str(metadata.schema_arrow), 'encoding': encoding,
+                'elapsed_seconds': round(time.monotonic() - started, 2),
+                'interface': interface, 'training_ready': False,
+            }
+            if encoding == 'zstd-wrapped-parquet':
+                dest = folder / f'BTCUSDT_{kind}.parquet.zst'
+            part.rename(dest)
+            meta.write_text(json.dumps(record, indent=2) + '\n')
+            print(json.dumps({k: v for k, v in record.items() if k != 'schema'}), flush=True)
+            return record
+        raise RuntimeError(f'{kind}: retries exhausted')
+
+    def download_unbound(remote, token, part, slot):
+        for attempt in range(4):
+            throttle(slot)
+            if (args.output / 'PAUSE').exists():
+                raise DownloadPaused()
             digest = hashlib.sha256()
             size = 0
             try:
@@ -157,7 +254,7 @@ def main():
                 continue
             with result:
                 if result.status_code == 401:
-                    token_for(slot, refresh=True)
+                    token = token_for(slot, refresh=True)
                     continue
                 if result.status_code == 429 or result.status_code >= 500:
                     delay = max(1, float(result.headers.get('Retry-After', 5)))
@@ -178,42 +275,58 @@ def main():
                             raise RuntimeError("Sample file exceeded 4 GiB bound")
                         target.write(chunk)
                         digest.update(chunk)
-            metadata, encoding = inspect_file(part)
-            record = {
-                "provider": "CryptoHFTData", "remote_file": remote,
-                "bytes": size, "sha256": digest.hexdigest(),
-                "rows": metadata.metadata.num_rows,
-                "schema": str(metadata.schema_arrow),
-                "encoding": encoding,
-                "elapsed_seconds": round(time.monotonic() - started, 2),
-                "training_ready": False,
-            }
-            if encoding == 'zstd-wrapped-parquet':
-                dest = folder / f'BTCUSDT_{kind}.parquet.zst'
-            part.rename(dest)
-            meta.write_text(json.dumps(record, indent=2) + "\n")
-            print(json.dumps({k: v for k, v in record.items() if k != "schema"}), flush=True)
-            return record
-        raise RuntimeError(f"{kind}: retries exhausted")
+            return size, digest
+        raise RuntimeError('Unbound transfer retries exhausted')
 
     # Round-robin monthly queues: distinct file keys, distributed credential slots.
     jobs = build_jobs(args.date, args.days, args.hour)
     assert len(jobs) == len(set(jobs)), 'Duplicate archive jobs'
+    total_files = len(jobs)
     records, failures = [], []
+    expected = {f'binance_futures/{d}/{h:02d}/BTCUSDT_{kind}.parquet'
+                for d, h, kind in jobs}
+    saved = set()
+    for meta in args.output.rglob('*.metadata.json'):
+        record = json.loads(meta.read_text())
+        remote = record['remote_file']
+        if remote not in expected or remote in saved:
+            continue
+        source = meta.with_name(meta.name.replace('.metadata.json', '.parquet'))
+        if not source.exists():
+            source = source.with_suffix('.parquet.zst')
+        if source.exists() and source.stat().st_size == record['bytes']:
+            with source.open('rb') as handle:
+                valid = hashlib.file_digest(handle, 'sha256').hexdigest() == record['sha256']
+            if valid:
+                records.append(record)
+                saved.add(remote)
+    jobs = [job for job in jobs if
+            f'binance_futures/{job[0]}/{job[1]:02d}/BTCUSDT_{job[2]}.parquet' not in saved]
+    print(json.dumps({'verified_reused_files': len(records), 'pending_files': len(jobs),
+                      'interfaces': args.interfaces}), flush=True)
+    status = {'completed_files': len(records), 'total_files': total_files,
+              'bytes': sum(r['bytes'] for r in records), 'failures': failures,
+              'training_ready': False, 'state': 'downloading'}
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
         pending = {pool.submit(download, job): job for job in jobs}
         for future in as_completed(pending):
             try:
                 records.append(future.result())
+            except (DownloadPaused, CancelledError):
+                continue
             except Exception as exc:
                 job = pending[future]
                 # Exception bodies/URLs are deliberately not logged (credentials).
                 failures.append({'date': str(job[0]), 'hour': job[1], 'kind': job[2],
                                  'error_type': type(exc).__name__,
                                  'http_status': getattr(exc, 'status', None)})
-            status = {'completed_files': len(records), 'total_files': len(jobs),
+            status = {'completed_files': len(records), 'total_files': total_files,
                       'bytes': sum(r['bytes'] for r in records), 'failures': failures,
                       'training_ready': False}
+            status['state'] = 'draining' if (args.output / 'PAUSE').exists() else 'downloading'
+            if status['state'] == 'draining':
+                for queued in pending:
+                    queued.cancel()
             status['months'] = {month: {'completed_files': sum(
                 1 for r in records if r['remote_file'].split('/')[1].startswith(month)),
                 'credential_slot': assignments[month] + 1} for month in months}
@@ -221,6 +334,9 @@ def main():
             temporary.write_text(json.dumps(status, indent=2) + '\n')
             temporary.replace(args.output / 'status.json')
     (args.output / "manifest.json").write_text(json.dumps(records, indent=2) + "\n")
+    if (args.output / 'PAUSE').exists():
+        status['state'] = 'paused'
+        (args.output / 'status.json').write_text(json.dumps(status, indent=2) + '\n')
     if failures:
         raise SystemExit(f"{len(failures)} files failed; resume the same command to retry")
 
