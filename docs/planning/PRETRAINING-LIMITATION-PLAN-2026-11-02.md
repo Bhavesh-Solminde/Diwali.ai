@@ -163,3 +163,10 @@ Sustained direct evidence and a suitable independent source are explicit deferre
 improvements; neither should become an endless demand for perfect data before an
 honestly labelled exploratory experiment. No news, inferred book, entry-quality
 model, simulator pretraining, deployment or trading is included.
+
+Recovery follow-up: the [official-source probe](MISSING-DATA-RECOVERY-2026-11-02.md)
+verified that Binance's free individual-trade archive recovers the contents of
+three selected bad/missing source minutes. This improves the recovery options;
+original receipt times and the 7,150-origin strict dataset remain unchanged until
+a versioned repair and availability review. Do not treat the earlier source
+inventory's lack of a second book sample as absence of recoverable execution data.
