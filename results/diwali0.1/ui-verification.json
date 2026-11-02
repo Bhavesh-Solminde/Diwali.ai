@@ -1,0 +1,13 @@
+{
+  "cases_checked": 10,
+  "api_predictions_match_saved_test_predictions_within_usdt": 0.009789050061954185,
+  "actual_targets_match_saved_labels": true,
+  "actual_hidden_before_predict": true,
+  "interactive_calculation_ms": {
+    "median": 0.8155000032274984,
+    "max": 1.0524170065764338
+  },
+  "browser_flow": "Predict / Reveal / example switch passed; desktop and mobile; zero JS errors; no mobile horizontal overflow",
+  "correctness_tests_passed": 49,
+  "live_trading": false
+}

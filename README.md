@@ -4,6 +4,8 @@ Research on BTC next-minute candle generation, order-book forecasting and Krafer
 
 ## Start here
 
+- [diwali0.1 trained model and UI](research/diwali/README.md) — local historical replay at http://127.0.0.1:8741; [training results](docs/planning/DIWALI0.1-TRAINING-RECORD-2026-11-02.md).
+
 - [Reusable model-training checklist](docs/checklists/MODEL-TRAINING-CHECKLIST.md) — copy for every new model/run; leave master unchecked.
 - [Current aligned pilot readiness and baseline results](docs/planning/ALIGNED-EXPERIMENT-READINESS-2026-11-02.md) — three preparation tasks complete, limitations retained.
 - [Frozen current experiment settings](configs/experiments/btc-button-pilot-v1.json)

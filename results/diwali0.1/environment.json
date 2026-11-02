@@ -1,0 +1,9 @@
+{
+  "python": "3.12.4 (v3.12.4:8e8a4baf65, Jun  6 2024, 17:33:18) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "numpy": "2.5.4",
+  "torch": "2.15.0",
+  "pyarrow": "26.0.0",
+  "websockets": "17.3",
+  "training_device": "mps",
+  "inference_demo_device": "cpu"
+}

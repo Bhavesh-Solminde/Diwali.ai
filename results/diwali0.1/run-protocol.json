@@ -1,0 +1,142 @@
+{
+  "model": "diwali0.1",
+  "protocol": {
+    "experiment_id": "btc-button-pilot-v1",
+    "status": "protocol_frozen_before_new_baseline_scores",
+    "market": "Binance USD-M BTCUSDT perpetual",
+    "dataset": "aligned-button-pilot-202610-v1",
+    "parent_dataset": "button-pilot-202610-v1",
+    "primary_snapshot_phase_seconds": 15,
+    "primary_assumed_candle_grace_ms": 1000,
+    "historical_availability": "ASSUMED; not measured original candle receipt",
+    "target": "OHLC of next full calendar minute after snapshot; reject results ready at or after target start",
+    "context": {
+      "candles": 1440,
+      "candle_features": 8,
+      "book_seconds": 60,
+      "book_features": 87,
+      "trade_seconds": 60,
+      "trade_features": 5
+    },
+    "splits_utc_end_exclusive": {
+      "fit": [
+        "2026-10-01",
+        "2026-10-19"
+      ],
+      "development": [
+        "2026-10-19",
+        "2026-10-22"
+      ],
+      "calibration": [
+        "2026-10-22",
+        "2026-10-24"
+      ],
+      "locked_test": [
+        "2026-10-24",
+        "2026-11-01"
+      ]
+    },
+    "preprocessing": "fit-only input scalers; fit-only target scales; no dropping/joining context gaps",
+    "label_units": "OHLC basis-point returns relative to final input candle close",
+    "baselines": [
+      "persistence",
+      "momentum",
+      "reversal",
+      "fit_majority",
+      "book_imbalance",
+      "trade_flow",
+      "recent_vwap_persistence"
+    ],
+    "models": {
+      "mlp": {
+        "input": "flatten all 1440x8 candle and 60x(87+5) book/trade features",
+        "hidden_sizes": [
+          32,
+          32
+        ],
+        "activation": "GELU",
+        "parameter_limit": 1000000
+      },
+      "sequence": {
+        "candle_conv": {
+          "in": 8,
+          "out": 16,
+          "kernel": 15,
+          "stride": 15,
+          "padding": 0
+        },
+        "candle_gru_hidden": 32,
+        "book_trade_projection": 16,
+        "book_trade_gru_hidden": 32,
+        "fusion_hidden": 32,
+        "parameter_limit": 100000
+      }
+    },
+    "output": "four OHLC values; open/close plus softplus high/low excursions ensuring valid candles",
+    "training": {
+      "seeds": [
+        17,
+        29,
+        43
+      ],
+      "optimizer": "AdamW",
+      "learning_rate": 0.0003,
+      "weight_decay": 0.0001,
+      "batch_size": 128,
+      "max_epochs": 20,
+      "early_stopping_patience": 4,
+      "loss": "mean squared error of fit-standardized OHLC returns",
+      "max_wall_minutes_per_seed": 30,
+      "peak_memory_budget_gb": 18,
+      "precision": "float32",
+      "device": "MPS if supported, otherwise CPU; record actual device and determinism limits"
+    },
+    "selection": {
+      "checkpoint": "lowest development mean OHLC MAE",
+      "architecture": "lowest three-seed mean development OHLC MAE; tie within 0.01 bp favors smaller parameter count",
+      "seed_for_final_forward_model": 17,
+      "no_extra_search": true
+    },
+    "metrics": [
+      "mean_OHLC_MAE_bp",
+      "per_OHLC_MAE_bp",
+      "per_OHLC_RMSE_bp",
+      "close_direction_accuracy_down_flat_up",
+      "balanced_direction_accuracy",
+      "class_counts",
+      "daily_metrics",
+      "eligible_coverage",
+      "inference_latency_and_missed_target_rate"
+    ],
+    "uncertainty": {
+      "calibration": "For each OHLC output, symmetric residual interval around point prediction. Calibration absolute error rank min(n,ceil((n+1)*coverage)) at coverage 0.80 and 0.95; per-output marginal intervals, no joint/IID/time-series guarantee.",
+      "note": "Temporal dependence and two calibration days prevent an IID coverage guarantee"
+    },
+    "test_access": "No model test scores until architectures/checkpoints and calibration fixed. Never tune from test. Baselines now score development only.",
+    "timing_sensitivity": "Predeclared phases 0/15/30/45 and grace 1/5/30/60 seconds; compare common targets; no hyperparameter retuning per scenario",
+    "error_views": {
+      "training": "fit data error",
+      "past_unseen": "locked chronological test after selection",
+      "recent_market": "only prospectively recorded predictions after targets mature; presently unavailable"
+    },
+    "out_of_scope": [
+      "news",
+      "missing-book inference",
+      "entry models",
+      "simulator pretraining",
+      "live orders"
+    ],
+    "reporting": "Publish failed runs, all seeds, actual epochs, hashes, parameters/device/cost. A pilot need not prove profitability; claim no live advantage without forward outcomes."
+  },
+  "protocol_sha256": "2056a5fb4eac17240bd8ec46ada50812b72becdef6cd9737ebd5cc06189dcc3f",
+  "colour_metric_addition": "Supplementary predicted close-vs-open candle colour; not selection criterion. Frozen before neural fitting.",
+  "device": "mps",
+  "torch_version": "2.15.0",
+  "started_utc": "2026-11-02T15:33:03.261544+00:00",
+  "code_sha256": {
+    "train.py": "970d7c51f0d1857dcdbe2556a9c0aef454662ae045a34cf99841db59e0f439dc",
+    "model.py": "3130d855b64bbf34f6ecf1b05c3d4ec0343f348394c9fa64e0ff472efd8412cc"
+  },
+  "historical_availability": "assumed; not certified historical live receipt",
+  "test_not_used_for_selection": true
+}

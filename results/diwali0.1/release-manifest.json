@@ -1,0 +1,25 @@
+{
+  "model": "diwali0.1",
+  "source_sha256": {
+    "research/diwali/model.py": "3130d855b64bbf34f6ecf1b05c3d4ec0343f348394c9fa64e0ff472efd8412cc",
+    "research/diwali/train.py": "970d7c51f0d1857dcdbe2556a9c0aef454662ae045a34cf99841db59e0f439dc",
+    "research/diwali/serve.py": "475181424308edcdc1271ab1b69076c09f896e3ec235c17632850ebeb3e5e872",
+    "ui/diwali/index.html": "6310f2cc9ad1e586ff613026a0e31e89391261639ab13fe0a18cd1c7f2a987c0",
+    "ui/diwali/app.js": "41441d40f971931b6bd488ccaeafcddfe4c2cee525e140c04ed1500d11762028",
+    "ui/diwali/style.css": "27cc08c0a631742719a85a1a8120284513efeb150d6c312e6ca3afc860548fa2"
+  },
+  "result_sha256": {
+    "calibration.json": "80a8a3108ac904932ee2990091835bc8f17f11e31fdb89d0874923f54a7e0524",
+    "environment.json": "df0b9be543273a74e00f080a220e18a534a2477d588d844e5c7e3b336de0f9f4",
+    "report.json": "52a85f36b65e4db055cb328f89af7b6335bbd2151672598033679502693012ae",
+    "run-protocol.json": "ea2373e703e01fdefc70d6557522dfc1ab8ad2ac75b223ffedd505353d6564b1",
+    "selection.json": "dd1c4fafe268058fffb11438afa0648563b85d55739c3eae2c1f1fbd555edd7a",
+    "ui-verification.json": "bd2261b007dcc09d7572d679d6b135258717e91db2f4313c1836ffc9af32ece7"
+  },
+  "weights_location": "private local data/models/diwali0.1; weights are not pushed to Git",
+  "server_url": "http://127.0.0.1:8741",
+  "correctness_tests_passed": 49,
+  "ui_test": "desktop/mobile actual Predict/Reveal/switch flow passed",
+  "test_period_consumed": true,
+  "live_accuracy_measured": false
+}

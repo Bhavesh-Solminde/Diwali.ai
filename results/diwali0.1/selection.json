@@ -1,0 +1,10 @@
+{
+  "architecture": "sequence",
+  "seed": 17,
+  "development_three_seed_means": {
+    "mlp": 3.8106667200724282,
+    "sequence": 3.5380442142486572
+  },
+  "selection_complete_before_test": true,
+  "selected_epoch": 9
+}
