@@ -21,7 +21,7 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 import requests
 
-VERSION = 'full-archive-audit-v1'
+VERSION = 'full-archive-audit-v2'
 HERE = Path(__file__).resolve().parent
 HARD_CLOCK = ('receipt_outside_file_hour_rows', 'invalid_exchange_clock_rows',
               'exchange_ahead_over_1s_rows', 'invalid_transaction_clock_rows')
@@ -142,7 +142,7 @@ def reference_candles(output):
     return status
 
 
-def run(root, output, workers, only_month=None, limit_hours=None):
+def run(root, output, workers, only_month=None, limit_hours=None, priority_month=None):
     output.mkdir(parents=True, exist_ok=True)
     # A validator process is exclusive; raw data and downloader locks are separate.
     import fcntl
@@ -246,7 +246,8 @@ def run(root, output, workers, only_month=None, limit_hours=None):
             process.wait()
 
     with ThreadPoolExecutor(max_workers=workers) as pool:
-        futures = [pool.submit(shard, key, value) for key, value in sorted(jobs.items())]
+        ordered = sorted(jobs.items(), key=lambda item: (item[0][0] != priority_month, item[0]))
+        futures = [pool.submit(shard, key, value) for key, value in ordered]
         for future in as_completed(futures):
             future.result()
     progress['state'] = 'scan_complete_reconciliation_pending'
@@ -276,13 +277,46 @@ def reconcile(output, inv, references):
                     minute = int(row[0])
                     if minute % 60000:
                         raise ValueError('Official candle not aligned to milliseconds')
-                    official[minute] = {'open': Decimal(row[1]), 'high': Decimal(row[2]),
+                    truth = {'open': Decimal(row[1]), 'high': Decimal(row[2]),
                         'low': Decimal(row[3]), 'close': Decimal(row[4]), 'volume': Decimal(row[5]),
                         'quote_volume': Decimal(row[7]), 'count': int(row[8])}
+                    validate_reference(minute, truth)
+                    if datetime.fromtimestamp(minute / 1000, timezone.utc).strftime('%Y-%m') != ref['month']:
+                        raise ValueError('Independent reference month mismatch')
+                    if minute in official:
+                        raise ValueError('Duplicate independent candle')
+                    official[minute] = truth
+    supplements = []
+    for supplement in sorted((output / 'reference').glob('REST-BTCUSDT-1m-*.json')):
+        if supplement.name.endswith('.metadata.json'):
+            continue
+        metadata = json.loads(supplement.with_suffix('.metadata.json').read_text())
+        if file_hash(supplement) != metadata['sha256']:
+            raise ValueError('Supplemental reference hash mismatch')
+        rows = json.loads(supplement.read_text())
+        day = supplement.name.removeprefix('REST-BTCUSDT-1m-').removesuffix('.json')
+        start = int(datetime.fromisoformat(day).replace(tzinfo=timezone.utc).timestamp()) * 1000
+        if len(rows) != 1440 or [int(r[0]) for r in rows] != list(range(start, start + 86400000, 60000)):
+            raise ValueError('Supplement is not a complete aligned UTC day')
+        inserted = 0
+        for row in rows:
+            minute = int(row[0])
+            truth = {k: Decimal(row[i]) for k, i in [('open', 1), ('high', 2), ('low', 3),
+                     ('close', 4), ('volume', 5), ('quote_volume', 7)]}
+            truth['count'] = int(row[8])
+            validate_reference(minute, truth)
+            if minute in official and official[minute] != truth:
+                raise ValueError('Independent references conflict')
+            if minute not in official:
+                official[minute] = truth
+                inserted += 1
+        supplements.append({'date': day, 'minutes_added': inserted, 'sha256': metadata['sha256'],
+                            'source': metadata['url']})
     totals = Counter()
     trade_minutes = {}
     book_minutes = {}
     file_errors = []
+    previous_trade_file = None
     for path in sorted((output / 'hours').rglob('*.quality.json')):
         q = json.loads(path.read_text())
         if not q.get('ok'):
@@ -298,10 +332,16 @@ def reconcile(output, inv, references):
             for i, seconds in enumerate(q['good_seconds_per_minute']):
                 book_minutes[q['hour_ns'] // 1000000 + i * 60000] = seconds == 60 and not hard_clock
         else:
+            boundary_bad = False
+            if previous_trade_file and q['hour_ns'] == previous_trade_file['hour_ns'] + 3600 * 10**9:
+                if q['first_trade_id'] != previous_trade_file['last_trade_id'] + 1:
+                    totals['trades.cross_file_boundary_id_discontinuities'] += 1
+                    boundary_bad = True
+            previous_trade_file = q
             for candle in q['candles']:
                 minute = candle['minute_ms']
                 value = {k: Decimal(candle[k]) for k in ('open', 'high', 'low', 'close', 'volume', 'quote_volume')}
-                value.update(count=candle['count'], bad=candle['bad'] or hard_clock,
+                value.update(count=candle['count'], bad=candle['bad'] or hard_clock or boundary_bad,
                              first_id=candle['first_id'], last_id=candle['last_id'])
                 if minute not in trade_minutes:
                     trade_minutes[minute] = value
@@ -349,6 +389,7 @@ def reconcile(output, inv, references):
     report = {'validation_version': VERSION, 'scan_complete': True, 'training_ready': False,
               'inventory': inv, 'counts': dict(totals), 'file_errors': file_errors,
               'independent_reference_months': references, 'official_minutes': len(official),
+              'independent_reference_supplements': supplements,
               'trade_minutes': len(trade_minutes), 'trade_minutes_compared': checked,
               'trade_candle_mismatches': dict(mismatches),
               'trade_minutes_passing': len(good_trade_minutes),
@@ -362,6 +403,15 @@ def reconcile(output, inv, references):
     save(output / 'report.json', report)
 
 
+def validate_reference(minute, truth):
+    if (minute % 60000 or not all(v.is_finite() for v in truth.values() if isinstance(v, Decimal))
+            or min(truth[k] for k in ('open', 'high', 'low', 'close')) <= 0
+            or truth['low'] > min(truth['open'], truth['close'])
+            or truth['high'] < max(truth['open'], truth['close'])
+            or truth['volume'] < 0 or truth['quote_volume'] < 0 or truth['count'] < 0):
+        raise ValueError('Invalid independent candle')
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('archive', type=Path)
@@ -369,5 +419,6 @@ if __name__ == '__main__':
     parser.add_argument('--workers', type=int, choices=range(1, 5), default=3)
     parser.add_argument('--month')
     parser.add_argument('--limit-hours', type=int)
+    parser.add_argument('--priority-month', help='Validate this month first, then the remaining archive')
     args = parser.parse_args()
-    run(args.archive, args.output, args.workers, args.month, args.limit_hours)
+    run(args.archive, args.output, args.workers, args.month, args.limit_hours, args.priority_month)

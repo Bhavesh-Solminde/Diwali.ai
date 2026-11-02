@@ -137,8 +137,13 @@ struct Scanner {
     auto type=x.text("event_type"),side=x.text("side"),price=x.text("price"),qty=x.text("quantity"),symbol=x.text("symbol");
     for(I i=0;i<b->num_rows();++i) {
       I r=val(recv,i),e=val(event,i),uu=val(u,i),ss=val(sid,i);auto t=str(type,i);
-      bool same=event_open&&r==er&&e==ee&&uu==eu&&ss==elast&&t==etype;
+      // Some old provider snapshots interleave two identical copies per level,
+      // one with synthetic E*1e6 receipt time. Snapshot identity is its native
+      // sequence plus event time, not the alternating receipt clock.
+      bool same=event_open&&e==ee&&uu==eu&&ss==elast&&t==etype&&
+                (t=="snapshot"||r==er);
       if(!same)begin_event(r,e,t,val(U,i),uu,val(pu,i),ss);
+      else if(t=="snapshot") er=std::max(er,r);
       clock(r,e);counts.add("rows");
       if(str(symbol,i)!="BTCUSDT"){counts.add("wrong_symbol_rows");event_bad=true;}
       I p=0,q=0;auto s=str(side,i);
@@ -152,6 +157,13 @@ struct Scanner {
       if(t=="snapshot") {snapshot_hash^=static_cast<uint64_t>(p);snapshot_hash*=1099511628211ULL;snapshot_hash^=static_cast<uint64_t>(q);snapshot_hash*=1099511628211ULL;snapshot_hash^=s=="bid"?1:2;}
       if(!apply || event_bad)continue;
       auto& levels=s=="bid"?bids:asks;
+      if(t=="snapshot") {
+        auto existing=levels.find(p);
+        if(existing!=levels.end()) {
+          if(existing->second!=q){counts.add("conflicting_snapshot_level_rows");event_bad=true;continue;}
+          counts.add("duplicate_snapshot_level_rows");
+        }
+      }
       if(q)levels[p]=q;else levels.erase(p);
     }
   }

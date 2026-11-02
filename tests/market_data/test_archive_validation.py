@@ -88,6 +88,30 @@ def test_duplicate_snapshot_and_invalid_decimal(scanner, tmp_path):
     assert q['counts']['invalid_level_rows'] == 1 and not q['valid_end']
 
 
+def test_interleaved_provider_snapshot_copies_form_one_complete_snapshot(scanner, tmp_path):
+    rows = []
+    for row in snapshot(HOUR + 200000000):
+        rows.append(row)
+        rows.append({**row, 'received_time': HOUR})
+    rows.append(level(HOUR + 300000000, 101, pu=100))
+    q = scan(scanner, tmp_path, rows)[0]
+    assert q['counts']['snapshots'] == 1
+    assert not q['counts'].get('invalid_snapshots')
+    assert q['counts']['accepted_updates'] == 1 and q['valid_end']
+    assert q['counts']['duplicate_snapshot_level_rows'] == 40
+    # Keep the raw receipt anomaly visible; reconstruction doesn't certify timing.
+    assert q['counts']['backward_receipt_rows'] > 0
+
+
+def test_conflicting_snapshot_level_cannot_be_silently_overwritten(scanner, tmp_path):
+    rows = snapshot()
+    rows.append({**rows[0], 'quantity': '999'})
+    rows.append(level(HOUR + 300000000, 101, pu=100))
+    q = scan(scanner, tmp_path, rows)[0]
+    assert q['counts']['conflicting_snapshot_level_rows'] == 1
+    assert not q['valid_end']
+
+
 def test_completed_crossed_book_is_invalid(scanner, tmp_path):
     q = scan(scanner, tmp_path, snapshot() + [level(HOUR + 100000000, 101, pu=100, price='105')])[0]
     assert q['counts']['empty_or_crossed_events'] == 1 and not q['valid_end']
@@ -186,3 +210,35 @@ def test_independent_reference_rejects_wrong_volume_and_keeps_training_gate_clos
     assert report['trade_minutes_passing'] == 1
     assert report['candidate_1440_context_origins'] == 0
     assert not report['training_ready']
+
+
+def test_rest_reference_day_recovery_requires_hash_and_complete_day(tmp_path):
+    import hashlib
+    from datetime import datetime, timezone
+    refs = tmp_path / 'reference'
+    refs.mkdir()
+    (tmp_path / 'hours').mkdir()
+    start = int(datetime(2026, 10, 28, tzinfo=timezone.utc).timestamp()) * 1000
+    rows = [[start + i * 60000, '100', '101', '99', '100', '1', start + (i+1)*60000-1,
+             '100', 1, '0', '0', '0'] for i in range(1440)]
+    source = refs / 'REST-BTCUSDT-1m-2026-10-28.json'
+    source.write_text(json.dumps(rows))
+    source.with_suffix('.metadata.json').write_text(json.dumps({
+        'sha256': hashlib.sha256(source.read_bytes()).hexdigest(),
+        'url': 'https://fapi.binance.com/fapi/v1/klines'}))
+    reconcile(tmp_path, {}, [])
+    result = json.loads((tmp_path / 'report.json').read_text())
+    assert result['official_minutes'] == 1440
+    assert result['independent_reference_supplements'][0]['minutes_added'] == 1440
+    source.write_text(json.dumps(rows[:-1]))
+    with pytest.raises(ValueError, match='hash mismatch'):
+        reconcile(tmp_path, {}, [])
+
+
+def test_pilot_boundaries_cover_one_month_without_overlapping_targets():
+    from research.market_data.freeze_pilot import SPLITS, timestamp
+    ranges = [(timestamp(a), timestamp(b)) for a, b in SPLITS.values()]
+    assert ranges[0][0] == timestamp('2026-10-01')
+    assert ranges[-1][1] == timestamp('2026-11-01')
+    assert all(a[1] == b[0] for a, b in zip(ranges, ranges[1:]))
+    assert sum((b-a)//60000 for a, b in ranges) == 31 * 1440
