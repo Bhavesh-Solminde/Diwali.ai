@@ -74,6 +74,8 @@ def main():
     parser.add_argument("--key-ring", type=Path)
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
+    if (args.output / 'PAUSE').exists():
+        parser.error('Download is paused. Remove the local PAUSE marker only when ready to resume.')
     process_lock = (args.output / '.download.lock').open('a')
     fcntl.flock(process_lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
     if args.key_ring:
