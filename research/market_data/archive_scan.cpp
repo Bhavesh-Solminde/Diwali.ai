@@ -75,6 +75,9 @@ struct Scanner {
   struct Candle {I n=0,o=0,h=0,l=0,c=0,v=0,min_id=0,max_id=0; __int128 quote=0; bool bad=false;};
   std::map<I,Candle> candles;
   explicit Scanner(std::string k):kind(std::move(k)){}
+  virtual ~Scanner() = default;
+  virtual void on_tick(I, bool) {}
+  virtual void on_trade(I, I, I, I, I, I, bool, bool, bool) {}
   void invalidate(){bids.clear();asks.clear();initialized=false;valid=false;last=-1;snapshot=-1;bid_floor=ask_ceiling=0;}
   void clock(I r,I e) {
     if(r<hour || r>=hour+3600*SEC)counts.add("receipt_outside_file_hour_rows");
@@ -85,13 +88,17 @@ struct Scanner {
   }
   void ticks(I until, bool inclusive=false) {
     while(next_tick<hour+3600*SEC && (next_tick<until || (inclusive && next_tick==until))) {
+      bool usable=false;
       if(valid && last_update_recv>=0 && next_tick>=last_update_recv && next_tick-last_update_recv<=SEC
          && bids.size()>=20 && asks.size()>=20 && bids.rbegin()->first<asks.begin()->first) {
         auto bid=bids.rbegin();auto ask=asks.begin();std::advance(bid,19);std::advance(ask,19);
-        if(bid->first>=bid_floor && ask->first<=ask_ceiling)
+        if(bid->first>=bid_floor && ask->first<=ask_ceiling) {
           ++good_seconds[(next_tick-hour)/(60*SEC)];
+          usable=true;
+        }
         else counts.add("top20_outside_snapshot_bounds_seconds");
       }
+      on_tick(next_tick, usable);
       next_tick+=SEC;
     }
   }
@@ -184,6 +191,7 @@ struct Scanner {
       if(last_trade>=0 && tid<last_trade){counts.add("backward_or_duplicate_trade_ids");bad=true;}
       if(last_trade>=0 && tid>last_trade+1){counts.add("trade_id_gap_events");counts.add("missing_trade_ids",tid-last_trade-1);bad=true;}
       last_trade=std::max(last_trade,tid);
+      on_trade(r,e,t,tid,p,q,maker->IsValid(i)&&maker->Value(i),bad,non_market);
       // Exchange NA events occupy trade IDs but are not executions. Preserve sequence,
       // exclude explicitly from OHLC/VWAP/volume/count rather than inventing a zero price.
       if(non_market){counts.add("non_market_zero_events");continue;}
