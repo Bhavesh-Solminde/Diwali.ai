@@ -1,0 +1,13 @@
+# First build scope and collection status
+
+User steering: first build is only validated real BTC data → fixed baselines → small MLP versus sequence model. News, missing-book inference, entry-quality modeling and synthetic pretraining are deferred. Training is authorized within this first scope after sufficient paired data, chronology and leakage/label checks. Do not wait for profitable results to publish failures; further features should be reviewed after the initial held-out results.
+
+Implemented public recorder under research/market_data: sequence-aware decimal book, reconnect with backoff, fresh snapshot after invalidation, hourly append-only raw storage, timestamps/segment provenance, metadata and closed exchange candle acquisition, final hash manifest and engineering audit. It uses no account keys or order endpoints.
+
+Local end-to-end smoke capture: 729 depth events, 726 accepted top20 book records, 497 market messages and two stream connections; no connection-error record. Closed REST candles: 1,500 contiguous minutes; two unclosed retrieval rows excluded. Final book invalidation records normal shutdown. Audit passes raw integrity. This is about 89 seconds including REST/setup, not 1,500 paired book minutes or an adequate training dataset. Raw data remains in ignored data/btc-perp/smoke-20261102-a/.
+
+Recorder unit tests verify snapshot overlap/absolute quantities, deletion, duplicate/stale data, gaps requiring a fresh snapshot, crossed/nonfinite/negative books, retry segmentation, hash tampering and keeping the training gate closed for engineering-only samples. No model training has started. Existing 2024 spot candles and 2023 unidentified-venue midpoint book data remain separate from the intended current BTCUSDT perpetual target.
+
+Next: supervised longer capture; validate actual paired coverage, signed trade continuity and official candle reconciliation; construct causal 1,440-minute-context origins and next-minute targets; freeze fit/selection/calibration/test periods; compare fixed baselines then reviewed MLP/sequence budgets. Do not silently shorten the context or split neighboring overlapping windows randomly to produce early scores. Candle-only experiments must be named separately from the combined book/trade experiment.
+
+Acceptance is measured on held-out independent days and market conditions, with class balance, interval calibration and coverage reported. Good training fit is not evidence of predictive improvement. Continuous collection requires the machine/process to remain running; a finite requested run is not a permanently supervised service. No claim of production-ready daemon/recovery or full execution coverage is made.
