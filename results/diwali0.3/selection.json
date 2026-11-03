@@ -1,0 +1,9 @@
+{
+  "mode": "multiscale",
+  "seed": 17,
+  "development_three_seed_means": {
+    "short_control": 1.078106468695103,
+    "multiscale": 1.0764434634234652
+  },
+  "frozen_before_calibration": true
+}

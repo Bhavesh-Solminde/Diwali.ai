@@ -1,5 +1,28 @@
 # Diwali model experiments
 
+## diwali0.3 longer order-history experiment
+
+```sh
+python -m research.diwali.multiscale --output data/models/NEW-MULTISCALE-RUN
+python -m research.diwali.multiscale_serve --port 8743
+```
+
+Default output: `data/models/diwali0.3`. It compares a matching short-history
+control against the same network with 60 minute summaries and 24 hour summaries
+of past order-book/trade observations. The original 60-second and 1,440-candle
+branches remain. Invalid/missing history has explicit coverage indicators.
+Both variants use 19,532 parameters and the same three seeds/training budget.
+The0.2 saved probabilities are compared on identical benchmark examples.
+
+This experiment tests longer context using existing one-second observations;
+it does not restore subsecond events or identify cancellations/refills from
+net depth changes. Fresh prospective confirmation remains outstanding. See
+`docs/planning/DIWALI0.3-MULTISCALE-2026-11-04.md` for definitions and results.
+Completed result: longer history selected by development, but historical
+benchmark accuracy45.63% versus0.2's45.83%, with worse probability log loss
+(1.03932 versus1.03383). No directional calls reached70% confidence. Keep this
+as a negative experiment; do not promote over0.2 or scale on this evidence.
+
 ## diwali0.2 probability model
 
 Train the single next-full-minute bearish/neutral/bullish probabilities with:

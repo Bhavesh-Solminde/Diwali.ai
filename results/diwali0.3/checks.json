@@ -1,0 +1,15 @@
+{
+  "tests_passed": 60,
+  "desktop_and_mobile": {
+    "sizes": [
+      1440,
+      390
+    ],
+    "predict_reveal_switch": true,
+    "javascript_errors": 0,
+    "horizontal_overflow": false
+  },
+  "historical_benchmark_not_fresh": true,
+  "selected_mode": "multiscale",
+  "promote_over_diwali0.2": false
+}

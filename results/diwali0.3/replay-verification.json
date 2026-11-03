@@ -1,0 +1,8 @@
+{
+  "cases": 10,
+  "max_cpu_vs_saved_mps_probability_error": 4.47318614371639e-08,
+  "labels_match": true,
+  "actual_hidden_until_reveal": true,
+  "prediction_ms_median": 3.972187507315539,
+  "prediction_ms_max": 4.802959010703489
+}

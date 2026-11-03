@@ -1,0 +1,22 @@
+{
+  "diwali0.2": {
+    "long_minus_other_log_loss": 0.0054820910975204706,
+    "day_block_bootstrap_95_percent_interval": [
+      0.003192241884158589,
+      0.007966009315603172
+    ],
+    "days_long_better": 0,
+    "days": 8,
+    "note": "Exploratory eight-day block resampling, no fresh-market guarantee or model-selection use."
+  },
+  "short_control": {
+    "long_minus_other_log_loss": 0.0010127192076866017,
+    "day_block_bootstrap_95_percent_interval": [
+      -8.179492757697268e-05,
+      0.002239901250339213
+    ],
+    "days_long_better": 3,
+    "days": 8,
+    "note": "Exploratory eight-day block resampling, no fresh-market guarantee or model-selection use."
+  }
+}

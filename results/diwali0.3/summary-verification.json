@@ -1,0 +1,6 @@
+{
+  "direct_source_bin_checks": 20,
+  "maximum_absolute_feature_error": 9.331206243246015e-07,
+  "coverage_matches_direct_source": true,
+  "tolerance": 0.001
+}

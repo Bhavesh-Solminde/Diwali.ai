@@ -1,0 +1,19 @@
+{
+  "model": "diwali0.3",
+  "source_sha256": {
+    "research/diwali/multiscale.py": "0f5c5f726a1a8455e7d04b0cf734a6f4ef97eac97a588c0bf8588e5254b002dc",
+    "research/diwali/multiscale_serve.py": "7684c0f70c17187773255f6c0398d484ea227396191c93282c8f676befc6d36e",
+    "research/diwali/probability.py": "a8c878e862fbe02348f30ceef0872eb371692e8fb2191212dfe3bd1ca2208c46",
+    "research/diwali/model.py": "3130d855b64bbf34f6ecf1b05c3d4ec0343f348394c9fa64e0ff472efd8412cc",
+    "research/diwali/train.py": "970d7c51f0d1857dcdbe2556a9c0aef454662ae045a34cf99841db59e0f439dc"
+  },
+  "artifact_sha256": {
+    "prefix.npy": "50cdc83c41285a7aa64bdaf031afc03b7ec580f7083e1924d7896a195992e7c9",
+    "preprocessing.json": "e1da3fe126e559818fe6b34bc9dd84465390bfb6ddc6d514f281d65dfa5974cb",
+    "multiscale-17.pt": "87f3f7b02ec226e2660edb12725e1cbaf917e2c71d38641ff14a03640336beb3",
+    "report.json": "d6bd9cdf32cb17df1ae4b298799eac27fa35742663b5e3567180047cd95e49f5"
+  },
+  "data_weights_private": true,
+  "historical_benchmark_inspected_previously": true,
+  "recent_live_accuracy_measured": false
+}

@@ -4,6 +4,8 @@ Research on BTC next-minute candle generation, order-book forecasting and Krafer
 
 ## Start here
 
+- [Diwali0.3 longer order-history experiment](docs/planning/DIWALI0.3-MULTISCALE-2026-11-04.md) — controlled comparison of 60-second inputs with additional minute/hour histories; local replay at http://127.0.0.1:8743.
+- [Diwali0.2 probability model](docs/planning/DIWALI0.2-PROBABILITY-TRAINING-2026-11-03.md) — next-full-minute bearish/neutral/bullish probabilities; local replay at http://127.0.0.1:8742.
 - [diwali0.1 trained model and UI](research/diwali/README.md) — local historical replay at http://127.0.0.1:8741; [training results](docs/planning/DIWALI0.1-TRAINING-RECORD-2026-11-02.md).
 
 - [Reusable model-training checklist](docs/checklists/MODEL-TRAINING-CHECKLIST.md) — copy for every new model/run; leave master unchecked.
