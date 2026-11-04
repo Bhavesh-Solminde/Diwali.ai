@@ -45,3 +45,23 @@ A fixed binary logistic diagnostic compares5/15/30/60/105/345/945-second horizon
 ## Publication and claims
 
 Publish source, protocols and aggregate metrics only. Keep paid raw data, individual input/forecast records, weights and fitted trees local. No trading, news model, target-before-stop entries or hidden-book inference is added here. Finite evaluations cannot establish perfect conditional probability prediction or profitability. No1.4 improvement is claimed before the planned comparisons actually finish.
+
+## Implementation amendment: exact second buckets
+
+The original study stopped during the first one-second control's transfer inference: one valid event just before the strict cutoff had an elapsed time that rounded to60.0 in float32, causing an outside-window rejection. A full scan of5,391 labelled inputs found15 event rows assigned to a different second by the float clock, including seven rows in foldA's fitting inputs and one rounded-to60row. No raw timestamp or event payload was changed.
+
+The corrected control reads the saved, hash-verified integer `available_ns` from each event-window index and subtracts the exact window start before dividing by1,000,000,000. Events at or beyond the true cutoff still fail; there is no clipping. Internal second-boundary rounding is corrected too. Because seven fitting rows were affected, the failed control is retrained, rather than merely skipping its failed transfer example. The original failed run stays private and excluded from comparison.
+
+The four completed raw-event foldA fits and completed baselines are imported unchanged, with their source and artifact hashes verified. New corrected controls use `event_data_exact.py` and `event_train_exact.py`; `event_study_exact.py` resumes the same families, dates, seeds, targets, losses and selection rules in a separate study directory. This amendment repairs preprocessing, not a performance-driven hyperparameter change. Aggregate audit: `results/event-model-engineering/exact-second-binning-audit.json`.
+
+## Remaining representation limitation found during the study
+
+A synthetic input-only counterexample holds the candle/seed/reference inputs fixed and repeats the same known market-fill feature vector1,2or16times in a single equal-availability group. Both fitted seed17event networks change their output probabilities by less than5e-8. Normalized set pooling therefore cannot distinguish the number of otherwise identical rows in this case. Processing every row before pooling is not a guarantee of retaining total trade quantity or group cardinality.
+
+This does not establish how often the limitation affects natural forecasts or explain every error. The frozen1.4 weights and study settings remain unchanged. After this comparison, a bounded representation experiment can test explicit counts/quantity sums or sum-plus-mean pooling while preserving the required same-time permutation invariance. Do not treat another wider hidden layer as recovering this discarded multiplicity. Evidence: `results/event-model-engineering/diwali14-group-cardinality-probe.json`.
+
+## Later final-build preparation
+
+The preparer now additionally supports the fixed September1–14 selection/calibration interval, with August31and preceding snapshot initialization as context. It still denies September15–29. The content auditor separately checks this interval and reports only final-build selection/calibration coverage. This extension does not alter the already completed August cohort artifacts.
+
+`event_final_data.py` joins only audited August and September1–14 components. Its final-score partition remains denied. `event_final_train.py` refuses to select a family from an incomplete development report and recomputes the frozen family-selection rule before fitting. It trains fixedseed17, selects on September1–7 and calibrates on September8–14, without opening final-test labels. This runner is implemented but has not yet been started: the full August comparison and September preparation must finish first. Final one-use evaluation and subsequent prospective confirmation remain required.

@@ -1,0 +1,12 @@
+{
+  "state": "complete",
+  "origins_checked": 5391,
+  "rows_with_float32_second_bucket_difference": 15,
+  "origins_with_bucket_difference": 15,
+  "rounded_to60_rows": 1,
+  "foldA_fit_affected_rows": 7,
+  "source_feature_values_unchanged": true,
+  "exact_timestamp_source": "Verified saved event window available_ns indices",
+  "action": "Retrain one-second controls with exact integer bucket assignment. Preserve completed raw-event fits and failed control artifacts.",
+  "new_code_hash": "a59eb2be64d30424f556a4dddcf9cfb3b5a08734ba67b91997f63b8122774111"
+}

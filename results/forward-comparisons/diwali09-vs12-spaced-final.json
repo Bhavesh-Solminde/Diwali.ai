@@ -1,0 +1,164 @@
+{
+  "state": "matched_prospective_smoke_only",
+  "matched_complete_origins": 6,
+  "audited_cutoff_utc_ns": 1793779290678982000,
+  "follower_stopped": [
+    true,
+    true
+  ],
+  "committed_counts": [
+    6,
+    6
+  ],
+  "complete_counts": [
+    6,
+    6
+  ],
+  "same_receiver_same_frozen_inputs": true,
+  "minimum_spacing_seconds": [
+    900,
+    900
+  ],
+  "only_fully_matured15_close_paths_scored": true,
+  "models": {
+    "diwali0.9": {
+      "final_direction": {
+        "examples": 6,
+        "up_frequency": 0.5,
+        "accuracy": 0.6666666666666666,
+        "binary_log_loss": 0.6879063749444256,
+        "brier_up": 0.24737982267671788,
+        "mean_up_probability": 0.48965347254850555,
+        "confusion_actual_rows_predicted_columns": [
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "confidence_groups": [
+          {
+            "minimum": 0.5,
+            "n": 6,
+            "accuracy": 0.6666666666666666
+          },
+          {
+            "minimum": 0.6,
+            "n": 0,
+            "accuracy": null
+          },
+          {
+            "minimum": 0.7,
+            "n": 0,
+            "accuracy": null
+          },
+          {
+            "minimum": 0.8,
+            "n": 0,
+            "accuracy": null
+          },
+          {
+            "minimum": 0.9,
+            "n": 0,
+            "accuracy": null
+          }
+        ],
+        "up_calibration": [
+          {
+            "lower": 0.4,
+            "n": 5,
+            "mean_claim": 0.48701493210110136,
+            "observed_up": 0.4
+          },
+          {
+            "lower": 0.5,
+            "n": 1,
+            "mean_claim": 0.5028461747855265,
+            "observed_up": 1.0
+          }
+        ],
+        "labels": [
+          "down_or_unchanged",
+          "up"
+        ],
+        "event": "Final forecast close versus frozen reference; equality in down_or_unchanged."
+      },
+      "mean15_range_log_loss": 2.7386717846893047,
+      "joint_log_loss": 27.34000190385601
+    },
+    "diwali1.2": {
+      "final_direction": {
+        "examples": 6,
+        "up_frequency": 0.5,
+        "accuracy": 0.5,
+        "binary_log_loss": 0.6636190563465384,
+        "brier_up": 0.23530854466555762,
+        "mean_up_probability": 0.5135246682613732,
+        "confusion_actual_rows_predicted_columns": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "confidence_groups": [
+          {
+            "minimum": 0.5,
+            "n": 6,
+            "accuracy": 0.5
+          },
+          {
+            "minimum": 0.6,
+            "n": 0,
+            "accuracy": null
+          },
+          {
+            "minimum": 0.7,
+            "n": 0,
+            "accuracy": null
+          },
+          {
+            "minimum": 0.8,
+            "n": 0,
+            "accuracy": null
+          },
+          {
+            "minimum": 0.9,
+            "n": 0,
+            "accuracy": null
+          }
+        ],
+        "up_calibration": [
+          {
+            "lower": 0.4,
+            "n": 2,
+            "mean_claim": 0.47892424149298707,
+            "observed_up": 0.5
+          },
+          {
+            "lower": 0.5,
+            "n": 4,
+            "mean_claim": 0.5308248816455663,
+            "observed_up": 0.5
+          }
+        ],
+        "labels": [
+          "down_or_unchanged",
+          "up"
+        ],
+        "event": "Final forecast close versus frozen reference; equality in down_or_unchanged."
+      },
+      "mean15_range_log_loss": 2.723249954372475,
+      "joint_log_loss": 27.48715772340378
+    }
+  },
+  "scope": "One small session with nonoverlapping target candle sets; not independent days, perfect probabilities, entry efficacy or training/selection evidence.",
+  "always_half_final_binary_log_loss": 0.6931471805599453,
+  "relation_to_diwali14": "Frozen0.9/1.2 forecasts were issued before1.4; they are not fresh1.4 confirmation and were not used to select1.4 settings."
+}

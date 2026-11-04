@@ -23,6 +23,12 @@ def intersects(first, stop, intervals):
     return any(first < b and stop > a for a,b in intervals)
 
 
+def period_bounds(period):
+    if period=='august':return '2026-08-01T00','2026-09-01T00',['2026-08-01','2026-08-31']
+    if period=='september-selection':return '2026-09-01T00','2026-09-15T00',['2026-09-01','2026-09-14']
+    raise ValueError('Only frozen development/final-selection dates allowed; reserved final preparation denied')
+
+
 def clock_exclusions(source, hours):
     intervals=[]
     for h in hours:
@@ -44,13 +50,15 @@ def main():
     p=argparse.ArgumentParser()
     p.add_argument('--source',type=Path,required=True)
     p.add_argument('--output',type=Path,required=True)
+    p.add_argument('--period',choices=['august','september-selection'],default='august')
     a=p.parse_args()
     sr=json.loads((a.source/'report.json').read_text())
     if sr['state'] != 'complete':
         raise ValueError('Incomplete source extraction')
-    first,stop=hour_ns('2026-08-01T00'),hour_ns('2026-09-01T00')
-    if sr['protocol']['stop_exclusive'] != '2026-09-01T00:00:00+00:00':
-        raise ValueError('This bounded builder requires the frozen August source end')
+    first_name,stop_name,target_interval=period_bounds(a.period)
+    first,stop=hour_ns(first_name),hour_ns(stop_name)
+    if sr['protocol']['stop_exclusive'] != stop_name+':00:00+00:00':
+        raise ValueError('This bounded builder requires the frozen period source end')
     exclusions=clock_exclusions(a.source,sr['hours'])
     a.output.mkdir(parents=True,exist_ok=False)
     out=a.output/'candles';out.mkdir()
@@ -61,7 +69,7 @@ def main():
     contexts=[];masks=[];metadata=[];ledger=[];reject=Counter();counts=[];provenance={}
     total_origins=0;source_rows=0
     protocol={'source_report_sha256':file_hash(a.source/'report.json'),
-              'origins':['2026-08-01','2026-08-31'],'freeze_second':15,'history_minutes':1440,
+              'origins':target_interval,'freeze_second':15,'history_minutes':1440,
               'recent_event_seconds':60,'targets':15,'clock_trade_exclusion_intervals_ns':exclusions,
               'context_policy':'At least99percent valid, latest candle valid; explicit masks',
               'target_policy':'No bad/missing or clock-exclusion target; month-end horizon purge',
@@ -149,7 +157,7 @@ def main():
     save(out/'targets.json',targets)
     common={'state':'complete','source_report_sha256':protocol['source_report_sha256'],
             'training_ready':False,'protocol_sha256':file_hash(a.output/'protocol.json')}
-    cr={**common,'target_interval':['2026-08-01','2026-08-31'],'contexts':len(metadata),
+    cr={**common,'target_interval':target_interval,'contexts':len(metadata),
         'labelled_origins':len(targets),'input_rejections':dict(reject),'target_rejections':dict(target_reject),
         'artifact_sha256':{n:file_hash(out/n) for n in ['input-candles.npy','input-candle-masks.npy','input-metadata.json','targets.json']},
         'masked_context_minutes':int(sum((~m).sum() for m in masks)),

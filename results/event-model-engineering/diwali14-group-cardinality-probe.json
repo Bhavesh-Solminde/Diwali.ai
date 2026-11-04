@@ -1,0 +1,43 @@
+{
+  "state": "complete",
+  "probe": "Repeat an otherwise identical market-fill feature vector in one availability-time group; hold all other inputs fixed.",
+  "models": [
+    {
+      "candidate": "event_temporal_conv",
+      "weights_sha256": "2ef3288626c5adc3df409ddf01efb529e3c041089e4ee103fd34918163ce7366",
+      "same_time_identical_fill_counts": [
+        1,
+        2,
+        16
+      ],
+      "maximum_probability_changes": [
+        2.9802322387695312e-08,
+        2.9802322387695312e-08
+      ],
+      "count_information_unidentifiable_in_this_case": true
+    },
+    {
+      "candidate": "event_attention",
+      "weights_sha256": "5e12610b8503e1bdad5f458aeb6194d8dd30abac4e32189618683cd8d4ebd2d4",
+      "same_time_identical_fill_counts": [
+        1,
+        2,
+        16
+      ],
+      "maximum_probability_changes": [
+        4.470348358154297e-08,
+        4.470348358154297e-08
+      ],
+      "count_information_unidentifiable_in_this_case": true
+    }
+  ],
+  "target_outcomes_used_in_probe": false,
+  "loader_validates_existing_development_targets": true,
+  "synthetic_counterexample": true,
+  "mechanism": "Normalized set pooling averages away multiplicity when every vector in a group is identical. Individual rows enter projection but cardinality is not guaranteed to survive.",
+  "implication": "This is a remaining representation limitation, not proof of its impact on natural forecast errors.",
+  "next_bounded_design": "After frozen1.4 comparison, test explicit group counts/size sums or sum-plus-mean pooling while retaining same-time permutation invariance.",
+  "frozen_study_changed": false,
+  "probe_source_sha256": "acb554ed3d67ffbf5e018989e7e4a1113ffdeff6dfd8c75b0bde161579c7797b",
+  "model_source_sha256": "d23f3c55083773d0010a67f22fb3d14581975af59a885b955aa5fa1d550da9fa"
+}
