@@ -1,0 +1,91 @@
+{
+  "state": "complete",
+  "protocol": {
+    "hours": [
+      [
+        "2026-10-05",
+        "00"
+      ],
+      [
+        "2026-10-05",
+        "12"
+      ],
+      [
+        "2026-10-12",
+        "00"
+      ],
+      [
+        "2026-10-12",
+        "12"
+      ]
+    ],
+    "selection": "Same fixed fit-only resolution-audit hours; no labels",
+    "sources": {
+      "event_replay.py": "b1867c134c9950e011232e00f4e42532702deaa04141dc8ebd72a229054659b6",
+      "event_scan.cpp": "ae04b0d59eb9e8850802bac683326d875a02b87f80241e33b2b7d87c84e57aa7",
+      "archive_scan.cpp": "c8da51f348f5b8fbcdaa8033fdf7236ab174659fa7340891ff55fd8a97baeaf4",
+      "feature_scan.cpp": "bffbb306b27d68a1004e067846e513db957bf65b44e3652f85248a4ca61887ce"
+    },
+    "archive_manifest_sha256": "bfc97147330ef1b0f1c838efb47da04eb9b6e1f3673adfae02ea8d4ba22b9a03",
+    "top20_scale": 100000000,
+    "dtype_bytes": 712,
+    "batch_atomic": true,
+    "training_started": false
+  },
+  "parent_seconds_sha256": "2d8018900937fbd1bd102b4b65b321fe47f7fb065fd06d410dba8ab81425ef61",
+  "hours": [
+    {
+      "hour": "2026-10-05T00",
+      "source_sha256": "bba0e5e53b69d2fec79db547fc83f5b519dd2ac0ca594500167d2da303e0b256",
+      "warmup_source_sha256": "5c2294d36caae29dd29d66f5ff0dac78678916ce02cc3566e7b05024eaf63273",
+      "events": 136583,
+      "accepted_updates": 136582,
+      "valid_states": 136582,
+      "old_grid_rows_byte_equal": 3600,
+      "event_sha256": "9c302c9db38711673830dce69ebf36bf9ba2e412af7c7ff90460b7d9c06bcc0a",
+      "seconds_sha256": "06409c2ec39cb7e92968d1b7a9fa7665e5175ab4fb56b29a0a95a38a8906f5ad"
+    },
+    {
+      "hour": "2026-10-05T12",
+      "source_sha256": "a3a106ab0cb8fb5be81c1c6f6373cac3e4c37ec7253e8276c98df2a1ce24e37f",
+      "warmup_source_sha256": "569940a7df2ec9934f464ffd8d2b4d40c552e896ea19a3ee08160bfe771d22fc",
+      "events": 136370,
+      "accepted_updates": 136369,
+      "valid_states": 136369,
+      "old_grid_rows_byte_equal": 3600,
+      "event_sha256": "ced110dd4c4f0bf289477f7f28572c3b9dfdf2fb2f30d5c9d84c20bcdcf9ace3",
+      "seconds_sha256": "6456ebfd930ec7747cff0b9708c1a3fb384e07613fd4924443debfb519082393"
+    },
+    {
+      "hour": "2026-10-12T00",
+      "source_sha256": "b51acf8427f3d3c44b9c96711652639c16806c867f2910321a872b672ada287b",
+      "warmup_source_sha256": "6ea2d98728060548ec999a0b1db3048e80d728b865da19118ba95941c3dc9266",
+      "events": 135716,
+      "accepted_updates": 135715,
+      "valid_states": 135715,
+      "old_grid_rows_byte_equal": 3600,
+      "event_sha256": "908a6b2acd03345b55372ee9ca20e89883a707628400646278d6b0b1e04746ca",
+      "seconds_sha256": "e4b0022ad8417ff36337ba0951b4c2090bce1f55eb388fc2667848731b35b9ed"
+    },
+    {
+      "hour": "2026-10-12T12",
+      "source_sha256": "5e288b7cf45ed6801ca1ae8c65b7740a54c8f8478f6c2aeb0efc417eccceffc1",
+      "warmup_source_sha256": "5ee453d9f53f8d9f4f4e419465662753dbe645f7f8054c41204ed02f28df6e01",
+      "events": 136517,
+      "accepted_updates": 136516,
+      "valid_states": 136516,
+      "old_grid_rows_byte_equal": 3600,
+      "event_sha256": "8b702cf02396d398ce6ce588acb7a00d732cea7a82e2b5690f13c30702b036fc",
+      "seconds_sha256": "d82b705fcb9dbc43cda9273eeffe6d79ff06cff3103b23b98b523f77236d78e3"
+    }
+  ],
+  "elapsed_seconds": 9.127002000808716,
+  "training_ready": false,
+  "limitations": [
+    "Top20 per provider batch; raw deeper levels remain in source archive.",
+    "No trade merge or new model windows yet.",
+    "Provider receipt authenticity remains uncertain.",
+    "Atomic batch order does not reveal individual orders or hidden liquidity.",
+    "Four sampled hour pairs do not prove whole-month continuity."
+  ]
+}
