@@ -1,0 +1,12 @@
+{
+  "state": "complete",
+  "origins_compared": 5519,
+  "event_rows_compared": 18868954,
+  "all_arrays_bitwise_equal": true,
+  "elapsed_seconds": 19.313440084457397,
+  "reference_preparation_seconds": 859.6688749790192,
+  "vectorized_preparation_seconds": 188.73622512817383,
+  "reference_report_sha256": "ae54dedcd566e1ee524326a4c233b5b698f92b42dc37c0b882c7a58dd372dad1",
+  "vectorized_report_sha256": "ea57e963451ec5b63c592981774c7dddd7c248b9b69025899a77e489d5b46ae1",
+  "scope": "Full August prepared-input parity; no model outputs or labels used."
+}
