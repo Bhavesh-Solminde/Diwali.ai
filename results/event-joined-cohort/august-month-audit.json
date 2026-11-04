@@ -1,0 +1,148 @@
+{
+  "state": "complete",
+  "scope": "August development content and cohort audit, not forecasting performance",
+  "cohort_sha256": "f93975712b8fc1b1ddcabadc247b000710b76f8d9163399277b14d8187339adc",
+  "source_report_sha256": "d1ff2ecf891dad27ba9895402e9362822d9024537c26ef357411b8c2f011eac3",
+  "audit_source_sha256": "de0d077794b095813225d35d0dcc84565bae69824384de029434eaced1e715c7",
+  "joined_contexts": 5519,
+  "labelled_origins": 5391,
+  "native_target_coordinates_checked": 80865,
+  "maximum_close_difference": 0.0,
+  "input_rejections": {
+    "No valid pre-window book seed": 36084,
+    "No fresh completed-second reference": 45,
+    "Gap/invalid marker inside window": 1151,
+    "Stale book coverage": 16,
+    "Insufficient99percent context or missing latest candle": 84,
+    "clock_trade_hour_intersects_input_history": 1501,
+    "clock_flagged_recent_source_hour": 240
+  },
+  "target_rejections": {
+    "missing_or_bad_target": 128
+  },
+  "event_rows": 18868954,
+  "minimum_events": 1770,
+  "maximum_events": 51276,
+  "folds": {
+    "A": {
+      "fit": {
+        "inside_partition": 1638,
+        "retained": 1638,
+        "purged_target_overlap": 0,
+        "outside_partition": 3753
+      },
+      "select": {
+        "inside_partition": 420,
+        "retained": 420,
+        "purged_target_overlap": 0,
+        "outside_partition": 4971
+      },
+      "calibrate": {
+        "inside_partition": 360,
+        "retained": 352,
+        "purged_target_overlap": 8,
+        "outside_partition": 5031
+      },
+      "score": {
+        "inside_partition": 896,
+        "retained": 896,
+        "purged_target_overlap": 0,
+        "outside_partition": 4495
+      }
+    },
+    "B": {
+      "fit": {
+        "inside_partition": 3314,
+        "retained": 3314,
+        "purged_target_overlap": 0,
+        "outside_partition": 2077
+      },
+      "select": {
+        "inside_partition": 260,
+        "retained": 260,
+        "purged_target_overlap": 0,
+        "outside_partition": 5131
+      },
+      "calibrate": {
+        "inside_partition": 1343,
+        "retained": 1343,
+        "purged_target_overlap": 0,
+        "outside_partition": 4048
+      },
+      "score": {
+        "inside_partition": 249,
+        "retained": 249,
+        "purged_target_overlap": 0,
+        "outside_partition": 5142
+      }
+    },
+    "C": {
+      "fit": {
+        "inside_partition": 4917,
+        "retained": 4917,
+        "purged_target_overlap": 0,
+        "outside_partition": 474
+      },
+      "select": {
+        "inside_partition": 249,
+        "retained": 249,
+        "purged_target_overlap": 0,
+        "outside_partition": 5142
+      },
+      "calibrate": {
+        "inside_partition": 25,
+        "retained": 25,
+        "purged_target_overlap": 0,
+        "outside_partition": 5366
+      },
+      "score": {
+        "inside_partition": 200,
+        "retained": 200,
+        "purged_target_overlap": 0,
+        "outside_partition": 5191
+      }
+    }
+  },
+  "labelled_origins_by_day": {
+    "2026-08-01": 181,
+    "2026-08-02": 120,
+    "2026-08-03": 254,
+    "2026-08-04": 216,
+    "2026-08-05": 171,
+    "2026-08-06": 251,
+    "2026-08-07": 153,
+    "2026-08-08": 5,
+    "2026-08-09": 156,
+    "2026-08-10": 131,
+    "2026-08-11": 52,
+    "2026-08-12": 221,
+    "2026-08-13": 147,
+    "2026-08-14": 30,
+    "2026-08-15": 330,
+    "2026-08-16": 570,
+    "2026-08-17": 84,
+    "2026-08-18": 242,
+    "2026-08-19": 230,
+    "2026-08-20": 23,
+    "2026-08-21": 7,
+    "2026-08-22": 661,
+    "2026-08-23": 682,
+    "2026-08-24": 121,
+    "2026-08-25": 66,
+    "2026-08-26": 62,
+    "2026-08-27": 2,
+    "2026-08-28": 23,
+    "2026-08-29": 40,
+    "2026-08-30": 97,
+    "2026-08-31": 63
+  },
+  "content_gate_passed": true,
+  "full_training_readiness": false,
+  "limitations": [
+    "Historical provider timing is an assumption; original exchange authenticity is not certified.",
+    "Native aggregation checks a separate candle implementation using the same paid raw source.",
+    "Month-end target arrivals beyond retained data remain unproven; no outside data were invented.",
+    "Limited quality-approved book coverage restricts the research population; all rejections remain explicit.",
+    "Fit-only transforms, executable training settings and matched baselines must be verified separately."
+  ]
+}

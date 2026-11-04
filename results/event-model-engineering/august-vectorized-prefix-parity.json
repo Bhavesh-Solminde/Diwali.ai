@@ -1,0 +1,9 @@
+{
+  "state": "completed_prefix_check",
+  "origins_compared": 3107,
+  "event_rows_compared": 9403483,
+  "all_arrays_bitwise_equal": true,
+  "elapsed_seconds": 13.737573146820068,
+  "scope": "Completed common prefix of concurrently preparing August inputs; no labels or fitted model. Full preparation not yet complete.",
+  "fast_source_sha256": "b698bf9cf7a2da0a9e8e5f5657442b62c03e2f6c8ed98796f0e154c0eca8e694"
+}

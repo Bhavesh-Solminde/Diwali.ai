@@ -1,0 +1,28 @@
+{
+  "state": "complete",
+  "origins": 5519,
+  "horizons_seconds_after_freeze": [
+    5,
+    15,
+    30,
+    60
+  ],
+  "valid_endpoint_counts": {
+    "5": 5376,
+    "15": 5377,
+    "30": 5388,
+    "60": 5469
+  },
+  "definition": "Latest market execution released strictly before endpoint, at most2seconds old; relative to the original frozen reference.",
+  "primary_task_unchanged": true,
+  "not_the_same_as_candle_close": true,
+  "used_as_input": false,
+  "source_report_sha256": "d1ff2ecf891dad27ba9895402e9362822d9024537c26ef357411b8c2f011eac3",
+  "cohort_sha256": "f93975712b8fc1b1ddcabadc247b000710b76f8d9163399277b14d8187339adc",
+  "code_sha256": "99825f3edd7cf2d1e4d2a584f303273ff042a839f0e2e20d4d2ab5238c9e4529",
+  "limitations": [
+    "Auxiliary availability-price labels include trade-price bid/ask noise, not true latent value.",
+    "No claim of exchange-original receipt authenticity.",
+    "Signal lifetime still requires matched chronological predictive scoring."
+  ]
+}

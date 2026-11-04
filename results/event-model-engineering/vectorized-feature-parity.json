@@ -1,0 +1,11 @@
+{
+  "state": "complete",
+  "windows_compared": 32,
+  "event_rows_compared": 156508,
+  "feature_channels": 103,
+  "all_values_bitwise_equal_to_reference": true,
+  "elapsed_seconds": 1.127411127090454,
+  "fast_source_sha256": "b698bf9cf7a2da0a9e8e5f5657442b62c03e2f6c8ed98796f0e154c0eca8e694",
+  "reference_source_sha256": "6cf5478f0177d9b40aa18106d4015157030926fcd76054e04f99ebb841836c09",
+  "scope": "Engineering parity on32 previously prepared fit-only windows; no model fitting or final labels."
+}

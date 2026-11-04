@@ -2,3 +2,4 @@ numpy==2.5.4
 torch==2.15.0
 pyarrow==26.0.0
 websockets==17.3
+scikit-learn==1.9.1
