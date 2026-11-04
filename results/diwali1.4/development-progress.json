@@ -1,7 +1,8 @@
 {
   "state": "development_in_progress",
   "completed_folds": [
-    "A"
+    "A",
+    "B"
   ],
   "neural_runs": [
     {
@@ -2781,6 +2782,2784 @@
         }
       },
       "elapsed_seconds": 92.44996500015259
+    },
+    {
+      "fold": "B",
+      "candidate": "event_temporal_conv",
+      "seed": 17,
+      "selection": {
+        "state": "checkpoint_selected",
+        "candidate": "event_temporal_conv",
+        "seed": 17,
+        "best_epoch": 8,
+        "selection_loss": 2.7832962037263935,
+        "parameters": 94620,
+        "weights_sha256": "5793ea0cc5e8635e45dec48317107f4d10c9133dd51f3a220da692ea0b35eaeb",
+        "all_trainable": true
+      },
+      "calibration_temperatures": [
+        1.0,
+        1.0905077326652577,
+        1.189207115002721,
+        1.2968395546510096,
+        1.3542555469368929,
+        1.414213562373095,
+        1.5422108254079407,
+        1.6104903319492543,
+        1.681792830507429,
+        1.8340080864093424,
+        1.9152065613971474,
+        1.9152065613971474,
+        2.0,
+        2.0885475648548275,
+        2.1810154653305154
+      ],
+      "partitions": {
+        "select": {
+          "origins": 260,
+          "mean15_bin_log_loss": 2.7732854911719045,
+          "per_horizon_bin_log_loss": [
+            2.558665360208484,
+            2.6524506170798543,
+            2.6635614152718396,
+            2.6888940105950594,
+            2.757569276138014,
+            2.782134010597932,
+            2.8111639281949947,
+            2.7847222370471014,
+            2.793921435086937,
+            2.8415359934362914,
+            2.8311152945143974,
+            2.8480881114457706,
+            2.854338424825818,
+            2.8547537568061334,
+            2.876368496329947
+          ],
+          "ranked_probability_score": 0.11642190630085458,
+          "per_horizon_binary_log_loss": [
+            0.7039704676012207,
+            0.698460494181283,
+            0.6973259130991691,
+            0.6923343563507318,
+            0.6946692771682408,
+            0.6897545424196115,
+            0.6911376404389826,
+            0.6932069923181696,
+            0.6945457875438984,
+            0.694514956862938,
+            0.6921163044908155,
+            0.69432966434634,
+            0.6936603762894034,
+            0.690315812633039,
+            0.6914385270536895
+          ],
+          "final_direction_log_loss": 0.6914385270536892,
+          "final_direction_brier": 0.24914829920270087,
+          "final_direction_accuracy": 0.47692307692307695,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 260,
+              "mean_confidence": 0.5165638651962229,
+              "correct_fraction": 0.47692307692307695
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "calibrate": {
+          "origins": 1343,
+          "mean15_bin_log_loss": 2.912011373155384,
+          "per_horizon_bin_log_loss": [
+            2.757011338404155,
+            2.8199247850785913,
+            2.856216644613863,
+            2.881442540872178,
+            2.8943229017561625,
+            2.9064458134924234,
+            2.932670129052752,
+            2.939427365941044,
+            2.9363775332381863,
+            2.9496383273748767,
+            2.9511702043090233,
+            2.9529307231242825,
+            2.955158859897762,
+            2.969749542675918,
+            2.9776838874995604
+          ],
+          "ranked_probability_score": 0.13318028118837189,
+          "per_horizon_binary_log_loss": [
+            0.6974990040031968,
+            0.7019174683605424,
+            0.7034122430683022,
+            0.7025143470724227,
+            0.7037224393911355,
+            0.7052884311969264,
+            0.7045668434756003,
+            0.7012326901882452,
+            0.7032907622406552,
+            0.7022154390785277,
+            0.7011138693080101,
+            0.6991080085454543,
+            0.6983403837991157,
+            0.6969349212958912,
+            0.6960906973911005
+          ],
+          "final_direction_log_loss": 0.6960906973911013,
+          "final_direction_brier": 0.25146629279822325,
+          "final_direction_accuracy": 0.501861504095309,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 1343,
+              "mean_confidence": 0.5380184715008857,
+              "correct_fraction": 0.501861504095309
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "score": {
+          "origins": 249,
+          "mean15_bin_log_loss": 2.8976391275729343,
+          "per_horizon_bin_log_loss": [
+            2.760406996298045,
+            2.7948391366500624,
+            2.827376018868877,
+            2.83160843888487,
+            2.819883930118851,
+            2.852855124143591,
+            2.902658544394983,
+            2.895318442486226,
+            2.8950676152519947,
+            2.967050639596798,
+            2.956848518570016,
+            3.0300817794939867,
+            2.986799795380678,
+            2.955343257745458,
+            2.9884486757095745
+          ],
+          "ranked_probability_score": 0.14750879596913138,
+          "per_horizon_binary_log_loss": [
+            0.6990578511491361,
+            0.7046052559368972,
+            0.7153889350574087,
+            0.721140274663326,
+            0.7207020048259573,
+            0.7255600146093443,
+            0.718000265336919,
+            0.71794734309483,
+            0.7174783592389536,
+            0.715294616285681,
+            0.7146910827217399,
+            0.7152411147250599,
+            0.7098401920676733,
+            0.7115220230453749,
+            0.7100980646667137
+          ],
+          "final_direction_log_loss": 0.7100980646667138,
+          "final_direction_brier": 0.25845994917406334,
+          "final_direction_accuracy": 0.39759036144578314,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 249,
+              "mean_confidence": 0.5346379323279797,
+              "correct_fraction": 0.39759036144578314
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        }
+      },
+      "daily_scores": {
+        "2026-08-24": {
+          "origins": 121,
+          "mean15_bin_log_loss": 2.8827345541564413,
+          "per_horizon_bin_log_loss": [
+            2.7350451067250416,
+            2.766907447378663,
+            2.781753483288943,
+            2.8048287606602864,
+            2.8144030170367857,
+            2.8424095030168877,
+            2.915543241000983,
+            2.909597654339596,
+            2.889750163284442,
+            2.9541152936510837,
+            2.9303019119236304,
+            3.0089879491536364,
+            2.9682901408790134,
+            2.9283524083971733,
+            2.9907322316104534
+          ],
+          "ranked_probability_score": 0.14530900744176475,
+          "per_horizon_binary_log_loss": [
+            0.6920676632651456,
+            0.6954600801010267,
+            0.695058347381154,
+            0.7001742140585957,
+            0.7036875529055764,
+            0.7092020232398502,
+            0.7053977412360228,
+            0.7072534600623935,
+            0.700905833644285,
+            0.7003518913977906,
+            0.6950600477382585,
+            0.6951156428493415,
+            0.69225141163805,
+            0.6946134701164717,
+            0.6938238227836884
+          ],
+          "final_direction_log_loss": 0.6938238227836884,
+          "final_direction_brier": 0.2503366316850515,
+          "final_direction_accuracy": 0.512396694214876,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 121,
+              "mean_confidence": 0.5343563505253893,
+              "correct_fraction": 0.512396694214876
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "2026-08-25": {
+          "origins": 66,
+          "mean15_bin_log_loss": 2.9695060564670857,
+          "per_horizon_bin_log_loss": [
+            2.8397908082023435,
+            2.861033235618678,
+            2.8875009288178077,
+            2.854881792639621,
+            2.862330246536417,
+            2.874140356496798,
+            2.9082507720680773,
+            2.943591245195267,
+            2.9514546025157573,
+            3.0956742920606706,
+            3.10765476329461,
+            3.162506482895395,
+            3.0942990787634708,
+            3.0512681740340097,
+            3.0482140678673666
+          ],
+          "ranked_probability_score": 0.15292692877434996,
+          "per_horizon_binary_log_loss": [
+            0.7010900897795171,
+            0.7020593669916643,
+            0.7256513107236101,
+            0.7317070389782496,
+            0.7294548686880263,
+            0.7269468568726669,
+            0.7157669051318676,
+            0.7121275725269403,
+            0.7112301186759763,
+            0.712111391381212,
+            0.717059876010883,
+            0.7160442104789527,
+            0.7064450007016717,
+            0.7078925114191359,
+            0.7048269182386329
+          ],
+          "final_direction_log_loss": 0.7048269182386329,
+          "final_direction_brier": 0.2558280319174197,
+          "final_direction_accuracy": 0.4393939393939394,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 66,
+              "mean_confidence": 0.5344004605012648,
+              "correct_fraction": 0.4393939393939394
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "2026-08-26": {
+          "origins": 62,
+          "mean15_bin_log_loss": 2.8502235804177998,
+          "per_horizon_bin_log_loss": [
+            2.72539823908272,
+            2.778886295842172,
+            2.8524096115873068,
+            2.8590971440035995,
+            2.785395762366772,
+            2.8505824599664904,
+            2.8715595876893345,
+            2.8160637713079315,
+            2.84542036571434,
+            2.8553734750293156,
+            2.848121538769854,
+            2.930280538311552,
+            2.908488754919992,
+            2.9059053270373494,
+            2.920370834638274
+          ],
+          "ranked_probability_score": 0.14603424188311429,
+          "per_horizon_binary_log_loss": [
+            0.7105366412194224,
+            0.725163238945376,
+            0.7441419078776917,
+            0.7508094180244158,
+            0.744590063978693,
+            0.7560081656791752,
+            0.7449729619456567,
+            0.7450129028433062,
+            0.7564728668859133,
+            0.7478456252393865,
+            0.7504816452365433,
+            0.7536633369380442,
+            0.7477809188763925,
+            0.7483846467829404,
+            0.7474703055070272
+          ],
+          "final_direction_log_loss": 0.747470305507027,
+          "final_direction_brier": 0.2771152387725943,
+          "final_direction_accuracy": 0.12903225806451613,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 62,
+              "mean_confidence": 0.5354402635969574,
+              "correct_fraction": 0.12903225806451613
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        }
+      },
+      "elapsed_seconds": 299.4929337501526
+    },
+    {
+      "fold": "B",
+      "candidate": "event_temporal_conv",
+      "seed": 29,
+      "selection": {
+        "state": "checkpoint_selected",
+        "candidate": "event_temporal_conv",
+        "seed": 29,
+        "best_epoch": 8,
+        "selection_loss": 2.7824289623755654,
+        "parameters": 94620,
+        "weights_sha256": "355259e46b9df7834337739deb5ba74ddbbd2c9a9f6219e04a0374fe45b63d24",
+        "all_trainable": true
+      },
+      "calibration_temperatures": [
+        1.0905077326652577,
+        1.0442737824274138,
+        1.1387886347566918,
+        1.1387886347566918,
+        1.1387886347566918,
+        1.241857812073484,
+        1.3542555469368929,
+        1.4768261459394991,
+        1.6104903319492543,
+        1.681792830507429,
+        1.7562521603732995,
+        1.9152065613971474,
+        1.9152065613971474,
+        2.0,
+        2.1810154653305154
+      ],
+      "partitions": {
+        "select": {
+          "origins": 260,
+          "mean15_bin_log_loss": 2.7741815068838114,
+          "per_horizon_bin_log_loss": [
+            2.5750368940719293,
+            2.6448847342755744,
+            2.66181310583238,
+            2.679959378364942,
+            2.740239301785123,
+            2.780576376194184,
+            2.81146222752849,
+            2.793709540936512,
+            2.803676577214669,
+            2.850687163961988,
+            2.837865223581727,
+            2.845030637277583,
+            2.8497764762484965,
+            2.8580804011894814,
+            2.879924564794084
+          ],
+          "ranked_probability_score": 0.11625413473346219,
+          "per_horizon_binary_log_loss": [
+            0.701763600476124,
+            0.6977386259284627,
+            0.6950682202351212,
+            0.691750134016053,
+            0.6897316812204195,
+            0.6891889795661017,
+            0.689960825940471,
+            0.6919108213634821,
+            0.6898832164740801,
+            0.6889759772932075,
+            0.6883625661153561,
+            0.6852382434233663,
+            0.6833061194045804,
+            0.6840485842095311,
+            0.6864532357170748
+          ],
+          "final_direction_log_loss": 0.6864532357170747,
+          "final_direction_brier": 0.24666750524233397,
+          "final_direction_accuracy": 0.5692307692307692,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 258,
+              "mean_confidence": 0.5217441628883986,
+              "correct_fraction": 0.5658914728682171
+            },
+            "0.6-0.7": {
+              "count": 2,
+              "mean_confidence": 0.6105128623362366,
+              "correct_fraction": 1.0
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "calibrate": {
+          "origins": 1343,
+          "mean15_bin_log_loss": 3.0102007442473657,
+          "per_horizon_bin_log_loss": [
+            2.8348434723839597,
+            2.888736805759648,
+            2.936086365862936,
+            2.954648225550158,
+            2.976515929619609,
+            3.0004213487970777,
+            3.0209661072692056,
+            3.0397555864128325,
+            3.053590700148435,
+            3.055635586676009,
+            3.0617220558809066,
+            3.0747827951190123,
+            3.0757018970824537,
+            3.083473973420427,
+            3.096130313727824
+          ],
+          "ranked_probability_score": 0.1338938660769012,
+          "per_horizon_binary_log_loss": [
+            0.6944455855044481,
+            0.6950912619633226,
+            0.6964500227618109,
+            0.6961610839744665,
+            0.6959781785385731,
+            0.6945739175905269,
+            0.6948998445735783,
+            0.6944948932482206,
+            0.694252430538896,
+            0.6933139341881599,
+            0.6928784861050835,
+            0.6933739966132884,
+            0.6936257446091345,
+            0.6936407327274107,
+            0.6935518626924281
+          ],
+          "final_direction_log_loss": 0.6935518626924282,
+          "final_direction_brier": 0.2502013204007989,
+          "final_direction_accuracy": 0.49218168279970215,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 1342,
+              "mean_confidence": 0.50741092063222,
+              "correct_fraction": 0.49254843517138597
+            },
+            "0.6-0.7": {
+              "count": 1,
+              "mean_confidence": 0.6015393456608491,
+              "correct_fraction": 0.0
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "score": {
+          "origins": 249,
+          "mean15_bin_log_loss": 2.946007120229699,
+          "per_horizon_bin_log_loss": [
+            2.800836469154886,
+            2.826800813496132,
+            2.8610105622486253,
+            2.886069859490162,
+            2.8656941365455664,
+            2.8732478137613486,
+            2.948161184077601,
+            2.9503434712975345,
+            2.9731049311483027,
+            3.019066572375125,
+            3.000331491307987,
+            3.0739778237480797,
+            3.0435263899553764,
+            3.017479256416918,
+            3.0504560284218414
+          ],
+          "ranked_probability_score": 0.14378344981194308,
+          "per_horizon_binary_log_loss": [
+            0.6890686791035153,
+            0.6857197779095754,
+            0.6884856102647983,
+            0.6894358947076316,
+            0.6863586575499687,
+            0.6842476223953652,
+            0.6872900099207384,
+            0.686602161291493,
+            0.6881420859342493,
+            0.6887832463560668,
+            0.6902187108915243,
+            0.6910605985456671,
+            0.6913756912137196,
+            0.6909284523885532,
+            0.6912690348052803
+          ],
+          "final_direction_log_loss": 0.6912690348052809,
+          "final_direction_brier": 0.24906100820808783,
+          "final_direction_accuracy": 0.5903614457831325,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 249,
+              "mean_confidence": 0.5062644823192326,
+              "correct_fraction": 0.5903614457831325
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        }
+      },
+      "daily_scores": {
+        "2026-08-24": {
+          "origins": 121,
+          "mean15_bin_log_loss": 2.9449517655505137,
+          "per_horizon_bin_log_loss": [
+            2.780915451057838,
+            2.809474501947906,
+            2.838938107648165,
+            2.886470419387829,
+            2.878033200297418,
+            2.899625542818023,
+            2.957513646152812,
+            2.9660880823942213,
+            2.9697692237195246,
+            3.025370082933828,
+            3.0006508270313703,
+            3.0694702640775846,
+            3.0461780668266103,
+            2.9936009409517834,
+            3.0521781260127954
+          ],
+          "ranked_probability_score": 0.14537188077289598,
+          "per_horizon_binary_log_loss": [
+            0.6920486876885096,
+            0.6899862062597095,
+            0.6947531811311293,
+            0.6968498080985404,
+            0.6971453261499236,
+            0.693687675287151,
+            0.6942047118438003,
+            0.6925510258322671,
+            0.6931768708389756,
+            0.6940782093627637,
+            0.6952087583601244,
+            0.6948677528427248,
+            0.6953543949960439,
+            0.6946799131556544,
+            0.694195958516679
+          ],
+          "final_direction_log_loss": 0.6941959585166795,
+          "final_direction_brier": 0.25052432901530747,
+          "final_direction_accuracy": 0.4793388429752066,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 121,
+              "mean_confidence": 0.5058438093332205,
+              "correct_fraction": 0.4793388429752066
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "2026-08-25": {
+          "origins": 66,
+          "mean15_bin_log_loss": 3.0177483384951223,
+          "per_horizon_bin_log_loss": [
+            2.8619752830496026,
+            2.894899004281201,
+            2.923843478369426,
+            2.9059070908244786,
+            2.871056203376028,
+            2.8978225405784466,
+            2.9826719625871343,
+            2.9895213372894185,
+            3.0821744148885872,
+            3.153344926429597,
+            3.134006776240866,
+            3.1860026437364226,
+            3.1280074620672993,
+            3.1307862412676255,
+            3.1242057124407054
+          ],
+          "ranked_probability_score": 0.149050035088879,
+          "per_horizon_binary_log_loss": [
+            0.695484355561014,
+            0.6887935388359893,
+            0.6913850805900253,
+            0.6941686360955752,
+            0.6907177125881816,
+            0.688481532123607,
+            0.6898382492567937,
+            0.6896846739965092,
+            0.6908916310003298,
+            0.6899626287850034,
+            0.6898073914441286,
+            0.6911583147339097,
+            0.6917869791823695,
+            0.6910887450457994,
+            0.692248109168961
+          ],
+          "final_direction_log_loss": 0.6922481091689611,
+          "final_direction_brier": 0.24955048926939824,
+          "final_direction_accuracy": 0.5454545454545454,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 66,
+              "mean_confidence": 0.5077153918680009,
+              "correct_fraction": 0.5454545454545454
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "2026-08-26": {
+          "origins": 62,
+          "mean15_bin_log_loss": 2.8716970800791093,
+          "per_horizon_bin_log_loss": [
+            2.7746313316176496,
+            2.788123444230333,
+            2.8372007968080237,
+            2.864171068914642,
+            2.835905053887755,
+            2.7956085043131806,
+            2.8931715180658295,
+            2.8779106148755487,
+            2.863508716180937,
+            2.8638230861622476,
+            2.8574087747257293,
+            2.963522607633565,
+            2.948419879297214,
+            2.9434633720803807,
+            2.968587432393606
+          ],
+          "ranked_probability_score": 0.13507708248044198,
+          "per_horizon_binary_log_loss": [
+            0.676423264829658,
+            0.6741212932078076,
+            0.673167205163331,
+            0.6699287261285318,
+            0.6606669715319596,
+            0.6613172281700388,
+            0.6710825465518658,
+            0.6717108960017394,
+            0.6753891996788772,
+            0.6771940566121942,
+            0.6809179260500345,
+            0.6835264866365081,
+            0.6831729788977164,
+            0.6834364190305289,
+            0.6845145722716979
+          ],
+          "final_direction_log_loss": 0.6845145722716981,
+          "final_direction_brier": 0.2456841119545384,
+          "final_direction_accuracy": 0.8548387096774194,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 62,
+              "mean_confidence": 0.5055409565303416,
+              "correct_fraction": 0.8548387096774194
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        }
+      },
+      "elapsed_seconds": 292.9445080757141
+    },
+    {
+      "fold": "B",
+      "candidate": "event_attention",
+      "seed": 17,
+      "selection": {
+        "state": "checkpoint_selected",
+        "candidate": "event_attention",
+        "seed": 17,
+        "best_epoch": 4,
+        "selection_loss": 2.821679896033057,
+        "parameters": 98908,
+        "weights_sha256": "c875b12a2bf04b9bbd803a253929fc06db2ae5bd519d6136892558d221f6b287",
+        "all_trainable": true
+      },
+      "calibration_temperatures": [
+        1.4768261459394991,
+        1.6104903319492543,
+        1.6104903319492543,
+        1.4768261459394991,
+        1.414213562373095,
+        1.3542555469368929,
+        1.3542555469368929,
+        1.3542555469368929,
+        1.2968395546510096,
+        1.2968395546510096,
+        1.241857812073484,
+        1.241857812073484,
+        1.241857812073484,
+        1.3542555469368929,
+        1.3542555469368929
+      ],
+      "partitions": {
+        "select": {
+          "origins": 260,
+          "mean15_bin_log_loss": 2.806096592303093,
+          "per_horizon_bin_log_loss": [
+            2.5840369872089886,
+            2.669993771628764,
+            2.6982658287212278,
+            2.7272120668402757,
+            2.773245629154715,
+            2.8083217735603228,
+            2.8452690385727357,
+            2.810803117160427,
+            2.8216809854925815,
+            2.8749461513072703,
+            2.8718798732784263,
+            2.895619160318214,
+            2.8951047588293424,
+            2.89479137212099,
+            2.920278370352122
+          ],
+          "ranked_probability_score": 0.11782339791438826,
+          "per_horizon_binary_log_loss": [
+            0.6928041932561932,
+            0.6937538098615917,
+            0.692079891363878,
+            0.6894026180930385,
+            0.6914264254178717,
+            0.6888036069783275,
+            0.6931752024961246,
+            0.6975221637475884,
+            0.6964137109577635,
+            0.6976515012907957,
+            0.6931330655307668,
+            0.6949298760889759,
+            0.6942408926681356,
+            0.6891791466508614,
+            0.6923488576269545
+          ],
+          "final_direction_log_loss": 0.6923488576269548,
+          "final_direction_brier": 0.2495935058721829,
+          "final_direction_accuracy": 0.5307692307692308,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 260,
+              "mean_confidence": 0.5238696136411839,
+              "correct_fraction": 0.5307692307692308
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "calibrate": {
+          "origins": 1343,
+          "mean15_bin_log_loss": 2.8947240173287336,
+          "per_horizon_bin_log_loss": [
+            2.9536153288396148,
+            2.9764756061007964,
+            2.9709170210782165,
+            2.941439423167704,
+            2.919301503189865,
+            2.8919377409857097,
+            2.896309202140765,
+            2.887494528724758,
+            2.8671372733867497,
+            2.858861077584612,
+            2.842129803264461,
+            2.8413352489673565,
+            2.8418621986123687,
+            2.8596319397025285,
+            2.8724123641854993
+          ],
+          "ranked_probability_score": 0.13274578154531733,
+          "per_horizon_binary_log_loss": [
+            0.6922871681114104,
+            0.6944773260714312,
+            0.6948403141131156,
+            0.6948468529566941,
+            0.696859272569144,
+            0.6973261139664118,
+            0.6984587666972288,
+            0.6974018432699765,
+            0.6995516809511609,
+            0.6992806726691354,
+            0.6994066791465645,
+            0.6972160287983217,
+            0.6968048107016838,
+            0.6956726386322553,
+            0.695514138837906
+          ],
+          "final_direction_log_loss": 0.6955141388379054,
+          "final_direction_brier": 0.2511813846528758,
+          "final_direction_accuracy": 0.5011169024571854,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 1339,
+              "mean_confidence": 0.5359033330576832,
+              "correct_fraction": 0.4996265870052278
+            },
+            "0.6-0.7": {
+              "count": 4,
+              "mean_confidence": 0.6083136149613361,
+              "correct_fraction": 1.0
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "score": {
+          "origins": 249,
+          "mean15_bin_log_loss": 2.9199275179457698,
+          "per_horizon_bin_log_loss": [
+            2.865059445411744,
+            2.87500038277648,
+            2.876272376371654,
+            2.8693280155688927,
+            2.8320429503512097,
+            2.8484167604017454,
+            2.9047089279648732,
+            2.888734814910101,
+            2.8913222712063114,
+            2.9788874811009003,
+            2.9584726560333134,
+            3.042151568274618,
+            2.998009234956975,
+            2.966416385849915,
+            3.0040894980078177
+          ],
+          "ranked_probability_score": 0.1478700986806362,
+          "per_horizon_binary_log_loss": [
+            0.6968260369930714,
+            0.7000528154936839,
+            0.7067010287950334,
+            0.7109907355025666,
+            0.7140380417373391,
+            0.7150805821362954,
+            0.7139337040068912,
+            0.7128421474163538,
+            0.712579168072003,
+            0.7118233532993102,
+            0.7131427655298704,
+            0.7128691694795956,
+            0.7083277587987925,
+            0.7114362665289417,
+            0.7126963305031415
+          ],
+          "final_direction_log_loss": 0.7126963305031411,
+          "final_direction_brier": 0.259743895884042,
+          "final_direction_accuracy": 0.39759036144578314,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 249,
+              "mean_confidence": 0.5351553711272922,
+              "correct_fraction": 0.39759036144578314
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        }
+      },
+      "daily_scores": {
+        "2026-08-24": {
+          "origins": 121,
+          "mean15_bin_log_loss": 2.8777207819452477,
+          "per_horizon_bin_log_loss": [
+            2.770114067758023,
+            2.805157128556998,
+            2.798451686119368,
+            2.8073943383937245,
+            2.8107930925317044,
+            2.8422354875108313,
+            2.9211123304959092,
+            2.9157754797384734,
+            2.874909403907747,
+            2.9417749370739035,
+            2.915916428498461,
+            2.9898509086666616,
+            2.946580776442156,
+            2.88759154951185,
+            2.938154113972907
+          ],
+          "ranked_probability_score": 0.14517589200149844,
+          "per_horizon_binary_log_loss": [
+            0.6903129734678823,
+            0.6929440823011548,
+            0.6912002336092558,
+            0.6947282619640984,
+            0.6994341922311751,
+            0.7011024315211747,
+            0.701935570861498,
+            0.7026437856030757,
+            0.6972680275579051,
+            0.6993142309345695,
+            0.6962204189296846,
+            0.6978451677996038,
+            0.6943227339912738,
+            0.6985164699093398,
+            0.697914965344668
+          ],
+          "final_direction_log_loss": 0.6979149653446678,
+          "final_direction_brier": 0.25236860153170454,
+          "final_direction_accuracy": 0.512396694214876,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 121,
+              "mean_confidence": 0.5328031866172052,
+              "correct_fraction": 0.512396694214876
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "2026-08-25": {
+          "origins": 66,
+          "mean15_bin_log_loss": 3.064220212729138,
+          "per_horizon_bin_log_loss": [
+            3.011758123646889,
+            2.9398444539264115,
+            2.9322310393606275,
+            2.917757290506249,
+            2.8828431456313766,
+            2.8959813833894614,
+            2.9327202435549067,
+            2.9493969498603,
+            3.0170363955887076,
+            3.2375128725096003,
+            3.2327899136078795,
+            3.2978145080979235,
+            3.24268394777241,
+            3.217585009534918,
+            3.2553479139494157
+          ],
+          "ranked_probability_score": 0.15384249220248228,
+          "per_horizon_binary_log_loss": [
+            0.6983041409933841,
+            0.700226028960888,
+            0.7154232845698613,
+            0.7223138537180005,
+            0.7235873165317089,
+            0.7192606048309066,
+            0.7148868897123621,
+            0.7093612650151294,
+            0.7071200232153126,
+            0.7069058982870242,
+            0.7118480735276403,
+            0.7101331152360777,
+            0.7018107914192262,
+            0.7047739869700443,
+            0.7054025127557677
+          ],
+          "final_direction_log_loss": 0.7054025127557677,
+          "final_direction_brier": 0.2560908137007605,
+          "final_direction_accuracy": 0.4393939393939394,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 66,
+              "mean_confidence": 0.5385437619778506,
+              "correct_fraction": 0.4393939393939394
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "2026-08-26": {
+          "origins": 62,
+          "mean15_bin_log_loss": 2.848696827629009,
+          "per_horizon_bin_log_loss": [
+            2.894192960453365,
+            2.9422798193032818,
+            2.968579340295112,
+            2.9386448348000207,
+            2.8194368198297406,
+            2.8098469039922453,
+            2.842877338687492,
+            2.7713860834432276,
+            2.7895291217528957,
+            2.7760059003636828,
+            2.749510793642927,
+            2.8720648873750165,
+            2.83791750002915,
+            2.8528789025224204,
+            2.8653012079445626
+          ],
+          "ranked_probability_score": 0.1467704379666657,
+          "per_horizon_binary_log_loss": [
+            0.7079635502596402,
+            0.713741922388209,
+            0.7276675987360092,
+            0.7306751467273396,
+            0.7323737458311697,
+            0.7379108196618617,
+            0.7363347339106243,
+            0.7364508573822824,
+            0.7482719352130923,
+            0.7414710280887383,
+            0.7475468560261543,
+            0.7451027788884836,
+            0.7425975628110685,
+            0.7437428123653783,
+            0.7493082201080108
+          ],
+          "final_direction_log_loss": 0.7493082201080107,
+          "final_direction_brier": 0.27802638041193584,
+          "final_direction_accuracy": 0.12903225806451613,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 62,
+              "mean_confidence": 0.5361389280560618,
+              "correct_fraction": 0.12903225806451613
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        }
+      },
+      "elapsed_seconds": 195.6358368396759
+    },
+    {
+      "fold": "B",
+      "candidate": "event_attention",
+      "seed": 29,
+      "selection": {
+        "state": "checkpoint_selected",
+        "candidate": "event_attention",
+        "seed": 29,
+        "best_epoch": 4,
+        "selection_loss": 2.824441772639562,
+        "parameters": 98908,
+        "weights_sha256": "b105273826149d0ba77e23bfd31cc38910e40772c815d424923563f4ad10cbee",
+        "all_trainable": true
+      },
+      "calibration_temperatures": [
+        1.9152065613971474,
+        1.9152065613971474,
+        1.8340080864093424,
+        1.681792830507429,
+        1.6104903319492543,
+        1.5422108254079407,
+        1.5422108254079407,
+        1.4768261459394991,
+        1.4768261459394991,
+        1.4768261459394991,
+        1.414213562373095,
+        1.414213562373095,
+        1.414213562373095,
+        1.4768261459394991,
+        1.4768261459394991
+      ],
+      "partitions": {
+        "select": {
+          "origins": 260,
+          "mean15_bin_log_loss": 2.8094293849360494,
+          "per_horizon_bin_log_loss": [
+            2.620726831939824,
+            2.6944355826307813,
+            2.7088647500284155,
+            2.72735267992239,
+            2.76925816056192,
+            2.8078616146133446,
+            2.8506507133461523,
+            2.8104850318963384,
+            2.8253698653780526,
+            2.881638689489967,
+            2.870264294986219,
+            2.888172417337617,
+            2.8872754718270914,
+            2.8900648607945536,
+            2.9090198092880777
+          ],
+          "ranked_probability_score": 0.11762190200770223,
+          "per_horizon_binary_log_loss": [
+            0.6924342920134858,
+            0.6931509168292638,
+            0.6902649452097576,
+            0.6875657268966822,
+            0.6894845976809109,
+            0.687311457304895,
+            0.691157813192803,
+            0.6962709454808342,
+            0.6944962782591643,
+            0.6962205293710305,
+            0.6909229466707707,
+            0.694287213568641,
+            0.6939254914620508,
+            0.6883145888984293,
+            0.6903425594776988
+          ],
+          "final_direction_log_loss": 0.6903425594776986,
+          "final_direction_brier": 0.24858639103957358,
+          "final_direction_accuracy": 0.5346153846153846,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 260,
+              "mean_confidence": 0.5255217166182683,
+              "correct_fraction": 0.5346153846153846
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "calibrate": {
+          "origins": 1343,
+          "mean15_bin_log_loss": 2.909263235751881,
+          "per_horizon_bin_log_loss": [
+            2.987769685677419,
+            2.997837042537144,
+            2.9857874286705828,
+            2.9569644417640464,
+            2.9327966410275708,
+            2.9117811083844245,
+            2.9131677887374967,
+            2.899505810128766,
+            2.881253463572443,
+            2.8739152889367454,
+            2.8496939209747723,
+            2.848394486783444,
+            2.8537700438184,
+            2.868177374473389,
+            2.8781340107915665
+          ],
+          "ranked_probability_score": 0.13365361677902662,
+          "per_horizon_binary_log_loss": [
+            0.6940108301499023,
+            0.6960420033918662,
+            0.6964007258468764,
+            0.6961412650315187,
+            0.6983472050289709,
+            0.6998270734134339,
+            0.700050258299164,
+            0.6990834293292465,
+            0.7008925110816466,
+            0.7018100696031332,
+            0.7022178528288091,
+            0.6994992372106466,
+            0.699476741123539,
+            0.6983349696024227,
+            0.6977552995071005
+          ],
+          "final_direction_log_loss": 0.6977552995070999,
+          "final_direction_brier": 0.25229170580725024,
+          "final_direction_accuracy": 0.501861504095309,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 1342,
+              "mean_confidence": 0.5510603694423695,
+              "correct_fraction": 0.5014903129657228
+            },
+            "0.6-0.7": {
+              "count": 1,
+              "mean_confidence": 0.605240547832722,
+              "correct_fraction": 1.0
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "score": {
+          "origins": 249,
+          "mean15_bin_log_loss": 2.918681030665882,
+          "per_horizon_bin_log_loss": [
+            2.885679297009193,
+            2.8771181998602393,
+            2.871241227386225,
+            2.862574479893652,
+            2.8311925776429274,
+            2.8497616663095577,
+            2.9042143897495336,
+            2.8931392834853864,
+            2.8885102898268364,
+            2.9751361340318954,
+            2.950010922681056,
+            3.02828838255684,
+            2.9950427889216544,
+            2.9605803780031423,
+            3.0077254426301043
+          ],
+          "ranked_probability_score": 0.14969509683303034,
+          "per_horizon_binary_log_loss": [
+            0.6979488766583066,
+            0.7026844856221564,
+            0.7102899270526581,
+            0.7163994482531153,
+            0.7202974622905873,
+            0.724697898410926,
+            0.720690392880672,
+            0.7238951474108917,
+            0.721308353501924,
+            0.7222209365017159,
+            0.7239584390656983,
+            0.7236350624292641,
+            0.7193831293142058,
+            0.7233436290212295,
+            0.7234399243998656
+          ],
+          "final_direction_log_loss": 0.7234399243998652,
+          "final_direction_brier": 0.26506544471993493,
+          "final_direction_accuracy": 0.39759036144578314,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 249,
+              "mean_confidence": 0.553705883303471,
+              "correct_fraction": 0.39759036144578314
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        }
+      },
+      "daily_scores": {
+        "2026-08-24": {
+          "origins": 121,
+          "mean15_bin_log_loss": 2.87974400794114,
+          "per_horizon_bin_log_loss": [
+            2.8294873136053647,
+            2.8331319329072833,
+            2.798938749415198,
+            2.8041217312803353,
+            2.809336366205209,
+            2.8419012416900595,
+            2.9061545139796703,
+            2.9054312133968443,
+            2.861904444640105,
+            2.9332448056760234,
+            2.9086943132218916,
+            2.970183592074656,
+            2.9540982352864513,
+            2.892552881409854,
+            2.9469787843281514
+          ],
+          "ranked_probability_score": 0.14569498603303357,
+          "per_horizon_binary_log_loss": [
+            0.6928359503835229,
+            0.6952716192764417,
+            0.6932403821329169,
+            0.6969072756626421,
+            0.7015056630526452,
+            0.7057655701913231,
+            0.7048696463520513,
+            0.7089222935644085,
+            0.7007388478785193,
+            0.7024781374277383,
+            0.6974592294804053,
+            0.69853076316802,
+            0.694728874539219,
+            0.6991772977340627,
+            0.6986722894466112
+          ],
+          "final_direction_log_loss": 0.6986722894466113,
+          "final_direction_brier": 0.25273425801164023,
+          "final_direction_accuracy": 0.512396694214876,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 121,
+              "mean_confidence": 0.5508932463542755,
+              "correct_fraction": 0.512396694214876
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "2026-08-25": {
+          "origins": 66,
+          "mean15_bin_log_loss": 3.042207975865693,
+          "per_horizon_bin_log_loss": [
+            3.0028751179368838,
+            2.93670208844135,
+            2.9293859382125396,
+            2.908313756121172,
+            2.875725392484307,
+            2.886595560818822,
+            2.927325820623225,
+            2.9422636618128113,
+            3.007266901991556,
+            3.198827858818873,
+            3.1810965564201257,
+            3.240084793871581,
+            3.192945956210921,
+            3.171876400026129,
+            3.2318338341951014
+          ],
+          "ranked_probability_score": 0.15599015884825748,
+          "per_horizon_binary_log_loss": [
+            0.6968225263876452,
+            0.7029000363517254,
+            0.7203007481038644,
+            0.728257298465137,
+            0.7311975369703749,
+            0.7290982993690991,
+            0.7217567144413201,
+            0.719540081528654,
+            0.7159451828611252,
+            0.7188316392284746,
+            0.72718648556371,
+            0.7241048946118437,
+            0.7142296741108318,
+            0.7171523657333216,
+            0.7149274789119133
+          ],
+          "final_direction_log_loss": 0.7149274789119132,
+          "final_direction_brier": 0.2608125764762471,
+          "final_direction_accuracy": 0.4393939393939394,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 66,
+              "mean_confidence": 0.5581982415679523,
+              "correct_fraction": 0.4393939393939394
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "2026-08-26": {
+          "origins": 62,
+          "mean15_bin_log_loss": 2.8631746010934056,
+          "per_horizon_bin_log_loss": [
+            2.870587455245251,
+            2.8995343555853093,
+            2.9504516938371492,
+            2.927961421041952,
+            2.8264415422305573,
+            2.8258918976216183,
+            2.875825527338079,
+            2.8168565014064124,
+            2.8140162715159174,
+            2.818768342017705,
+            2.784650566516218,
+            2.916225745485409,
+            2.864279594546948,
+            2.8684156946849284,
+            2.8877124073276237
+          ],
+          "ranked_probability_score": 0.1508005696361693,
+          "per_horizon_binary_log_loss": [
+            0.7091263475794738,
+            0.716922074004092,
+            0.7329073584382889,
+            0.7418177509862406,
+            0.7453684748538918,
+            0.7569621766582256,
+            0.750431249444547,
+            0.7577524000504405,
+            0.7671612477394183,
+            0.764359199533734,
+            0.7722383308552421,
+            0.7721287928576568,
+            0.772984627236722,
+            0.7770976526139566,
+            0.7808383958764544
+          ],
+          "final_direction_log_loss": 0.7808383958764545,
+          "final_direction_brier": 0.29365839465198434,
+          "final_direction_accuracy": 0.12903225806451613,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 62,
+              "mean_confidence": 0.5544128740356792,
+              "correct_fraction": 0.12903225806451613
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        }
+      },
+      "elapsed_seconds": 197.7372829914093
+    },
+    {
+      "fold": "B",
+      "candidate": "one_second_temporal_conv",
+      "seed": 17,
+      "selection": {
+        "state": "checkpoint_selected",
+        "candidate": "one_second_temporal_conv",
+        "seed": 17,
+        "best_epoch": 4,
+        "selection_loss": 2.7709695236041334,
+        "parameters": 94620,
+        "weights_sha256": "732f8c7a518630117fc8da35e05d8e14320b91335405220df6008a9d31d91fff",
+        "all_trainable": true
+      },
+      "calibration_temperatures": [
+        0.9170040432046712,
+        0.9576032806985736,
+        1.0905077326652577,
+        1.0905077326652577,
+        1.1387886347566918,
+        1.1387886347566918,
+        1.241857812073484,
+        1.2968395546510096,
+        1.2968395546510096,
+        1.2968395546510096,
+        1.3542555469368929,
+        1.414213562373095,
+        1.414213562373095,
+        1.414213562373095,
+        1.4768261459394991
+      ],
+      "partitions": {
+        "select": {
+          "origins": 260,
+          "mean15_bin_log_loss": 2.7652449507628534,
+          "per_horizon_bin_log_loss": [
+            2.6098530850297705,
+            2.688833374154688,
+            2.6855538453733203,
+            2.6939640368317255,
+            2.7445528283615315,
+            2.759215843465953,
+            2.8019159816871526,
+            2.7736021834008406,
+            2.7762820998236033,
+            2.8409031814971124,
+            2.8162462067856056,
+            2.820416325738678,
+            2.8094087502788603,
+            2.817712712291393,
+            2.8402138067225633
+          ],
+          "ranked_probability_score": 0.11618285165086775,
+          "per_horizon_binary_log_loss": [
+            0.6938589573353313,
+            0.6938732614534457,
+            0.6910466650039652,
+            0.689908545540328,
+            0.6897594121097287,
+            0.6893619301413877,
+            0.6911485827418613,
+            0.6929118993002501,
+            0.69220217102978,
+            0.6921097762675191,
+            0.6898686016090118,
+            0.6905171471234927,
+            0.6906709234048862,
+            0.6883815648747824,
+            0.6891949126733767
+          ],
+          "final_direction_log_loss": 0.6891949126733772,
+          "final_direction_brier": 0.24802565057854703,
+          "final_direction_accuracy": 0.5692307692307692,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 260,
+              "mean_confidence": 0.5138883655779646,
+              "correct_fraction": 0.5692307692307692
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "calibrate": {
+          "origins": 1343,
+          "mean15_bin_log_loss": 2.8777598289179127,
+          "per_horizon_bin_log_loss": [
+            2.768111481939646,
+            2.8114926297604783,
+            2.859744586523383,
+            2.863232599869928,
+            2.87222685056297,
+            2.874884578687122,
+            2.893216016816702,
+            2.90683007159277,
+            2.8978481665890095,
+            2.8972333354702138,
+            2.8932888460594857,
+            2.9000953563605107,
+            2.898398861868727,
+            2.908136347844467,
+            2.921657703823281
+          ],
+          "ranked_probability_score": 0.131639741621914,
+          "per_horizon_binary_log_loss": [
+            0.6932168516976265,
+            0.6945533956777872,
+            0.6951318965357433,
+            0.6946018627693421,
+            0.6949590296537256,
+            0.6958594066526639,
+            0.6956227324648053,
+            0.6948468489332421,
+            0.695739168360713,
+            0.6957691817298073,
+            0.6952817820552778,
+            0.6946044251664064,
+            0.6942559891881546,
+            0.6937297630816376,
+            0.6935545284646474
+          ],
+          "final_direction_log_loss": 0.6935545284646467,
+          "final_direction_brier": 0.2502035034138799,
+          "final_direction_accuracy": 0.501861504095309,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 1343,
+              "mean_confidence": 0.513246903831324,
+              "correct_fraction": 0.501861504095309
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "score": {
+          "origins": 249,
+          "mean15_bin_log_loss": 2.877356719709008,
+          "per_horizon_bin_log_loss": [
+            2.75070703707152,
+            2.7707870722172996,
+            2.799649456825312,
+            2.7999128165109317,
+            2.797680503863342,
+            2.820495510289653,
+            2.8864525237122516,
+            2.866092278621903,
+            2.876969647040856,
+            2.9598305205391595,
+            2.930738206564401,
+            3.012944407329085,
+            2.9682690858683,
+            2.940813022300766,
+            2.979008706880352
+          ],
+          "ranked_probability_score": 0.14447653530972218,
+          "per_horizon_binary_log_loss": [
+            0.6945431754134966,
+            0.6967508092278041,
+            0.7011673093669942,
+            0.7039462029296205,
+            0.7026459700076826,
+            0.7046889170588115,
+            0.7017887809710539,
+            0.7020614048250166,
+            0.7016001182576131,
+            0.7005005010387754,
+            0.6992745679978633,
+            0.6996853421720783,
+            0.6972388732052756,
+            0.6981359849964875,
+            0.6975466517755506
+          ],
+          "final_direction_log_loss": 0.697546651775551,
+          "final_direction_brier": 0.2521993620124544,
+          "final_direction_accuracy": 0.39759036144578314,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 249,
+              "mean_confidence": 0.5110445786700631,
+              "correct_fraction": 0.39759036144578314
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        }
+      },
+      "daily_scores": {
+        "2026-08-24": {
+          "origins": 121,
+          "mean15_bin_log_loss": 2.8654728927549367,
+          "per_horizon_bin_log_loss": [
+            2.732036540648183,
+            2.753018321315614,
+            2.7575628354002433,
+            2.7731986483908733,
+            2.7939736428938966,
+            2.823688171891895,
+            2.907956653128564,
+            2.896945329363218,
+            2.888621667505312,
+            2.9482481896602306,
+            2.9117578968437163,
+            2.986487831660408,
+            2.9392747437413833,
+            2.894507604349178,
+            2.9748153145313414
+          ],
+          "ranked_probability_score": 0.14433826843142694,
+          "per_horizon_binary_log_loss": [
+            0.6916130792724859,
+            0.6936111123701009,
+            0.6925190627067882,
+            0.6945418284682837,
+            0.6957748601737103,
+            0.6979419739952744,
+            0.6965642129942389,
+            0.6979736577055569,
+            0.6952233978214735,
+            0.6946353997386331,
+            0.6924619261669523,
+            0.6932113175237836,
+            0.6915714505818681,
+            0.6925144836530288,
+            0.6925576823854707
+          ],
+          "final_direction_log_loss": 0.6925576823854707,
+          "final_direction_brier": 0.2497053257976476,
+          "final_direction_accuracy": 0.512396694214876,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 121,
+              "mean_confidence": 0.5121763627357071,
+              "correct_fraction": 0.512396694214876
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "2026-08-25": {
+          "origins": 66,
+          "mean15_bin_log_loss": 2.9858888564227715,
+          "per_horizon_bin_log_loss": [
+            2.8374194480279256,
+            2.828465504129659,
+            2.865450284477359,
+            2.8491267204035076,
+            2.867237650179008,
+            2.873204109584447,
+            2.9232495730584973,
+            2.924509881036188,
+            2.958391424800784,
+            3.1624555921649824,
+            3.140370888746714,
+            3.196392234627262,
+            3.1378732116156662,
+            3.117139985469988,
+            3.107046338019579
+          ],
+          "ranked_probability_score": 0.15007037241519763,
+          "per_horizon_binary_log_loss": [
+            0.696472055825978,
+            0.6981955626296992,
+            0.707679015606133,
+            0.7097159862020167,
+            0.7070816582698538,
+            0.706461949921592,
+            0.7020795502904404,
+            0.7002226042615147,
+            0.6993814191368696,
+            0.699877486146123,
+            0.7006504092405679,
+            0.6998874704175062,
+            0.6965874344449338,
+            0.6977009337708332,
+            0.6962467783687489
+          ],
+          "final_direction_log_loss": 0.6962467783687487,
+          "final_direction_brier": 0.25154947984359616,
+          "final_direction_accuracy": 0.4393939393939394,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 66,
+              "mean_confidence": 0.5098128393122977,
+              "correct_fraction": 0.4393939393939394
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "2026-08-26": {
+          "origins": 62,
+          "mean15_bin_log_loss": 2.7850151396821423,
+          "per_horizon_bin_log_loss": [
+            2.694837858750567,
+            2.7440651746832314,
+            2.8117402079123757,
+            2.7996595372466935,
+            2.730870157419289,
+            2.7581555166230727,
+            2.805313734740868,
+            2.74369258670187,
+            2.7675546178738384,
+            2.7667370900399053,
+            2.744623052567148,
+            2.869294230784422,
+            2.8443084906752407,
+            2.8434803771874293,
+            2.850894462026182
+          ],
+          "ranked_probability_score": 0.13879164891153425,
+          "per_horizon_binary_log_loss": [
+            0.6982082645399221,
+            0.7013403188287236,
+            0.711113522820251,
+            0.7161578741206461,
+            0.7113338549207018,
+            0.7159689161192078,
+            0.711675586618071,
+            0.7119965377064017,
+            0.7164068491405494,
+            0.7126101178167172,
+            0.7111056025062757,
+            0.7121049634341006,
+            0.7089929553926093,
+            0.7095700986005457,
+            0.7086669250182716
+          ],
+          "final_direction_log_loss": 0.7086669250182718,
+          "final_direction_brier": 0.2577585653211039,
+          "final_direction_accuracy": 0.12903225806451613,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 62,
+              "mean_confidence": 0.510146980696992,
+              "correct_fraction": 0.12903225806451613
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        }
+      },
+      "elapsed_seconds": 166.9284863471985
+    },
+    {
+      "fold": "B",
+      "candidate": "one_second_temporal_conv",
+      "seed": 29,
+      "selection": {
+        "state": "checkpoint_selected",
+        "candidate": "one_second_temporal_conv",
+        "seed": 29,
+        "best_epoch": 3,
+        "selection_loss": 2.774847977735591,
+        "parameters": 94620,
+        "weights_sha256": "91c654335e48254d7715a06d36130c4c99612aafd1c7fd7204f119c61698d33c",
+        "all_trainable": true
+      },
+      "calibration_temperatures": [
+        1.1387886347566918,
+        0.9170040432046712,
+        0.9170040432046712,
+        0.8781260801866497,
+        0.9170040432046712,
+        0.9170040432046712,
+        0.9170040432046712,
+        0.9576032806985736,
+        0.9576032806985736,
+        0.9576032806985736,
+        0.9576032806985736,
+        0.9576032806985736,
+        1.0,
+        1.0442737824274138,
+        1.0905077326652577
+      ],
+      "partitions": {
+        "select": {
+          "origins": 260,
+          "mean15_bin_log_loss": 2.775548282340385,
+          "per_horizon_bin_log_loss": [
+            2.6405886419147473,
+            2.726571847011748,
+            2.7329185163457326,
+            2.7152683662614945,
+            2.7583386325719665,
+            2.787838752332293,
+            2.829744512813602,
+            2.78301690417419,
+            2.7713369867202005,
+            2.8361244965897985,
+            2.792424221877999,
+            2.8174805226741064,
+            2.80388164397862,
+            2.8081339383055957,
+            2.82955625153368
+          ],
+          "ranked_probability_score": 0.11619890770389742,
+          "per_horizon_binary_log_loss": [
+            0.694339209621305,
+            0.6954444080699457,
+            0.6921928999197049,
+            0.6934032408745502,
+            0.6900290993337808,
+            0.6919575525310727,
+            0.6913983797593898,
+            0.6904485382189773,
+            0.6870107600505703,
+            0.6859116326789116,
+            0.6844703734168192,
+            0.680164708180099,
+            0.6782240355451272,
+            0.6798181608404227,
+            0.6815291754861706
+          ],
+          "final_direction_log_loss": 0.6815291754861703,
+          "final_direction_brier": 0.24420855905735286,
+          "final_direction_accuracy": 0.5692307692307692,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 260,
+              "mean_confidence": 0.5388897933915345,
+              "correct_fraction": 0.5692307692307692
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "calibrate": {
+          "origins": 1343,
+          "mean15_bin_log_loss": 2.851354697394364,
+          "per_horizon_bin_log_loss": [
+            2.776641777577733,
+            2.806313077415892,
+            2.8442478666977453,
+            2.844981391904369,
+            2.854456673523537,
+            2.8520117902884854,
+            2.8646644493924045,
+            2.865475225428191,
+            2.860094505075358,
+            2.8532230590243377,
+            2.8494509324323114,
+            2.85337839007686,
+            2.857525512394182,
+            2.889295475734346,
+            2.898560333949712
+          ],
+          "ranked_probability_score": 0.130803474120624,
+          "per_horizon_binary_log_loss": [
+            0.694315503114493,
+            0.6939250282456246,
+            0.6943468244465747,
+            0.6948450355913081,
+            0.6939389146196936,
+            0.6932151037125863,
+            0.6926703129093615,
+            0.6940661761548753,
+            0.6931023616079584,
+            0.6924255123086067,
+            0.6924896036705377,
+            0.6944774123180442,
+            0.6943625189449563,
+            0.6945067313565766,
+            0.6945921433864229
+          ],
+          "final_direction_log_loss": 0.694592143386424,
+          "final_direction_brier": 0.25072159415977757,
+          "final_direction_accuracy": 0.498138495904691,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 1343,
+              "mean_confidence": 0.5236289628143619,
+              "correct_fraction": 0.498138495904691
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "score": {
+          "origins": 249,
+          "mean15_bin_log_loss": 2.8578237893847067,
+          "per_horizon_bin_log_loss": [
+            2.781297445429304,
+            2.78798913945647,
+            2.7876727839445725,
+            2.791691291042059,
+            2.768533652589994,
+            2.8035236147250893,
+            2.8702308196705117,
+            2.8586729744376216,
+            2.8430725803456545,
+            2.9210622260723387,
+            2.894196914776695,
+            2.98561977913874,
+            2.933576593134726,
+            2.899540778336449,
+            2.9406762476703756
+          ],
+          "ranked_probability_score": 0.1400829915185676,
+          "per_horizon_binary_log_loss": [
+            0.6901693668185033,
+            0.6867771441478948,
+            0.6809821106031717,
+            0.6778059437695417,
+            0.6761380521862992,
+            0.6724279730083346,
+            0.6760102214239105,
+            0.6759541741974228,
+            0.6776268504372328,
+            0.6785533815760747,
+            0.6804889667638648,
+            0.680459809756137,
+            0.6842320376668255,
+            0.682765766866046,
+            0.6831762955145678
+          ],
+          "final_direction_log_loss": 0.6831762955145674,
+          "final_direction_brier": 0.24501968066439897,
+          "final_direction_accuracy": 0.6024096385542169,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 249,
+              "mean_confidence": 0.526511331916495,
+              "correct_fraction": 0.6024096385542169
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        }
+      },
+      "daily_scores": {
+        "2026-08-24": {
+          "origins": 121,
+          "mean15_bin_log_loss": 2.8787331632621282,
+          "per_horizon_bin_log_loss": [
+            2.8059287705912483,
+            2.8057644676306195,
+            2.7923298650628894,
+            2.8106494148406065,
+            2.802070595063794,
+            2.842767184312084,
+            2.9350981086822467,
+            2.930994749217105,
+            2.8689069548950132,
+            2.946215778216577,
+            2.912985168303682,
+            2.9904279579430564,
+            2.935046961423911,
+            2.8652590352278855,
+            2.9365524375212115
+          ],
+          "ranked_probability_score": 0.1444576169302189,
+          "per_horizon_binary_log_loss": [
+            0.6942885124328949,
+            0.6937287306683626,
+            0.696441832047232,
+            0.693711110746807,
+            0.6912949938627451,
+            0.6872203508772314,
+            0.6885029314619495,
+            0.6863648872511622,
+            0.6930986095063447,
+            0.6929504078243555,
+            0.6974158511186136,
+            0.6980394315434447,
+            0.6998650760925912,
+            0.6965267495229118,
+            0.696167343695163
+          ],
+          "final_direction_log_loss": 0.696167343695163,
+          "final_direction_brier": 0.2515078855332883,
+          "final_direction_accuracy": 0.48760330578512395,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 121,
+              "mean_confidence": 0.5265336926832965,
+              "correct_fraction": 0.48760330578512395
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "2026-08-25": {
+          "origins": 66,
+          "mean15_bin_log_loss": 2.9897779190236538,
+          "per_horizon_bin_log_loss": [
+            2.821198504565764,
+            2.8218469966274298,
+            2.8561609630283087,
+            2.834052039658404,
+            2.8356656198507717,
+            2.89289429991291,
+            2.9275935171821215,
+            2.940971474349202,
+            3.0023534359057487,
+            3.1692884835581308,
+            3.1254373105542017,
+            3.2166117622447246,
+            3.1385609076936967,
+            3.128856128223437,
+            3.1351773419999547
+          ],
+          "ranked_probability_score": 0.1456133575089563,
+          "per_horizon_binary_log_loss": [
+            0.6929683057890067,
+            0.6896133300982272,
+            0.6770352512987832,
+            0.6750503742245005,
+            0.6742862529186195,
+            0.675035654507601,
+            0.6799460713748836,
+            0.683038399517698,
+            0.6848718289646524,
+            0.6837313145660436,
+            0.6812897662531013,
+            0.6822816773279454,
+            0.6884361995447633,
+            0.6873213215093448,
+            0.6891509807376568
+          ],
+          "final_direction_log_loss": 0.6891509807376567,
+          "final_direction_brier": 0.24800289577311088,
+          "final_direction_accuracy": 0.5606060606060606,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 66,
+              "mean_confidence": 0.5243437091919365,
+              "correct_fraction": 0.5606060606060606
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        },
+        "2026-08-26": {
+          "origins": 62,
+          "mean15_bin_log_loss": 2.6765494862340855,
+          "per_horizon_bin_log_loss": [
+            2.6907513124034685,
+            2.717256344579774,
+            2.705677193060012,
+            2.70959867187588,
+            2.6316194610006205,
+            2.6317988221053654,
+            2.682571464732031,
+            2.6299207850427653,
+            2.6230968418385916,
+            2.607731374402744,
+            2.6113703857753885,
+            2.730341383649753,
+            2.7124978943624067,
+            2.7223355819428114,
+            2.741674776739673
+          ],
+          "ranked_probability_score": 0.12565825232218916,
+          "per_horizon_binary_log_loss": [
+            0.6791508734089151,
+            0.670191172507597,
+            0.6550122141412098,
+            0.6496985628941159,
+            0.6485288394252814,
+            0.6407830584746553,
+            0.6474395115631538,
+            0.6480952201548311,
+            0.63971956930542,
+            0.6449439661989786,
+            0.646601776873314,
+            0.6442117856270461,
+            0.6492470000303486,
+            0.6510601941573616,
+            0.6514626494730194
+          ],
+          "final_direction_log_loss": 0.6514626494730194,
+          "final_direction_brier": 0.22918153572390554,
+          "final_direction_accuracy": 0.8709677419354839,
+          "final_direction_reliability": {
+            "0.5-0.6": {
+              "count": 62,
+              "mean_confidence": 0.5287751617074289,
+              "correct_fraction": 0.8709677419354839
+            },
+            "0.6-0.7": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.7-0.8": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.8-0.9": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            },
+            "0.9-1.0": {
+              "count": 0,
+              "mean_confidence": null,
+              "correct_fraction": null
+            }
+          },
+          "always_half_final_log_loss": 0.6931471805599453,
+          "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+        }
+      },
+      "elapsed_seconds": 108.17077612876892
     }
   ],
   "baselines": {
@@ -4617,6 +7396,1840 @@
         "features": "ea57e963451ec5b63c592981774c7dddd7c248b9b69025899a77e489d5b46ae1",
         "content_audit": "d8c72638fc670537197c62b6eae2c4f8a8c6fd8c071d23584d4edc5f4d2429ca"
       }
+    },
+    "B": {
+      "state": "complete",
+      "fold": "B",
+      "cohorts": {
+        "fit": {
+          "inside_partition": 3314,
+          "retained": 3314,
+          "purged_target_overlap": 0,
+          "outside_partition": 2077
+        },
+        "select": {
+          "inside_partition": 260,
+          "retained": 260,
+          "purged_target_overlap": 0,
+          "outside_partition": 5131
+        },
+        "calibrate": {
+          "inside_partition": 1343,
+          "retained": 1343,
+          "purged_target_overlap": 0,
+          "outside_partition": 4048
+        },
+        "score": {
+          "inside_partition": 249,
+          "retained": 249,
+          "purged_target_overlap": 0,
+          "outside_partition": 5142
+        }
+      },
+      "models": {
+        "fit_histogram": {
+          "temperatures": [
+            1.9152065613971474,
+            1.9152065613971474,
+            1.9152065613971474,
+            1.9152065613971474,
+            1.9152065613971474,
+            1.8340080864093424,
+            1.8340080864093424,
+            1.8340080864093424,
+            1.7562521603732995,
+            1.7562521603732995,
+            1.7562521603732995,
+            1.7562521603732995,
+            1.8340080864093424,
+            1.8340080864093424,
+            1.9152065613971474
+          ],
+          "partitions": {
+            "select": {
+              "origins": 260,
+              "mean15_bin_log_loss": 2.957921640402476,
+              "per_horizon_bin_log_loss": [
+                2.745588126961438,
+                2.8380194227457793,
+                2.883168671518016,
+                2.918661908965728,
+                2.9461525852753843,
+                2.956438074972052,
+                2.977553290619812,
+                2.9792467322583387,
+                2.9675237471974696,
+                2.9861796936520912,
+                2.9934369285884244,
+                3.010764213286905,
+                3.045587119338544,
+                3.052155616204587,
+                3.06834847445255
+              ],
+              "ranked_probability_score": 0.12031529702380764,
+              "per_horizon_binary_log_loss": [
+                0.6933166416027117,
+                0.6935210230773949,
+                0.6925356822623766,
+                0.6930302816045256,
+                0.6923357121073437,
+                0.692376875928655,
+                0.6921715392791922,
+                0.6916968708835436,
+                0.6902853145508183,
+                0.6893215103053341,
+                0.6897087515922654,
+                0.6874767464899251,
+                0.6867949524290622,
+                0.6879485503788608,
+                0.6884313408350629
+              ],
+              "final_direction_log_loss": 0.688431340835064,
+              "final_direction_brier": 0.24764307413543427,
+              "final_direction_accuracy": 0.573076923076923,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 260,
+                  "mean_confidence": 0.5184572304576412,
+                  "correct_fraction": 0.573076923076923
+                },
+                "0.6-0.7": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.7-0.8": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.8-0.9": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.9-1.0": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            },
+            "calibrate": {
+              "origins": 1343,
+              "mean15_bin_log_loss": 2.970071966014944,
+              "per_horizon_bin_log_loss": [
+                2.8380644824217685,
+                2.878731075802725,
+                2.9247657556396383,
+                2.940662959225545,
+                2.9583986610546913,
+                2.9689073881970147,
+                2.9803293307153154,
+                2.993028541537258,
+                2.9924371755679346,
+                2.990530405842606,
+                2.9974694873324355,
+                3.0075661776416998,
+                3.0156673582980824,
+                3.027178694339848,
+                3.037341996607561
+              ],
+              "ranked_probability_score": 0.13399604596536946,
+              "per_horizon_binary_log_loss": [
+                0.6936322412105427,
+                0.6930378001035937,
+                0.6930146911850721,
+                0.6931277670869864,
+                0.6929130763104154,
+                0.692555770853338,
+                0.6924001092014919,
+                0.692960875952529,
+                0.6924962806596264,
+                0.6922097148942217,
+                0.692325292231435,
+                0.6933244621056331,
+                0.6934053217340492,
+                0.6938648645995464,
+                0.6939664792338471
+              ],
+              "final_direction_log_loss": 0.6939664792338464,
+              "final_direction_brier": 0.25040938577633637,
+              "final_direction_accuracy": 0.498138495904691,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 1343,
+                  "mean_confidence": 0.5184572304576411,
+                  "correct_fraction": 0.498138495904691
+                },
+                "0.6-0.7": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.7-0.8": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.8-0.9": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.9-1.0": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            },
+            "score": {
+              "origins": 249,
+              "mean15_bin_log_loss": 3.1173501974805293,
+              "per_horizon_bin_log_loss": [
+                2.94599189995726,
+                3.0109867291651744,
+                3.046867312077942,
+                3.0698186089151944,
+                3.099277937143262,
+                3.132981238846051,
+                3.16465774924508,
+                3.162845983530878,
+                3.140178644712794,
+                3.152365733298981,
+                3.1602925519528196,
+                3.189974892318361,
+                3.175255863071573,
+                3.1419835834341074,
+                3.166774234538438
+              ],
+              "ranked_probability_score": 0.14996258180314778,
+              "per_horizon_binary_log_loss": [
+                0.6914196981701629,
+                0.6907829053583163,
+                0.688981105794029,
+                0.6892441338923132,
+                0.6899597311580885,
+                0.6871497502898523,
+                0.6877651912698161,
+                0.6867615916359039,
+                0.686521339394206,
+                0.685459203320383,
+                0.6860000783219636,
+                0.6858319464765247,
+                0.6878039610801475,
+                0.6859787923347325,
+                0.6862647535993104
+              ],
+              "final_direction_log_loss": 0.6862647535993088,
+              "final_direction_brier": 0.2465602727564086,
+              "final_direction_accuracy": 0.6024096385542169,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 249,
+                  "mean_confidence": 0.5184572304576412,
+                  "correct_fraction": 0.6024096385542169
+                },
+                "0.6-0.7": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.7-0.8": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.8-0.9": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.9-1.0": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            }
+          },
+          "daily_scores": {
+            "2026-08-24": {
+              "origins": 121,
+              "mean15_bin_log_loss": 3.1335228993568953,
+              "per_horizon_bin_log_loss": [
+                2.9844001575103363,
+                3.0358273471096617,
+                3.0855423391293906,
+                3.1202382954738344,
+                3.127482475041004,
+                3.1700052633683002,
+                3.2182645173898354,
+                3.2114467106742857,
+                3.179397828794982,
+                3.166145286992564,
+                3.1560414364330494,
+                3.148791237691702,
+                3.1704705946557343,
+                3.1118976755311363,
+                3.1168923245576092
+              ],
+              "ranked_probability_score": 0.15248541048596564,
+              "per_horizon_binary_log_loss": [
+                0.6937577989534354,
+                0.6928481320982783,
+                0.6935847301355559,
+                0.6928695012563765,
+                0.6924828301685622,
+                0.6910364664554662,
+                0.6913170999903634,
+                0.6902885319053046,
+                0.6923460973702835,
+                0.6923049301643608,
+                0.6946365216773145,
+                0.694792800622059,
+                0.6959241071588642,
+                0.6948517309743767,
+                0.6947446345484132
+              ],
+              "final_direction_log_loss": 0.6947446345484123,
+              "final_direction_brier": 0.25079828664024023,
+              "final_direction_accuracy": 0.48760330578512395,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 121,
+                  "mean_confidence": 0.5184572304576412,
+                  "correct_fraction": 0.48760330578512395
+                },
+                "0.6-0.7": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.7-0.8": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.8-0.9": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.9-1.0": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            },
+            "2026-08-25": {
+              "origins": 66,
+              "mean15_bin_log_loss": 3.2323414507828065,
+              "per_horizon_bin_log_loss": [
+                2.9758889204241483,
+                3.0742577416419907,
+                3.1219238087682997,
+                3.123270474551219,
+                3.171910667213343,
+                3.2056448650984706,
+                3.2292134297854154,
+                3.2516721557119497,
+                3.22316794903019,
+                3.3223266574438104,
+                3.3253938893994164,
+                3.4114939203966204,
+                3.3376041301554995,
+                3.310881244534948,
+                3.4004719075867764
+              ],
+              "ranked_probability_score": 0.1557497479520587,
+              "per_horizon_binary_log_loss": [
+                0.6926915222226024,
+                0.6914786475223804,
+                0.6872761701363057,
+                0.6881148932130541,
+                0.689313079762038,
+                0.6874212541833753,
+                0.6885227073476579,
+                0.6888000435543199,
+                0.6889246188705379,
+                0.6871779022573292,
+                0.6852428435560065,
+                0.6858594798272489,
+                0.6893894728965291,
+                0.68803862746848,
+                0.6893524697182445
+              ],
+              "final_direction_log_loss": 0.6893524697182437,
+              "final_direction_brier": 0.2481034293006948,
+              "final_direction_accuracy": 0.5606060606060606,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 66,
+                  "mean_confidence": 0.5184572304576412,
+                  "correct_fraction": 0.5606060606060606
+                },
+                "0.6-0.7": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.7-0.8": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.8-0.9": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.9-1.0": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            },
+            "2026-08-26": {
+              "origins": 62,
+              "mean15_bin_log_loss": 2.963377299980683,
+              "per_horizon_bin_log_loss": [
+                2.8392079884292385,
+                2.8951544453788376,
+                2.891489778936182,
+                2.9145185249543437,
+                2.9669148843972484,
+                2.9833730727194534,
+                2.991317525677715,
+                2.9734392843647335,
+                2.9752945260209835,
+                2.9445472334525,
+                2.992836047217594,
+                3.034538865812868,
+                3.011772505826062,
+                3.020905345105155,
+                3.0153494714173315
+              ],
+              "ranked_probability_score": 0.1388784650862271,
+              "per_horizon_binary_log_loss": [
+                0.6855027532953734,
+                0.6860117534492375,
+                0.681811544634109,
+                0.6833709150823172,
+                0.6857239894140922,
+                0.679275364596104,
+                0.6800268522968501,
+                0.6777084045518268,
+                0.6725953368048089,
+                0.6702694117404017,
+                0.6699511726535102,
+                0.6683145182062348,
+                0.6702687763155241,
+                0.6664695230730521,
+                0.6664283849107415
+              ],
+              "final_direction_log_loss": 0.666428384910741,
+              "final_direction_brier": 0.23664659514565842,
+              "final_direction_accuracy": 0.8709677419354839,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 62,
+                  "mean_confidence": 0.5184572304576414,
+                  "correct_fraction": 0.8709677419354839
+                },
+                "0.6-0.7": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.7-0.8": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.8-0.9": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.9-1.0": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            }
+          }
+        },
+        "fit_volatility_histogram": {
+          "temperatures": [
+            1.0905077326652577,
+            1.0,
+            1.1387886347566918,
+            1.1387886347566918,
+            1.0442737824274138,
+            1.0,
+            1.0442737824274138,
+            1.0442737824274138,
+            1.0442737824274138,
+            1.0,
+            1.0442737824274138,
+            1.0905077326652577,
+            1.0905077326652577,
+            1.0905077326652577,
+            1.189207115002721
+          ],
+          "partitions": {
+            "select": {
+              "origins": 260,
+              "mean15_bin_log_loss": 2.8863537634019267,
+              "per_horizon_bin_log_loss": [
+                2.6498770974727934,
+                2.7361845905795414,
+                2.7669865515676757,
+                2.827233306981246,
+                2.8530191565861727,
+                2.8879817672488097,
+                2.9275301756428433,
+                2.8884671292425255,
+                2.913422588751549,
+                2.945039526944075,
+                2.9600864021488884,
+                2.95455665261646,
+                3.0075908231909323,
+                2.9851451614746485,
+                2.9921855205807146
+              ],
+              "ranked_probability_score": 0.11926499608241171,
+              "per_horizon_binary_log_loss": [
+                0.6941173603434027,
+                0.6934194348627722,
+                0.6904300183464546,
+                0.6938978571946901,
+                0.6903524790340976,
+                0.6925889469655776,
+                0.6916660952576578,
+                0.6905391788255213,
+                0.6915513286078122,
+                0.6909728891867946,
+                0.6940996904751617,
+                0.6879668441921509,
+                0.6876162619406463,
+                0.6956778692922226,
+                0.6937051302004306
+              ],
+              "final_direction_log_loss": 0.6937051302004313,
+              "final_direction_brier": 0.25023724176183204,
+              "final_direction_accuracy": 0.5269230769230769,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 260,
+                  "mean_confidence": 0.5494561782104828,
+                  "correct_fraction": 0.5269230769230769
+                },
+                "0.6-0.7": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.7-0.8": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.8-0.9": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.9-1.0": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            },
+            "calibrate": {
+              "origins": 1343,
+              "mean15_bin_log_loss": 2.842346753553037,
+              "per_horizon_bin_log_loss": [
+                2.7429946294339644,
+                2.7716466731574276,
+                2.8229478295975583,
+                2.8356465076970907,
+                2.8259865549968777,
+                2.83607222622718,
+                2.8515625172661347,
+                2.8639698634772683,
+                2.853120929552092,
+                2.851476111899844,
+                2.8466732587632166,
+                2.856039039850505,
+                2.8712385133736396,
+                2.88857256610123,
+                2.917254081901504
+              ],
+              "ranked_probability_score": 0.13141554685545556,
+              "per_horizon_binary_log_loss": [
+                0.6948251284845892,
+                0.6942989629054404,
+                0.6954588524961265,
+                0.6978846089216449,
+                0.6955100679316448,
+                0.6962168790947338,
+                0.6956276351926527,
+                0.6984095439704424,
+                0.6993350331674194,
+                0.699386219764883,
+                0.6954634134722072,
+                0.7001836503461161,
+                0.7017866957785586,
+                0.7042550721678783,
+                0.7062160936472744
+              ],
+              "final_direction_log_loss": 0.706216093647283,
+              "final_direction_brier": 0.25640368143455744,
+              "final_direction_accuracy": 0.5115413253909159,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 1343,
+                  "mean_confidence": 0.5802254479425355,
+                  "correct_fraction": 0.5115413253909159
+                },
+                "0.6-0.7": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.7-0.8": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.8-0.9": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.9-1.0": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            },
+            "score": {
+              "origins": 249,
+              "mean15_bin_log_loss": 2.9420278175892913,
+              "per_horizon_bin_log_loss": [
+                2.8141400858888157,
+                2.8565781329631164,
+                2.872328039969045,
+                2.8945145719995344,
+                2.889197006960323,
+                2.9323588796504056,
+                2.971608680489876,
+                2.973142413436412,
+                2.933279515405702,
+                2.9992735882162127,
+                2.971128638705214,
+                3.0415443727022122,
+                3.0249554734017146,
+                2.9504691821871565,
+                3.0058986818636377
+              ],
+              "ranked_probability_score": 0.14126704186159747,
+              "per_horizon_binary_log_loss": [
+                0.6910252376190215,
+                0.6888864893769424,
+                0.6812782251319488,
+                0.6746476592277251,
+                0.675997059401124,
+                0.6679596381837941,
+                0.6728692252398836,
+                0.6678785424319792,
+                0.6700577705039874,
+                0.668834614175243,
+                0.6715482063334214,
+                0.6716659055268127,
+                0.6796421065724686,
+                0.6720640215691329,
+                0.6720973907935901
+              ],
+              "final_direction_log_loss": 0.6720973907935923,
+              "final_direction_brier": 0.23954824216258647,
+              "final_direction_accuracy": 0.6024096385542169,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 249,
+                  "mean_confidence": 0.5964116195986079,
+                  "correct_fraction": 0.6024096385542169
+                },
+                "0.6-0.7": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.7-0.8": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.8-0.9": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.9-1.0": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            }
+          },
+          "daily_scores": {
+            "2026-08-24": {
+              "origins": 121,
+              "mean15_bin_log_loss": 2.9908143723177845,
+              "per_horizon_bin_log_loss": [
+                2.8383020212074848,
+                2.889511237328312,
+                2.9049145601289075,
+                2.957856177010107,
+                2.951474320960858,
+                3.013464395421158,
+                3.069849637194377,
+                3.065191423820696,
+                3.01988357750372,
+                3.0597170365266906,
+                2.9985826472698616,
+                3.036979790548898,
+                3.0844318906316532,
+                2.959794864327771,
+                3.012262004886267
+              ],
+              "ranked_probability_score": 0.14808901058525334,
+              "per_horizon_binary_log_loss": [
+                0.6941179391888672,
+                0.6929702464862657,
+                0.6965225568618512,
+                0.6955501654096304,
+                0.6917293040334604,
+                0.6873654622391394,
+                0.6891098291672494,
+                0.6854497737019548,
+                0.6981035868075365,
+                0.7000561780626089,
+                0.7073212486585436,
+                0.7104604583757136,
+                0.7200124954281478,
+                0.7176324093456816,
+                0.7169333471047906
+              ],
+              "final_direction_log_loss": 0.7169333471047911,
+              "final_direction_brier": 0.2616855711274765,
+              "final_direction_accuracy": 0.48760330578512395,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 121,
+                  "mean_confidence": 0.596411619598608,
+                  "correct_fraction": 0.48760330578512395
+                },
+                "0.6-0.7": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.7-0.8": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.8-0.9": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.9-1.0": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            },
+            "2026-08-25": {
+              "origins": 66,
+              "mean15_bin_log_loss": 3.0866522715526594,
+              "per_horizon_bin_log_loss": [
+                2.8944113455574465,
+                2.9538689768874544,
+                2.958644760752493,
+                2.946491256885232,
+                2.9746566778885257,
+                3.00865768686539,
+                3.0295238723333138,
+                3.0734049581511615,
+                3.0259389787140223,
+                3.218761046649619,
+                3.206114184281044,
+                3.3182222424956382,
+                3.2256396538361405,
+                3.1753376609532986,
+                3.290110771039106
+              ],
+              "ranked_probability_score": 0.14726330158335058,
+              "per_horizon_binary_log_loss": [
+                0.6927075313300917,
+                0.690262242437742,
+                0.6756325419014555,
+                0.6681368817233191,
+                0.6719650028261357,
+                0.6693152187210937,
+                0.6763328611485667,
+                0.6780341184710656,
+                0.6816293988868384,
+                0.6766731490577955,
+                0.6684116615524133,
+                0.6717851066668521,
+                0.6875246899573256,
+                0.6826426325505057,
+                0.6884231748276932
+              ],
+              "final_direction_log_loss": 0.688423174827693,
+              "final_direction_brier": 0.24760894347258328,
+              "final_direction_accuracy": 0.5606060606060606,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 66,
+                  "mean_confidence": 0.5964116195986078,
+                  "correct_fraction": 0.5606060606060606
+                },
+                "0.6-0.7": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.7-0.8": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.8-0.9": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.9-1.0": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            },
+            "2026-08-26": {
+              "origins": 62,
+              "mean15_bin_log_loss": 2.6928602839807447,
+              "per_horizon_bin_log_loss": [
+                2.6815352905389997,
+                2.6887377889760753,
+                2.7168462252746797,
+                2.7155662589553824,
+                2.676682599293786,
+                2.692850997643161,
+                2.7182287059267813,
+                2.686767281054595,
+                2.6656244171442625,
+                2.647663434955371,
+                2.6674031379902687,
+                2.75592461518906,
+                2.6952489831840647,
+                2.6928929380326365,
+                2.6909315855520477
+              ],
+              "ranked_probability_score": 0.12157008448743507,
+              "per_horizon_binary_log_loss": [
+                0.6831986525402814,
+                0.6794520649859676,
+                0.6575371114850964,
+                0.6407848861193463,
+                0.6495859970371981,
+                0.6286439442134919,
+                0.6374867567691809,
+                0.6227755262666983,
+                0.6030050084717644,
+                0.5995579604233199,
+                0.6050719778528753,
+                0.5958270640758568,
+                0.5924635976218571,
+                0.571871065992798,
+                0.5672158995047911
+              ],
+              "final_direction_log_loss": 0.5672158995047907,
+              "final_direction_brier": 0.18776399875594982,
+              "final_direction_accuracy": 0.8709677419354839,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 62,
+                  "mean_confidence": 0.5964116195986077,
+                  "correct_fraction": 0.8709677419354839
+                },
+                "0.6-0.7": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.7-0.8": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.8-0.9": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.9-1.0": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            }
+          }
+        },
+        "flow_logistic": {
+          "temperatures": [
+            4.0,
+            3.8304131227942957,
+            4.0,
+            2.9536522918789987,
+            3.8304131227942957,
+            3.8304131227942957,
+            3.6680161728186857,
+            3.8304131227942957,
+            3.6680161728186857,
+            3.084421650815882,
+            2.8284271247461903,
+            3.5125043207466,
+            3.084421650815882,
+            3.363585661014859,
+            3.363585661014859
+          ],
+          "partitions": {
+            "select": {
+              "origins": 260,
+              "mean15_bin_log_loss": 3.197358502468382,
+              "per_horizon_bin_log_loss": [
+                3.1688747613856263,
+                3.1845320181572028,
+                3.164316099690803,
+                3.165649574682436,
+                3.1781066805000497,
+                3.2123682155599464,
+                3.2291925025903385,
+                3.1920242466915276,
+                3.1869090837630067,
+                3.1856743948640824,
+                3.220815982660518,
+                3.224778915093704,
+                3.2171941621155087,
+                3.2158954283093153,
+                3.2140454709616697
+              ],
+              "ranked_probability_score": 0.12735430807670212,
+              "per_horizon_binary_log_loss": [
+                0.691571401148609,
+                0.6899025606983867,
+                0.689765200778447,
+                0.6955428022324769,
+                0.6912682650641024,
+                0.6940739281831501,
+                0.6921020309164215,
+                0.6914625442229867,
+                0.6884723969297891,
+                0.689675461811957,
+                0.6894922497587557,
+                0.6890203150433067,
+                0.6873514716733529,
+                0.6932677970814303,
+                0.691180758813653
+              ],
+              "final_direction_log_loss": 0.691180758813653,
+              "final_direction_brier": 0.24903251905072854,
+              "final_direction_accuracy": 0.5307692307692308,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 258,
+                  "mean_confidence": 0.5167409549811035,
+                  "correct_fraction": 0.5271317829457365
+                },
+                "0.6-0.7": {
+                  "count": 2,
+                  "mean_confidence": 0.6055875209388808,
+                  "correct_fraction": 1.0
+                },
+                "0.7-0.8": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.8-0.9": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.9-1.0": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            },
+            "calibrate": {
+              "origins": 1343,
+              "mean15_bin_log_loss": 3.1400188522798547,
+              "per_horizon_bin_log_loss": [
+                3.2022773522315333,
+                3.1878033945907265,
+                3.186457267332365,
+                3.143111670735186,
+                3.130342940429583,
+                3.148608674985665,
+                3.1472323512597105,
+                3.1590179707359165,
+                3.134173510960093,
+                3.0949845642056233,
+                3.093817718830174,
+                3.1369469730231097,
+                3.080217327315066,
+                3.1285828913161793,
+                3.1267081762469
+              ],
+              "ranked_probability_score": 0.1371910569187248,
+              "per_horizon_binary_log_loss": [
+                0.6955840324675184,
+                0.6948556843747205,
+                0.6967156358568473,
+                0.6957949920254284,
+                0.6986968561995488,
+                0.7006378291661864,
+                0.6920052630118485,
+                0.6981790447258192,
+                0.6994125478507928,
+                0.6997787838965533,
+                0.6950198382843537,
+                0.6991117778253652,
+                0.6987731918023449,
+                0.7004119783416667,
+                0.7063151348039567
+              ],
+              "final_direction_log_loss": 0.706315134803957,
+              "final_direction_brier": 0.2556310429168095,
+              "final_direction_accuracy": 0.4959046909903202,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 1335,
+                  "mean_confidence": 0.5647011304654157,
+                  "correct_fraction": 0.49737827715355803
+                },
+                "0.6-0.7": {
+                  "count": 5,
+                  "mean_confidence": 0.606882887982368,
+                  "correct_fraction": 0.4
+                },
+                "0.7-0.8": {
+                  "count": 1,
+                  "mean_confidence": 0.775737102847099,
+                  "correct_fraction": 0.0
+                },
+                "0.8-0.9": {
+                  "count": 1,
+                  "mean_confidence": 0.8715254447171943,
+                  "correct_fraction": 0.0
+                },
+                "0.9-1.0": {
+                  "count": 1,
+                  "mean_confidence": 0.9837736431305021,
+                  "correct_fraction": 0.0
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            },
+            "score": {
+              "origins": 249,
+              "mean15_bin_log_loss": 3.0506430398846254,
+              "per_horizon_bin_log_loss": [
+                3.1699018249587474,
+                3.1053517940559185,
+                3.0627739302300334,
+                3.0281325756732236,
+                2.990147853833891,
+                3.0448688060931346,
+                3.0580575937123027,
+                3.0224602498257,
+                2.975255719545667,
+                3.073240527245507,
+                2.993169548384825,
+                3.105335109196004,
+                3.0501614457993522,
+                3.059506336792014,
+                3.0212822829230546
+              ],
+              "ranked_probability_score": 0.14404081733236762,
+              "per_horizon_binary_log_loss": [
+                0.6894422629197346,
+                0.6928120813110458,
+                0.6896171024824084,
+                0.6886088607986987,
+                0.692849871805865,
+                0.6773681409196923,
+                0.6827788701505396,
+                0.6868459950422482,
+                0.6727589883887536,
+                0.6875093970365977,
+                0.6903946196610854,
+                0.6806567137070714,
+                0.6908444015672848,
+                0.6796681621767751,
+                0.6750276682325337
+              ],
+              "final_direction_log_loss": 0.6750276682325335,
+              "final_direction_brier": 0.24099305817954333,
+              "final_direction_accuracy": 0.6024096385542169,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 246,
+                  "mean_confidence": 0.5689372272089381,
+                  "correct_fraction": 0.5975609756097561
+                },
+                "0.6-0.7": {
+                  "count": 3,
+                  "mean_confidence": 0.6098761692459305,
+                  "correct_fraction": 1.0
+                },
+                "0.7-0.8": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.8-0.9": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.9-1.0": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            }
+          },
+          "daily_scores": {
+            "2026-08-24": {
+              "origins": 121,
+              "mean15_bin_log_loss": 3.0594983052410707,
+              "per_horizon_bin_log_loss": [
+                3.182427250811507,
+                3.1068540973331507,
+                3.040387598842392,
+                3.00114976099595,
+                2.9556239597773617,
+                3.0771143927879576,
+                3.101865957940715,
+                3.0626632961998532,
+                3.0037352965633035,
+                3.081711298729063,
+                3.027855710999485,
+                3.126079791736907,
+                3.033569512434152,
+                3.0457361972560704,
+                3.0457004562081806
+              ],
+              "ranked_probability_score": 0.14747015404535335,
+              "per_horizon_binary_log_loss": [
+                0.690671034302419,
+                0.6874920615269429,
+                0.6950538307480535,
+                0.6951336105555507,
+                0.6920894109002294,
+                0.6888488418127325,
+                0.6892797346046532,
+                0.6966297605502543,
+                0.7002675958009568,
+                0.6956098971867306,
+                0.7006109354455675,
+                0.7033425836233187,
+                0.7040493466817281,
+                0.6944853292323254,
+                0.7015659847622598
+              ],
+              "final_direction_log_loss": 0.7015659847622598,
+              "final_direction_brier": 0.25419722049477494,
+              "final_direction_accuracy": 0.48760330578512395,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 120,
+                  "mean_confidence": 0.5703330460533,
+                  "correct_fraction": 0.48333333333333334
+                },
+                "0.6-0.7": {
+                  "count": 1,
+                  "mean_confidence": 0.6039434720811856,
+                  "correct_fraction": 1.0
+                },
+                "0.7-0.8": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.8-0.9": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.9-1.0": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            },
+            "2026-08-25": {
+              "origins": 66,
+              "mean15_bin_log_loss": 3.107485028781278,
+              "per_horizon_bin_log_loss": [
+                3.1493071185583057,
+                3.089621566748587,
+                3.077966563860958,
+                3.0634204635890057,
+                3.066152629290804,
+                3.105359219029874,
+                3.0821141004781167,
+                3.0171556484674285,
+                3.04212955536904,
+                3.204638938439432,
+                3.037609290440567,
+                3.184049485337564,
+                3.1963801055821377,
+                3.175247284507725,
+                3.1211234620196153
+              ],
+              "ranked_probability_score": 0.14795818037991643,
+              "per_horizon_binary_log_loss": [
+                0.6940352887382477,
+                0.6926326440019439,
+                0.6881536255811418,
+                0.6858117587478821,
+                0.6935358890570429,
+                0.6767514217495019,
+                0.6865106400504359,
+                0.6841607941419692,
+                0.6802357643605634,
+                0.6846130772921001,
+                0.681885325478522,
+                0.6729355758782836,
+                0.6919109432299121,
+                0.6828839030743974,
+                0.6861400553800951
+              ],
+              "final_direction_log_loss": 0.6861400553800951,
+              "final_direction_brier": 0.2465141509346749,
+              "final_direction_accuracy": 0.5606060606060606,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 65,
+                  "mean_confidence": 0.5757047590744331,
+                  "correct_fraction": 0.5538461538461539
+                },
+                "0.6-0.7": {
+                  "count": 1,
+                  "mean_confidence": 0.6166023914228017,
+                  "correct_fraction": 1.0
+                },
+                "0.7-0.8": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.8-0.9": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.9-1.0": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            },
+            "2026-08-26": {
+              "origins": 62,
+              "mean15_bin_log_loss": 2.972851775766739,
+              "per_horizon_bin_log_loss": [
+                3.167380439382057,
+                3.1191649602775002,
+                3.0902905798794484,
+                3.0432280591169154,
+                2.9766168215868505,
+                2.917544882804461,
+                2.9469520853545403,
+                2.9496462994768917,
+                2.8484863327154053,
+                2.9168331322727763,
+                2.8781687636742914,
+                2.9810567960864454,
+                2.926890355340085,
+                2.9631722131567146,
+                2.8673449153767088
+              ],
+              "ranked_probability_score": 0.133177983406408,
+              "per_horizon_binary_log_loss": [
+                0.6821548267693024,
+                0.7033857144768048,
+                0.6805646082137083,
+                0.6788526352305483,
+                0.69360372069303,
+                0.6556187644225095,
+                0.6661191699514928,
+                0.6706103117027232,
+                0.6111136865981721,
+                0.674783535503866,
+                0.6795146068566793,
+                0.6446019530108471,
+                0.6639381094933968,
+                0.6473275797096021,
+                0.6114058319125988
+              ],
+              "final_direction_log_loss": 0.6114058319125988,
+              "final_direction_brier": 0.2093463523411285,
+              "final_direction_accuracy": 0.8709677419354839,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 61,
+                  "mean_confidence": 0.5589800496256495,
+                  "correct_fraction": 0.8688524590163934
+                },
+                "0.6-0.7": {
+                  "count": 1,
+                  "mean_confidence": 0.609082644233804,
+                  "correct_fraction": 1.0
+                },
+                "0.7-0.8": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.8-0.9": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.9-1.0": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            }
+          }
+        },
+        "flow_boosted_trees": {
+          "temperatures": [
+            2.9536522918789987,
+            2.9536522918789987,
+            3.084421650815882,
+            2.9536522918789987,
+            3.084421650815882,
+            2.9536522918789987,
+            2.8284271247461903,
+            2.7085110938737857,
+            2.7085110938737857,
+            2.8284271247461903,
+            2.5936791093020193,
+            3.2209806638985095,
+            3.363585661014859,
+            3.2209806638985095,
+            3.5125043207466
+          ],
+          "partitions": {
+            "select": {
+              "origins": 260,
+              "mean15_bin_log_loss": 2.9018319603674723,
+              "per_horizon_bin_log_loss": [
+                2.6697743511417737,
+                2.748576492021911,
+                2.794868784354305,
+                2.8344642836427414,
+                2.910182288281085,
+                2.9145264624459073,
+                2.9669152376693546,
+                2.9174413674819433,
+                2.8767889589006197,
+                2.9109603398052215,
+                2.922119465442216,
+                2.982221967859577,
+                3.0211178369677483,
+                2.97323760572702,
+                3.0842839637706683
+              ],
+              "ranked_probability_score": 0.11854505722739639,
+              "per_horizon_binary_log_loss": [
+                0.6886533674366465,
+                0.6859227577221407,
+                0.6918598201288987,
+                0.6891495601706997,
+                0.6937695626415571,
+                0.6888678315494338,
+                0.6933482073165406,
+                0.6884352430451641,
+                0.6945846191888778,
+                0.6925511946544265,
+                0.6964114463812476,
+                0.6883366865955446,
+                0.6848946440718113,
+                0.6839976934733012,
+                0.6906636580117876
+              ],
+              "final_direction_log_loss": 0.6906636580117881,
+              "final_direction_brier": 0.248753895945849,
+              "final_direction_accuracy": 0.5576923076923077,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 260,
+                  "mean_confidence": 0.5294252431099069,
+                  "correct_fraction": 0.5576923076923077
+                },
+                "0.6-0.7": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.7-0.8": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.8-0.9": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.9-1.0": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            },
+            "calibrate": {
+              "origins": 1343,
+              "mean15_bin_log_loss": 2.9214266013850043,
+              "per_horizon_bin_log_loss": [
+                2.785565664823123,
+                2.825426644502459,
+                2.864976217856712,
+                2.8738128462985673,
+                2.8959044698396412,
+                2.9178609369242907,
+                2.9223050104229475,
+                2.940126005755935,
+                2.9326630911947884,
+                2.9335752891092044,
+                2.951618375927152,
+                2.9681347050773406,
+                2.9905745112077473,
+                3.003330345944483,
+                3.0155249058906732
+              ],
+              "ranked_probability_score": 0.13277078431771785,
+              "per_horizon_binary_log_loss": [
+                0.6932088775492514,
+                0.6955174241764569,
+                0.6949198593181442,
+                0.695580071933543,
+                0.6939920997623444,
+                0.696121215610011,
+                0.6941076082000169,
+                0.7019032659400903,
+                0.6994564917295619,
+                0.700805721454677,
+                0.6982342756303364,
+                0.7020125202618549,
+                0.7023247500922887,
+                0.7008621289694844,
+                0.6992959876695707
+              ],
+              "final_direction_log_loss": 0.6992959876695707,
+              "final_direction_brier": 0.2530612123600287,
+              "final_direction_accuracy": 0.4720774385703649,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 1343,
+                  "mean_confidence": 0.5259071086087639,
+                  "correct_fraction": 0.4720774385703649
+                },
+                "0.6-0.7": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.7-0.8": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.8-0.9": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.9-1.0": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            },
+            "score": {
+              "origins": 249,
+              "mean15_bin_log_loss": 3.0239531788333376,
+              "per_horizon_bin_log_loss": [
+                2.830504118997593,
+                2.8702286135736426,
+                2.9238495442254315,
+                2.956674901859514,
+                3.0118512006320155,
+                2.997491792139106,
+                3.03164112709635,
+                3.0516783326852126,
+                3.035118137625554,
+                3.107767536595898,
+                3.081815781119339,
+                3.1748536765328814,
+                3.1096281060792186,
+                3.0372850110919742,
+                3.1389098022463346
+              ],
+              "ranked_probability_score": 0.14853121416015785,
+              "per_horizon_binary_log_loss": [
+                0.6940190266560343,
+                0.6993585654860425,
+                0.6995148387587201,
+                0.695590654738145,
+                0.7039647569878084,
+                0.69686766570508,
+                0.7029942306109169,
+                0.6956620169926561,
+                0.7020414493418905,
+                0.7053053820270558,
+                0.7006326367135223,
+                0.7074771832836493,
+                0.7012827259549966,
+                0.706308603860386,
+                0.7064046283714303
+              ],
+              "final_direction_log_loss": 0.70640462837143,
+              "final_direction_brier": 0.2566079468979094,
+              "final_direction_accuracy": 0.41767068273092367,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 249,
+                  "mean_confidence": 0.5301585861062095,
+                  "correct_fraction": 0.41767068273092367
+                },
+                "0.6-0.7": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.7-0.8": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.8-0.9": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.9-1.0": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            }
+          },
+          "daily_scores": {
+            "2026-08-24": {
+              "origins": 121,
+              "mean15_bin_log_loss": 3.021761348405,
+              "per_horizon_bin_log_loss": [
+                2.86070296854004,
+                2.866530695839237,
+                2.931686530512836,
+                2.9449379738465957,
+                3.030392958375667,
+                3.008115658026146,
+                3.094706844336648,
+                3.0952408166947833,
+                3.100197247981452,
+                3.1080573730721666,
+                3.057039713945576,
+                3.0942053953787756,
+                3.086930414656634,
+                2.980174929747015,
+                3.0675007051214287
+              ],
+              "ranked_probability_score": 0.15020657756103492,
+              "per_horizon_binary_log_loss": [
+                0.6976463623799876,
+                0.6960110524988625,
+                0.7003470798788397,
+                0.6927381232631108,
+                0.6919093736796572,
+                0.6999386774485996,
+                0.7121691416144355,
+                0.7006068110341387,
+                0.7103517179801532,
+                0.7176710941855683,
+                0.7074238502365183,
+                0.7031868700643643,
+                0.7065378064403552,
+                0.7047327547969581,
+                0.7039435044656469
+              ],
+              "final_direction_log_loss": 0.7039435044656464,
+              "final_direction_brier": 0.2553776446804921,
+              "final_direction_accuracy": 0.4214876033057851,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 121,
+                  "mean_confidence": 0.5345714666727358,
+                  "correct_fraction": 0.4214876033057851
+                },
+                "0.6-0.7": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.7-0.8": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.8-0.9": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.9-1.0": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            },
+            "2026-08-25": {
+              "origins": 66,
+              "mean15_bin_log_loss": 3.152641920092719,
+              "per_horizon_bin_log_loss": [
+                2.8776969189335637,
+                2.947094624027153,
+                2.9815519703295443,
+                3.0110691574615647,
+                3.064680650323457,
+                3.0953236099736965,
+                3.0827590978447037,
+                3.0727855379339415,
+                3.0607826928613338,
+                3.323824894876904,
+                3.2899985073836664,
+                3.4739139834030746,
+                3.3533180281386,
+                3.2392331278710844,
+                3.4155960000284926
+              ],
+              "ranked_probability_score": 0.1504443130784894,
+              "per_horizon_binary_log_loss": [
+                0.6828910482970605,
+                0.6908860545273791,
+                0.6916238352701044,
+                0.6907135061249264,
+                0.7063508118633531,
+                0.690175948453023,
+                0.6816660011425434,
+                0.6802148932343265,
+                0.6856922539142137,
+                0.6781959798619355,
+                0.6665568668360224,
+                0.6837913990153558,
+                0.6821047754964781,
+                0.7000003974744914,
+                0.6871929925630257
+              ],
+              "final_direction_log_loss": 0.6871929925630259,
+              "final_direction_brier": 0.24702690555156648,
+              "final_direction_accuracy": 0.5909090909090909,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 66,
+                  "mean_confidence": 0.5247099834679065,
+                  "correct_fraction": 0.5909090909090909
+                },
+                "0.6-0.7": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.7-0.8": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.8-0.9": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.9-1.0": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            },
+            "2026-08-26": {
+              "origins": 62,
+              "mean15_bin_log_loss": 2.891239542683495,
+              "per_horizon_bin_log_loss": [
+                2.7213301578619435,
+                2.7956204096370576,
+                2.84712961739241,
+                2.9216772795986845,
+                2.919427065686583,
+                2.872614570374348,
+                2.854145355233979,
+                2.944192266369503,
+                2.8807885731315905,
+                2.8772053453027557,
+                2.9085552036125497,
+                3.0138933824395564,
+                2.8945133610181477,
+                2.9337647552100146,
+                2.983735797383298
+              ],
+              "ranked_probability_score": 0.1432250286744158,
+              "per_horizon_binary_log_loss": [
+                0.6987857838994855,
+                0.714910739594437,
+                0.7062907267379823,
+                0.7063494953341389,
+                0.7249522047055547,
+                0.697997680506207,
+                0.7077926001832878,
+                0.7024554055254033,
+                0.703227004067646,
+                0.7100306944741186,
+                0.7236530234172714,
+                0.7410641133036633,
+                0.7114420806571542,
+                0.7160992386691564,
+                0.7316588857255353
+              ],
+              "final_direction_log_loss": 0.7316588857255353,
+              "final_direction_brier": 0.2692081936263952,
+              "final_direction_accuracy": 0.22580645161290322,
+              "final_direction_reliability": {
+                "0.5-0.6": {
+                  "count": 62,
+                  "mean_confidence": 0.5273464768413433,
+                  "correct_fraction": 0.22580645161290322
+                },
+                "0.6-0.7": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.7-0.8": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.8-0.9": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                },
+                "0.9-1.0": {
+                  "count": 0,
+                  "mean_confidence": null,
+                  "correct_fraction": null
+                }
+              },
+              "always_half_final_log_loss": 0.6931471805599453,
+              "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+            }
+          }
+        }
+      },
+      "fit_direction_up_fraction": 0.4499094749547375,
+      "source_hashes": {
+        "cohort": "f93975712b8fc1b1ddcabadc247b000710b76f8d9163399277b14d8187339adc",
+        "features": "ea57e963451ec5b63c592981774c7dddd7c248b9b69025899a77e489d5b46ae1",
+        "content_audit": "d8c72638fc670537197c62b6eae2c4f8a8c6fd8c071d23584d4edc5f4d2429ca"
+      }
     }
   },
   "lifetime": {
@@ -5130,6 +9743,535 @@
         3.363585661014859,
         3.2209806638985095,
         2.9536522918789987,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "source_hashes": {
+        "cohort": "f93975712b8fc1b1ddcabadc247b000710b76f8d9163399277b14d8187339adc",
+        "features": "ea57e963451ec5b63c592981774c7dddd7c248b9b69025899a77e489d5b46ae1",
+        "content_audit": "d8c72638fc670537197c62b6eae2c4f8a8c6fd8c071d23584d4edc5f4d2429ca"
+      },
+      "auxiliary_report_sha256": "65ec7f5c263f14d4a430c1651fee62e61941c6b70253c20c6c7911cac0e1f95f",
+      "primary_task_unchanged": true,
+      "scope": "Fixed simple-flow diagnostic on common origins; does not prove all models have the same signal lifetime.",
+      "limitations": [
+        "Short availability-price and full-candle execution-close labels differ; microstructure noise remains.",
+        "Overlapping origins and same-month dates are correlated development evidence.",
+        "No reserved final data, entry prediction or profitability test."
+      ]
+    },
+    "B": {
+      "state": "complete",
+      "fold": "B",
+      "cohorts": {
+        "fit": {
+          "primary_eligible": 3314,
+          "common_all_horizons": 2984
+        },
+        "select": {
+          "primary_eligible": 260,
+          "common_all_horizons": 245
+        },
+        "calibrate": {
+          "primary_eligible": 1343,
+          "common_all_horizons": 1300
+        },
+        "score": {
+          "primary_eligible": 249,
+          "common_all_horizons": 245
+        }
+      },
+      "horizons": [
+        {
+          "horizon_seconds": 5,
+          "endpoint_definition": "availability-price",
+          "model": {
+            "origins": 245,
+            "log_loss": 0.6654019594890066,
+            "brier": 0.2356228710512567,
+            "accuracy": 0.6040816326530613,
+            "up_fraction": 0.4857142857142857
+          },
+          "fit_frequency": {
+            "origins": 245,
+            "log_loss": 0.706640618547061,
+            "brier": 0.2566020499581403,
+            "accuracy": 0.5142857142857142,
+            "up_fraction": 0.4857142857142857
+          },
+          "log_loss_improvement_over_fit_frequency": 0.04123865905805435,
+          "daily": {
+            "2026-08-24": {
+              "model": {
+                "origins": 119,
+                "log_loss": 0.6592230831048794,
+                "brier": 0.2334077697580454,
+                "accuracy": 0.6218487394957983,
+                "up_fraction": 0.5210084033613446
+              },
+              "fit_frequency": {
+                "origins": 119,
+                "log_loss": 0.7204789826233665,
+                "brier": 0.2634339320746842,
+                "accuracy": 0.4789915966386555,
+                "up_fraction": 0.5210084033613446
+              }
+            },
+            "2026-08-25": {
+              "model": {
+                "origins": 65,
+                "log_loss": 0.6230570820942224,
+                "brier": 0.21597932035142248,
+                "accuracy": 0.676923076923077,
+                "up_fraction": 0.5076923076923077
+              },
+              "fit_frequency": {
+                "origins": 65,
+                "log_loss": 0.7152579148583138,
+                "brier": 0.2608563355252189,
+                "accuracy": 0.49230769230769234,
+                "up_fraction": 0.5076923076923077
+              }
+            },
+            "2026-08-26": {
+              "model": {
+                "origins": 61,
+                "log_loss": 0.722577423757402,
+                "brier": 0.2608757866148857,
+                "accuracy": 0.4918032786885246,
+                "up_fraction": 0.39344262295081966
+              },
+              "fit_frequency": {
+                "origins": 61,
+                "log_loss": 0.6704621007550652,
+                "brier": 0.23874102481504475,
+                "accuracy": 0.6065573770491803,
+                "up_fraction": 0.39344262295081966
+              }
+            }
+          }
+        },
+        {
+          "horizon_seconds": 15,
+          "endpoint_definition": "availability-price",
+          "model": {
+            "origins": 245,
+            "log_loss": 0.6966900365762927,
+            "brier": 0.25181466643856953,
+            "accuracy": 0.5061224489795918,
+            "up_fraction": 0.47346938775510206
+          },
+          "fit_frequency": {
+            "origins": 245,
+            "log_loss": 0.6945724288312142,
+            "brier": 0.2506974727879057,
+            "accuracy": 0.5265306122448979,
+            "up_fraction": 0.47346938775510206
+          },
+          "log_loss_improvement_over_fit_frequency": -0.0021176077450785202,
+          "daily": {
+            "2026-08-24": {
+              "model": {
+                "origins": 119,
+                "log_loss": 0.6959862533006486,
+                "brier": 0.25150896394080163,
+                "accuracy": 0.5210084033613446,
+                "up_fraction": 0.5462184873949579
+              },
+              "fit_frequency": {
+                "origins": 119,
+                "log_loss": 0.7132886167606811,
+                "brier": 0.2600042899554961,
+                "accuracy": 0.453781512605042,
+                "up_fraction": 0.5462184873949579
+              }
+            },
+            "2026-08-25": {
+              "model": {
+                "origins": 65,
+                "log_loss": 0.6999419948273465,
+                "brier": 0.25342888721209883,
+                "accuracy": 0.46153846153846156,
+                "up_fraction": 0.5076923076923077
+              },
+              "fit_frequency": {
+                "origins": 65,
+                "log_loss": 0.7033769721755406,
+                "brier": 0.2550756226258201,
+                "accuracy": 0.49230769230769234,
+                "up_fraction": 0.5076923076923077
+              }
+            },
+            "2026-08-26": {
+              "model": {
+                "origins": 61,
+                "log_loss": 0.6945977894202787,
+                "brier": 0.25069096556897885,
+                "accuracy": 0.5245901639344263,
+                "up_fraction": 0.29508196721311475
+              },
+              "fit_frequency": {
+                "origins": 61,
+                "log_loss": 0.6486786307822348,
+                "brier": 0.22787630914187773,
+                "accuracy": 0.7049180327868853,
+                "up_fraction": 0.29508196721311475
+              }
+            }
+          }
+        },
+        {
+          "horizon_seconds": 30,
+          "endpoint_definition": "availability-price",
+          "model": {
+            "origins": 245,
+            "log_loss": 0.695656501578828,
+            "brier": 0.25126276102851447,
+            "accuracy": 0.5020408163265306,
+            "up_fraction": 0.46530612244897956
+          },
+          "fit_frequency": {
+            "origins": 245,
+            "log_loss": 0.6912678859634532,
+            "brier": 0.24905911005279907,
+            "accuracy": 0.5346938775510204,
+            "up_fraction": 0.46530612244897956
+          },
+          "log_loss_improvement_over_fit_frequency": -0.004388615615374736,
+          "daily": {
+            "2026-08-24": {
+              "model": {
+                "origins": 119,
+                "log_loss": 0.7099006553463262,
+                "brier": 0.25826377800069106,
+                "accuracy": 0.46218487394957986,
+                "up_fraction": 0.5294117647058824
+              },
+              "fit_frequency": {
+                "origins": 119,
+                "log_loss": 0.7043662572090837,
+                "brier": 0.25558560544667,
+                "accuracy": 0.47058823529411764,
+                "up_fraction": 0.5294117647058824
+              }
+            },
+            "2026-08-25": {
+              "model": {
+                "origins": 65,
+                "log_loss": 0.7056631105462047,
+                "brier": 0.25609390526720927,
+                "accuracy": 0.5076923076923077,
+                "up_fraction": 0.49230769230769234
+              },
+              "fit_frequency": {
+                "origins": 65,
+                "log_loss": 0.6967849757822696,
+                "brier": 0.25180809774102697,
+                "accuracy": 0.5076923076923077,
+                "up_fraction": 0.49230769230769234
+              }
+            },
+            "2026-08-26": {
+              "model": {
+                "origins": 61,
+                "log_loss": 0.6572059461491272,
+                "brier": 0.23245709881205262,
+                "accuracy": 0.5737704918032787,
+                "up_fraction": 0.3114754098360656
+              },
+              "fit_frequency": {
+                "origins": 61,
+                "log_loss": 0.6598364594642221,
+                "brier": 0.2333978452723818,
+                "accuracy": 0.6885245901639344,
+                "up_fraction": 0.3114754098360656
+              }
+            }
+          }
+        },
+        {
+          "horizon_seconds": 60,
+          "endpoint_definition": "availability-price",
+          "model": {
+            "origins": 245,
+            "log_loss": 0.6914439617442967,
+            "brier": 0.24912344770963454,
+            "accuracy": 0.5714285714285714,
+            "up_fraction": 0.4448979591836735
+          },
+          "fit_frequency": {
+            "origins": 245,
+            "log_loss": 0.6875520425357002,
+            "brier": 0.24720663523378109,
+            "accuracy": 0.5551020408163265,
+            "up_fraction": 0.4448979591836735
+          },
+          "log_loss_improvement_over_fit_frequency": -0.0038919192085964394,
+          "daily": {
+            "2026-08-24": {
+              "model": {
+                "origins": 119,
+                "log_loss": 0.7040562718236555,
+                "brier": 0.2553762542223902,
+                "accuracy": 0.5210084033613446,
+                "up_fraction": 0.5042016806722689
+              },
+              "fit_frequency": {
+                "origins": 119,
+                "log_loss": 0.6969458334480282,
+                "brier": 0.2518937344539113,
+                "accuracy": 0.4957983193277311,
+                "up_fraction": 0.5042016806722689
+              }
+            },
+            "2026-08-25": {
+              "model": {
+                "origins": 65,
+                "log_loss": 0.6927759182671765,
+                "brier": 0.24976252454371645,
+                "accuracy": 0.6,
+                "up_fraction": 0.4461538461538462
+              },
+              "fit_frequency": {
+                "origins": 65,
+                "log_loss": 0.6877509767562041,
+                "brier": 0.2473058948871504,
+                "accuracy": 0.5538461538461539,
+                "up_fraction": 0.4461538461538462
+              }
+            },
+            "2026-08-26": {
+              "model": {
+                "origins": 61,
+                "log_loss": 0.6654203211962493,
+                "brier": 0.2362443662467945,
+                "accuracy": 0.639344262295082,
+                "up_fraction": 0.32786885245901637
+              },
+              "fit_frequency": {
+                "origins": 61,
+                "log_loss": 0.669014471340621,
+                "brier": 0.23795718138682226,
+                "accuracy": 0.6721311475409836,
+                "up_fraction": 0.32786885245901637
+              }
+            }
+          }
+        },
+        {
+          "horizon_seconds": 105,
+          "endpoint_definition": "full-candle execution close",
+          "model": {
+            "origins": 245,
+            "log_loss": 0.692870002658559,
+            "brier": 0.249918698412505,
+            "accuracy": 0.5020408163265306,
+            "up_fraction": 0.45714285714285713
+          },
+          "fit_frequency": {
+            "origins": 245,
+            "log_loss": 0.6894835501943785,
+            "brier": 0.24817039207559569,
+            "accuracy": 0.5428571428571428,
+            "up_fraction": 0.45714285714285713
+          },
+          "log_loss_improvement_over_fit_frequency": -0.003386452464180567,
+          "daily": {
+            "2026-08-24": {
+              "model": {
+                "origins": 119,
+                "log_loss": 0.6768247375345964,
+                "brier": 0.24197348028400925,
+                "accuracy": 0.5966386554621849,
+                "up_fraction": 0.4957983193277311
+              },
+              "fit_frequency": {
+                "origins": 119,
+                "log_loss": 0.6957108551762549,
+                "brier": 0.2512773280850966,
+                "accuracy": 0.5042016806722689,
+                "up_fraction": 0.4957983193277311
+              }
+            },
+            "2026-08-25": {
+              "model": {
+                "origins": 65,
+                "log_loss": 0.7084953738096731,
+                "brier": 0.2576744425222578,
+                "accuracy": 0.38461538461538464,
+                "up_fraction": 0.49230769230769234
+              },
+              "fit_frequency": {
+                "origins": 65,
+                "log_loss": 0.6951485232882593,
+                "brier": 0.25099676864611153,
+                "accuracy": 0.5076923076923077,
+                "up_fraction": 0.49230769230769234
+              }
+            },
+            "2026-08-26": {
+              "model": {
+                "origins": 61,
+                "log_loss": 0.7075214358541192,
+                "brier": 0.25715406874294855,
+                "accuracy": 0.4426229508196721,
+                "up_fraction": 0.3442622950819672
+              },
+              "fit_frequency": {
+                "origins": 61,
+                "log_loss": 0.6712987543919925,
+                "brier": 0.2390976074491343,
+                "accuracy": 0.6557377049180327,
+                "up_fraction": 0.3442622950819672
+              }
+            }
+          }
+        },
+        {
+          "horizon_seconds": 345,
+          "endpoint_definition": "full-candle execution close",
+          "model": {
+            "origins": 245,
+            "log_loss": 0.7127276430315607,
+            "brier": 0.25953730562171096,
+            "accuracy": 0.5020408163265306,
+            "up_fraction": 0.37142857142857144
+          },
+          "fit_frequency": {
+            "origins": 245,
+            "log_loss": 0.6850934347834254,
+            "brier": 0.2459745805754575,
+            "accuracy": 0.6285714285714286,
+            "up_fraction": 0.37142857142857144
+          },
+          "log_loss_improvement_over_fit_frequency": -0.027634208248135228,
+          "daily": {
+            "2026-08-24": {
+              "model": {
+                "origins": 119,
+                "log_loss": 0.6819718781199621,
+                "brier": 0.24433901716241427,
+                "accuracy": 0.6554621848739496,
+                "up_fraction": 0.46218487394957986
+              },
+              "fit_frequency": {
+                "origins": 119,
+                "log_loss": 0.6911744967226212,
+                "brier": 0.24901397449779533,
+                "accuracy": 0.5378151260504201,
+                "up_fraction": 0.46218487394957986
+              }
+            },
+            "2026-08-25": {
+              "model": {
+                "origins": 65,
+                "log_loss": 0.727623340999302,
+                "brier": 0.267189496140045,
+                "accuracy": 0.35384615384615387,
+                "up_fraction": 0.35384615384615387
+              },
+              "fit_frequency": {
+                "origins": 65,
+                "log_loss": 0.6839153373137236,
+                "brier": 0.24538575212326666,
+                "accuracy": 0.6461538461538462,
+                "up_fraction": 0.35384615384615387
+              }
+            },
+            "2026-08-26": {
+              "model": {
+                "origins": 61,
+                "log_loss": 0.756854129204955,
+                "brier": 0.28103245222768775,
+                "accuracy": 0.36065573770491804,
+                "up_fraction": 0.21311475409836064
+              },
+              "fit_frequency": {
+                "origins": 61,
+                "log_loss": 0.674485729287791,
+                "brier": 0.2406727112743788,
+                "accuracy": 0.7868852459016393,
+                "up_fraction": 0.21311475409836064
+              }
+            }
+          }
+        },
+        {
+          "horizon_seconds": 945,
+          "endpoint_definition": "full-candle execution close",
+          "model": {
+            "origins": 245,
+            "log_loss": 0.718386579829571,
+            "brier": 0.26136645571832373,
+            "accuracy": 0.5510204081632653,
+            "up_fraction": 0.39591836734693875
+          },
+          "fit_frequency": {
+            "origins": 245,
+            "log_loss": 0.6779088611496068,
+            "brier": 0.24240021788004942,
+            "accuracy": 0.6040816326530613,
+            "up_fraction": 0.39591836734693875
+          },
+          "log_loss_improvement_over_fit_frequency": -0.04047771867996419,
+          "daily": {
+            "2026-08-24": {
+              "model": {
+                "origins": 119,
+                "log_loss": 0.7598778762157206,
+                "brier": 0.28108994426752326,
+                "accuracy": 0.48739495798319327,
+                "up_fraction": 0.5042016806722689
+              },
+              "fit_frequency": {
+                "origins": 119,
+                "log_loss": 0.6984227037634083,
+                "brier": 0.252626572320017,
+                "accuracy": 0.4957983193277311,
+                "up_fraction": 0.5042016806722689
+              }
+            },
+            "2026-08-25": {
+              "model": {
+                "origins": 65,
+                "log_loss": 0.7102996497067721,
+                "brier": 0.25778355114983265,
+                "accuracy": 0.5538461538461539,
+                "up_fraction": 0.4461538461538462
+              },
+              "fit_frequency": {
+                "origins": 65,
+                "log_loss": 0.6874257726129431,
+                "brier": 0.24714449283770107,
+                "accuracy": 0.5538461538461539,
+                "up_fraction": 0.4461538461538462
+              }
+            },
+            "2026-08-26": {
+              "model": {
+                "origins": 61,
+                "log_loss": 0.6460617632399015,
+                "brier": 0.22670733538385104,
+                "accuracy": 0.6721311475409836,
+                "up_fraction": 0.13114754098360656
+              },
+              "fit_frequency": {
+                "origins": 61,
+                "log_loss": 0.6277490821961764,
+                "brier": 0.2173950695095002,
+                "accuracy": 0.8688524590163934,
+                "up_fraction": 0.13114754098360656
+              }
+            }
+          }
+        }
+      ],
+      "temperatures": [
+        2.9536522918789987,
+        4.0,
+        4.0,
         4.0,
         4.0,
         4.0,

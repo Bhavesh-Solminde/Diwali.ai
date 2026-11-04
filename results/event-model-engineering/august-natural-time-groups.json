@@ -1,0 +1,29 @@
+{
+  "state": "complete",
+  "counts": {
+    "origins": 5519,
+    "input_rows": 18868954,
+    "availability_groups": 18868954,
+    "market_trade_rows": 6484263,
+    "groups_with_market_trades": 6484263,
+    "groups_with_multiple_market_trades": 0,
+    "market_trade_rows_in_multiple_trade_groups": 0,
+    "same_time_cross_stream_groups": 0
+  },
+  "origins_with_multiple_trade_groups": 0,
+  "market_trade_group_size_histogram": {
+    "1": 6484263,
+    "2": 0,
+    "3-5": 0,
+    "6-10": 0,
+    "11-50": 0,
+    "51+": 0
+  },
+  "maximum_same_time_market_trade_count": 1,
+  "fraction_market_trades_in_multi_trade_groups": 0.0,
+  "source_feature_report_sha256": "ea57e963451ec5b63c592981774c7dddd7c248b9b69025899a77e489d5b46ae1",
+  "audit_source_sha256": "705938483426f65390af2465cdfa418789629b666d91b03d840120fca3023d21",
+  "target_labels_loaded": false,
+  "model_weights_changed": false,
+  "interpretation": "No multi-trade equal-availability groups were found. The synthetic set-pooling multiplicity counterexample is not activated by this retained cohort and cannot explain its measured forecast errors."
+}

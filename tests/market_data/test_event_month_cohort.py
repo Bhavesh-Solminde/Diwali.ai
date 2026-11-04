@@ -15,3 +15,12 @@ def test_only_frozen_nonfinal_periods_can_be_constructed():
     assert period_bounds('august')[2]==['2026-08-01','2026-08-31']
     assert period_bounds('september-selection')[1]=='2026-09-15T00'
     with pytest.raises(ValueError,match='reserved final preparation denied'):period_bounds('final')
+    with pytest.raises(ValueError,match='reserved final preparation denied'):period_bounds('reserved-final')
+
+
+def test_reserved_bounds_require_verified_release(monkeypatch):
+    from research.diwali import event_final_gate
+    called=[]
+    monkeypatch.setattr(event_final_gate,'check_release',lambda path:called.append(path))
+    assert period_bounds('reserved-final','test-release')[2]==['2026-09-15','2026-09-29']
+    assert called==['test-release']

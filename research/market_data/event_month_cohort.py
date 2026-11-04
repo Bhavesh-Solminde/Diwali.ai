@@ -23,9 +23,13 @@ def intersects(first, stop, intervals):
     return any(first < b and stop > a for a,b in intervals)
 
 
-def period_bounds(period):
+def period_bounds(period,final_release=None):
     if period=='august':return '2026-08-01T00','2026-09-01T00',['2026-08-01','2026-08-31']
     if period=='september-selection':return '2026-09-01T00','2026-09-15T00',['2026-09-01','2026-09-14']
+    if period=='reserved-final' and final_release is not None:
+        from ..diwali.event_final_gate import check_release
+        check_release(final_release)
+        return '2026-09-15T00','2026-09-30T00',['2026-09-15','2026-09-29']
     raise ValueError('Only frozen development/final-selection dates allowed; reserved final preparation denied')
 
 
@@ -50,12 +54,13 @@ def main():
     p=argparse.ArgumentParser()
     p.add_argument('--source',type=Path,required=True)
     p.add_argument('--output',type=Path,required=True)
-    p.add_argument('--period',choices=['august','september-selection'],default='august')
+    p.add_argument('--period',choices=['august','september-selection','reserved-final'],default='august')
+    p.add_argument('--final-release',type=Path)
     a=p.parse_args()
     sr=json.loads((a.source/'report.json').read_text())
     if sr['state'] != 'complete':
         raise ValueError('Incomplete source extraction')
-    first_name,stop_name,target_interval=period_bounds(a.period)
+    first_name,stop_name,target_interval=period_bounds(a.period,a.final_release)
     first,stop=hour_ns(first_name),hour_ns(stop_name)
     if sr['protocol']['stop_exclusive'] != stop_name+':00:00+00:00':
         raise ValueError('This bounded builder requires the frozen period source end')
@@ -75,6 +80,7 @@ def main():
               'target_policy':'No bad/missing or clock-exclusion target; month-end horizon purge',
               'no_target_outcome_origin_selection':True,'reserved_final_denied':True,
               'code_hashes':{n:file_hash(Path(__file__).with_name(n)) for n in ['event_month_cohort.py','candle_tape.py','event_windows.py','event_join_cohort.py']}}
+    if a.period=='reserved-final':protocol['final_release_sha256']=file_hash(a.final_release)
     save(a.output/'protocol.json',protocol)
     for hour in sr['hours']:
         at=hour_ns(hour['UTC_hour'])

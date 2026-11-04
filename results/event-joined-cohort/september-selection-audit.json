@@ -1,0 +1,69 @@
+{
+  "state": "complete",
+  "scope": "Development/selection content and cohort audit, not forecasting performance",
+  "target_interval": [
+    "2026-09-01",
+    "2026-09-14"
+  ],
+  "cohort_sha256": "7691a8ef885c990fac62c6ebfd0402715f2d4a7a7cd2165bb1d813eb1af40cd3",
+  "source_report_sha256": "cba2214a99a787cc9b4bbc29dc9ad2dfca5bda172fe1a31ae7b347f4d3dd0f9c",
+  "audit_source_sha256": "1b685b263aa4419cd195e6d4b72877a8127d28671ff6bc36aa08095682479a8e",
+  "joined_contexts": 2398,
+  "labelled_origins": 2341,
+  "native_target_coordinates_checked": 35115,
+  "maximum_close_difference": 0.0,
+  "input_rejections": {
+    "No valid pre-window book seed": 17063,
+    "Gap/invalid marker inside window": 583,
+    "No fresh completed-second reference": 104,
+    "Insufficient99percent context or missing latest candle": 2,
+    "Stale book coverage": 10
+  },
+  "target_rejections": {
+    "missing_or_bad_target": 50,
+    "month_end_boundary": 7
+  },
+  "event_rows": 8257963,
+  "minimum_events": 2250,
+  "maximum_events": 18092,
+  "folds": {
+    "final": {
+      "select": {
+        "inside_partition": 865,
+        "retained": 862,
+        "purged_target_overlap": 3,
+        "outside_partition": 1476
+      },
+      "calibrate": {
+        "inside_partition": 1476,
+        "retained": 1476,
+        "purged_target_overlap": 0,
+        "outside_partition": 865
+      }
+    }
+  },
+  "labelled_origins_by_day": {
+    "2026-09-01": 76,
+    "2026-09-02": 169,
+    "2026-09-03": 155,
+    "2026-09-04": 59,
+    "2026-09-05": 154,
+    "2026-09-06": 72,
+    "2026-09-07": 180,
+    "2026-09-08": 25,
+    "2026-09-09": 12,
+    "2026-09-11": 125,
+    "2026-09-12": 526,
+    "2026-09-13": 420,
+    "2026-09-14": 368
+  },
+  "content_gate_passed": true,
+  "full_training_readiness": false,
+  "limitations": [
+    "Historical provider timing is an assumption; original exchange authenticity is not certified.",
+    "Native aggregation checks a separate candle implementation using the same paid raw source.",
+    "Month-end target arrivals beyond retained data remain unproven; no outside data were invented.",
+    "Limited quality-approved book coverage restricts the research population; all rejections remain explicit.",
+    "Fit-only transforms, executable training settings and matched baselines must be verified separately."
+  ]
+}

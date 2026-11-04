@@ -1,0 +1,429 @@
+{
+  "state": "baselines_fitted_without_final_evaluation",
+  "models": {
+    "fit_histogram": {
+      "temperatures": [
+        0.9170040432046712,
+        0.9170040432046712,
+        0.9170040432046712,
+        0.9170040432046712,
+        0.9576032806985736,
+        0.9576032806985736,
+        0.9576032806985736,
+        0.9576032806985736,
+        1.0,
+        1.0442737824274138,
+        1.0905077326652577,
+        1.0442737824274138,
+        1.0442737824274138,
+        1.0442737824274138,
+        1.0442737824274138
+      ],
+      "temperature_fitted": true,
+      "calibration_partition_diagnostic": {
+        "origins": 1476,
+        "mean15_bin_log_loss": 2.8662977778562033,
+        "per_horizon_bin_log_loss": [
+          2.6189119266199032,
+          2.7137859259173793,
+          2.7712257263482103,
+          2.8079718313340787,
+          2.8402452536228417,
+          2.864897500054412,
+          2.881637865766258,
+          2.8955281985082744,
+          2.909834421297128,
+          2.9287317894392353,
+          2.9381485725351686,
+          2.941103737291831,
+          2.953155640392974,
+          2.9601941520329755,
+          2.9690941266824074
+        ],
+        "ranked_probability_score": 0.108793121219052,
+        "per_horizon_binary_log_loss": [
+          0.6931983655181475,
+          0.6928140770608582,
+          0.6927374365927108,
+          0.6943111620736564,
+          0.6940762828873289,
+          0.6932889770341393,
+          0.693639018485105,
+          0.6922726638187355,
+          0.6920589389974838,
+          0.6925933966761922,
+          0.6917729890832803,
+          0.6922568175100494,
+          0.692543636963785,
+          0.6920286652581901,
+          0.6937519500373424
+        ],
+        "final_direction_log_loss": 0.6937519500373437,
+        "final_direction_brier": 0.25030024536145423,
+        "final_direction_accuracy": 0.5155826558265583,
+        "final_direction_reliability": {
+          "0.5-0.6": {
+            "count": 1476,
+            "mean_confidence": 0.5388864006771862,
+            "correct_fraction": 0.5155826558265583
+          },
+          "0.6-0.7": {
+            "count": 0,
+            "mean_confidence": null,
+            "correct_fraction": null
+          },
+          "0.7-0.8": {
+            "count": 0,
+            "mean_confidence": null,
+            "correct_fraction": null
+          },
+          "0.8-0.9": {
+            "count": 0,
+            "mean_confidence": null,
+            "correct_fraction": null
+          },
+          "0.9-1.0": {
+            "count": 0,
+            "mean_confidence": null,
+            "correct_fraction": null
+          }
+        },
+        "always_half_final_log_loss": 0.6931471805599453,
+        "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+      }
+    },
+    "fit_volatility_histogram": {
+      "temperatures": [
+        1.1387886347566918,
+        1.1387886347566918,
+        1.1387886347566918,
+        1.1387886347566918,
+        1.189207115002721,
+        1.1387886347566918,
+        1.1387886347566918,
+        1.1387886347566918,
+        1.189207115002721,
+        1.189207115002721,
+        1.241857812073484,
+        1.189207115002721,
+        1.1387886347566918,
+        1.1387886347566918,
+        1.189207115002721
+      ],
+      "temperature_fitted": true,
+      "calibration_partition_diagnostic": {
+        "origins": 1476,
+        "mean15_bin_log_loss": 2.7746494245221993,
+        "per_horizon_bin_log_loss": [
+          2.535304348327075,
+          2.627570721150334,
+          2.6814063057837605,
+          2.712544816348026,
+          2.756308848817873,
+          2.7732652088793786,
+          2.7908540355510856,
+          2.805646139181126,
+          2.818693995335145,
+          2.8393693089293137,
+          2.848130928102029,
+          2.8437369194243205,
+          2.8534949376721435,
+          2.8568435108696737,
+          2.876571343461726
+        ],
+        "ranked_probability_score": 0.10654312336165891,
+        "per_horizon_binary_log_loss": [
+          0.6938895224382978,
+          0.6930984538702655,
+          0.6927531058537972,
+          0.6938037156081662,
+          0.6936472307875594,
+          0.6924403679556483,
+          0.693390032264632,
+          0.691968575090315,
+          0.6913928362419265,
+          0.692064836788403,
+          0.6909169086552999,
+          0.6906665461985833,
+          0.6910674584631554,
+          0.6907881954879305,
+          0.6921120657944313
+        ],
+        "final_direction_log_loss": 0.6921120657944336,
+        "final_direction_brier": 0.2494845013976292,
+        "final_direction_accuracy": 0.5155826558265583,
+        "final_direction_reliability": {
+          "0.5-0.6": {
+            "count": 1476,
+            "mean_confidence": 0.528493609040508,
+            "correct_fraction": 0.5155826558265583
+          },
+          "0.6-0.7": {
+            "count": 0,
+            "mean_confidence": null,
+            "correct_fraction": null
+          },
+          "0.7-0.8": {
+            "count": 0,
+            "mean_confidence": null,
+            "correct_fraction": null
+          },
+          "0.8-0.9": {
+            "count": 0,
+            "mean_confidence": null,
+            "correct_fraction": null
+          },
+          "0.9-1.0": {
+            "count": 0,
+            "mean_confidence": null,
+            "correct_fraction": null
+          }
+        },
+        "always_half_final_log_loss": 0.6931471805599453,
+        "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+      }
+    },
+    "flow_logistic": {
+      "temperatures": [
+        1.189207115002721,
+        1.241857812073484,
+        1.3542555469368929,
+        1.5422108254079407,
+        1.5422108254079407,
+        1.7562521603732995,
+        1.7562521603732995,
+        1.7562521603732995,
+        1.7562521603732995,
+        1.7562521603732995,
+        1.8340080864093424,
+        1.9152065613971474,
+        2.0,
+        1.9152065613971474,
+        2.0
+      ],
+      "temperature_fitted": true,
+      "calibration_partition_diagnostic": {
+        "origins": 1476,
+        "mean15_bin_log_loss": 3.0821719843819313,
+        "per_horizon_bin_log_loss": [
+          2.8763958548934188,
+          2.9455982518702717,
+          3.010226585006945,
+          3.053604631432608,
+          3.0626031669939944,
+          3.1052841912236073,
+          3.122250604861891,
+          3.113556405161949,
+          3.1230497676546998,
+          3.119544917720001,
+          3.1303359691489074,
+          3.136513080210337,
+          3.147399382900511,
+          3.1443603400241216,
+          3.1418566166256876
+        ],
+        "ranked_probability_score": 0.1118593766498071,
+        "per_horizon_binary_log_loss": [
+          0.6990533882140151,
+          0.7020911991127233,
+          0.6979244583777774,
+          0.6954509080701381,
+          0.6904313151901658,
+          0.6921828347721696,
+          0.6958896552891298,
+          0.6946783415935402,
+          0.694490145806007,
+          0.6908548918419795,
+          0.6939181542613616,
+          0.6905571983660727,
+          0.6906153116687477,
+          0.6923355042822219,
+          0.6914369758791152
+        ],
+        "final_direction_log_loss": 0.6914369758791158,
+        "final_direction_brier": 0.24915100988812408,
+        "final_direction_accuracy": 0.5155826558265583,
+        "final_direction_reliability": {
+          "0.5-0.6": {
+            "count": 1421,
+            "mean_confidence": 0.5321649175658045,
+            "correct_fraction": 0.5102040816326531
+          },
+          "0.6-0.7": {
+            "count": 53,
+            "mean_confidence": 0.6242895951291125,
+            "correct_fraction": 0.6415094339622641
+          },
+          "0.7-0.8": {
+            "count": 2,
+            "mean_confidence": 0.7603776207744891,
+            "correct_fraction": 1.0
+          },
+          "0.8-0.9": {
+            "count": 0,
+            "mean_confidence": null,
+            "correct_fraction": null
+          },
+          "0.9-1.0": {
+            "count": 0,
+            "mean_confidence": null,
+            "correct_fraction": null
+          }
+        },
+        "always_half_final_log_loss": 0.6931471805599453,
+        "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+      }
+    },
+    "flow_boosted_trees": {
+      "temperatures": [
+        1.5422108254079407,
+        1.6104903319492543,
+        1.681792830507429,
+        1.681792830507429,
+        1.681792830507429,
+        1.8340080864093424,
+        1.8340080864093424,
+        1.9152065613971474,
+        1.9152065613971474,
+        1.9152065613971474,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        1.9152065613971474
+      ],
+      "temperature_fitted": true,
+      "calibration_partition_diagnostic": {
+        "origins": 1476,
+        "mean15_bin_log_loss": 2.803349712775055,
+        "per_horizon_bin_log_loss": [
+          2.541967999591559,
+          2.6306916662125137,
+          2.7018547245367084,
+          2.736547379589973,
+          2.760031079874612,
+          2.798847095271514,
+          2.822143236215838,
+          2.8324267105263417,
+          2.8471237376614935,
+          2.8809070795523657,
+          2.8830441172723935,
+          2.8948206488088393,
+          2.9015444994699076,
+          2.9093459478296184,
+          2.9089497692121666
+        ],
+        "ranked_probability_score": 0.10646229498487206,
+        "per_horizon_binary_log_loss": [
+          0.6922003788260817,
+          0.6928695525377616,
+          0.6984322697543695,
+          0.6953898189166465,
+          0.688768713340548,
+          0.692492934956067,
+          0.6941993825694386,
+          0.6939669018666542,
+          0.6923322960567881,
+          0.6943396003063083,
+          0.6942546803382312,
+          0.6957628129888791,
+          0.6937277396517585,
+          0.6956810777270904,
+          0.6954073339939856
+        ],
+        "final_direction_log_loss": 0.6954073339939872,
+        "final_direction_brier": 0.2510923407904802,
+        "final_direction_accuracy": 0.5101626016260162,
+        "final_direction_reliability": {
+          "0.5-0.6": {
+            "count": 1308,
+            "mean_confidence": 0.5444234246588725,
+            "correct_fraction": 0.5015290519877675
+          },
+          "0.6-0.7": {
+            "count": 165,
+            "mean_confidence": 0.6214465885034208,
+            "correct_fraction": 0.5818181818181818
+          },
+          "0.7-0.8": {
+            "count": 3,
+            "mean_confidence": 0.708588640110506,
+            "correct_fraction": 0.3333333333333333
+          },
+          "0.8-0.9": {
+            "count": 0,
+            "mean_confidence": null,
+            "correct_fraction": null
+          },
+          "0.9-1.0": {
+            "count": 0,
+            "mean_confidence": null,
+            "correct_fraction": null
+          }
+        },
+        "always_half_final_log_loss": 0.6931471805599453,
+        "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+      }
+    }
+  },
+  "cohorts": {
+    "fit": {
+      "inside_partition": 5391,
+      "retained": 5391,
+      "purged_target_overlap": 0,
+      "outside_partition": 2341
+    },
+    "select": {
+      "inside_partition": 865,
+      "retained": 862,
+      "purged_target_overlap": 3,
+      "outside_partition": 6867
+    },
+    "calibrate": {
+      "inside_partition": 1476,
+      "retained": 1476,
+      "purged_target_overlap": 0,
+      "outside_partition": 6256
+    }
+  },
+  "artifact_hashes": {
+    "fit-transforms.json": "d5a8c9cef631379cb1e01a33d28373983712f79e955889806e0cd4cfa5d238a8",
+    "histograms.npz": "e4a29752bff81989da3504136f643ca2bbae1282ce3a7574a65ee94ed972a325",
+    "calibration.json": "c3a63b3970b1eedaa630f5668c9b61730ccc131b991a7751d9acf5673df1f4f5",
+    "flow_logistic/weights.pt": "5ddaa60049a62b72518493081d4a68582600b9ac48c3fdf65933814eaa2d4367",
+    "flow_logistic/selection.json": "2fa5d9e1853dd5ef7363aed76e025e7c114cd4c26c53862107c8539d416faf32",
+    "flow_boosted_trees/horizon-01.joblib": "3ea101d2af9908976df64195d59eaec2bd8d0d7608773ed8d9024fe5dc2ce3ad",
+    "flow_boosted_trees/horizon-02.joblib": "b474ae59c2031353b1b555310051e9332f139402d78e9dd2fda994764e0a1aee",
+    "flow_boosted_trees/horizon-03.joblib": "aa3964668391d4a1d52eaa8fab46c8fce4a463b0cc3539b344b99ca9badf135d",
+    "flow_boosted_trees/horizon-04.joblib": "e8dd32eb35bf177262e4400b4f61582cd617a84db1d1c85a98496a6e8c13909b",
+    "flow_boosted_trees/horizon-05.joblib": "a9790f3c8890f658b83433441b209039255d045b6af51e0478cb0ce2e76698d9",
+    "flow_boosted_trees/horizon-06.joblib": "b7ed733a4961473ac76fb601ad81e95c00bedd46858c213d9e4b48cffbc0e39b",
+    "flow_boosted_trees/horizon-07.joblib": "d829d98eec29e30c35bdd9f503b933867fcbfd9a655a57df853e480e7f6c01a9",
+    "flow_boosted_trees/horizon-08.joblib": "225939e84549f889b85fe0d58cca5585a42b227f57844f35a31140974297a8d7",
+    "flow_boosted_trees/horizon-09.joblib": "e431bcb1a7f2a1ae702f7d80a6dc488ad181bedd1c1160fc587f316dbd9b1312",
+    "flow_boosted_trees/horizon-10.joblib": "2b0114009ce2e2f06055bc837db23a77289158c7ba959ca1a860a38ad077df0d",
+    "flow_boosted_trees/horizon-11.joblib": "f7cbbee6e0f52cb9df0fe795a17780bdb5ecc533e01da1a9dd8f66ec50316e40",
+    "flow_boosted_trees/horizon-12.joblib": "dbce6d7a0633bffeaa4eb01e3b48e8748382d0103a0419825d157f996f36c949",
+    "flow_boosted_trees/horizon-13.joblib": "60570235308004cd8e8c0c67bc332216ba9221a8a8a4be327ca88cad88e481cc",
+    "flow_boosted_trees/horizon-14.joblib": "b96ef33c9191cdafdf991b0f8b670d83c5dbec3b661b36b154e615dd51c928d4",
+    "flow_boosted_trees/horizon-15.joblib": "163b07ed02e91952ef01e29e9598b43e850a083744d3d5e653b9ff7943a63549"
+  },
+  "data_hashes": {
+    "august_fit": {
+      "cohort": "f93975712b8fc1b1ddcabadc247b000710b76f8d9163399277b14d8187339adc",
+      "features": "ea57e963451ec5b63c592981774c7dddd7c248b9b69025899a77e489d5b46ae1",
+      "content_audit": "d8c72638fc670537197c62b6eae2c4f8a8c6fd8c071d23584d4edc5f4d2429ca",
+      "exact_window_ledger": "dac4b7d0ad981ff52b905b89e2383fb58067dc4e0e01f0a2de745dfa17b5b8d9"
+    },
+    "september_selection_calibration": {
+      "cohort": "7691a8ef885c990fac62c6ebfd0402715f2d4a7a7cd2165bb1d813eb1af40cd3",
+      "features": "7396ddf89db0d4743e46800f3e4dfd5d82a612bc52891939909c1b96256de2bd",
+      "content_audit": "b250ac9d430ad3cb6e4e1073eae98657753f2cf1d7e9d098e5f573c1f9e39994",
+      "exact_window_ledger": "c668d833fbd9f762f9f1b8f2a77f7bfdbcd2ef6c9e589f46755643210af2cb97"
+    }
+  },
+  "reserved_final_labels_loaded": false,
+  "reserved_final_evaluated": false,
+  "elapsed_seconds": 238.6148180961609,
+  "scope": "Earlier fit/selection/calibration only; calibration metrics are diagnostics, not independent final performance."
+}
