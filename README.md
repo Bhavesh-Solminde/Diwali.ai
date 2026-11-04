@@ -4,7 +4,8 @@ Research on BTC next-minute candle generation, order-book forecasting and Krafer
 
 ## Start here
 
-- [Diwali1.1 direct order-flow correction](docs/planning/DIWALI1.1-ORDER-FLOW-2026-11-04.md) — averaged flow won development but regressed on benchmark probability quality; no promotion over0.9. Research replay at http://127.0.0.1:8751; matched prospective source-audited comparison is pending.
+- [Midpoint input audit](docs/planning/MIDPOINT-INPUT-AUDIT-2026-11-04.md) — explicit book midpoint recovered with exact parent replay/validity matching across October; unchanged cohorts, fit-only scaling. [Next1.2protocol](docs/planning/DIWALI1.2-ANCHORED-INPUT-PROTOCOL-2026-11-04.md) is specified, not trained.
+- [Diwali1.1 direct order-flow correction](docs/planning/DIWALI1.1-ORDER-FLOW-2026-11-04.md) — averaged flow won development but regressed on benchmark probability quality; no promotion over0.9. Research replay at http://127.0.0.1:8751; matched prospective comparison completed9origins, all in one upward session.
 - [Diwali1.0 explicit overall-direction objective](docs/planning/DIWALI1.0-DIRECTION-OBJECTIVE-2026-11-04.md) — negative controlled experiment: extra direction loss failed development checks, so no learned correction was adopted. Probability errors remain near50–50;0.9 stays the replay UI.
 - [Diwali0.9 recent-candle detail](docs/planning/DIWALI0.9-RECENT-DETAIL-2026-11-04.md) — matched grouped/detail corrections; small historical changes, no strong directional edge. Replay at http://127.0.0.1:8749 includes net final-close up/down probabilities from the same price cloud.
 - [Diwali0.8 coupled closing-price probabilities](docs/planning/DIWALI0.8-COUPLED-PROBABILITY-2026-11-04.md) — preserves 0.5 individual range forecasts while linking them with 0.7; replay and price-aligned chart at http://127.0.0.1:8748. A measured marginal/joint tradeoff; reliable high-confidence direction remains unproven.

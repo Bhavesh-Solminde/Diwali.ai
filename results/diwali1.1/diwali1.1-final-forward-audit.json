@@ -1,0 +1,18 @@
+{
+  "state": "follower_source_prefix_verified",
+  "model": "diwali1.1",
+  "capture_complete": true,
+  "source_capture_complete": true,
+  "follower_rows_beyond_source_prefix": 0,
+  "native_freezes_replayed": 32,
+  "forecasts_recomputed": 9,
+  "matured_outcomes_verified": 135,
+  "outcomes_beyond_source_prefix": 0,
+  "complete_joint_paths_verified": 9,
+  "joint_log_loss": 32.20446348188637,
+  "audited_through_utc_ns": 1793771134897596000,
+  "max_recomputed_probability_difference": 0,
+  "minimum_pre_target_commit_seconds": 44.464099,
+  "scope": "Actual receiver source replay and model/forecast/outcome chronology; small correlated sample, no accuracy/calibration guarantee.",
+  "training_ready": false
+}

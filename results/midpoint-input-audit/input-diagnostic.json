@@ -1,0 +1,20 @@
+{
+  "scope": "Unlabelled first2hours fit-input diagnostic only; no future outcomes used",
+  "origins": 118,
+  "midpoint_minus_execution_reference_bp_abs_quantiles": [
+    0.005600020818730123,
+    0.09017505646236043,
+    0.8369779840939784
+  ],
+  "absolute60_second_midpoint_move_bp_quantiles": [
+    2.269738076980179,
+    5.999630727751668,
+    10.066389441209315
+  ],
+  "midpoint_vs_existing_trade_vwap_offset_abs_bp_quantiles": [
+    0.005770392291998383,
+    0.14602373823538095,
+    0.8420118625906636
+  ],
+  "interpretation": "Trade VWAP already retains related price motion. Separate midpoint context may be partly redundant; no assumed performance benefit."
+}

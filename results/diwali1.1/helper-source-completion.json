@@ -1,0 +1,7 @@
+{
+  "state": "stopped",
+  "closed_after_both_candidate_followers_complete": true,
+  "complete_source_manifests_verified_in_both_candidate_audits": true,
+  "native0.5_pending_forecasts_not_part_of_candidate_comparison": 9,
+  "all_candidate_pending_counts": 0
+}

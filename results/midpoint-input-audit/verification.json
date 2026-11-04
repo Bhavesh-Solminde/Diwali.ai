@@ -1,0 +1,16 @@
+{
+  "all_source_and_artifact_hashes_verified": true,
+  "all_origin_indices_unchanged": true,
+  "fit_scalers_independently_recomputed_from_fit_only": true,
+  "no_model_training_claim": true,
+  "source_sha256": {
+    "research/market_data/midpoint.py": "44547e1d045da2b6be6b97bbffe025da7d4530df75a91cab3405ede048740a7e",
+    "research/market_data/midpoint_scan.cpp": "584ab7dd72427c4ca28206ddf43080ce48ff7aa73bf8c0bffbd4a2ec61ccf77e",
+    "research/market_data/midpoint_windows.py": "24dc5552eabff3f968ad938ad967e4f73e6ef165c6e8a36fa8fea46dfd482e50",
+    "tests/market_data/test_midpoint.py": "ab477ebe8c3a4ca32ee1fe79d7fcd7646e2d855cc9c518b179aaa90fb22e9fab"
+  },
+  "inventory_744_unique_contiguous_hours_verified": true,
+  "whole_month_grid_and_all_parent_metadata_verified": true,
+  "all_valid_midpoint_availability_verified": true,
+  "valid_seconds": 2598362
+}

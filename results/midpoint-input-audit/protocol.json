@@ -1,0 +1,13 @@
+{
+  "hours": 744,
+  "full_october": true,
+  "parent_book_sha256": "2d8018900937fbd1bd102b4b65b321fe47f7fb065fd06d410dba8ab81425ef61",
+  "archive_manifest_sha256": "bfc97147330ef1b0f1c838efb47da04eb9b6e1f3673adfae02ea8d4ba22b9a03",
+  "sources": {
+    "midpoint.py": "44547e1d045da2b6be6b97bbffe025da7d4530df75a91cab3405ede048740a7e",
+    "midpoint_scan.cpp": "584ab7dd72427c4ca28206ddf43080ce48ff7aa73bf8c0bffbd4a2ec61ccf77e",
+    "archive_scan.cpp": "c8da51f348f5b8fbcdaa8033fdf7236ab174659fa7340891ff55fd8a97baeaf4"
+  },
+  "preserve_existing_exclusions": true,
+  "feature_contract": "same receipt-grid metadata and validity as parent; midpoint adds absolute location, no hidden orders or future messages"
+}

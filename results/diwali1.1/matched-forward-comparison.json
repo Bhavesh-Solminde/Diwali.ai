@@ -1,0 +1,159 @@
+{
+  "state": "matched_prospective_smoke_only",
+  "matched_complete_origins": 9,
+  "audited_cutoff_utc_ns": 1793771134897596000,
+  "follower_stopped": [
+    true,
+    true
+  ],
+  "committed_counts": [
+    9,
+    9
+  ],
+  "complete_counts": [
+    9,
+    9
+  ],
+  "same_receiver_same_frozen_inputs": true,
+  "only_fully_matured15_close_paths_scored": true,
+  "models": {
+    "diwali0.9": {
+      "final_direction": {
+        "examples": 9,
+        "up_frequency": 1.0,
+        "accuracy": 0.5555555555555556,
+        "binary_log_loss": 0.6894017125223493,
+        "brier_up": 0.24812830067124134,
+        "mean_up_probability": 0.5021116191350079,
+        "confusion_actual_rows_predicted_columns": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "confidence_groups": [
+          {
+            "minimum": 0.5,
+            "n": 9,
+            "accuracy": 0.5555555555555556
+          },
+          {
+            "minimum": 0.6,
+            "n": 0,
+            "accuracy": null
+          },
+          {
+            "minimum": 0.7,
+            "n": 0,
+            "accuracy": null
+          },
+          {
+            "minimum": 0.8,
+            "n": 0,
+            "accuracy": null
+          },
+          {
+            "minimum": 0.9,
+            "n": 0,
+            "accuracy": null
+          }
+        ],
+        "up_calibration": [
+          {
+            "lower": 0.4,
+            "n": 4,
+            "mean_claim": 0.48728022946738414,
+            "observed_up": 1.0
+          },
+          {
+            "lower": 0.5,
+            "n": 5,
+            "mean_claim": 0.513976730869107,
+            "observed_up": 1.0
+          }
+        ],
+        "labels": [
+          "down_or_unchanged",
+          "up"
+        ],
+        "event": "Final forecast close versus frozen reference; equality in down_or_unchanged."
+      },
+      "mean15_range_log_loss": 2.683121235875479,
+      "joint_log_loss": 32.48798797984534
+    },
+    "diwali1.1": {
+      "final_direction": {
+        "examples": 9,
+        "up_frequency": 1.0,
+        "accuracy": 0.7777777777777778,
+        "binary_log_loss": 0.6345675986428692,
+        "brier_up": 0.22088419346955407,
+        "mean_up_probability": 0.531371615560249,
+        "confusion_actual_rows_predicted_columns": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            7
+          ]
+        ],
+        "confidence_groups": [
+          {
+            "minimum": 0.5,
+            "n": 9,
+            "accuracy": 0.7777777777777778
+          },
+          {
+            "minimum": 0.6,
+            "n": 0,
+            "accuracy": null
+          },
+          {
+            "minimum": 0.7,
+            "n": 0,
+            "accuracy": null
+          },
+          {
+            "minimum": 0.8,
+            "n": 0,
+            "accuracy": null
+          },
+          {
+            "minimum": 0.9,
+            "n": 0,
+            "accuracy": null
+          }
+        ],
+        "up_calibration": [
+          {
+            "lower": 0.4,
+            "n": 2,
+            "mean_claim": 0.4794437532431456,
+            "observed_up": 1.0
+          },
+          {
+            "lower": 0.5,
+            "n": 7,
+            "mean_claim": 0.5462081476508499,
+            "observed_up": 1.0
+          }
+        ],
+        "labels": [
+          "down_or_unchanged",
+          "up"
+        ],
+        "event": "Final forecast close versus frozen reference; equality in down_or_unchanged."
+      },
+      "mean15_range_log_loss": 2.6464201772081606,
+      "joint_log_loss": 32.20446348188637
+    }
+  },
+  "scope": "One small overlapping session; not multi-day reliability, perfect probabilities, entry efficacy or training/selection evidence.",
+  "always_half_final_binary_log_loss": 0.6931471805599453
+}
