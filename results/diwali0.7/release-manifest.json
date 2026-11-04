@@ -1,0 +1,28 @@
+{
+  "model": "diwali0.7",
+  "source_and_aggregate_sha256": {
+    "research/diwali/balanced.py": "896248bae5e7e7827ac28237845db9e2e010cc17f8ed8aab63846309b75c6c32",
+    "research/diwali/path_evaluate.py": "d6fb5aa0f27168e2ef42a24948eda95eb6907c7c881db4dc321e9ec0da5103e1",
+    "research/diwali/balanced_serve.py": "25d09b8462a35438ee7374ec66d321b6533d0ff3834e86beec6dcbb23795a626",
+    "research/diwali/forward_follower.py": "8964e211d56f317b398ccda7b07ba7511f646dff9d62c3d6399ad6f423610425",
+    "research/diwali/audit_follower.py": "c0b54cb12eaf52459c34d4efe268ccbb934cf9156c92a065d194a4da6ca23c4f",
+    "research/diwali/compare_forward.py": "2ade603b1a9744eb194f0654614323b845019be798f49835b28c5f9790ae4cbb",
+    "tests/diwali/test_balanced.py": "5a8e66d277cacbcf68abf36e0160fca12cdd9be116b4ef2d26987982c61833af",
+    "tests/diwali/test_follower_audit.py": "435204f2636234432a8751eceb0e8a1a9c42cdc57d36a58a840c8bdb14acdf11",
+    "results/diwali0.7/source-verification.json": "e59bd810d5e25cabe35833368ee2a0f29f00f80d8210567a66698d37126e4904",
+    "results/diwali0.7/report.json": "66e63669aea2d446423b8c2688cba78d64abc5301d67dcc0d4afe5e16f2248a7",
+    "results/diwali0.7/browser-verification.json": "baa8030c33c552ceb4a8c28b8a02c2739cfe5dcca047379996e9b857d4558d86",
+    "results/diwali0.7/diwali06-forward-comparison.json": "2be28559fb1912496e70da8dabeba8e8052469c01d0835ae3f99451670c11bfc",
+    "results/diwali0.7/diwali06-forward-source-audit.json": "01e59128b3dd8f013bb9e9d6b2e08a9f1ff9811c3bf698752fc62b0547172cbc",
+    "results/diwali0.7/selection.json": "43073c4883bb5ec142fb53f9ad2dad5c15d6d5286caef8845b753b1be026b6b4",
+    "results/diwali0.7/replay-verification.json": "4138f1cfe6336a7664a9e8e6e1e088a24c60abdb88b9cd74f63d80b5c4ce0b4b",
+    "results/diwali0.7/parent-hashes.json": "2602d55c104491adaf065171f9810604884a8ce8ff019ea251b4addc3f712018",
+    "results/diwali0.7/paired-comparison.json": "a170513e9808946071b040db6782c731ec06e8510f63cc0529ff6e6b2fcc5fc7",
+    "results/diwali0.7/run-protocol.json": "a20d31750d47ed32c1f1d6500d3cb505453404e87d2bfd209cfbe2914bc58338",
+    "results/diwali0.7/runs.json": "7b326251845830207fe3fb25416d8c8f9721df7602200f5056305451852cb916"
+  },
+  "selected_checkpoint_sha256": "912a009a3a7002a2a532a00d708378f7e681c513f77d899272b9cf595640c669",
+  "checks": "93 tests; ten cases/150 horizons/30 joint queries; desktop/mobile browser; separate0.6 forward7paths/105outcomes audited",
+  "raw_data_or_weights_published": false,
+  "goal_complete": false
+}

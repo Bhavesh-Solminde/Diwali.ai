@@ -1,0 +1,38 @@
+[
+  {
+    "variant": "joint_control",
+    "seed": 17,
+    "epoch": 12,
+    "development_composite": 4.739826412267254
+  },
+  {
+    "variant": "joint_control",
+    "seed": 29,
+    "epoch": 17,
+    "development_composite": 4.742207106108459
+  },
+  {
+    "variant": "joint_control",
+    "seed": 43,
+    "epoch": 9,
+    "development_composite": 4.737771960792409
+  },
+  {
+    "variant": "balanced",
+    "seed": 17,
+    "epoch": 1,
+    "development_composite": 4.744303065274878
+  },
+  {
+    "variant": "balanced",
+    "seed": 29,
+    "epoch": 1,
+    "development_composite": 4.74628757175023
+  },
+  {
+    "variant": "balanced",
+    "seed": 43,
+    "epoch": 1,
+    "development_composite": 4.740272914244059
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "trainer_matches_protocol": true,
+  "model_definition_matches_parent": true,
+  "evaluation_source_sha256": "d6fb5aa0f27168e2ef42a24948eda95eb6907c7c881db4dc321e9ec0da5103e1",
+  "model_source_sha256": "007e73de5e02cbee8c6e818820cf891839be9770888e4760827627cccf213f3d",
+  "note": "Recorded during active run; source files left unchanged after startup."
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "width": 1440,
+    "errors": [],
+    "before": 0,
+    "dots": 15,
+    "all_bin_query": "100.00%",
+    "reset": "Predict first.",
+    "overflow": false,
+    "friendly_label_recheck": {
+      "width": 1440,
+      "errors": [],
+      "friendly_labels": true,
+      "overflow": false
+    }
+  },
+  {
+    "width": 390,
+    "errors": [],
+    "before": 0,
+    "dots": 15,
+    "all_bin_query": "100.00%",
+    "reset": "Predict first.",
+    "overflow": false,
+    "friendly_label_recheck": {
+      "width": 390,
+      "errors": [],
+      "friendly_labels": true,
+      "overflow": false
+    }
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "joint": {
+    "mean_per_step_difference": -0.005198058307598623,
+    "days_better": 7,
+    "days": 8,
+    "exploratory_day_block_interval": [
+      -0.008554805441602687,
+      -0.002262656639366339
+    ],
+    "scope": "Eight inspected correlated days; no fresh significance claim or model reselection."
+  },
+  "marginal": {
+    "mean_per_step_difference": 0.00047873531002551317,
+    "days_better": 2,
+    "days": 8,
+    "exploratory_day_block_interval": [
+      -0.00239641428925097,
+      0.0030503259040415287
+    ],
+    "scope": "Eight inspected correlated days; no fresh significance claim or model reselection."
+  },
+  "composite": {
+    "mean_per_step_difference": -0.004719323029731465,
+    "days_better": 7,
+    "days": 8,
+    "exploratory_day_block_interval": [
+      -0.009756608675325964,
+      -0.00012545904136230653
+    ],
+    "scope": "Eight inspected correlated days; no fresh significance claim or model reselection."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "state": "follower_source_prefix_verified",
+  "model": "diwali0.6",
+  "capture_complete": true,
+  "source_capture_complete": false,
+  "source_prefixes": {
+    "events-20261104T02.jsonl": {
+      "bytes": 63685708,
+      "sha256": "0414edeaaa9ecc1ede0a46a569ac081fb88c259ce253c8c65447ad486c4068f6"
+    },
+    "events-20261104T03.jsonl": {
+      "bytes": 167713349,
+      "sha256": "548a13abfd9e7f2d76179df614318d979ab4a67ef9e427abfb490fdad2aa3bec"
+    }
+  },
+  "follower_prefixes": {
+    "events-20261104T03.jsonl": {
+      "bytes": 6090,
+      "sha256": "bb6dbcafdc56ed82768ce125e4e944bdc7f61740292215975fee96f473ada000"
+    }
+  },
+  "follower_rows_beyond_source_prefix": 0,
+  "native_freezes_replayed": 32,
+  "forecasts_recomputed": 7,
+  "matured_outcomes_verified": 105,
+  "outcomes_beyond_source_prefix": 0,
+  "complete_joint_paths_verified": 7,
+  "joint_log_loss": 35.20828176039657,
+  "audited_through_utc_ns": 1793763053239517000,
+  "max_recomputed_probability_difference": 0,
+  "minimum_pre_target_commit_seconds": 44.58385,
+  "scope": "Actual receiver source replay and model/forecast/outcome chronology; small correlated sample, no accuracy/calibration guarantee.",
+  "training_ready": false
+}

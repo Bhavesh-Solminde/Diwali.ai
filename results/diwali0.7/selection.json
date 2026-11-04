@@ -1,0 +1,9 @@
+{
+  "variant": "joint_control",
+  "seed": 17,
+  "development_three_seed_means": {
+    "joint_control": 4.739935159722708,
+    "balanced": 4.743621183756389
+  },
+  "before_calibration": true
+}

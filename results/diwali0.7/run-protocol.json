@@ -1,0 +1,37 @@
+{
+  "model": "diwali0.7",
+  "task": "retain coherent joint15-close paths while reducing unconditional marginal error",
+  "architecture": "unchanged21,308-parameter0.6 Markov model, warm-start corresponding seed checkpoint, reset optimizer",
+  "variants": [
+    "joint_control",
+    "balanced"
+  ],
+  "training_losses": "joint_control: mean joint NLL perstep+.25colourCE; balanced: joint+mean unconditional marginal NLL+.25colourCE",
+  "marginal_calculation": "differentiable exact forward probability sum; floor1e-30 only for numerical log safety; no future labels supplied to transition generation",
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "extra_epochs": 20,
+  "patience": 4,
+  "batch": 128,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0001,
+  "gradient_clip": 5,
+  "selection": "same joint-perstep plus marginal-perstep development score for both variants; three-seed mean; deploy seed17 fixed; epoch0 parent is candidate",
+  "calibration": "same one global conditional temperature for both variants,41loggrid .5..2, minimizes calibration joint-perstep+marginal-perstep; colour scalar separately",
+  "cohort": "exact0.5 purged fit/development/calibration/inspected benchmark; verify against0.6 parent hashes; no new data/labels",
+  "limitations": [
+    "Already-inspected October benchmark, no fresh test claim.",
+    "Coarse first-order future bins and historical receipt assumptions remain.",
+    "Weighted proper scores do not guarantee perfect probabilities or directional edge."
+  ],
+  "source_sha256": "896248bae5e7e7827ac28237845db9e2e010cc17f8ed8aab63846309b75c6c32",
+  "parent_report_sha256": "173ba7c7d6f05bee03659811ec34c21efbc12411a4a5dd733ed0bb39d46c92d0",
+  "parent_checkpoints": {
+    "17": "fd80eaf46d502591ade90fd5dd60a84729a56a43a1ccfe6cad00878b7e083181",
+    "29": "fad5be56cfe40c251fd51f2864fbe8f017d8e416a4f0503c284e4280de6544e2",
+    "43": "8d434de1501cc0de8749b19bf1f91e1b942045ed78fe79ca3b34a446d09e5025"
+  }
+}

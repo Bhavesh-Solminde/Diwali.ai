@@ -1,0 +1,11 @@
+{
+  "cases": 10,
+  "horizons": 150,
+  "path_queries": 30,
+  "max_cpu_saved_bin_difference": 9.655947380560193e-08,
+  "max_path_event_difference": 1.774811825838718e-07,
+  "actuals_absent_before_reveal": true,
+  "all_revealed_labels_match": true,
+  "median_calculation_ms": 1.2319585075601935,
+  "max_calculation_ms": 1.6261250129900873
+}
