@@ -48,6 +48,8 @@ The benchmark happened to contain51.53% down-or-unchanged outcomes. Choosing tha
 
 This is a small supervised neural model in Python/PyTorch on Apple MPS. Supervised means it learns from historical input/outcome pairs. It is not a ChatGPT-sized language model, and it is not trained by identifying chart drawings.
 
+These Diwali runs use real historical BTC inputs and labels, not simulator v0.4/v0.5 candles as training truth. Simulator research informed hypotheses about liquidity and impact, but did not establish that the simulator reproduces real BTC or that candle wicks identify hidden order quantities. There is no verified reproduction of Krafer's proprietary Tiger weights, architecture or reported accuracy in these versions.
+
 ### Available inputs
 
 -1,440 completed one-minute candles, with8 features each: relative candle prices, volumes/count and time-of-day features.
