@@ -1,0 +1,1037 @@
+{
+  "scope": "Post-selection descriptive error localization. Calibration scores reuse fitted labels. October benchmark repeatedly inspected; correlated origins, not independent trials. Not used to reselect current model.",
+  "model": "diwali1.2",
+  "selected": "with_midpoint",
+  "variants": {
+    "no_midpoint": {
+      "endpoint_temperature": 0.5946035575013605,
+      "temperature_grid_boundary": false,
+      "partitions": {
+        "fit": {
+          "examples": 24009,
+          "up_frequency": 0.502686492565288,
+          "accuracy": 0.5330084551626474,
+          "binary_log_loss": 0.689854085445404,
+          "brier_up": 0.24836515471664034,
+          "mean_up_probability": 0.5050657987594604,
+          "confusion_actual_rows_predicted_columns": [
+            [
+              6096,
+              5844
+            ],
+            [
+              5368,
+              6701
+            ]
+          ],
+          "confidence_groups": [
+            {
+              "minimum": 0.5,
+              "n": 24009,
+              "accuracy": 0.5330084551626474
+            },
+            {
+              "minimum": 0.6,
+              "n": 1225,
+              "accuracy": 0.6089795918367347
+            },
+            {
+              "minimum": 0.7,
+              "n": 12,
+              "accuracy": 0.5833333333333334
+            },
+            {
+              "minimum": 0.8,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.9,
+              "n": 0,
+              "accuracy": null
+            }
+          ],
+          "up_calibration": [
+            {
+              "lower": 0.30000000000000004,
+              "n": 307,
+              "mean_claim": 0.38784611225128174,
+              "observed_up": 0.4527687296416938
+            },
+            {
+              "lower": 0.4,
+              "n": 11157,
+              "mean_claim": 0.4630725085735321,
+              "observed_up": 0.4686743748319441
+            },
+            {
+              "lower": 0.5,
+              "n": 11627,
+              "mean_claim": 0.5390082597732544,
+              "observed_up": 0.5266190762879505
+            },
+            {
+              "lower": 0.6000000000000001,
+              "n": 906,
+              "mean_claim": 0.6235918998718262,
+              "observed_up": 0.630242825607064
+            },
+            {
+              "lower": 0.7000000000000001,
+              "n": 12,
+              "mean_claim": 0.7111400961875916,
+              "observed_up": 0.5833333333333334
+            }
+          ],
+          "labels": [
+            "down_or_unchanged",
+            "up"
+          ],
+          "event": "Final forecast close versus frozen reference; equality in down_or_unchanged."
+        },
+        "development": {
+          "examples": 4026,
+          "up_frequency": 0.5178837555886736,
+          "accuracy": 0.5198708395429706,
+          "binary_log_loss": 0.6926235556602478,
+          "brier_up": 0.2497331494912291,
+          "mean_up_probability": 0.4881598949432373,
+          "confusion_actual_rows_predicted_columns": [
+            [
+              1214,
+              727
+            ],
+            [
+              1206,
+              879
+            ]
+          ],
+          "confidence_groups": [
+            {
+              "minimum": 0.5,
+              "n": 4026,
+              "accuracy": 0.5198708395429706
+            },
+            {
+              "minimum": 0.6,
+              "n": 113,
+              "accuracy": 0.6017699115044248
+            },
+            {
+              "minimum": 0.7,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.8,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.9,
+              "n": 0,
+              "accuracy": null
+            }
+          ],
+          "up_calibration": [
+            {
+              "lower": 0.30000000000000004,
+              "n": 88,
+              "mean_claim": 0.38958540558815,
+              "observed_up": 0.3977272727272727
+            },
+            {
+              "lower": 0.4,
+              "n": 2332,
+              "mean_claim": 0.45938095450401306,
+              "observed_up": 0.5021440823327615
+            },
+            {
+              "lower": 0.5,
+              "n": 1581,
+              "mean_claim": 0.5341657996177673,
+              "observed_up": 0.5464895635673624
+            },
+            {
+              "lower": 0.6000000000000001,
+              "n": 25,
+              "mean_claim": 0.6102322936058044,
+              "observed_up": 0.6
+            }
+          ],
+          "labels": [
+            "down_or_unchanged",
+            "up"
+          ],
+          "event": "Final forecast close versus frozen reference; equality in down_or_unchanged."
+        },
+        "calibration": {
+          "examples": 2667,
+          "up_frequency": 0.4289463817022872,
+          "accuracy": 0.5410573678290214,
+          "binary_log_loss": 0.6868284940719604,
+          "brier_up": 0.24685694383654194,
+          "mean_up_probability": 0.49154385924339294,
+          "confusion_actual_rows_predicted_columns": [
+            [
+              905,
+              618
+            ],
+            [
+              606,
+              538
+            ]
+          ],
+          "confidence_groups": [
+            {
+              "minimum": 0.5,
+              "n": 2667,
+              "accuracy": 0.5410573678290214
+            },
+            {
+              "minimum": 0.6,
+              "n": 95,
+              "accuracy": 0.6526315789473685
+            },
+            {
+              "minimum": 0.7,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.8,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.9,
+              "n": 0,
+              "accuracy": null
+            }
+          ],
+          "up_calibration": [
+            {
+              "lower": 0.30000000000000004,
+              "n": 71,
+              "mean_claim": 0.38564741611480713,
+              "observed_up": 0.2676056338028169
+            },
+            {
+              "lower": 0.4,
+              "n": 1440,
+              "mean_claim": 0.4591357409954071,
+              "observed_up": 0.4076388888888889
+            },
+            {
+              "lower": 0.5,
+              "n": 1132,
+              "mean_claim": 0.5368857383728027,
+              "observed_up": 0.4664310954063604
+            },
+            {
+              "lower": 0.6000000000000001,
+              "n": 24,
+              "mean_claim": 0.6106782555580139,
+              "observed_up": 0.4166666666666667
+            }
+          ],
+          "labels": [
+            "down_or_unchanged",
+            "up"
+          ],
+          "event": "Final forecast close versus frozen reference; equality in down_or_unchanged."
+        },
+        "locked_test": {
+          "examples": 11186,
+          "up_frequency": 0.48471303414983014,
+          "accuracy": 0.512783836939031,
+          "binary_log_loss": 0.695123553276062,
+          "brier_up": 0.2509665119878141,
+          "mean_up_probability": 0.5048285126686096,
+          "confusion_actual_rows_predicted_columns": [
+            [
+              2734,
+              3030
+            ],
+            [
+              2420,
+              3002
+            ]
+          ],
+          "confidence_groups": [
+            {
+              "minimum": 0.5,
+              "n": 11186,
+              "accuracy": 0.512783836939031
+            },
+            {
+              "minimum": 0.6,
+              "n": 319,
+              "accuracy": 0.5047021943573667
+            },
+            {
+              "minimum": 0.7,
+              "n": 2,
+              "accuracy": 0.5
+            },
+            {
+              "minimum": 0.8,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.9,
+              "n": 0,
+              "accuracy": null
+            }
+          ],
+          "up_calibration": [
+            {
+              "lower": 0.2,
+              "n": 1,
+              "mean_claim": 0.25628215074539185,
+              "observed_up": 0.0
+            },
+            {
+              "lower": 0.30000000000000004,
+              "n": 106,
+              "mean_claim": 0.38814374804496765,
+              "observed_up": 0.42452830188679247
+            },
+            {
+              "lower": 0.4,
+              "n": 5047,
+              "mean_claim": 0.46446385979652405,
+              "observed_up": 0.47057658014662174
+            },
+            {
+              "lower": 0.5,
+              "n": 5820,
+              "mean_claim": 0.5379763841629028,
+              "observed_up": 0.49879725085910653
+            },
+            {
+              "lower": 0.6000000000000001,
+              "n": 211,
+              "mean_claim": 0.6148487329483032,
+              "observed_up": 0.46919431279620855
+            },
+            {
+              "lower": 0.7000000000000001,
+              "n": 1,
+              "mean_claim": 0.7076056599617004,
+              "observed_up": 0.0
+            }
+          ],
+          "labels": [
+            "down_or_unchanged",
+            "up"
+          ],
+          "event": "Final forecast close versus frozen reference; equality in down_or_unchanged."
+        }
+      }
+    },
+    "with_midpoint": {
+      "endpoint_temperature": 0.6155722066724582,
+      "temperature_grid_boundary": false,
+      "partitions": {
+        "fit": {
+          "examples": 24009,
+          "up_frequency": 0.502686492565288,
+          "accuracy": 0.5335915698279812,
+          "binary_log_loss": 0.6897964477539062,
+          "brier_up": 0.2483362190865788,
+          "mean_up_probability": 0.504715621471405,
+          "confusion_actual_rows_predicted_columns": [
+            [
+              6130,
+              5810
+            ],
+            [
+              5388,
+              6681
+            ]
+          ],
+          "confidence_groups": [
+            {
+              "minimum": 0.5,
+              "n": 24009,
+              "accuracy": 0.5335915698279812
+            },
+            {
+              "minimum": 0.6,
+              "n": 1065,
+              "accuracy": 0.6253521126760564
+            },
+            {
+              "minimum": 0.7,
+              "n": 4,
+              "accuracy": 0.25
+            },
+            {
+              "minimum": 0.8,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.9,
+              "n": 0,
+              "accuracy": null
+            }
+          ],
+          "up_calibration": [
+            {
+              "lower": 0.30000000000000004,
+              "n": 256,
+              "mean_claim": 0.3881670832633972,
+              "observed_up": 0.44140625
+            },
+            {
+              "lower": 0.4,
+              "n": 11262,
+              "mean_claim": 0.4635477066040039,
+              "observed_up": 0.4683892736636477
+            },
+            {
+              "lower": 0.5,
+              "n": 11682,
+              "mean_claim": 0.5388199090957642,
+              "observed_up": 0.5271357644239
+            },
+            {
+              "lower": 0.6000000000000001,
+              "n": 805,
+              "mean_claim": 0.6218041777610779,
+              "observed_up": 0.6484472049689441
+            },
+            {
+              "lower": 0.7000000000000001,
+              "n": 4,
+              "mean_claim": 0.7066329717636108,
+              "observed_up": 0.25
+            }
+          ],
+          "labels": [
+            "down_or_unchanged",
+            "up"
+          ],
+          "event": "Final forecast close versus frozen reference; equality in down_or_unchanged."
+        },
+        "development": {
+          "examples": 4026,
+          "up_frequency": 0.5178837555886736,
+          "accuracy": 0.5153999006458023,
+          "binary_log_loss": 0.692779004573822,
+          "brier_up": 0.2498148576328267,
+          "mean_up_probability": 0.488093763589859,
+          "confusion_actual_rows_predicted_columns": [
+            [
+              1225,
+              716
+            ],
+            [
+              1235,
+              850
+            ]
+          ],
+          "confidence_groups": [
+            {
+              "minimum": 0.5,
+              "n": 4026,
+              "accuracy": 0.5153999006458023
+            },
+            {
+              "minimum": 0.6,
+              "n": 101,
+              "accuracy": 0.6336633663366337
+            },
+            {
+              "minimum": 0.7,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.8,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.9,
+              "n": 0,
+              "accuracy": null
+            }
+          ],
+          "up_calibration": [
+            {
+              "lower": 0.30000000000000004,
+              "n": 74,
+              "mean_claim": 0.38876238465309143,
+              "observed_up": 0.36486486486486486
+            },
+            {
+              "lower": 0.4,
+              "n": 2386,
+              "mean_claim": 0.46014174818992615,
+              "observed_up": 0.5062866722548198
+            },
+            {
+              "lower": 0.5,
+              "n": 1539,
+              "mean_claim": 0.5340788960456848,
+              "observed_up": 0.5412605588044185
+            },
+            {
+              "lower": 0.6000000000000001,
+              "n": 27,
+              "mean_claim": 0.6093156337738037,
+              "observed_up": 0.6296296296296297
+            }
+          ],
+          "labels": [
+            "down_or_unchanged",
+            "up"
+          ],
+          "event": "Final forecast close versus frozen reference; equality in down_or_unchanged."
+        },
+        "calibration": {
+          "examples": 2667,
+          "up_frequency": 0.4289463817022872,
+          "accuracy": 0.5489313835770528,
+          "binary_log_loss": 0.6874979734420776,
+          "brier_up": 0.24718819255822896,
+          "mean_up_probability": 0.4915895462036133,
+          "confusion_actual_rows_predicted_columns": [
+            [
+              930,
+              593
+            ],
+            [
+              610,
+              534
+            ]
+          ],
+          "confidence_groups": [
+            {
+              "minimum": 0.5,
+              "n": 2667,
+              "accuracy": 0.5489313835770528
+            },
+            {
+              "minimum": 0.6,
+              "n": 84,
+              "accuracy": 0.6547619047619048
+            },
+            {
+              "minimum": 0.7,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.8,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.9,
+              "n": 0,
+              "accuracy": null
+            }
+          ],
+          "up_calibration": [
+            {
+              "lower": 0.30000000000000004,
+              "n": 58,
+              "mean_claim": 0.38542258739471436,
+              "observed_up": 0.27586206896551724
+            },
+            {
+              "lower": 0.4,
+              "n": 1482,
+              "mean_claim": 0.46038028597831726,
+              "observed_up": 0.4008097165991903
+            },
+            {
+              "lower": 0.5,
+              "n": 1101,
+              "mean_claim": 0.5364615321159363,
+              "observed_up": 0.4732061762034514
+            },
+            {
+              "lower": 0.6000000000000001,
+              "n": 26,
+              "mean_claim": 0.6071930527687073,
+              "observed_up": 0.5
+            }
+          ],
+          "labels": [
+            "down_or_unchanged",
+            "up"
+          ],
+          "event": "Final forecast close versus frozen reference; equality in down_or_unchanged."
+        },
+        "locked_test": {
+          "examples": 11186,
+          "up_frequency": 0.48471303414983014,
+          "accuracy": 0.5123368496334704,
+          "binary_log_loss": 0.6949002742767334,
+          "brier_up": 0.25085810601719516,
+          "mean_up_probability": 0.5029284954071045,
+          "confusion_actual_rows_predicted_columns": [
+            [
+              2842,
+              2922
+            ],
+            [
+              2533,
+              2889
+            ]
+          ],
+          "confidence_groups": [
+            {
+              "minimum": 0.5,
+              "n": 11186,
+              "accuracy": 0.5123368496334704
+            },
+            {
+              "minimum": 0.6,
+              "n": 279,
+              "accuracy": 0.4910394265232975
+            },
+            {
+              "minimum": 0.7,
+              "n": 1,
+              "accuracy": 1.0
+            },
+            {
+              "minimum": 0.8,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.9,
+              "n": 0,
+              "accuracy": null
+            }
+          ],
+          "up_calibration": [
+            {
+              "lower": 0.2,
+              "n": 1,
+              "mean_claim": 0.285093754529953,
+              "observed_up": 0.0
+            },
+            {
+              "lower": 0.30000000000000004,
+              "n": 106,
+              "mean_claim": 0.3880617320537567,
+              "observed_up": 0.44339622641509435
+            },
+            {
+              "lower": 0.4,
+              "n": 5268,
+              "mean_claim": 0.4643147885799408,
+              "observed_up": 0.47190584662110857
+            },
+            {
+              "lower": 0.5,
+              "n": 5639,
+              "mean_claim": 0.5378186106681824,
+              "observed_up": 0.4986699769462671
+            },
+            {
+              "lower": 0.6000000000000001,
+              "n": 172,
+              "mean_claim": 0.6137741208076477,
+              "observed_up": 0.4476744186046512
+            }
+          ],
+          "labels": [
+            "down_or_unchanged",
+            "up"
+          ],
+          "event": "Final forecast close versus frozen reference; equality in down_or_unchanged."
+        }
+      }
+    },
+    "epoch0_parent": {
+      "endpoint_temperature": 2.0,
+      "temperature_grid_boundary": true,
+      "partitions": {
+        "fit": {
+          "examples": 24009,
+          "up_frequency": 0.502686492565288,
+          "accuracy": 0.5143904369194885,
+          "binary_log_loss": 0.6926897764205933,
+          "brier_up": 0.2497714032260776,
+          "mean_up_probability": 0.5039352178573608,
+          "confusion_actual_rows_predicted_columns": [
+            [
+              4688,
+              7252
+            ],
+            [
+              4407,
+              7662
+            ]
+          ],
+          "confidence_groups": [
+            {
+              "minimum": 0.5,
+              "n": 24009,
+              "accuracy": 0.5143904369194885
+            },
+            {
+              "minimum": 0.6,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.7,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.8,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.9,
+              "n": 0,
+              "accuracy": null
+            }
+          ],
+          "up_calibration": [
+            {
+              "lower": 0.4,
+              "n": 9095,
+              "mean_claim": 0.4963243305683136,
+              "observed_up": 0.4845519516217702
+            },
+            {
+              "lower": 0.5,
+              "n": 14914,
+              "mean_claim": 0.5085765719413757,
+              "observed_up": 0.5137454740512271
+            }
+          ],
+          "labels": [
+            "down_or_unchanged",
+            "up"
+          ],
+          "event": "Final forecast close versus frozen reference; equality in down_or_unchanged."
+        },
+        "development": {
+          "examples": 4026,
+          "up_frequency": 0.5178837555886736,
+          "accuracy": 0.5032290114257327,
+          "binary_log_loss": 0.6930726170539856,
+          "brier_up": 0.24996271693531202,
+          "mean_up_probability": 0.49957817792892456,
+          "confusion_actual_rows_predicted_columns": [
+            [
+              1068,
+              873
+            ],
+            [
+              1127,
+              958
+            ]
+          ],
+          "confidence_groups": [
+            {
+              "minimum": 0.5,
+              "n": 4026,
+              "accuracy": 0.5032290114257327
+            },
+            {
+              "minimum": 0.6,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.7,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.8,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.9,
+              "n": 0,
+              "accuracy": null
+            }
+          ],
+          "up_calibration": [
+            {
+              "lower": 0.4,
+              "n": 2195,
+              "mean_claim": 0.49621671438217163,
+              "observed_up": 0.5134396355353075
+            },
+            {
+              "lower": 0.5,
+              "n": 1831,
+              "mean_claim": 0.503607988357544,
+              "observed_up": 0.523211359912616
+            }
+          ],
+          "labels": [
+            "down_or_unchanged",
+            "up"
+          ],
+          "event": "Final forecast close versus frozen reference; equality in down_or_unchanged."
+        },
+        "calibration": {
+          "examples": 2667,
+          "up_frequency": 0.4289463817022872,
+          "accuracy": 0.48293963254593175,
+          "binary_log_loss": 0.69347083568573,
+          "brier_up": 0.25016180187643333,
+          "mean_up_probability": 0.4998433291912079,
+          "confusion_actual_rows_predicted_columns": [
+            [
+              751,
+              772
+            ],
+            [
+              607,
+              537
+            ]
+          ],
+          "confidence_groups": [
+            {
+              "minimum": 0.5,
+              "n": 2667,
+              "accuracy": 0.48293963254593175
+            },
+            {
+              "minimum": 0.6,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.7,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.8,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.9,
+              "n": 0,
+              "accuracy": null
+            }
+          ],
+          "up_calibration": [
+            {
+              "lower": 0.4,
+              "n": 1358,
+              "mean_claim": 0.49633902311325073,
+              "observed_up": 0.44698085419734906
+            },
+            {
+              "lower": 0.5,
+              "n": 1309,
+              "mean_claim": 0.5034788846969604,
+              "observed_up": 0.4102368220015279
+            }
+          ],
+          "labels": [
+            "down_or_unchanged",
+            "up"
+          ],
+          "event": "Final forecast close versus frozen reference; equality in down_or_unchanged."
+        },
+        "locked_test": {
+          "examples": 11186,
+          "up_frequency": 0.48471303414983014,
+          "accuracy": 0.5059002324333989,
+          "binary_log_loss": 0.6931583285331726,
+          "brier_up": 0.2500055492134193,
+          "mean_up_probability": 0.5015318989753723,
+          "confusion_actual_rows_predicted_columns": [
+            [
+              2547,
+              3217
+            ],
+            [
+              2310,
+              3112
+            ]
+          ],
+          "confidence_groups": [
+            {
+              "minimum": 0.5,
+              "n": 11186,
+              "accuracy": 0.5059002324333989
+            },
+            {
+              "minimum": 0.6,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.7,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.8,
+              "n": 0,
+              "accuracy": null
+            },
+            {
+              "minimum": 0.9,
+              "n": 0,
+              "accuracy": null
+            }
+          ],
+          "up_calibration": [
+            {
+              "lower": 0.4,
+              "n": 4857,
+              "mean_claim": 0.496342271566391,
+              "observed_up": 0.47560222359481164
+            },
+            {
+              "lower": 0.5,
+              "n": 6329,
+              "mean_claim": 0.5055145025253296,
+              "observed_up": 0.49170485068731234
+            }
+          ],
+          "labels": [
+            "down_or_unchanged",
+            "up"
+          ],
+          "event": "Final forecast close versus frozen reference; equality in down_or_unchanged."
+        }
+      }
+    }
+  },
+  "paired_target_days": [
+    {
+      "target_start_UTC_day": "2026-10-24",
+      "origins": 1405,
+      "final_binary_log_loss": {
+        "no_midpoint": 0.6891785930861966,
+        "with_midpoint": 0.6899085500958814,
+        "epoch0_parent": 0.6928620802866469
+      },
+      "difference_from_epoch0": {
+        "no_midpoint": -0.0036834872004503786,
+        "with_midpoint": -0.002953530190765498,
+        "epoch0_parent": 0.0
+      }
+    },
+    {
+      "target_start_UTC_day": "2026-10-25",
+      "origins": 1394,
+      "final_binary_log_loss": {
+        "no_midpoint": 0.7019101417588076,
+        "with_midpoint": 0.7017245337023612,
+        "epoch0_parent": 0.6959433084574749
+      },
+      "difference_from_epoch0": {
+        "no_midpoint": 0.005966833301332731,
+        "with_midpoint": 0.0057812252448863986,
+        "epoch0_parent": 0.0
+      }
+    },
+    {
+      "target_start_UTC_day": "2026-10-26",
+      "origins": 1408,
+      "final_binary_log_loss": {
+        "no_midpoint": 0.7007451074500346,
+        "with_midpoint": 0.7009875824186995,
+        "epoch0_parent": 0.693220419552408
+      },
+      "difference_from_epoch0": {
+        "no_midpoint": 0.007524687897626759,
+        "with_midpoint": 0.007767162866291508,
+        "epoch0_parent": 0.0
+      }
+    },
+    {
+      "target_start_UTC_day": "2026-10-27",
+      "origins": 1380,
+      "final_binary_log_loss": {
+        "no_midpoint": 0.6978037941340465,
+        "with_midpoint": 0.6969145951903594,
+        "epoch0_parent": 0.6928219591397573
+      },
+      "difference_from_epoch0": {
+        "no_midpoint": 0.00498183499428926,
+        "with_midpoint": 0.0040926360506020245,
+        "epoch0_parent": 0.0
+      }
+    },
+    {
+      "target_start_UTC_day": "2026-10-28",
+      "origins": 1399,
+      "final_binary_log_loss": {
+        "no_midpoint": 0.6910855295059817,
+        "with_midpoint": 0.6917198282645033,
+        "epoch0_parent": 0.6930630444342142
+      },
+      "difference_from_epoch0": {
+        "no_midpoint": -0.0019775149282324936,
+        "with_midpoint": -0.0013432161697108343,
+        "epoch0_parent": 0.0
+      }
+    },
+    {
+      "target_start_UTC_day": "2026-10-29",
+      "origins": 1414,
+      "final_binary_log_loss": {
+        "no_midpoint": 0.690229422364825,
+        "with_midpoint": 0.689939562669542,
+        "epoch0_parent": 0.6922835867666186
+      },
+      "difference_from_epoch0": {
+        "no_midpoint": -0.0020541644017936663,
+        "with_midpoint": -0.0023440240970765357,
+        "epoch0_parent": 0.0
+      }
+    },
+    {
+      "target_start_UTC_day": "2026-10-30",
+      "origins": 1413,
+      "final_binary_log_loss": {
+        "no_midpoint": 0.6946110922538093,
+        "with_midpoint": 0.6930048536896294,
+        "epoch0_parent": 0.6924348889407032
+      },
+      "difference_from_epoch0": {
+        "no_midpoint": 0.002176203313106129,
+        "with_midpoint": 0.0005699647489261591,
+        "epoch0_parent": 0.0
+      }
+    },
+    {
+      "target_start_UTC_day": "2026-10-31",
+      "origins": 1373,
+      "final_binary_log_loss": {
+        "no_midpoint": 0.6955400437173984,
+        "with_midpoint": 0.6951130322063004,
+        "epoch0_parent": 0.6926508430892782
+      },
+      "difference_from_epoch0": {
+        "no_midpoint": 0.002889200628120272,
+        "with_midpoint": 0.002462189117022178,
+        "epoch0_parent": 0.0
+      }
+    }
+  ],
+  "always_half": {
+    "binary_log_loss": 0.6931471805599453,
+    "brier": 0.25
+  }
+}

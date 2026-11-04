@@ -1,5 +1,15 @@
 # Diwali model experiments
 
+## Diwali1.3 confidence-penalty experiment
+
+`python -m research.diwali.regularized_serve` serves the historical UI on port8753.
+The selected parent-KL training penalty improves1.2's final-direction log loss
+from0.694900 to0.693765 on the inspected October benchmark, but remains worse
+than the unchanged parent (0.693158). It reduces >=60% claims from279 to15;
+only6/15 remaining calls chose the right side. This is a partial experimental
+improvement, not proven directional confidence. All source and aggregate
+evidence is in `results/diwali1.3`; raw inputs and weights remain local.
+
 ## Diwali1.2 controlled midpoint experiment
 
 Run `python -m research.diwali.anchored_serve` for the historical UI on port8752.

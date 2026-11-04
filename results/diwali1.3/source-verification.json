@@ -1,0 +1,26 @@
+{
+  "training_sources_and_dependencies_unchanged": true,
+  "data_parent_hashes_unchanged": true,
+  "sources": {
+    "research/diwali/directional.py": "33dc95058d082b7f790a22c7d3d3c10a488b0a74458212618f0e392b26d3a3bf",
+    "research/diwali/refined.py": "cfb116869a61e4f680a5dd4ec2f132575e68eefca7537811f5e58503f9ae766f",
+    "research/diwali/model.py": "3130d855b64bbf34f6ecf1b05c3d4ec0343f348394c9fa64e0ff472efd8412cc",
+    "research/diwali/path.py": "007e73de5e02cbee8c6e818820cf891839be9770888e4760827627cccf213f3d",
+    "research/diwali/fan.py": "a43ab2eb54c4a8e55e248e63ff4e95c284bd2f88a8f07dc6395ce2bb859bf98b",
+    "research/diwali/probability.py": "a8c878e862fbe02348f30ceef0872eb371692e8fb2191212dfe3bd1ca2208c46",
+    "research/diwali/coupled.py": "b6ecf87ea9df64511098412791ddd06b9ebe22272ca4c3e9e21f12a180805641",
+    "research/diwali/path_evaluate.py": "d6fb5aa0f27168e2ef42a24948eda95eb6907c7c881db4dc321e9ec0da5103e1",
+    "research/market_data/midpoint.py": "44547e1d045da2b6be6b97bbffe025da7d4530df75a91cab3405ede048740a7e",
+    "research/market_data/midpoint_windows.py": "24dc5552eabff3f968ad938ad967e4f73e6ef165c6e8a36fa8fea46dfd482e50",
+    "research/diwali/anchored.py": "4bbc5354aeaaf77f62a5b8515e5e00e08c4e25f00eaef75724cd79b7cf20f748",
+    "research/diwali/regularized_train.py": "aa09497a64ee0292bb80ea40db97c355b3c1027c4aeb688393356f72e430b751",
+    "research/diwali/regularized.py": "f841ab6574084c056d3ac3e5f6ad49e657f03958cd875d15fda0652610fa688f"
+  },
+  "release_sources": {
+    "research/diwali/regularized.py": "f841ab6574084c056d3ac3e5f6ad49e657f03958cd875d15fda0652610fa688f",
+    "research/diwali/regularized_train.py": "aa09497a64ee0292bb80ea40db97c355b3c1027c4aeb688393356f72e430b751",
+    "research/diwali/regularized_serve.py": "3631e374d87b395e41a45cf7afcd432c3ef844c71ec11ed34a7d6541e960a98f",
+    "research/diwali/confidence_diagnostics.py": "9a7fd809ede7fbdf285bd0bdd8fede8c22ea719d7b8fbb16a5c87626876dcacf",
+    "research/diwali/verify_anchored.py": "d590a05fb66ffc53f7f5969841ecc50832a3478aaf6bdfd40fb7a1fcd59511ff"
+  }
+}

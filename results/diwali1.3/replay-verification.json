@@ -1,0 +1,12 @@
+{
+  "cases": 10,
+  "horizons": 150,
+  "joint_event_queries": 30,
+  "maximum_cpu_probability_difference": 1.3036753603035134e-07,
+  "coherent_net_direction_verified": true,
+  "actuals_separate_until_reveal": true,
+  "future_actuals_used": false,
+  "midpoint_artifact_and_input_hashes_verified": true,
+  "raw_parent_cache_cases_recomputed": 10,
+  "maximum_raw_parent_logit_difference": 1.430511474609375e-06
+}

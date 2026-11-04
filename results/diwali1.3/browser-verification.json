@@ -1,0 +1,20 @@
+[
+  {
+    "width": 1440,
+    "page_errors": [],
+    "document_overflow": false,
+    "actual_dots_before": 0,
+    "actual_dots_after": 15,
+    "direction_unchanged_after_reveal": true,
+    "explicit_actual_dot_legend": true
+  },
+  {
+    "width": 390,
+    "page_errors": [],
+    "document_overflow": false,
+    "actual_dots_before": 0,
+    "actual_dots_after": 15,
+    "direction_unchanged_after_reveal": true,
+    "explicit_actual_dot_legend": true
+  }
+]

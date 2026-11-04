@@ -1,0 +1,20 @@
+{
+  "comparison": "1.3 confidence_control versus1.2 with_midpoint",
+  "checks": [
+    {
+      "seed": 17,
+      "epoch": 4,
+      "all_parameters_exactly_equal": true
+    },
+    {
+      "seed": 29,
+      "epoch": 11,
+      "all_parameters_exactly_equal": true
+    },
+    {
+      "seed": 43,
+      "epoch": 3,
+      "all_parameters_exactly_equal": true
+    }
+  ]
+}
