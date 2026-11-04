@@ -59,3 +59,15 @@ The new window builder returns all raw row references in each60-second input int
 At fixed minutes2/9/16/23/30/37/44/51, second15, all32 sampled windows passed without truncation or rejection. Raw row references, seeds and individual windows remain private. Aggregate results: `results/trade-event-preflight` and `results/event-window-preflight`. Tests cover strict cutoff, timestamp groups, blocked out-of-order availability, future-payload invariance, invalid markers and staleness.
 
 This advances event preservation and alignment; it does not finish a normalized training dataset. Still required: price-aligned order-flow features, broader continuity checks, explicit source-exposure inventory and sealed walk-forward evaluation, end-to-end model definitions and training. Older0.9/1.2 forward captures remain unmodified.
+
+## Price-aligned feature and temporal-plan progress
+
+The32 private preflight windows now contain156,508 rows with103 unscaled features per event. Book rows retain their80 level-state coordinates relative to the known pre-window midpoint. Additional channels describe elapsed times, spread/midpoint/imbalance, changes at matched exact price levels, top20 visibility entry/exit, trade price displacement, signed trade size/notional and nonmarket markers. A separate seed vector initializes the pre-window state. There is no silent fixed-length truncation or one-second aggregation.
+
+Matched-price depth changes are separated from changes in level rank. Entry/exit at the top20 boundary is labelled visibility change, never uniquely identified cancellation, execution or refill. Trades use their fixed pre-window price coordinate and own fields; they do not read a same-timestamp book transition as confirmed earlier context. Explicit timestamp groups remain part of the model-input contract. Tests verify rank shifts do not manufacture matched-price quantity changes, buyer-maker side mapping, future-payload invariance and same-time cross-stream isolation. All source event hashes are checked before preparation.
+
+Aggregate output: `results/event-feature-preflight`. The private first feature-preparation run is superseded by version2, which adds direct event-file hash checks. No scaler or model is fitted in either run.
+
+The bounded exposure register and chronological date plan are now recorded in [DIWALI1.4-EVALUATION-EXPOSURE-AND-SPLITS.md](DIWALI1.4-EVALUATION-EXPOSURE-AND-SPLITS.md). August rolling development folds are followed by final August fitting, September1–7 selection, September8–14 calibration and reserved September15–29 final scoring. Prior archive-quality access is disclosed; these are previously unevaluated model-performance periods in retained records, not provably unseen raw prices. No model forecasts for the reserved final block have been evaluated in this reset.
+
+Remaining work: expand verified event extraction beyond these sample hours; prepare eligible feature/context/target cohorts under the frozen dates; implement final-label access separation; specify bounded end-to-end models and baselines; train and evaluate. This is not yet a trained1.4 model or completed implementation of all evaluation gates.
