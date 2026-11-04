@@ -1,0 +1,9 @@
+{
+  "cases": 10,
+  "horizons": 150,
+  "joint_queries": 30,
+  "maximum_cpu_replay_difference": 9.677960009779607e-08,
+  "parent_neural_calls_per_predict": 2,
+  "future_actuals_used": false,
+  "reveal_assignment_verified": true
+}

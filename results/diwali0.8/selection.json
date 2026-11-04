@@ -1,0 +1,25 @@
+{
+  "mode": "unit_dependence",
+  "gamma": 1.0,
+  "development": {
+    "independent": {
+      "gamma": 0.0,
+      "joint_log_loss": 42.28134672856164,
+      "maximum_marginal_difference": 2.0816681711721685e-16,
+      "maximum_iterations": 0
+    },
+    "unit_dependence": {
+      "gamma": 1.0,
+      "joint_log_loss": 28.9016383265879,
+      "maximum_marginal_difference": 1.429629359339657e-09,
+      "maximum_iterations": 215
+    },
+    "fitted_dependence": {
+      "gamma": 1,
+      "joint_log_loss": 28.9016383265879,
+      "maximum_marginal_difference": 1.429629359339657e-09,
+      "maximum_iterations": 215
+    }
+  },
+  "before_benchmark": true
+}

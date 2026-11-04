@@ -1,0 +1,9 @@
+{
+  "model": "diwali0.8",
+  "selected": "unit_dependence",
+  "definition_sha256": "caf8b0c9558129efbc104613e58960cee203b34ce82ca7b25d5ab40642829ee4",
+  "weights_published": false,
+  "raw_data_published": false,
+  "recent_live_accuracy": null,
+  "not_certified_perfect": true
+}

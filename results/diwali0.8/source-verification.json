@@ -1,0 +1,12 @@
+{
+  "parent_files_checked": 9,
+  "all_parent_hashes_unchanged": true,
+  "training_sources_unchanged_since_start": true,
+  "source_sha256": {
+    "research/diwali/coupled.py": "b6ecf87ea9df64511098412791ddd06b9ebe22272ca4c3e9e21f12a180805641",
+    "research/diwali/coupled_train.py": "b9edb319397363b97d01f6a6c8ae24f6d7f6c3b9ec689c96bd5cb4659dfac3cb",
+    "research/diwali/coupled_serve.py": "30c558422ef0e1a7756ece8e8df1fdf18650ac729853e33d921b57654d7e6bdf",
+    "research/diwali/price_chart.js": "3d145bdff38c33728d88c87fcf1de64c2334041b122fdf6b6e9aa5269a36ca90",
+    "tests/diwali/test_coupled.py": "242526af9b2924bfe277412bad16181f0c92f08a58db5f397ff2b3a04daf60a3"
+  }
+}

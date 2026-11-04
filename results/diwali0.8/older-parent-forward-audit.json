@@ -1,0 +1,16 @@
+{
+  "state": "bounded_forward_prefix_verified",
+  "capture_complete": true,
+  "completed_raw_manifest_verified": true,
+  "source_records": 229084,
+  "input_snapshots_replayed": 38,
+  "pre_target_forecasts_recomputed": 38,
+  "matured_outcomes_verified": 477,
+  "max_recomputed_probability_difference": 0,
+  "minimum_committed_lead_seconds": 44.911057,
+  "scope": "Source receipt replay, immutable input/forecast bytes, frozen model recomputation and then-available outcome scoring. Not a calibration or profitability proof.",
+  "training_ready": false,
+  "native_capture_state": "stopped",
+  "pending_forecasts": 12,
+  "not_a_diwali08_prospective_test": true
+}

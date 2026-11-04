@@ -1,0 +1,42 @@
+{
+  "by_day": {
+    "2026-10-24": {
+      "n": 1405,
+      "joint_loss_difference_08_minus07": 0.05810826190068654
+    },
+    "2026-10-25": {
+      "n": 1394,
+      "joint_loss_difference_08_minus07": 0.030817832031483344
+    },
+    "2026-10-26": {
+      "n": 1408,
+      "joint_loss_difference_08_minus07": 0.10073932893920366
+    },
+    "2026-10-27": {
+      "n": 1380,
+      "joint_loss_difference_08_minus07": 0.025802500156441244
+    },
+    "2026-10-28": {
+      "n": 1399,
+      "joint_loss_difference_08_minus07": 0.055851787469753646
+    },
+    "2026-10-29": {
+      "n": 1414,
+      "joint_loss_difference_08_minus07": 0.031081003980032055
+    },
+    "2026-10-30": {
+      "n": 1413,
+      "joint_loss_difference_08_minus07": 0.07838184564200242
+    },
+    "2026-10-31": {
+      "n": 1373,
+      "joint_loss_difference_08_minus07": 0.017124549448438692
+    }
+  },
+  "equal_day_joint_loss_difference": 0.0497383886960052,
+  "day_resample_95pct_interval": [
+    0.032087206589584166,
+    0.06980650254049414
+  ],
+  "scope": "Exploratory 8 inspected UTC days, overlapping origins, no fresh significance claim; positive means0.8 worse0.7."
+}

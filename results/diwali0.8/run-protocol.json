@@ -1,0 +1,86 @@
+{
+  "model": "diwali0.8",
+  "task": "fit coherent dependence while preserving0.5 predicted marginal distributions",
+  "parents": {
+    "marginal": {
+      "root": "data/models/diwali0.5",
+      "checkpoint": "data/models/diwali0.5/near_weighted-17.pt",
+      "checkpoint_sha256": "30279c15acfab578a3af492d3fa180c8d469982d54b29e2bea31553dd23ec0ae",
+      "report_sha256": "134a711d419c8a11f84abc845d17be52dc289b50c9dcc65dc855a73b118ecc79",
+      "temperatures": [
+        0.9716279515771067,
+        1.0292005271944284,
+        1.059253725177289,
+        1.0292005271944284,
+        1.0000000000000004,
+        1.0292005271944284,
+        1.059253725177289,
+        1.0292005271944284,
+        1.0000000000000004,
+        1.0000000000000004,
+        0.9716279515771067,
+        1.0000000000000004,
+        1.0000000000000004,
+        0.9716279515771067,
+        1.0292005271944284
+      ],
+      "colour_temperature": 0.9172759353897799
+    },
+    "dependence": {
+      "root": "data/models/diwali0.7",
+      "checkpoint": "data/models/diwali0.7/joint_control-17.pt",
+      "checkpoint_sha256": "912a009a3a7002a2a532a00d708378f7e681c513f77d899272b9cf595640c669",
+      "report_sha256": "66e63669aea2d446423b8c2688cba78d64abc5301d67dcc0d4afe5e16f2248a7",
+      "temperatures": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "colour_temperature": 0.9716279515771067
+    }
+  },
+  "learned_parameters": "one dependence exponent gamma; both neural networks frozen, no neural retraining",
+  "training_gamma_grid": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1,
+    1.25,
+    1.5,
+    1.75,
+    2
+  ],
+  "fit_origins": "2048 deterministic evenly spaced fit origins only; conditional target labels used only in joint loss",
+  "variants": [
+    "independent",
+    "unit_dependence",
+    "fitted_dependence"
+  ],
+  "selection": "lowest development joint log loss among three declared variants, fixed order breaks ties",
+  "matrix_scaling": "positive kernel max(T,1e-30)^gamma; predicted row/column constraints; relative tolerance1e-8,max2000; failure stops run",
+  "invariant": "normalized chain forward marginal differs from0.5 targets by at most2e-7 absolute probability",
+  "calibration": "no new temperature fit; use frozen parents including their prior calibration; calibration partition is descriptive, not independent",
+  "data_flow": "parents used fit/development/calibration previously; scalar fit uses their frozen outputs. No pure-crossfit or fresh calibration claim.",
+  "limitations": [
+    "Repeatedly inspected October benchmark.",
+    "Scalar coupling cannot improve direction because marginals are preserved.",
+    "Finite price bins, unknown within-bin state and hidden/future orders.",
+    "No exact market-probability or trading guarantee."
+  ],
+  "reference": "https://proceedings.neurips.cc/paper_files/paper/2013/file/af21d0c97db2e27e13572cbf59eb343d-Paper.pdf",
+  "source_sha256": "b9edb319397363b97d01f6a6c8ae24f6d7f6c3b9ec689c96bd5cb4659dfac3cb",
+  "coupling_source_sha256": "b6ecf87ea9df64511098412791ddd06b9ebe22272ca4c3e9e21f12a180805641"
+}

@@ -1,0 +1,29 @@
+{
+  "checks": [
+    {
+      "width": 1440,
+      "page_errors": [],
+      "page_overflow": false,
+      "actuals_before_predict": 0,
+      "actuals_after_predict": 0,
+      "forecast_columns_after_predict": 15,
+      "actuals_after_reveal": 15,
+      "case_change_clears_forecasts_and_actuals": true
+    },
+    {
+      "width": 390,
+      "page_errors": [],
+      "page_overflow": false,
+      "actuals_before_predict": 0,
+      "actuals_after_predict": 0,
+      "forecast_columns_after_predict": 15,
+      "actuals_after_reveal": 15,
+      "case_change_clears_forecasts_and_actuals": true
+    }
+  ],
+  "visual_inspection": [
+    "Desktop forecast rectangles and price labels",
+    "Mobile reveal overlays and axes"
+  ],
+  "screenshots_kept_local": true
+}
