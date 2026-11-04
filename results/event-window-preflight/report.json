@@ -1,0 +1,51 @@
+{
+  "state": "complete",
+  "sources": {
+    "/Users/solminde/Developer/Personal/100_TO_750k/trading-ai/research/market_data/verify_event_windows.py": "95aba8ca0c6f434c3a0d03946dfe2f0fc56b2d4ac81974998ed2146022d5e3a4",
+    "/Users/solminde/Developer/Personal/100_TO_750k/trading-ai/research/market_data/event_windows.py": "3d8f8089f262e574b50cec4b6af03d51798f125384801aed4721a02d19101884",
+    "data/btc-perp/event-replay-preflight-20261104-v3/report.json": "f896fbd734509c601a47c9d8d943c8decda2bbfef4df905be784554f80198671",
+    "data/btc-perp/trade-events-preflight-20261104-v1/report.json": "3d97cb78ccff5e7371c9728ff98234111ae0a2ba48bd33853dac789245da25c0"
+  },
+  "hours": [
+    {
+      "hour": "2026-10-05T00",
+      "raw_trade_fields_exact_rows": 142367,
+      "windows": 8,
+      "minimum_events": 3315,
+      "maximum_events": 8308
+    },
+    {
+      "hour": "2026-10-05T12",
+      "raw_trade_fields_exact_rows": 87270,
+      "windows": 8,
+      "minimum_events": 2920,
+      "maximum_events": 4588
+    },
+    {
+      "hour": "2026-10-12T00",
+      "raw_trade_fields_exact_rows": 77228,
+      "windows": 8,
+      "minimum_events": 3024,
+      "maximum_events": 4819
+    },
+    {
+      "hour": "2026-10-12T12",
+      "raw_trade_fields_exact_rows": 213913,
+      "windows": 8,
+      "minimum_events": 2874,
+      "maximum_events": 29965
+    }
+  ],
+  "windows": 32,
+  "rejections": {},
+  "retained_all_events_in_each_accepted_window": true,
+  "cutoff": "strictly before freeze; prefix-max source availability; timestamp groups do not identify cross-feed causal order",
+  "training_ready": false,
+  "limitations": [
+    "Four sampled fit-only hours; no sealed evaluation split yet.",
+    "Row-reference windows only, no fitted features or model.",
+    "One-second maximum accepted-update gap required.",
+    "No clipping/truncation; variable event counts need a suitable encoder.",
+    "Historical provider clock provenance remains unresolved."
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "state": "complete",
+  "protocol": {
+    "hours": [
+      [
+        "2026-10-05",
+        "00"
+      ],
+      [
+        "2026-10-05",
+        "12"
+      ],
+      [
+        "2026-10-12",
+        "00"
+      ],
+      [
+        "2026-10-12",
+        "12"
+      ]
+    ],
+    "source_hashes": {
+      "trade_events.py": "04538fb8af9c58c1d5641fc4d3b253539ba907a0fbc92f282338cb60f2b86c77",
+      "trade_event_scan.cpp": "28242c727e573e3bc9bfd1a86eeeacfce9d3c21d106215503d100cea0c4ea1ff",
+      "feature_scan.cpp": "bffbb306b27d68a1004e067846e513db957bf65b44e3652f85248a4ca61887ce",
+      "archive_scan.cpp": "c8da51f348f5b8fbcdaa8033fdf7236ab174659fa7340891ff55fd8a97baeaf4"
+    },
+    "archive_manifest_sha256": "bfc97147330ef1b0f1c838efb47da04eb9b6e1f3673adfae02ea8d4ba22b9a03",
+    "integer_scale": 100000000,
+    "buyer_maker_means": "seller was aggressor",
+    "retain_nonmarket_and_bad_markers": true,
+    "training_started": false
+  },
+  "parent_seconds_sha256": "24a9ba88f46ed3648c818139b38f20eb10c2b9b09db63ad6345f71b3e5d9ade2",
+  "hours": [
+    {
+      "hour": "2026-10-05T00",
+      "source_sha256": "01c962ac7499a00809a4f16a2ef28fab2d3c9c7cf294650390bab83cdf132749",
+      "warmup_source_sha256": "a3a4426b35eb76e79c3f466a9dc8c28593643d904f5048cc24c534019b0abe0c",
+      "rows": 142367,
+      "market_trades": 141691,
+      "nonmarket_markers": 676,
+      "bad_rows": 0,
+      "original_grid_rows_byte_equal": 3600,
+      "event_sha256": "7cfa5d4b60ab222bc578690579e76796f0ca2e414851a90b729a570cab6aec7b"
+    },
+    {
+      "hour": "2026-10-05T12",
+      "source_sha256": "1b39262d2ac7c57b1d1a7cfaf8da60b9bd0b907b668587b0df588c745fae5e58",
+      "warmup_source_sha256": "ba9e5bf33f95f1a1eb9fead5fc9f560dbe3497f63875f9f17ec9c581db0db1de",
+      "rows": 87270,
+      "market_trades": 86725,
+      "nonmarket_markers": 545,
+      "bad_rows": 0,
+      "original_grid_rows_byte_equal": 3600,
+      "event_sha256": "4c8478d9436c5ff155b44f56c96f414cc5a2040acb855ae10fe3dbae44f99dfc"
+    },
+    {
+      "hour": "2026-10-12T00",
+      "source_sha256": "47dcb14e85368684b7defe0102dfc9beb1e96bbab3db67773c6236c3afcfe68e",
+      "warmup_source_sha256": "7302ba6039529ed8876489d75fddafb519798e55270b5d765a552a5abf66321a",
+      "rows": 77228,
+      "market_trades": 76774,
+      "nonmarket_markers": 454,
+      "bad_rows": 0,
+      "original_grid_rows_byte_equal": 3600,
+      "event_sha256": "b1b722c6e1179000b269241b391e0d506184102d4171baa9be1b23168501a794"
+    },
+    {
+      "hour": "2026-10-12T12",
+      "source_sha256": "5c2b575d9cbe79d6a4af4b05cab692040d8481ae191cf841c8cfb467538a47eb",
+      "warmup_source_sha256": "963d8eeb5b159dcc3f1c9b96eb85db113480b4f3d9ffa68699b897de20c1e59f",
+      "rows": 213913,
+      "market_trades": 213369,
+      "nonmarket_markers": 544,
+      "bad_rows": 0,
+      "original_grid_rows_byte_equal": 3600,
+      "event_sha256": "a957f9a03b71416f14e387a625d5caa14a3c6b168cfefb4d62ea0cb9eb0dab7a"
+    }
+  ],
+  "elapsed_seconds": 2.9610040187835693,
+  "training_ready": false,
+  "limitations": [
+    "Four fit-only hours; not whole-month continuity.",
+    "Retained provider times do not prove original exchange receipt times.",
+    "Nonmarket placeholders remain markers, never market fills.",
+    "No cross-stream causal order or hidden order identity inferred."
+  ]
+}

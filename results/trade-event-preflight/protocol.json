@@ -1,0 +1,31 @@
+{
+  "hours": [
+    [
+      "2026-10-05",
+      "00"
+    ],
+    [
+      "2026-10-05",
+      "12"
+    ],
+    [
+      "2026-10-12",
+      "00"
+    ],
+    [
+      "2026-10-12",
+      "12"
+    ]
+  ],
+  "source_hashes": {
+    "trade_events.py": "04538fb8af9c58c1d5641fc4d3b253539ba907a0fbc92f282338cb60f2b86c77",
+    "trade_event_scan.cpp": "28242c727e573e3bc9bfd1a86eeeacfce9d3c21d106215503d100cea0c4ea1ff",
+    "feature_scan.cpp": "bffbb306b27d68a1004e067846e513db957bf65b44e3652f85248a4ca61887ce",
+    "archive_scan.cpp": "c8da51f348f5b8fbcdaa8033fdf7236ab174659fa7340891ff55fd8a97baeaf4"
+  },
+  "archive_manifest_sha256": "bfc97147330ef1b0f1c838efb47da04eb9b6e1f3673adfae02ea8d4ba22b9a03",
+  "integer_scale": 100000000,
+  "buyer_maker_means": "seller was aggressor",
+  "retain_nonmarket_and_bad_markers": true,
+  "training_started": false
+}
