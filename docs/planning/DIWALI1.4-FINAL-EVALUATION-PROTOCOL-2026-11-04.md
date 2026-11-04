@@ -10,6 +10,8 @@ The fixed histograms, conditional-volatility histograms, logistic and boosted-tr
 
 The primary model build remains gated on the complete August development report. `event_final_train.py` recomputes its frozen family-selection rule and then fits fixedseed17on August, selects a checkpoint on September1–7and calibrates on September8–14. It does not compute a final-score partition. Both its data wrapper and the ordinary partition helper deny final scoring without a deliberate release.
 
+`event_build_when_ready.py` is running as the continuation for this stage. While waiting, it verifies that the specific development process is live and still running the expected study command; a state file alone is not accepted as proof. A failed/terminal study without a complete report makes the continuation fail rather than start another fit. After a valid completed decision it fits the final model and runs the nonfinal preflight. It stops before release, final-period preparation or scoring, and refuses existing final-build output paths. Current local state is in `data/models/diwali1.4-final-continuation-v1`; the development study remains `data/models/diwali1.4-development-exact-v2`.
+
 ## Nonfinal engineering preflight and release
 
 Before opening the reserved period for model evaluation, `event_final_preflight.py` must exercise the selected model and all four baselines on ten already-used selection inputs. It checks finite15×26probability outputs, normalization and CPU/MPS agreement when MPS is available. Existing selection labels are loaded for the verified loader but are not used to score this engineering check. This does not consume the reserved final test.

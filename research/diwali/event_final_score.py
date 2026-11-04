@@ -72,6 +72,10 @@ def main():
                   'Only quality-approved book windows and masked-history contexts are represented.',
                   'Historical provider timing is not proven exchange-original receipt timing.',
                   'Probability scores do not establish profitability or perfect conditional probability prediction.']}
+        quality=json.loads((a.cohort/'report.json').read_text());context_quality=json.loads((a.cohort/'candles/report.json').read_text())
+        report['quality_coverage']={name:quality[name] for name in ['origins_considered','joined_contexts','labelled_joined_origins','input_rejections','target_rejections','event_rows','minimum_events','maximum_events']}
+        report['quality_coverage']['masked_context_minutes_across_overlapping_inputs']=context_quality['masked_context_minutes']
+        report['paired_difference_sign']='Negative model-minus-baseline log loss favours the model.'
         save(a.output/'report.json',report);finish(ticket,a.release,'complete',a.output/'report.json')
     except Exception as error:
         finish(ticket,a.release,'failed_after_final_claim',error=error);raise
