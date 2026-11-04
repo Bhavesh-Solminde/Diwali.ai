@@ -1,0 +1,1456 @@
+{
+  "state": "complete",
+  "protocol": {
+    "start": "2026-07-31T00:00:00+00:00",
+    "stop_exclusive": "2026-08-02T00:00:00+00:00",
+    "source_hashes": {
+      "event_shards.py": "66fc82a590648a92ae17b756e9ff28e4bd7f51756d4e31a1d0ebbe217138e59a",
+      "event_replay.py": "b1867c134c9950e011232e00f4e42532702deaa04141dc8ebd72a229054659b6",
+      "event_scan.cpp": "ae04b0d59eb9e8850802bac683326d875a02b87f80241e33b2b7d87c84e57aa7",
+      "trade_events.py": "04538fb8af9c58c1d5641fc4d3b253539ba907a0fbc92f282338cb60f2b86c77",
+      "trade_event_scan.cpp": "28242c727e573e3bc9bfd1a86eeeacfce9d3c21d106215503d100cea0c4ea1ff",
+      "feature_scan.cpp": "bffbb306b27d68a1004e067846e513db957bf65b44e3652f85248a4ca61887ce",
+      "archive_scan.cpp": "c8da51f348f5b8fbcdaa8033fdf7236ab174659fa7340891ff55fd8a97baeaf4"
+    },
+    "archive_manifest_sha256": "bfc97147330ef1b0f1c838efb47da04eb9b6e1f3673adfae02ea8d4ba22b9a03",
+    "all_rows_retained": true,
+    "lossless": true,
+    "final_period_denied": true,
+    "training_started": false
+  },
+  "hours_including_warmup": 49,
+  "hours": [
+    {
+      "UTC_hour": "2026-07-30T23",
+      "warmup_only": true,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "2ae2f148ca9566010f8969d61c3cca1a8bfdcaa3d791bc7d1178803c8b8b5af6",
+          "decoded_binary_sha256": "a898d234b5e8be94357c98f7c69671889085b9cca41bcaacd1008a00cbce0ffd",
+          "source_sha256": "902dc13acc00c17b9a98c196a1572a6e9c224f7b5751579cd8e8ae0a5c652263",
+          "quality_sha256": "6e3ef98114373b719efd3232ba13e5bd7c2d429227e16fb4200700de5a2278b6",
+          "rows": 133370,
+          "uncompressed_bytes": 94959440,
+          "stored_bytes": 3320625,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "636233ebd27900a2ecc7be633010545fc29a49b1a62e23c654e3226b318ce3c7",
+          "decoded_binary_sha256": "bcd72ffa6639e195dc1a7b2c93a49e196f4f75fb78d814a6393c3f7223fa40aa",
+          "source_sha256": "9f946582ee407b3034a467cef5db51f6a8efd2e9c86fbdff8d3f88d1c71e5613",
+          "quality_sha256": "3783b38d360daedeaab1ecb5859e23947c160b6e1be6a7f4283c30235266671b",
+          "rows": 92742,
+          "uncompressed_bytes": 6677424,
+          "stored_bytes": 1117778,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T00",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "9ae121ec29681403b56ca1add18aca408ec66db66a773028d744bb19a9c59f85",
+          "decoded_binary_sha256": "79651db279594577ecab7211c014f496351f830089152b8dd983b1f0358c821b",
+          "source_sha256": "1b7ddc6de0b9f86b3e5b7dec0a551a4e24a1eedf247cf653221dfe61bff66dc1",
+          "quality_sha256": "46e62ee101e9536389804ab4d1dd91533d89734166e8184e6dcaab413a182662",
+          "rows": 133001,
+          "uncompressed_bytes": 94696712,
+          "stored_bytes": 3305346,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "62bbf173628368a3c79048fd5315ec91939198e9546a117de6645d590d6b2236",
+          "decoded_binary_sha256": "03e92b2f2becce68e616d4216f834531451eed044ffe1d04fdb8fd781fc0819b",
+          "source_sha256": "4026eaa695e81c27a96489440d24123ebe5d4217142600a345d831ee23f73445",
+          "quality_sha256": "9eb268620ee54558e4446ba9fe2c7488e91d14da644103c4ef3b1925ea598f22",
+          "rows": 79084,
+          "uncompressed_bytes": 5694048,
+          "stored_bytes": 981726,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T01",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "7aec0dc84073977482a5dfe614aa028bd39f5b78e90a46bad50968648917a6d3",
+          "decoded_binary_sha256": "2aa344d1c866c46705ac0cdc75b4a852814753ca6e0aa46c13a8b0fbfb401420",
+          "source_sha256": "591e0a86ce76a6997369a2dc280ca226df3559c0cf55bc5f48524390b76b0b3b",
+          "quality_sha256": "2e34deaea4503dc2843783f129b28c8f913186668df6da2c7f5fe016659297bd",
+          "rows": 134327,
+          "uncompressed_bytes": 95640824,
+          "stored_bytes": 3347799,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "d0019f833559f3ca144ddb5099b652fb91ed1274f3baacc14e574d576ec22ce9",
+          "decoded_binary_sha256": "9f4ad97409a4731dd268e8180dc0a77dba243e614ca989f250bb35a7fb5692ba",
+          "source_sha256": "b72eb77cd958c3c6645ab15f8ee67b6b8ffd6dcedd9f298e0a6112b6d4fada9e",
+          "quality_sha256": "1df4ee2ff0363382ebaed61fcd0993576f27d3c9fd7a9a184b51320562058cbc",
+          "rows": 301729,
+          "uncompressed_bytes": 21724488,
+          "stored_bytes": 3676029,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T02",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "976081ab2361bea39da084a1b38332d346fc9142dec0b4273680cd90430aac4c",
+          "decoded_binary_sha256": "6abfc6b55cd70744ee9c058520fa554da2a99f348f67c3b893ca8fa813c989c2",
+          "source_sha256": "cd5330daada109a1a3133aea65197ea5a2bda8f56cafeb0a442fd3d4403a1191",
+          "quality_sha256": "6c05067596c44e5aab3f8524c3454be9d168f1fe001fd40aca5bfcbd573b10ed",
+          "rows": 134027,
+          "uncompressed_bytes": 95427224,
+          "stored_bytes": 3345680,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "7a76934c9705c481ff5c4a41bbec040d8f1beaba7cd8d405b07e6959f817f8d3",
+          "decoded_binary_sha256": "a8d2b71c5589321834437306d3bbda1354193da9b7dee6c43c32bce1bd265324",
+          "source_sha256": "2478a574ebd3dd72c90d8ceef4990802ab1a07ba41d0b4e9e6ea3d97b5bf93ce",
+          "quality_sha256": "7cf2d0437d76b93d01b0bab3bb61a9b62a0f528e7e20f47e6b55eb3caf13e1d5",
+          "rows": 192074,
+          "uncompressed_bytes": 13829328,
+          "stored_bytes": 2344499,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T03",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "2032d811ab77d7dae2f84316255765d1e8feec88608bda1caebaf21318ab9d8c",
+          "decoded_binary_sha256": "b633bf580eccad094b322031310c947539773ac679826434ea7d0a7f34659246",
+          "source_sha256": "6ba66e5c93ddacb51b5cc0b79e449ddaa2185aa4b64aceb762216fe9a162a7bf",
+          "quality_sha256": "117db29f435d8cba41c860ba7e3e658ed9f6d3953edc13613ae310cda9cd5c91",
+          "rows": 133722,
+          "uncompressed_bytes": 95210064,
+          "stored_bytes": 3345093,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "50e40887d545a0420d97225387996e00af67c0b26bef06a921e4cbb085d1bc31",
+          "decoded_binary_sha256": "44edd4a4b864c0434898cec31875d206c9cb27303db9d58b287cb4d9c5db35d6",
+          "source_sha256": "58166efebf52c0e7f2b8c8b90dadfdf8d5d451f9b0a4aaae1a982a4bc634bf1d",
+          "quality_sha256": "af321122a59dd024a58c0738a726ee64188398ffac6a7ac67264e530aa13bc46",
+          "rows": 129326,
+          "uncompressed_bytes": 9311472,
+          "stored_bytes": 1580674,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T04",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "27b68d9ead6a400c8c313e68483f878e43827b60bdf404d4316f6b0c981c5d38",
+          "decoded_binary_sha256": "0a0ed82f67c2d04794a3f7ad6d126886e29950bee2fc6621a24b9e4decaabf24",
+          "source_sha256": "bf820b2e979715fa327dd2402e92363e6d1dd55a85b8724e623bdb27aa890084",
+          "quality_sha256": "6fef1666f4ba910e4763a9242ed77879b373b16bb41177d3731ffc095c63970d",
+          "rows": 133187,
+          "uncompressed_bytes": 94829144,
+          "stored_bytes": 3307063,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "ab1a8332fdf0727500946c134242c4b4d94ccba2fe0206281ba4d04f2dfa1fda",
+          "decoded_binary_sha256": "32cbba7161c27e730f42820925412afa3ac73915d090c5f0e459a3a1a76fc04c",
+          "source_sha256": "38d33a8d62feff30966218ae1dd2345db88eebc1714702d7b86af7c99acae026",
+          "quality_sha256": "628ebcd4b78c3d8388a54511b287936b714d5ea630c6b4a7d152c21a4e5f0c39",
+          "rows": 77456,
+          "uncompressed_bytes": 5576832,
+          "stored_bytes": 948178,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T05",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "ddc3495573e5eba4f0eb4c8452c628497055faeb5794c2c6b7e891592a359373",
+          "decoded_binary_sha256": "69e9503c9115e796c18897c68b48d82247d840dae079ca8ba52aa00553df278a",
+          "source_sha256": "7a6762a48f81dba63df59d9a421765325a8f7cbe5e07b31fd3cb21c1e8583be0",
+          "quality_sha256": "b5af637ec656715a2d3a53b6275a08e7f3f197ad018dca70508f105ce247c6a7",
+          "rows": 133098,
+          "uncompressed_bytes": 94765776,
+          "stored_bytes": 3306807,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "b08e60e9ab6f6517fb53c0bcf44cfc94fbc1ce3462b7fa601bf76487b0f9e763",
+          "decoded_binary_sha256": "23e50dcdcb8f748a7641517652d46160818a771fdb4a111313ac1aab9d9a281e",
+          "source_sha256": "1b639606dae5b0be4b0af3d6d911152f3ba6a47ceb522cddef828ede47e4dcdb",
+          "quality_sha256": "4a806c9fa5663b530679f2bf1407d0f574e9f55667b934f8c453b22a5d53a183",
+          "rows": 64033,
+          "uncompressed_bytes": 4610376,
+          "stored_bytes": 811630,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T06",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "09fb441d548fe2408cb64724f1752bdee89f7b120ca2969103033ba018adefd2",
+          "decoded_binary_sha256": "0bfd6809a51c2f06bd7bb01d67a5959a4fbf5f7da77eaa4e51b25fea472c607c",
+          "source_sha256": "c8418eb9baa7027bbe8299d2704d0f9466348560caedc5fc649bb958407923bd",
+          "quality_sha256": "20dd0501c1b6648221beecb380d64620784404884a562397969fb56f9f33b927",
+          "rows": 133226,
+          "uncompressed_bytes": 94856912,
+          "stored_bytes": 3321469,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "2fc0ddca7f78fd5a425a53096c84b9e2d98baf962c62c9cc77ec73c26d2f9acf",
+          "decoded_binary_sha256": "90660fb232199fd2820b83e2ec3a58891fb7f8354e5c8bb15357c0798a1ac6be",
+          "source_sha256": "464ea757afba32c8cad38337f3279491f271a1d9b06abff9a90976bd3c917b96",
+          "quality_sha256": "67d0814e08bb8173b7131ece3ad0aba320109271033114a551fb6fce656eedaf",
+          "rows": 83000,
+          "uncompressed_bytes": 5976000,
+          "stored_bytes": 1045305,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T07",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "5997d3d62d4253e4d99a065f7e3e69176a1306c46b6bcb776b5b09615e7306ef",
+          "decoded_binary_sha256": "9c013a5b1d0da8829a3cb648d5fcbb3305d6dd27fa2d0c271b56c6a1b48b7bc7",
+          "source_sha256": "8f61790611b191b6d117192fc70aed400cbc0c2d3124d935c2abf946c749641c",
+          "quality_sha256": "1bf84b4f78e5d1fdae35187a9c4843b69c5005110c88c635a208abe70ccdad40",
+          "rows": 134224,
+          "uncompressed_bytes": 95567488,
+          "stored_bytes": 3346953,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "abffeb31336bb890eec43e26137acc870c6c568a93a1d669d7892672b346c298",
+          "decoded_binary_sha256": "6cabb7eddef2b179556d50755c6fd61490ddc8aaf70c7e6ffb925cf96eea47e2",
+          "source_sha256": "59d487f4aab6658f6bf182673f04726c3cb7c9ff6695a2990e9c7914e639d4f4",
+          "quality_sha256": "e63adeeda1b2188e58f8e430aece2f7245e714fde5e14fbd06066d7648eefd29",
+          "rows": 166317,
+          "uncompressed_bytes": 11974824,
+          "stored_bytes": 2155994,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T08",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "19f103c161c629f1fe3557b23b92db48fdadf180dc7e7b7996e1715d153c6e79",
+          "decoded_binary_sha256": "81402bd1b48c1337ec10d7c42b11d6260e7dec961a98937bf6fded30e6f6b781",
+          "source_sha256": "faa50cb5d25a4fda7d2e2217e0ef40d684697b8b0ee8ee023168264d2fa223d1",
+          "quality_sha256": "b8935234a6354ba5fb83e3c38597d9488e52c1154cf30bd1159cb98ae9e2aeaa",
+          "rows": 133333,
+          "uncompressed_bytes": 94933096,
+          "stored_bytes": 3321903,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "9ff3928b56654e78c78bd933c65b3ff5375610a871a59e007071ef9400b368a9",
+          "decoded_binary_sha256": "11754e9634bb595ceff832a32097076c21daf0bdf278a4a6abacfad22df02f24",
+          "source_sha256": "2f6e977d2f5732d15a55cddfc56d97c1f4897fca5fa769f9d849db68ded7bc8c",
+          "quality_sha256": "a24b84297f088c9425d37a515c7f9e7d873830378c49cc6a63a3f1978a68be5d",
+          "rows": 105097,
+          "uncompressed_bytes": 7566984,
+          "stored_bytes": 1354254,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T09",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "984f37c19a74c8e614f187440bb6d83408b2f452d9eda039109b592feb528d72",
+          "decoded_binary_sha256": "23281b688514a41fae4843d299e799d59e6e6ac784bbfd44464532618e1dc651",
+          "source_sha256": "b495445b7639317085f4f5155e69ae7195b2e0b81458a8768082212b188cd7df",
+          "quality_sha256": "c5f31666f3d5d3ad6d05c1bdf244e3a2389b968d224efe20a114ad1c14797749",
+          "rows": 133287,
+          "uncompressed_bytes": 94900344,
+          "stored_bytes": 3320727,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "577b177a4d5b4fdf2fe650a4d93d3e700d523883245b58f15a717146038a0126",
+          "decoded_binary_sha256": "ac290249f97002af5e4682aaef49e475efd7c4616441273f55a396f09b4e588c",
+          "source_sha256": "d5dd42f6b77ba8b237ec79a8c6af91f2350897db4c9722acd21969c1fb04e509",
+          "quality_sha256": "98ecbc8e6306be8b24378a56bc4f866bcad81e4a111a938b59fd11ccffb1318c",
+          "rows": 108377,
+          "uncompressed_bytes": 7803144,
+          "stored_bytes": 1379113,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T10",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "4ef1a9c54d616cc6386c8b8d4f747f8fc5b298c91c73d594d2dd9975238e05d8",
+          "decoded_binary_sha256": "5de883b4e81262352094b69cec4e8b1d45a60e54bb1ca91ba193bafe6fc656cb",
+          "source_sha256": "7e98a96b5409034a520b8beb0669e6489bc9c49d270598bd39326e6c1170a697",
+          "quality_sha256": "71e12dddbe9efd4dee1dbfd17da8087aaba33653f3a0030cdf97a7399a7e3f73",
+          "rows": 133562,
+          "uncompressed_bytes": 95096144,
+          "stored_bytes": 3331534,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "3cec8e816c6b045e4b55a60c9c45fa5fbb7c253ee2b077607a2965cf0a9e8497",
+          "decoded_binary_sha256": "11852e6b076c5075a6e8365cc1f3522b675590a6f267dbd1afdbe65cbbe7c397",
+          "source_sha256": "09b7e3ab2ab703b9b927f1e87040504509b1b6a7f6cf8ba865f3087d2105e577",
+          "quality_sha256": "0c23b2d3061e65dd68b9b2ffabca5da56ace0717f668f3744cbee53e301963c0",
+          "rows": 91962,
+          "uncompressed_bytes": 6621264,
+          "stored_bytes": 1251679,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T11",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "a056a7bd99394d25075f83798e49579714aef8f21ca86df235cbb93d43500665",
+          "decoded_binary_sha256": "522b2c2692b97406e5b5cb06073e4b3a6b0112ca70f61c062c4f00a3928ddad3",
+          "source_sha256": "6e4cfd182c8708b9878d9205ed072cf44f17cf96877d68b1dd4fc5f6e1b5953f",
+          "quality_sha256": "03aeeec087167f3cb57c246856de014e87052805bcf65bd6bc62ac4ca02576be",
+          "rows": 133166,
+          "uncompressed_bytes": 94814192,
+          "stored_bytes": 3308986,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "bb56ac9e974c1a17e476ed209815769713ea23aad3aef9f25a84b8b80c5a4bdb",
+          "decoded_binary_sha256": "dd5870ebc3cc8c00cf47c734e7dd79522f203cfecd936693961a8d3fa2727a97",
+          "source_sha256": "e388d70123bd5630019522d3df874af7046fe96fdde72e166a1fa90a46795271",
+          "quality_sha256": "bb9f22b67e3ed8ac3f05354e791cceb89aef852a7c10b680669a233e2a8896e6",
+          "rows": 70670,
+          "uncompressed_bytes": 5088240,
+          "stored_bytes": 935061,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T12",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "122d4c550a3799f971cfda4550f6dd17f88e2208922a93bbd28b72b6ea0c26e6",
+          "decoded_binary_sha256": "a2202aca5a43213b309261184401a7dd0a5f22decf35ab226722a03bc0463ca2",
+          "source_sha256": "d96bf958daf0f1eaefcf6edf3f106bcd78da06ba46390ada3173addeaa37aee5",
+          "quality_sha256": "88e807044bd6d71072d7b1ee80d82cc4a69074180304788a7436455005e7c0b5",
+          "rows": 133434,
+          "uncompressed_bytes": 95005008,
+          "stored_bytes": 4224681,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "f4400b33285bbdd9d10dbaed07e297483f03c0738a5ca9f0a85023860a1289df",
+          "decoded_binary_sha256": "003c198e503fb02936e202b501d522810505d1604ff61f5775b1d724d3a3fb88",
+          "source_sha256": "e966e70e985d9c99634e169de9172295f2eec63f06f19f1b513e9d7c8aa09fb0",
+          "quality_sha256": "f1fe2a9e30c173221583a87c789a04eccf6eb1db49ffc903079df59172824c0f",
+          "rows": 98529,
+          "uncompressed_bytes": 7094088,
+          "stored_bytes": 1270155,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T13",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "6b68fd17896f6bba30c583783b76002d2c3b229b3dc1776a0fb034ff1ff03388",
+          "decoded_binary_sha256": "48dd3de7c486906d8116b3131938d1cf8751fbf534ae63d142668dffe88b4795",
+          "source_sha256": "3084ece29ef7fdfd9d2f43d5ebd218b98001efd528c58a3081396cce3b0cf577",
+          "quality_sha256": "d80ca0288ee24122ad0f6670ee03d2450039075f889f283648ff0dc2461f1a69",
+          "rows": 134514,
+          "uncompressed_bytes": 95773968,
+          "stored_bytes": 4534249,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "1d5fb10710b381711fae5e74246207180a882e7fc10c142fde1ed875b30400d5",
+          "decoded_binary_sha256": "7fcde5758543d12bca17ae68e30252082af1f42d82c162272f45067efa689397",
+          "source_sha256": "2a6ba3a2dd3eb34da2d9eddd7ca300d5ee201275768e85b43e43e9050523dff6",
+          "quality_sha256": "450f6144c3d2b20c8516b349b3d414a3aadb99ec7aea4133bafa21ec2f90ca03",
+          "rows": 279879,
+          "uncompressed_bytes": 20151288,
+          "stored_bytes": 3415282,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T14",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "a62e8ae416445adcc56eb0476355e0354f086f7acba1c28b75b6305303094644",
+          "decoded_binary_sha256": "3b30daa5404428d4145e327c332ff605e1d99671135d6e15289420b26883c86b",
+          "source_sha256": "3365d671160d32d0faf77d13247e9e34ed9db122d1e80e9d87c14d905610acbd",
+          "quality_sha256": "c946f74ac3a7ed09d8eb53dae73df29e71f137ca84298784b0a6912294fa2631",
+          "rows": 135882,
+          "uncompressed_bytes": 96747984,
+          "stored_bytes": 3936016,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "9c2ac3135cdc02f4ef36766e56fdbf06702bcd45e3b912ccfbc6f67548d36c81",
+          "decoded_binary_sha256": "197dd64d1477e79a788a9f6d85ee7810296cf711238fefa2174c41c14fae4eb3",
+          "source_sha256": "50cb777864e911e0a53f2a1e0b4da3a5d0b40c7186ec450df994613085e49523",
+          "quality_sha256": "54409b51afc99aefe8456e538c957b7c6af17035dca3dcec0058bfc1b82e63b8",
+          "rows": 619512,
+          "uncompressed_bytes": 44604864,
+          "stored_bytes": 7501265,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T15",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "a79f3f5fe3540e5c1fcee12c0646db86125e9e89583e109fb0d7ddfddb04d5e8",
+          "decoded_binary_sha256": "1682e367d53580f526f5e6b936a78c2ad7c3ca4f277c63a893fd67f6b4093bd0",
+          "source_sha256": "d1fa1e2634ca917340d2d9f9510a3f61a6df56ad670d9bf8d6260db6205a7420",
+          "quality_sha256": "85b77ad9d1109c214c377e46adbc6c09a1925430dcd8ad68aa86ff342a6e7ded",
+          "rows": 134656,
+          "uncompressed_bytes": 95875072,
+          "stored_bytes": 3890511,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "cfa1b7b7b754031ce70e8b9e2fa4b4ac51471a3faddcd516eaa739879d4f68a2",
+          "decoded_binary_sha256": "c6daf7e77d3356fdab605542ff06525a90131a63a08416e20a213cb33ca1819f",
+          "source_sha256": "12c331a777633d366a186b6af34caa96c634ebecca21f9264de780bf39c7ef0b",
+          "quality_sha256": "4919e3de9781348f5e0076b3c9879d2cec5aef8b7d0eb0efa0fe6eb00cdb8e12",
+          "rows": 209398,
+          "uncompressed_bytes": 15076656,
+          "stored_bytes": 2573091,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T16",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "a17d2a262e67613976af9b230b51f0ce97367723c367352a81e0cc0ffb81da0e",
+          "decoded_binary_sha256": "95b3930255dcd1004ee237b8270fbed1752f70c4a6a78b4a15363f37c508ca7b",
+          "source_sha256": "e5e2a0a50df1a16072312fad44f5a18b85d4fdf50f03db512b7d3fd0a1fa7400",
+          "quality_sha256": "fc13607883e1a30b0e61206727a6ec912e88dc9900eb1b85cc5c075b1ca19d72",
+          "rows": 134040,
+          "uncompressed_bytes": 95436480,
+          "stored_bytes": 3881248,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "615a6228f7d26e27d81eae60ad0cd20bd2c06e941599dc5a543e2bb0e47dc669",
+          "decoded_binary_sha256": "82a1aa393f5d96598f3ea245e597717dacd3ddbb00bdfccfb73fa8249d8b06ed",
+          "source_sha256": "d61cbd70d4efd5835505efcbba191f68b29db4f512b128c7053b352a30cd74ba",
+          "quality_sha256": "512ab91fe81e06778e640998b814c0451cf2cbff73be7707ab91b0dcc71f9ce8",
+          "rows": 143760,
+          "uncompressed_bytes": 10350720,
+          "stored_bytes": 1820339,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T17",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "54c000cf312d87881298ddc31c0cc5c1315ced2293a226dd3c0c6a2198de67dc",
+          "decoded_binary_sha256": "20d9d24de61fb5eeedf4c0449f703df817a197b7fc39b578e88205edfaa55fba",
+          "source_sha256": "7c9d42d152c77b146c4f2503f29b8a36cb64865354c73df6b288a194a53ed438",
+          "quality_sha256": "25dcb3333533dc08c4efa942dd3e266f50e2d91329abc38fceb26d6591d7ae2f",
+          "rows": 134099,
+          "uncompressed_bytes": 95478488,
+          "stored_bytes": 3875658,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "ca9535f3abd841495bb56524fe27faa01d0b5edf05d715492fce30f9534c624f",
+          "decoded_binary_sha256": "567792ac72792211122f23b45b657a00d826192e6922c24ee910e5c3ee18dce0",
+          "source_sha256": "99b732ba14a237689420a30bf519db8cb77ae795a3f4b34d75c5f19ece3c734c",
+          "quality_sha256": "80addcdaa8a589ab9fcbc14afe8d2b7096bddda4b7fe9ef70ac076a6f43ee9df",
+          "rows": 142873,
+          "uncompressed_bytes": 10286856,
+          "stored_bytes": 1794235,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T18",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "959f74f3426767393a701e2af087bdfe04dff0a17bc55fbfb6800b79f033f4c9",
+          "decoded_binary_sha256": "0b981d6261cb2077cac9e2b2ccd51ba189c09acb62c5110c15bfe21af1598222",
+          "source_sha256": "9650f62e77263f194a4cdeafd4da9634e0eabc1457a40deccd8ab1643ff02c43",
+          "quality_sha256": "087db6aaa9c6f5c8cdab08328ba18780c73bf8215231e72a43d2eb3446695038",
+          "rows": 133818,
+          "uncompressed_bytes": 95278416,
+          "stored_bytes": 3872630,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "4ebe57790b59f19e36e8fd9904951b8f33922c434c71c9c9380548d296713a3a",
+          "decoded_binary_sha256": "8500fc5236616e26a8c9c2e958c151a17e39b10300672f6a77dd2a77990c7d68",
+          "source_sha256": "70e52b10120e117ab366e001dcdfde172f2997585a417431391cf2cb67799ae2",
+          "quality_sha256": "a8c2f8f2c43b37eb92b440abf383c1cab0d357aa6cad7699c64717279f1ed2f6",
+          "rows": 105569,
+          "uncompressed_bytes": 7600968,
+          "stored_bytes": 1365726,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T19",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "55a8e5311004a61c281638fa3071d92564e73840077b23f3cf398e0afc81006b",
+          "decoded_binary_sha256": "1c8f023c6ed4e4c6a05bb10d999f890d9079642f9fe652c602ddba0a7e5a1614",
+          "source_sha256": "a9387e7d40c25bc9f92a222cd953e9e255816274e7c5407e52aeb3520e849c6d",
+          "quality_sha256": "58b21f53ae66cf6309c4a32ec13fd42d3e0e5e13b7fddf795dba76ead588f383",
+          "rows": 133456,
+          "uncompressed_bytes": 95020672,
+          "stored_bytes": 3848765,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "57f0e20870849398b6a381c58e18d857c8967f548529b61287839a1f5043ecf0",
+          "decoded_binary_sha256": "69b8abbcaac30ed838ede5aec6d3ba741bfc47b6d491f76b4ae880e73c54b66c",
+          "source_sha256": "a2b0afed41424884d6b48516b3f72cfb57f0762114e0ae638777d9e61470500a",
+          "quality_sha256": "9f0644bb03b1a7eb2950b2ae512fe5fd7518649f8d66395c7f19c249f03be08f",
+          "rows": 80089,
+          "uncompressed_bytes": 5766408,
+          "stored_bytes": 1031083,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T20",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "72a4cc373ee3b3e498f739b9cd18c13896796bdf6c596ab8183919055ad80434",
+          "decoded_binary_sha256": "68f7a9b258ddd798b2538735b7db3316dad3a6dba6f1381ddec22c00220db942",
+          "source_sha256": "2a463dd6daad35e65e4649c19817433d6ad195a9d9f272084ed579d7b162d8fd",
+          "quality_sha256": "70d356ba291ef9a11cbfafed275b8ff7dfb518ab88f637f90a531b7464b1a817",
+          "rows": 133329,
+          "uncompressed_bytes": 94930248,
+          "stored_bytes": 3847814,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "3bea55c64c1344af79ce344e719ac62fb945ec95f7b4284d0ec926bebad99786",
+          "decoded_binary_sha256": "f1fd439280a3c3fc109ba270865a500b9d8c3efad4d95711803edc4dde953237",
+          "source_sha256": "cb1ba4c211e69c9b1732de9eff938895b7a2b16b7f3e5f192ab9c8517208b39f",
+          "quality_sha256": "b7908fd50f0a079112be5cb2821b281e998e2701d4d781f06a7571c700cb7a34",
+          "rows": 56600,
+          "uncompressed_bytes": 4075200,
+          "stored_bytes": 727966,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T21",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "fbb1eac8f243f23cf6782fbdbe9348dab65b595d9b9b3fb98788d6eb290a9e5b",
+          "decoded_binary_sha256": "a157e2d9f8c518152656c14d7755e70698e437c26a1befa4ec1b43f090f73896",
+          "source_sha256": "54f9d699fe467287eef7c2c9074bbd936c344f0b6f8d9917ef6b5ca471cecbae",
+          "quality_sha256": "78a0528a8124d9758025f652de81d9af6eca700a2c10ed1194b1258fafb22b91",
+          "rows": 133357,
+          "uncompressed_bytes": 94950184,
+          "stored_bytes": 3846590,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "f2f5729018eb3afced94d44f12427a0c363103bceb8243bae6ad6dc7f71bbcc3",
+          "decoded_binary_sha256": "69411ec0956e544a571204bc23674ec5c71174b052ac69f4e9122c9ebb0ab829",
+          "source_sha256": "15594bdd1d856ff69ddbe5a44cecee2e039d411e468dcf7d7496119bd2d11727",
+          "quality_sha256": "c1f5ada69b037ce16854b95d9ad7607e6a8c42807af7b0a252fac7cf5f546c44",
+          "rows": 63168,
+          "uncompressed_bytes": 4548096,
+          "stored_bytes": 834947,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T22",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "9b94bc32984b581a8b385eb4a27016d5dc735283bd666ad05f80ad322e5ad3ec",
+          "decoded_binary_sha256": "67522c7a7988a53b78c7c8325a8ba3130533934cb6a5777391f7818e4c388068",
+          "source_sha256": "0d5712478a3666af0eece5cda0536661e20dc07fee4c0a03caf6e443743046c0",
+          "quality_sha256": "255758cce7ca3bd7abf3271a0fa13f59303a82daf64be70e5f404c5bfa7117f0",
+          "rows": 133130,
+          "uncompressed_bytes": 94788560,
+          "stored_bytes": 3837430,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "513bde7af7426f5781bbf589e13c570fe6a5d5d306e1c165afa8301b4b43aff6",
+          "decoded_binary_sha256": "5e2dc29fe8eab58a172ce282e1fc3356edeae00d0adb8de5247fc9e0c3828938",
+          "source_sha256": "c9ea7b04acede14e0fee026ea31d20cacd5717806f66eaf09f9a935d7a5b0e3f",
+          "quality_sha256": "baa6a078becba13c7397ea8a31a639ee02ab9e2fb35f612e050bfa24406e851e",
+          "rows": 48936,
+          "uncompressed_bytes": 3523392,
+          "stored_bytes": 619281,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-07-31T23",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "0182b2b44dfca49fe20c0a025d93ace8936d5e95a92e5283ba87c7ddd69a9b30",
+          "decoded_binary_sha256": "daf1c329cd2ea3d5d9ac5de895fbbd9526d2ee4c7e909949bf788b3f5ac84cdb",
+          "source_sha256": "689287e7abb9f116a9eb25a87abee4277666be87fa71c8a8ebb0d94072ed6b0b",
+          "quality_sha256": "79eaf7e0282fc0e3ed0952513b3e74e4e1b7d0f68541203b20ef8cdee13f4303",
+          "rows": 133045,
+          "uncompressed_bytes": 94728040,
+          "stored_bytes": 3833151,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "e57f63dd351c3de40275da09a2e0a884c162b10159dd13069f443fbc6b4b7920",
+          "decoded_binary_sha256": "65713ca2a7ba1236b34670c46b0b6fc0310e942925d2b91de06b1f841f5f0ad5",
+          "source_sha256": "7aaaf8abd586ec14df3c7032dd98dcacf69ca36f11be65cf152ff1039c62caef",
+          "quality_sha256": "beb0f3563ca9a1bfe8c5e8c4191504c80d613e54068e64bd553a6c5b1c691008",
+          "rows": 38788,
+          "uncompressed_bytes": 2792736,
+          "stored_bytes": 528639,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T00",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "6cfdbda62e417691c91f465311de91824e35f07bbcde713f1807641576396fa0",
+          "decoded_binary_sha256": "087e2d0f75d8e47fbcc02661b2545e2e9ac89e5013871fab124c423a26e1a84d",
+          "source_sha256": "88a0125fe8c070518cbb1e7ea2df2f24c757a8487cb90b4148e159f9db86ad67",
+          "quality_sha256": "4a83da560ae3099c1409e56d6319501c1a4486d73f98dbb98cad19ba099f3992",
+          "rows": 132727,
+          "uncompressed_bytes": 94501624,
+          "stored_bytes": 3830836,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "00fd6dd1e83d3023f17c598a1c5c168f011d1115d46d43ca76c1f91c46820531",
+          "decoded_binary_sha256": "794294383e7cebe10a22e4b71ea03782b6eae23023f541645637e4c19385ca01",
+          "source_sha256": "fe6c22c5cd4c758b50ff69c4992be4fa2e5a57d44eb4f50fdd0de9fcc805e3cc",
+          "quality_sha256": "cb83f68b0007838e11abb418f786eebeab68ad2b117ab143af62239cd2ac1709",
+          "rows": 49534,
+          "uncompressed_bytes": 3566448,
+          "stored_bytes": 664646,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T01",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "32c5fbd3e005e75cbf300ed29c6e47acf608bf2dd78c5e8426f9af0b0392c3ca",
+          "decoded_binary_sha256": "210aecd81370b103cb2bcd748e7d85db4f569cf019c85a4af5c541110e4062e6",
+          "source_sha256": "cc0327c3dd1768c67afbd89a4d931caf8d9de2394f81b8450c053f6d4a1cbfa8",
+          "quality_sha256": "fa56b3ba5390e5f5f514591c8cbf14526b7474a86a654014719a64d816f038e7",
+          "rows": 132584,
+          "uncompressed_bytes": 94399808,
+          "stored_bytes": 3830146,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "41cc438f2ddf82de7ea7e1955ccc24b22bf71754299ee522fe2ed781f25c37c3",
+          "decoded_binary_sha256": "4e401f6ef217d62b41fdb96365113ce02911f3b320722b6cefe23547af447072",
+          "source_sha256": "a5423a93cd091604723121941c9e935bbfdf9dc8a417a9454b51559ad61a3001",
+          "quality_sha256": "46a5824b4e7f23c116da9b291eb86a093af22503b9b2abdbff29a71a23c51fca",
+          "rows": 35106,
+          "uncompressed_bytes": 2527632,
+          "stored_bytes": 466299,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T02",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "b5a27c20b944be5dcda2be640d9333cfba3fdd41a3c7a0d8f9bbe1f3464f03f1",
+          "decoded_binary_sha256": "3e455e5232ad55a7de02de43a7aa7631aba49a55263f4b8b30383fedd8d83379",
+          "source_sha256": "9fa7f4723029e768751a95780b038e28d5764241ad773eb2c8214445af9626be",
+          "quality_sha256": "dc6422f1a85d4d18cddd625304a2583e5e80930483d77b7767dc88902a7743ac",
+          "rows": 132757,
+          "uncompressed_bytes": 94522984,
+          "stored_bytes": 3824603,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "383470105e59000cab144bf5210a28c77f19df47b3d8807ebf15e83b7e737242",
+          "decoded_binary_sha256": "e487d0900f7d30ef4ac54f064a7385bf818badcb2546e0137c001badaf9bf114",
+          "source_sha256": "4da2136d1ab7707f0271997ab879e4877b6d6181a79c04faf41130a8cbf65b3b",
+          "quality_sha256": "ea54b8f3620d180a2da7389e22667348d413ae86ec5abdb8c28f0f0e441d4501",
+          "rows": 38021,
+          "uncompressed_bytes": 2737512,
+          "stored_bytes": 545933,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T03",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "b94cea61923b322f5b2760bda495c50b21f4e9a12a0af75c60f3fa7777512a94",
+          "decoded_binary_sha256": "48da3275b0d574f46ec293392cd1ad886910fa76c1c9079a82f69e7e76bdb0f9",
+          "source_sha256": "9bc944a9c71f919b520e7084e78a1ee3ae9e3cd5cd65296bb9bbef193e3559e7",
+          "quality_sha256": "b0fd87d3b9c0aa69bc6939e55e1afa6b08cef12f5c3ff3f5a1a9811dff747c5d",
+          "rows": 132839,
+          "uncompressed_bytes": 94581368,
+          "stored_bytes": 3827382,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "39b200431bf8d47f862040e1c20d39caacc9ca72860481f139935ae5bcb21da6",
+          "decoded_binary_sha256": "d66124b74a8055a04b8677dc8aac54b270015000912f5237b2a3e41df22f933e",
+          "source_sha256": "cd8bb5ac2dc07aeff8776de8162a48b504478b71aa599efa9d47ef8c7bff7c2f",
+          "quality_sha256": "06bd195127e31ad595571d70038c0bbb7eee757eb65f7fc07d30acdfb3ab7c62",
+          "rows": 36398,
+          "uncompressed_bytes": 2620656,
+          "stored_bytes": 514295,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T04",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "de31a3fd4467f04f7569eeedca9fc6ef11cdff7202acaff2d224335ff5257f64",
+          "decoded_binary_sha256": "676b67905cd43476dd5a25c1105b93e2f55940a9d34fe76b623cd76cb6cb0a06",
+          "source_sha256": "eb73927b5e7c79e13f71ae718578f7ad2842d2cbe4c6b324f9b6941fed8c2d8a",
+          "quality_sha256": "874a1fda83e253beeec130f26597266def8f50f7dc9fd9ca4227d26947ca70d3",
+          "rows": 133096,
+          "uncompressed_bytes": 94764352,
+          "stored_bytes": 3831461,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "6309ac4b1eed3b0b57828385f808384745290d6cd2e9cbdb292fe2107489f92a",
+          "decoded_binary_sha256": "e03adb3af854dec0c62bd79765f02e6b7dee458b66e852622c7a037eb5d1905a",
+          "source_sha256": "09e07358bf8d58d3c3cea03d2fe5e02f34fdbedf17630f52043e6bf5e44c1585",
+          "quality_sha256": "70a88d864acaa4c0a623d8305e524ba36e4ee8b15cc61f31e486e62305391ffe",
+          "rows": 23513,
+          "uncompressed_bytes": 1692936,
+          "stored_bytes": 344269,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T05",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "d49f573873d89658ae73b8cbb1610ee66f61e497a466241b416242b118733e2a",
+          "decoded_binary_sha256": "efc3ed5cb0f5e58e17d74ce4b570300df9d1eb1fa0c05ec8aedd4fa7ec816b02",
+          "source_sha256": "127f0c89f1f0a819a7cae7b4604e65d2696fbeb1fd72390a15c1747a2cbbd465",
+          "quality_sha256": "8a18f504c5db29ad4ae25eafbd8fff0d25eb032efabf1378b28d6c46d543441e",
+          "rows": 134668,
+          "uncompressed_bytes": 95883616,
+          "stored_bytes": 3887239,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "cb6b025291d17b68811d4195f47bc82192fb157b74e111c3c075599bad2f7d2f",
+          "decoded_binary_sha256": "c4ac7afce4eea221f03fedcf0b82b7b642139c78fb26ef0aeee3141c851fe403",
+          "source_sha256": "c4d1f7aa0ab34b9995608dc1353a0d29b99652af28255b743c1377532a7ff1fd",
+          "quality_sha256": "682556a33b38d24930f1a9cd57803e89367fea1fb8db1673f939fcb610badfed",
+          "rows": 36162,
+          "uncompressed_bytes": 2603664,
+          "stored_bytes": 517583,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T06",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "b214424031f555305c9dc7614106d73df13836948218ea95e3a93b26b4fe5251",
+          "decoded_binary_sha256": "67a1e787b7bc08c0d21468feda29d05f28d29c877ebfa405d974e368cc254728",
+          "source_sha256": "389f29a1db404c6b4d48d96ded6341f777c78ff527708d7122aae5e085c7105f",
+          "quality_sha256": "857822161972f119134f719c645548da6b13b73cdb485bc51ff90f4a53f44ce7",
+          "rows": 134596,
+          "uncompressed_bytes": 95832352,
+          "stored_bytes": 3875618,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "eccf12a9d1c2f1c883c56e868a3c00cb05f208a8da0f97aca1d09191e46878a3",
+          "decoded_binary_sha256": "b515f46f116d09f530bfa58f7841481d340097f42f5181e18376aeb07d0842e4",
+          "source_sha256": "122bb8347164a5f001bd9d2ad3f96991734cf916d3f18dd4002040f6abb24826",
+          "quality_sha256": "a20a73bcca2ab428ce862f0307aa9f310fbe180ed2fad1d8b78a55e8f6dc87e1",
+          "rows": 27475,
+          "uncompressed_bytes": 1978200,
+          "stored_bytes": 412077,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T07",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "f214fb83a34f54d85d903d0f0cf7a1c2007fa0adb6255fedafd30e88487c3805",
+          "decoded_binary_sha256": "1edf99fd3f010613dc1abbfeb4b258f5a310633c8c108d9cab5e5423448bccce",
+          "source_sha256": "deeecf336aba72d2389ac9a793f2c9ff74f93775094a8696f0143a64d2d0efa7",
+          "quality_sha256": "76dda62a99c90bd1b7879bd66ecae842b3be86ed83955be80c1fdf5a0791a166",
+          "rows": 134489,
+          "uncompressed_bytes": 95756168,
+          "stored_bytes": 3886500,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "47cf05ba853a2affa1cb817298a032118a4769d81d64e761f68d9c9872b1f444",
+          "decoded_binary_sha256": "d28a9cc5758eca7f0b05d1a6ea1030b8ee7ceed92cc12f0112ca3ba6b95e113c",
+          "source_sha256": "0af54c687117d92e9eb35d44992f5c231d87c977aa7b13d27b7a6fa257c1b084",
+          "quality_sha256": "2382b1bccfd7567dbed09897c840170491cad1bd6d458b170b39e6417535bcdc",
+          "rows": 26520,
+          "uncompressed_bytes": 1909440,
+          "stored_bytes": 388612,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T08",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "fc755ecdef4e593dccd65b6324e3ba005b4c00eb4d73c532baf0dfa9c31b8c6f",
+          "decoded_binary_sha256": "23751b64ccdb98d0c060228a7c0dfd61f0a5bf175b868faafeba489b26f4d3e9",
+          "source_sha256": "c983a3ab639d17b9b77918a95d3014623e544ba35a25aa3d656f5cbef8569b71",
+          "quality_sha256": "1da9e27326786730937f565d853f248c8a8735cb4f3d59b822f734c962a2f897",
+          "rows": 134556,
+          "uncompressed_bytes": 95803872,
+          "stored_bytes": 3872024,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "e33a03e90cbf97634ebd956036a6c5a3193fd13650766c401268dbf5001701ba",
+          "decoded_binary_sha256": "cdf7523acfc1c8995fd955e0a4e6c598bedd8335436e5ad29dba51188d4d0b65",
+          "source_sha256": "b806e8bff2c6de1ea9a667e9e31979a101fe6c552edbe2d175c4abe53ace4514",
+          "quality_sha256": "a209c77bfe22a9e9e667002ec7fe6a32f380220fa92f8daf3790be188cbaabbc",
+          "rows": 21474,
+          "uncompressed_bytes": 1546128,
+          "stored_bytes": 342795,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T09",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "c3d357d66f96a6107267f84e862ca9d25a88ca6d9251f59bd030109eadafa709",
+          "decoded_binary_sha256": "02510788d2997ede5aa5588f5bcd6a1ef71cd6c63d90803efec726c67394e500",
+          "source_sha256": "9081330da57ce61d7a6ca9c0f38bac289049acf100e53544183818093e7022ad",
+          "quality_sha256": "62c78ae3df879ccf91dd3ba52082d392c6eb1722e637862baaa80d9d9bc87da8",
+          "rows": 134453,
+          "uncompressed_bytes": 95730536,
+          "stored_bytes": 3870931,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "447e5b08f13cca8a6fae510639adbdbe64e7c3d6c3146b94dfcb55f2a7903bf3",
+          "decoded_binary_sha256": "97ae461bd8008bdfa4233a53324846d72e27fd840ba651e62ad3d9e148374c5f",
+          "source_sha256": "b0cba710403e88c6fc07e193cbc2198b8a6f9b7cced19024442734eb0b1fceb5",
+          "quality_sha256": "2194ee6c0a8cc0dc6dcb38c59e7c47d5daf3e68af4fd351dc92ec40139bda2ea",
+          "rows": 25225,
+          "uncompressed_bytes": 1816200,
+          "stored_bytes": 373033,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T10",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "b8af42bf7f79b37d3314456be5f93c5d6cb86cf81ef82efbd11043fe5b0142ba",
+          "decoded_binary_sha256": "18330af23bb04018ab9b4500ec276384c0d300a6dfadcb822c38396b68ae4ee3",
+          "source_sha256": "3eb9c6a5cec982c9b248af756de9ce7b4e791241d28c658093df0ed0fa4de91f",
+          "quality_sha256": "8d4d99381d040aac977b7c2b24d29b3d9c73c7953821be87d76620f60b772264",
+          "rows": 134345,
+          "uncompressed_bytes": 95653640,
+          "stored_bytes": 3872304,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "2f70e0b6cc777312cd2dbb0aca0a455104428ebca61a8b01e9719fa62eb6bf17",
+          "decoded_binary_sha256": "3b58cb74b303d3b4a21d0127e1382b2b19c1bdb9fe735fcc1a206061e4b81e13",
+          "source_sha256": "8c179e8faa4460d3c49dd2c12bbfc805a04f7752b0ca7f41215771da51cb3320",
+          "quality_sha256": "eb7d5e43dc0d0fb889aa6df94f306527185310ec3690e2bba9ff3e251e0a3fbc",
+          "rows": 32874,
+          "uncompressed_bytes": 2366928,
+          "stored_bytes": 468739,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T11",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "5a95afe043df78ee4afd84f57fa8ee71e067c2ef2226ab8a65cea500747ed588",
+          "decoded_binary_sha256": "0657b2b801abb091fe127dc3d1771a19fc87f4848fa34e69542a091bd3f525f0",
+          "source_sha256": "d53f5b4a2b0641dca15a46821da2bd7d2d3b26d14e029a1f8f20c36c2c469d62",
+          "quality_sha256": "c5decc32c57d8b5e57d4842bfd505a31f224dddfcf92a4be60c105b1a84fe2ef",
+          "rows": 134237,
+          "uncompressed_bytes": 95576744,
+          "stored_bytes": 3877291,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "e5ef88744859b529c28409b4aa6c45cd89d5ef61fa3ae0216edbe4c5ae8bda5e",
+          "decoded_binary_sha256": "82ad0b35ad484ad456fbbc30367507fb255935d74aa631213464c2b2f7e9b210",
+          "source_sha256": "73cb5917eeb332b404d0a65bb0d3db16cde59e1e7b837f35a913742ba66fcbcb",
+          "quality_sha256": "ec6a10887d7ee4da9804da0a3e8a9b39480c391a92888e0b02a314d1a052a977",
+          "rows": 17113,
+          "uncompressed_bytes": 1232136,
+          "stored_bytes": 267972,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T12",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "10b222c0eb4445a5b200f51c7bac0e44f10b0d17133e75bf1bf794a2671824e2",
+          "decoded_binary_sha256": "2659562727db25b74b8d454c6a759eb92b40bb4aaf0560954370f3565651cf4d",
+          "source_sha256": "b24862b20062d0b6c76e67ab8f8d430742457adb95b0aec8f9933c599cdf740d",
+          "quality_sha256": "27c78e51f7539231ff72af484380ea08a885eb7d1b20f38e0c770139aaf151ff",
+          "rows": 134221,
+          "uncompressed_bytes": 95565352,
+          "stored_bytes": 4402338,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "7f9330503c16671a9f53460a5547f12b1b532fb8476c22e75354d80f56616a6b",
+          "decoded_binary_sha256": "06e08cac872d4b9b3d96bfb90163df0ff32730eef4ccf3195c48420ad2e0b5f2",
+          "source_sha256": "bbbe9af32c2db03efcb8c3c1fd8d8a4f6f356a1bd6661f6ffedc3fe09a34001b",
+          "quality_sha256": "54a4288bf46014d66bd06eeb770ee3239d626ce7dcd487c57e64adc255f79bc8",
+          "rows": 22366,
+          "uncompressed_bytes": 1610352,
+          "stored_bytes": 348632,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T13",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "e18415cf5267948a80b4a94ffc98969092b450a62e852e3fb28b5f7cb961ed58",
+          "decoded_binary_sha256": "f6ed581bf8e556a81c9cb9c6ca4ff376005b5ab995626a670b4cbcfff20b9929",
+          "source_sha256": "fc83a51b885ed74e795be76eeba11560a4942c693b4ef1ce0a28ea02cfde2482",
+          "quality_sha256": "9f75d33f07299b3b31e3944f1305375a82cae63537a72fe030020246882619cb",
+          "rows": 134162,
+          "uncompressed_bytes": 95523344,
+          "stored_bytes": 4990152,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "d3431c85bf0e355f67817c9f7882b396c164d9836f319099618cb005b7ea8569",
+          "decoded_binary_sha256": "c4a9aa356c15a8e3cc5fd19860a0d83877e43b7986a39b8a4d9e02501bd8dc73",
+          "source_sha256": "3a58361662b42d3998ae0ba57cc98ad3ebb9731ee7bec08ba12eaa82c335ce59",
+          "quality_sha256": "4aa86c20602a5c0599b7cb3bbc060c60c27d005a446c078c43aa0731c2897084",
+          "rows": 19658,
+          "uncompressed_bytes": 1415376,
+          "stored_bytes": 310324,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T14",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "b5e2780bb577e8177b9e517ae1bbb6978f18fea64aa11d795446fcd09befee1c",
+          "decoded_binary_sha256": "3bc6f2610ca649ea9e6e8a18c2d351fddaa3345cca809ac2bd740c319221c599",
+          "source_sha256": "60581876de4abd5e33db88c95fa8343d4b8b750a61bfb885c599b655d1ea755d",
+          "quality_sha256": "79a76c6cf6ed162dd5ae95581cd173a448423f547112ed48157ea6d322021f86",
+          "rows": 134037,
+          "uncompressed_bytes": 95434344,
+          "stored_bytes": 4911221,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "e1015dc255d854a017656afa9a0b3a527772adc193b1f4f61cd4e95d88f68632",
+          "decoded_binary_sha256": "ae423b2287cccb4d692ca2d559a7fc5bdbbdac6ccaf61033f2b307e12ebbf0e9",
+          "source_sha256": "0646173f60a05da50e96f77d17631ec511a16e388bfa0b79866e955b53c4a422",
+          "quality_sha256": "cfd496cf18c2810a16b7c58f44dfad7c1b02bbc20febebe6b775f05a3695fe18",
+          "rows": 25993,
+          "uncompressed_bytes": 1871496,
+          "stored_bytes": 383260,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T15",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "52c7ec50ae04dcfbc8b2893acf7b24e7e878ad50275f3b80f0262f0db463aa8d",
+          "decoded_binary_sha256": "9bf33ab788f6f815f65da62cbc98999978a31ee54a0d2724e4723106a5ce3fe9",
+          "source_sha256": "7f7afab9a44c73df3a9edf09f762546c99b2ae0251ac235c62d8ff40d98cb434",
+          "quality_sha256": "2af1121d897f7fb9d1cb400d9500dfe713c30d25ed258bd3fe7b6bbcd9a01da3",
+          "rows": 134204,
+          "uncompressed_bytes": 95553248,
+          "stored_bytes": 4708335,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "5088ef7cbb15ff7ad3da5a9868f4067fc800d4c440edbb7544829c6d615c0ae5",
+          "decoded_binary_sha256": "5e42eecbe276c2fb1b8fbc753801df6f2df5f50d513dd824a5b9b3a83f92d7ee",
+          "source_sha256": "fa09db49d0d18ef31d07547afea795532a4cb02bea02f9f8666a41377e2ad054",
+          "quality_sha256": "1569e098c9664cd7d1ecddb8442c7011ce5928a8274bf9a5429bc9b6b844df64",
+          "rows": 22363,
+          "uncompressed_bytes": 1610136,
+          "stored_bytes": 353931,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T16",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "a08d2e0ab46d557d042177b1ae2d4d36aacfcc6188897bcdc002a27605c1e784",
+          "decoded_binary_sha256": "12d610485d7bd9c405c7358c5313a3bac089822abd13aecf40893d1f45c2764e",
+          "source_sha256": "8cfdcee67dde6036dd8b9dbb14bbbc6304e574309f8611ba883b18d9ed7a1088",
+          "quality_sha256": "1cfc32b6a04b91ce17ff8d2580c555353bfb1ab67e5b4a1060b68eaaa363d222",
+          "rows": 134476,
+          "uncompressed_bytes": 95746912,
+          "stored_bytes": 3885980,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "e2c517dcfc5a07cbc71f0249189ae783004245bb9869c4b063716ada3478fdb4",
+          "decoded_binary_sha256": "4be4a6b07eeebee361f61b44d292c406aae51cbf3e38cee94b32b8a447bf1684",
+          "source_sha256": "f042d1742cddc3d4ce31aa9ae8f0b198a22abdd996dde375ccf570821474ba24",
+          "quality_sha256": "10f4b99c945d6192340ad019be5a64ccadaba0e0cbca9189a52359b118b38125",
+          "rows": 57027,
+          "uncompressed_bytes": 4105944,
+          "stored_bytes": 784553,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T17",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "fc95307a1d52091abbf85c85565be2f6e1f291c92bbc8a9e75a34c3397444e7c",
+          "decoded_binary_sha256": "bd5a34fd171e747a9fd6ffc27ffa41302470f09b6f5ea0aae1769dd08cd13bc1",
+          "source_sha256": "d3829bcd5fc2400d3b8c82e173d3dd9bcddeda88e76f6a2362f7e03c733e0a4c",
+          "quality_sha256": "fb970d9197bc03e8a8d36973d58e3eccb54f1cd7ffd986e09df3d178b10a7f0e",
+          "rows": 134624,
+          "uncompressed_bytes": 95852288,
+          "stored_bytes": 3873972,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "319a293a9cbd2125d3e05dc8fe746c9476e5e1b57b6bddf43fb19f5d41c3adee",
+          "decoded_binary_sha256": "9b85bd26f50ff79cd0759e1d5c198962961ae48c286bac5fd5474494c132c09d",
+          "source_sha256": "1e2a0dee3a24f35db124e3180eb9aa851e77d120fc4fe6b9cfef82cb5c9bab52",
+          "quality_sha256": "d545aded426157844f13a67fd2b2ae4152b37640c40e432f5007bfb0601386af",
+          "rows": 83761,
+          "uncompressed_bytes": 6030792,
+          "stored_bytes": 1120868,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T18",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "f6e6cd9ea9ee8759ca22db6d097e5bf49bf7e86b278d5c1f6b8243a08bbb38cf",
+          "decoded_binary_sha256": "b9ecdf527731fb8c7edab111525514e444b032d37353e9e2b8331fbe4b3fb3a1",
+          "source_sha256": "39947b3895a9e91b049e3d8a82cc516942438ac7a235217880d76001ecfd991c",
+          "quality_sha256": "6fd8daedd87af1c11491dff653d03d1b8b09e81c99de5824c95a18e033471cbf",
+          "rows": 135431,
+          "uncompressed_bytes": 96426872,
+          "stored_bytes": 3906205,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "e32e7219f9878d15b798df1ae923d22b124ea85250c26f2117e68b6d40bf903e",
+          "decoded_binary_sha256": "1a5343a780702699dc54c46170cbc61207cbd98b35538cd267b5f25b014dfebc",
+          "source_sha256": "4d4fc6bd025a9f5d4a0533dbde7ca5df53774b23e81e9f950321c6bcceb36328",
+          "quality_sha256": "b6aaae374a8ab6a622db801bff4efd9bb3f44c142e54adc9aaedd5064cb0e756",
+          "rows": 219741,
+          "uncompressed_bytes": 15821352,
+          "stored_bytes": 2711081,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T19",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "3f5045d3a7ee128a29bba55d1bbca90de5471373fa9c6e01228ec20e8ac72568",
+          "decoded_binary_sha256": "bd376007b454a7779f87400b529fa29da36d44cc86f95cc5c1ded49202076df0",
+          "source_sha256": "c15ec51f7e5b941c1bdd0d1182f6f77f34ffb6c0327ecf2d307ec35ab4c8578e",
+          "quality_sha256": "90578bbe913a3e0d00a1fbcbadf354958bcc1ccb8bdde7f21361aea64128c0ad",
+          "rows": 134942,
+          "uncompressed_bytes": 96078704,
+          "stored_bytes": 3882755,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "0a4202918fea7c45ee1f54983aabae06304a62caeb3ef7636513ca743105235e",
+          "decoded_binary_sha256": "3833b6366facd6d81df72fec91ae9cfdbfb5d6db024840f4795a064992b951d0",
+          "source_sha256": "aceba02a17e1224a09e7477f217a77fd6d610472803fb024a152b10bbad55d9a",
+          "quality_sha256": "4f512f87f61a32c0eebd152f2753f206e3c1527ad0a6fed8b30b50072bf26318",
+          "rows": 80768,
+          "uncompressed_bytes": 5815296,
+          "stored_bytes": 1027525,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T20",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "b4a510085ddd7593a392127ba32c388c9c2ab887f92ef77b041e26cf6797be4b",
+          "decoded_binary_sha256": "c5f881e27772daa6dca70f8172638b0bda0327225515a115ea89274358fb927b",
+          "source_sha256": "60613c61ead31e05858d7d72370f126bb0260b9959cc96c810286569368df2a6",
+          "quality_sha256": "a55561555d9ca1563bcfd2cec0cda1c9faea9f9dc3371713090f94b72ac02f3b",
+          "rows": 134614,
+          "uncompressed_bytes": 95845168,
+          "stored_bytes": 3886277,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "63c004638cb6aa8fa8aa7ed47b7df4c5447f1676e9dcafeda4a873cd8104b960",
+          "decoded_binary_sha256": "5074aa259df0a9baf92eda43917c0fa435f82174109e69104ff2dbacc52c412c",
+          "source_sha256": "b982597c427f4772719e322a8b11f62e6ae518d256426fb3749eef9364e0b395",
+          "quality_sha256": "2661b5038d09a2204db96a34ff34a04f2cdbdf447ef2932660356c9ef11c4409",
+          "rows": 57187,
+          "uncompressed_bytes": 4117464,
+          "stored_bytes": 759408,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T21",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "c635bc8844a01aea2a76a4ef00c7af4c92ddb1c510fbfc145397cc5c1e2a28e0",
+          "decoded_binary_sha256": "220375a343873771360d38825ccd84553d77e44560ac035de1764d8e3be94a9a",
+          "source_sha256": "115ef190ae56b19637b6da6ee3febf580e2a4c038a004bf60e3721ef5d695cb2",
+          "quality_sha256": "eb039f1850d2959d4d19481945714794609ee3430fc9690b51333a42c3b074a8",
+          "rows": 134780,
+          "uncompressed_bytes": 95963360,
+          "stored_bytes": 3887540,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "e1aa11c44e211667c6d8e2f5f8e33f293e032686a01c532af81c481d23b0c36e",
+          "decoded_binary_sha256": "5a8136c02cd7a3ec21f4fa54383b983d20ec7971b62d430ca7e6f2e4a516fbd2",
+          "source_sha256": "51fb579f6d5acbf5a74977e95d726b0dd91fc0ce4b2038c221e77e1ff903ccb0",
+          "quality_sha256": "728530852ea1ff9f85360826035382ac0617b5b00106ae1bfc0d6049b78b647c",
+          "rows": 63451,
+          "uncompressed_bytes": 4568472,
+          "stored_bytes": 819965,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T22",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "352981f587c52c233e9e0ff9c7b997cc215eeccb881491f73f25f9f1fe82d4f8",
+          "decoded_binary_sha256": "e2761c1bc619d4f48c9a04b1e573ac40dccba882e96ff2c6f9c59cffc5e3711b",
+          "source_sha256": "ad19e913c6eff49fac71b1ae32fb40e1540caaeb5a7618161222854ca54441eb",
+          "quality_sha256": "76ea2345972567751cd980d91bb049ac00976e5d6bf27724704c8e3629cace52",
+          "rows": 134420,
+          "uncompressed_bytes": 95707040,
+          "stored_bytes": 3878711,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "fbb3eb85cba75276ba76985525cf85a7b701fef0b357f9cfdd1be9f54aa4c461",
+          "decoded_binary_sha256": "a8cacde374fbee4cdce22e65d0ed91b69d7ee0ec2acdf4a63b5e908394dd6ef1",
+          "source_sha256": "dfa8234afd003e52ae146072d1784a60ebe1752bd77b06f60e5f280d54b186dc",
+          "quality_sha256": "bd72e3c7fce7815ddc37854b1ea56e5af8fb709bffbb49586a0d2ff0decd7d07",
+          "rows": 31765,
+          "uncompressed_bytes": 2287080,
+          "stored_bytes": 420411,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    },
+    {
+      "UTC_hour": "2026-08-01T23",
+      "warmup_only": false,
+      "files": {
+        "orderbook": {
+          "file": "orderbook-events.parquet",
+          "sha256": "26de9b594a89f52a2c52aa4c1ffbb93f94947a892b7becdf24770f9fbffe1a7c",
+          "decoded_binary_sha256": "83825c892714f86aea70940e2d41a0d420b72073cc02d9d894ed3f7f437d5cbb",
+          "source_sha256": "6c6c0f89d2143335bcfad753577f6ef4c6a88affd7723823c7d0b85518599957",
+          "quality_sha256": "75cf4871b57772d4ba49bd9edde8086ff31e22f37a7ff65bc5534e95426f6dfe",
+          "rows": 134654,
+          "uncompressed_bytes": 95873648,
+          "stored_bytes": 3879012,
+          "clock_bad": false
+        },
+        "trades": {
+          "file": "trades-events.parquet",
+          "sha256": "dd7d8a31b5c17ea9c9ef99bdb4bbf4abb6ddb453e577b8899a39a675ca2eede0",
+          "decoded_binary_sha256": "35f650990334fe6b1c209f25fb80dec90a8097675ac4b4cc2dc105b04d7aa16c",
+          "source_sha256": "69e6d2abc88204257584f4824c339727cf6d978a2dcf58a53ba768c87bed12b7",
+          "quality_sha256": "2d5a09c3cad841d03a41f72bb2b6962172a54b710ef33119f4afec1908ec89eb",
+          "rows": 33723,
+          "uncompressed_bytes": 2428056,
+          "stored_bytes": 474706,
+          "clock_bad": false
+        }
+      },
+      "model_input_ready": false
+    }
+  ],
+  "elapsed_seconds": 34.114012002944946,
+  "compressed_bytes": 244922407,
+  "uncompressed_bytes": 4998893216,
+  "training_ready": false,
+  "limitations": [
+    "Raw event shards only; context/target cohorts and normalization not yet fitted.",
+    "Clock-bad records remain marked, not silently used.",
+    "Provider original timing is unproven.",
+    "Warmup source is replayed for continuity, not a training target."
+  ],
+  "resume_check": "Completed full replay with --resume; every decoded event binary SHA matched completed shard manifests."
+}

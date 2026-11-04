@@ -1,0 +1,36 @@
+{
+  "scope": "Untrained engineering forward/backward only. Real fit-hour event inputs, synthetic zero candle context, no outcome labels, optimizer or accuracy claim. Cold timing, not steady training throughput.",
+  "source_sha256": "44531c927ae02490e5fb7bc35e906b963c467b362c257736493ce375a1135c5f",
+  "runs": [
+    {
+      "mode": "temporal_conv",
+      "parameters": 94556,
+      "all_parameters_trainable": true,
+      "events": 29965,
+      "timestamp_groups": 29965,
+      "output_shape": [
+        1,
+        15,
+        26
+      ],
+      "finite_logits": true,
+      "forward_backward_seconds": 2.6763072079920676,
+      "device": "mps"
+    },
+    {
+      "mode": "attention",
+      "parameters": 111196,
+      "all_parameters_trainable": true,
+      "events": 29965,
+      "timestamp_groups": 29965,
+      "output_shape": [
+        1,
+        15,
+        26
+      ],
+      "finite_logits": true,
+      "forward_backward_seconds": 0.1543670000100974,
+      "device": "mps"
+    }
+  ]
+}
