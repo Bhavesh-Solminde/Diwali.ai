@@ -1,39 +1,49 @@
-# Diwali1.4: training in progress, no final model decision
+# Diwali 1.4 completed development review
 
-The study has completed the first fold's six neural fits and baselines, plus both event-convolution fits in foldB. Later fits remain running. Do not treat this document as the completed three-fold comparison, a selected production model or independent September test result.
+All 18 planned neural fits, 12 baseline comparisons and three horizon diagnostics have completed. The frozen selection rule chose **one_second_temporal_conv**. That final model has now been trained on August, selected on September 1–7 and calibrated on September 8–14. The reserved September 15–29 evaluation is running separately; this document contains no score from it.
 
-## First fold, fixed earlier fit and later transfer dates
+## What improved, and what did not
 
-All rows below score the same896 August16–18 origins, with15 future-close distributions per origin. Two neural seeds are averaged equally here; baseline settings use their fixedseed17where applicable. Lower log loss is better.
+The replacement networks train all weights from scratch and retain multiple context tokens instead of the old 33-value snapshot. The richer candidates process every retained event before learned pooling. The selected control still compresses events into one-second inputs. **Retaining subsecond events did not win this bounded comparison.** Do not describe the selected model as the event-detail winner.
 
-| Method | Mean15 price-bin log loss | Final net-direction log loss |
-|---|---:|---:|
-| Event convolution, mean of seeds17/29 |2.590611|0.687006|
-| Event attention, mean of seeds17/29 |2.581623|0.687784|
-| Corrected one-second convolution, mean of seeds17/29 |2.577083|0.688120|
-| Fit-frequency histogram |2.843222|0.687545|
-| Fit-volatility conditional histogram |2.684924|0.687359|
-| Flow logistic |3.031402|0.689181|
-| Flow boosted trees |2.718260|0.696168|
+The selected control improved the development price-range score against all four baselines. Its final up/down probability score did not beat the frequency or volatility baselines. Improving where price might finish is different from establishing a useful directional advantage. No result here supports an 80–20 or 90–10 trading claim.
 
-On this fold, the richer event representations have not beaten the simpler one-second control on the primary range score. Direction scores are close to the constant fit-frequency predictor; direction accuracy alone would overstate the result because55.58%of these endpoints went up. These are overlapping examples across only three transfer days. The full study will use the frozen three-fold/two-seed selection rule, not choose a winner from this table or retune on these outcomes.
+## Completed three-fold comparison
 
-The result distinguishes two questions: a newly trained multi-token model can improve the range score against simple histograms here, while retained subsecond detail has not yet established additional benefit over the matched early-compression network. It does not prove that event information is useless, or that the observed advantage generalizes to later dates.
+Lower log loss is better. Neural rows average the two seeds within each fold, then give the three folds equal weight. Baselines give the same three folds equal weight. Accuracy uses the same averaging and is not a pooled or independent win rate.
 
-## Errors found and corrected
+| Method | Mean 15-close price-bin log loss | Final-close up/down log loss | Final-close direction accuracy |
+|---|---:|---:|---:|
+| event_temporal_conv | 2.810989 | 0.694070 | 51.95% |
+| event_attention | 2.800579 | 0.700142 | 47.80% |
+| one_second_temporal_conv | 2.791701 | 0.691911 | 49.77% |
+| fit_histogram | 3.008487 | 0.687185 | 57.11% |
+| fit_volatility_histogram | 2.841790 | 0.682562 | 57.11% |
+| flow_logistic | 3.067021 | 0.698957 | 52.38% |
+| flow_boosted_trees | 2.997395 | 0.697399 | 49.87% |
 
-The first one-second control stopped during transfer inference because float32elapsed time rounded a valid event just below60seconds to60.0. Exact saved availability nanoseconds reveal15 bucket differences across5,391 labelled inputs, including seven fitting rows. The corrected controls are retrained from initialization with integer bucket assignment. There is no clipping or removal of the failed transfer event. The original failed control is retained and excluded, and the four already completed raw-event fits are imported unchanged with hash checks.
+The three score periods contain 896, 249 and 200 quality-approved origins, with overlapping 15-close windows. They are not 1,345 independent market experiments. A permanent 50–50 direction forecast has log loss 0.693147; frequency and volatility baselines can do better when the outcome mix is uneven.
 
-Separately, a synthetic input-only probe shows that normalized same-time set pooling can discard multiplicity:1,2or16identical fill vectors give probabilities differing by less than5e-8in both fitted seed17event models. Their projection sees every row, but later averaging can still erase the number of trades. This is a structural counterexample, not proof of the cause of the natural prediction errors. Its practical relevance must be checked before using it to justify a model change. The current study stays frozen.
+The selected control's per-fold price-bin losses are 2.577083, 2.867590 and 2.930430. Its lead is not uniform: event attention wins on fold C. The full average, rather than the most favourable fold, determined selection. Fold C had only 25 calibration origins and retained temperature 1 under the already frozen minimum-100 rule.
 
-Follow-up relevance check: the actual18,868,954August input events have18,868,954distinct availability groups. None of the6,484,263market fills shares a group with another fill. The synthetic multiplicity edge case is therefore not activated in this retained cohort and is **not** an evidence-based explanation of its errors. An explicit same-time count addition is not justified as the next fix by that probe alone. The frozen comparison continues unchanged.
+## Verified corrections and limitations
 
-## Horizon diagnostic and remaining work
+- Fixed float32 timestamp rounding in the one-second control using exact integer availability times. Fifteen event assignments differed across 5,391 labelled inputs, including seven fitting rows. The affected control was retrained; no failed transfer example was clipped or skipped.
+- Recomputed the saved development forecasts against their labels for all 18 models. Selected checkpoint identities, fit-only transform counts, calibration identities and probability sums passed; the maximum reported-metric difference was exactly zero.
+- A synthetic same-time multiplicity example found a possible pooling alias, but the actual 18,868,954 retained rows all have distinct availability groups. It does not explain these natural errors and does not justify a count-feature fix by itself.
+- Local learned pooling and one-second summarization still discard information. The results do not establish which discarded details would improve later forecasts.
+- Early checkpoint selection is common. More training epochs are not automatically an improvement. Subsequent changes need development evidence rather than repeated retuning on the reserved test.
 
-The first fold's fixed logistic diagnostic does not show a simple monotonic relationship between shorter horizon and predictive benefit. It beats its fitted frequency baseline at some horizons and loses at others, including the15thfull-close endpoint. The5/15/30/60-second labels use latest available trade prices, while105/345/945-second labels use full-candle closes. Both bid/ask noise and the endpoint-definition difference limit interpretation. This is a simple-model development diagnostic, not a universal lifetime estimate or entry signal.
+## Signal lifetime
 
-September1–14source replay has completed and context construction is running. September15–29remains outside preparation. Final building requires the complete development decision, audited later selection/calibration inputs, separate fit-only transforms and fixedseed17. A final-build runner is implemented but not started. A deliberate one-use final evaluation and later new future-issued forecasts remain required.
+The fixed simple-model diagnostic compared 5, 15, 30, 60, 105, 345 and 945 seconds on common eligible origins. Its benefit over a fitted-frequency predictor changes across folds and horizons; the study does not establish a universal useful lifetime. The short endpoints use available last-trade prices, whereas the longer endpoints use full-candle closes. They differ in both timing and price definition.
 
-The earlier frozen0.9/1.2prospective comparison has also finished and been audited separately: six matched, fully matured,15-close forecasts with nonoverlapping target sets. That tiny session is smoke-test evidence only and cannot confirm1.4, whose weights were not yet fitted when those forecasts were issued.
+## Final model and next checks
 
-Sources: `results/diwali1.4/development-progress.json`, `results/event-model-engineering/exact-second-binning-audit.json`, `results/event-model-engineering/diwali14-group-cardinality-probe.json`, and `results/forward-comparisons/diwali09-vs12-spaced-final.json`. Individual predictions, inputs, paid data and weights stay private.
+Final build: fixed seed 17, 5,391 fitting origins, 862 selection origins after boundary purging and 1,476 calibration origins. The earliest best checkpoint was epoch 1. Engineering inference passed on ten earlier selection inputs for the selected model and all four baselines; maximum CPU/GPU probability difference was about 1.09e-7. This is an inference check, not a final performance result.
+
+The deliberately frozen final release authorizes one September 15–29 comparison, with a shared one-use evaluation claim. No model settings will change from its results within version 1.4. New future-issued forecasts remain necessary afterward. October remains an already inspected diagnostic benchmark; comparing its older-version scores directly with these different cohorts would be misleading.
+
+Data remain incomplete: only quality-approved book windows are represented, older candle gaps are explicitly masked, provider receipt timing is not proven original-exchange timing, hidden liquidity is not observed, and native candle agreement does not certify every book level. Finite forecast scores cannot establish perfect probabilities or trading profitability.
+
+Evidence: `results/diwali1.4/development-report.json`, `development-artifact-audit.json`, `final-build-model-preparation.json` and `final-build-inference-preflight.json`. Individual forecasts, market inputs, fitted artifacts and paid archives remain local.

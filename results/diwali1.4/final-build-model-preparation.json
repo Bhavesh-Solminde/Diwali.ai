@@ -1,0 +1,130 @@
+{
+  "state": "fitted_selected_calibrated_without_final_evaluation",
+  "model": "diwali1.4",
+  "candidate": "one_second_temporal_conv",
+  "selection": {
+    "candidate": "one_second_temporal_conv",
+    "seed": 17,
+    "best_epoch": 1,
+    "selection_loss": 2.8390540709481686,
+    "weights_sha256": "20943ce23f44ee9d2244aaff0d0054aede9db132b3062e787917cd58a5a051ca",
+    "development_report_sha256": "f00db858fd5788ca6adc90ce7166f3fe5e48f1e5dca5998f4e96eb390d48cfdc"
+  },
+  "calibration": {
+    "temperatures": [
+      0.9576032806985736,
+      1.0442737824274138,
+      1.0442737824274138,
+      1.0905077326652577,
+      1.0905077326652577,
+      1.0905077326652577,
+      1.0905077326652577,
+      1.0905077326652577,
+      1.0905077326652577,
+      1.1387886347566918,
+      1.189207115002721,
+      1.1387886347566918,
+      1.189207115002721,
+      1.189207115002721,
+      1.189207115002721
+    ],
+    "origins": 1476,
+    "temperature_fitted": true,
+    "weights_sha256": "20943ce23f44ee9d2244aaff0d0054aede9db132b3062e787917cd58a5a051ca"
+  },
+  "cohorts": {
+    "fit": {
+      "inside_partition": 5391,
+      "retained": 5391,
+      "purged_target_overlap": 0,
+      "outside_partition": 2341
+    },
+    "select": {
+      "inside_partition": 865,
+      "retained": 862,
+      "purged_target_overlap": 3,
+      "outside_partition": 6867
+    },
+    "calibrate": {
+      "inside_partition": 1476,
+      "retained": 1476,
+      "purged_target_overlap": 0,
+      "outside_partition": 6256
+    }
+  },
+  "calibration_partition_diagnostic": {
+    "origins": 1476,
+    "mean15_bin_log_loss": 2.786545288529612,
+    "per_horizon_bin_log_loss": [
+      2.605051284057197,
+      2.681341091072948,
+      2.717204063160727,
+      2.7410409475854705,
+      2.7693749886674017,
+      2.7812167172487867,
+      2.7835945491314042,
+      2.7957117157128226,
+      2.8088926841713504,
+      2.8289654263377972,
+      2.8442220390887654,
+      2.8435204151134257,
+      2.857606859661496,
+      2.866866466486436,
+      2.873570080448159
+    ],
+    "ranked_probability_score": 0.10670879640522347,
+    "per_horizon_binary_log_loss": [
+      0.6953449803581125,
+      0.6946256605604542,
+      0.6947728223378021,
+      0.6961946287195735,
+      0.6949854379624435,
+      0.6931597142765156,
+      0.6926702852296949,
+      0.6913401869306648,
+      0.6904968088709397,
+      0.6910250108223495,
+      0.6908051513213977,
+      0.6908292384330302,
+      0.6911530868978953,
+      0.6908738189736087,
+      0.69170133709638
+    ],
+    "final_direction_log_loss": 0.6917013370963802,
+    "final_direction_brier": 0.2492783576758637,
+    "final_direction_accuracy": 0.5155826558265583,
+    "final_direction_reliability": {
+      "0.5-0.6": {
+        "count": 1476,
+        "mean_confidence": 0.5181358097118195,
+        "correct_fraction": 0.5155826558265583
+      },
+      "0.6-0.7": {
+        "count": 0,
+        "mean_confidence": null,
+        "correct_fraction": null
+      },
+      "0.7-0.8": {
+        "count": 0,
+        "mean_confidence": null,
+        "correct_fraction": null
+      },
+      "0.8-0.9": {
+        "count": 0,
+        "mean_confidence": null,
+        "correct_fraction": null
+      },
+      "0.9-1.0": {
+        "count": 0,
+        "mean_confidence": null,
+        "correct_fraction": null
+      }
+    },
+    "always_half_final_log_loss": 0.6931471805599453,
+    "scope": "Overlapping origins; descriptive development scores, not independent trials or entry success."
+  },
+  "reserved_final_labels_loaded": false,
+  "reserved_final_evaluated": false,
+  "elapsed_seconds": 150.51923370361328,
+  "next_required": "Freeze baseline artifacts and final-evaluation source; deliberate one-use release, final test and new prospective confirmation."
+}

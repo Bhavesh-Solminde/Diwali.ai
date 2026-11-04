@@ -1,0 +1,72 @@
+{
+  "state": "preflight_passed",
+  "selection_origins_checked": 10,
+  "checks": {
+    "diwali1.4": {
+      "shape": [
+        10,
+        15,
+        26
+      ],
+      "all_finite": true,
+      "maximum_probability_sum_error": 3.3306690738754696e-16
+    },
+    "fit_histogram": {
+      "shape": [
+        10,
+        15,
+        26
+      ],
+      "all_finite": true,
+      "maximum_probability_sum_error": 2.220446049250313e-16
+    },
+    "fit_volatility_histogram": {
+      "shape": [
+        10,
+        15,
+        26
+      ],
+      "all_finite": true,
+      "maximum_probability_sum_error": 4.440892098500626e-16
+    },
+    "flow_logistic": {
+      "shape": [
+        10,
+        15,
+        26
+      ],
+      "all_finite": true,
+      "maximum_probability_sum_error": 4.440892098500626e-16
+    },
+    "flow_boosted_trees": {
+      "shape": [
+        10,
+        15,
+        26
+      ],
+      "all_finite": true,
+      "maximum_probability_sum_error": 4.440892098500626e-16
+    }
+  },
+  "maximum_cpu_mps_probability_difference": 1.0856387233637577e-07,
+  "artifact_hashes": {
+    "selected_model": "20943ce23f44ee9d2244aaff0d0054aede9db132b3062e787917cd58a5a051ca",
+    "fit_transforms": "3692bc46b2c93760de9bc86a43313f3f5db89c5b70e361f071e47b20f6e4105c",
+    "calibration": "1308910bafcb183d5f2899b5583e781e1fe35d2bc46375d0808e1feb8d57d027",
+    "baseline_report": "b33bd0d5856c3ccddc26e3bd31b07c89e486343e5ad5e5d97c1e275c72195de3"
+  },
+  "source_hashes": {
+    "event_final_preflight.py": "c272ed52495163d4f14e907409e2152b91503735c24480105776146f1dc8f327",
+    "event_final_gate.py": "fea734c7b5c18ec61ebf2d869021cece86887f3d0c540f5e06d5c2c45ed75fd1",
+    "event_final_score.py": "fe0ec884a8ba764441a8d278fa639e1d4ed314dfe62868456f32ef0602697f00",
+    "event_model.py": "d23f3c55083773d0010a67f22fb3d14581975af59a885b955aa5fa1d550da9fa",
+    "event_data.py": "566240853809e680d82f725e633cd123879b2afe62ae57df8cf68979463c811e",
+    "event_data_exact.py": "a59eb2be64d30424f556a4dddcf9cfb3b5a08734ba67b91997f63b8122774111",
+    "event_baselines.py": "96ac22b64cf6b4c8099da7b579b84a75269be3dafaae873d3917663084f02571",
+    "event_train.py": "33952e008e911f0d8fb19c181f7097983b5739c9f132ba8f299955fada4ffe89"
+  },
+  "reserved_final_labels_loaded": false,
+  "existing_selection_labels_loaded_for_loader_validation": true,
+  "target_outcomes_used_in_preflight": false,
+  "scope": "Engineering inference on already used selection inputs; no performance score or final-test access."
+}
