@@ -1,0 +1,15 @@
+# Fixed spaced forward test:0.9 versus1.2
+
+The prior0.9/1.1test had nine overlapping targets, all in one upward session. For the next frozen models, issue forecasts at least900seconds apart so their15target candle sets do not overlap. This still does not produce independent days or guarantee different market regimes.
+
+Native public receiver maximum budget7,200seconds, recorded in an immutable `capture-budget.json` tied to its actual startup timestamp and source hashes. Two followers share that receiver: frozen selected0.9and development-selected1.2. Accept only freezes at/after each follower startup and after its previous successful issue plus900seconds. Issue for4,800seconds maximum (about six opportunities), then drain issued targets for up to17minutes. Never force a forecast through a quality/deadline rejection or choose a case based on its future direction.
+
+Check frozen checkpoint/report/model/preprocessing/midpoint-scaler sources.1.2derives its added midpoint summaries from the same then-received book levels and last available completed input candle; it does not read archive midpoint sidecars during live prediction. Verify that this transformation matches the historical definition. All forecasts must be durably recorded before the first target begins, with UTC and monotonic chronology checked.
+
+After both followers stop, audit each against the native source journal and compare only shared input freezes with all15outcomes verified. Record attempted/committed/completed/matched counts, all rejections, spacing and receiver budget; do not inflate sample size by counting15horizons as independent origins. Compare final binary probability error/Brier/accuracy/confidence plus marginal range and joint loss, including50–50loss. Do not retune either model after observing partial outcomes.
+
+The receiver has a finite maximum budget; it can be closed cleanly once both candidates have all issued labels, then final audits must check completed raw manifests. Incomplete ancillary0.5helper predictions are outside this candidate comparison. If the receiver stops early, record pending candidate counts and do not call them complete.
+
+No orders placed. Keep raw records, inputs, forecasts and weights local. Publish aggregate evidence only. Results pending; no live accuracy or calibrated80–20claim until verified, and this small single-session test cannot establish perfect market probabilities.
+
+Started on2026-11-04 with native capture `prospective-diwali05-20261104-v4`, and followers `prospective-diwali09-spaced-20261104-v1` / `prospective-diwali12-spaced-20261104-v1`. Process existence was independently checked; no duplicate receivers were launched after a truncated observation. Each follower has committed its first forecast. Initial prefix audits replayed source receipts, recomputed each forecast exactly (maximum probability difference0), and verified more than44.6seconds of pre-target lead. Neither source nor follower capture is complete. These are chronology checks, not finished performance results; `results/diwali1.2/prospective-prefix-audits.json` records the bounded audited prefixes.

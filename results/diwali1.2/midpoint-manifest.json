@@ -1,0 +1,51 @@
+{
+  "state": "complete",
+  "cohorts": {
+    "fit": 24009,
+    "development": 4026,
+    "calibration": 2667,
+    "locked_test": 11186
+  },
+  "source_sha256": "24dc5552eabff3f968ad938ad967e4f73e6ef165c6e8a36fa8fea46dfd482e50",
+  "inputs": {
+    "data/btc-perp/book-midpoints-202610-v1/midpoints.bin": "f90071f03ea4f6ced62f7fcaaccc11d24c535724a9d8dbdf8f7748a7253afeeb",
+    "data/btc-perp/button-pilot-202610-v1/candle-raw.npy": "fd7274f7d31f3393a328433546f90b325e07db26063d4c853d5595a4ab98be2b",
+    "data/models/diwali0.5/fit-targets.npz": "5c4ea22d76ac24ca5f481669a622d4fc0a5a6296790fc60794266ed516d34765",
+    "data/models/diwali0.5/development-targets.npz": "6b902e977d161c2f6a90b08391031f5f8ddec259feedbe9ff43277311c04588e",
+    "data/models/diwali0.5/calibration-targets.npz": "335bf42653890d928e53f240f3cdcdde4db3417778cc17fc9777d91bfaaa9b3e",
+    "data/models/diwali0.5/locked_test-targets.npz": "bb2f45afe36ecc75872760bafbe53ad7640afb5dcc161363d108bff5659d1f01"
+  },
+  "source_report_sha256": "2be974708125e62031fc0baf0fb4e962b7b1211b38d6fb7ace92df62788e4560",
+  "scaling": "fit origins only, overlapping windows weighted as the unchanged training cohort",
+  "names": [
+    "midpoint_vs_last_completed_candle_close_bp",
+    "within_window_midpoint_log_change_bp"
+  ],
+  "summary_names": [
+    "latest_midpoint_vs_last_completed_candle_close_bp",
+    "net60_second_midpoint_log_change_bp"
+  ],
+  "first_change": "zero by definition because no previous midpoint outside the60-second window is supplied",
+  "artifacts": {
+    "calibration-indices.npy": "2a2417a7357e6e2c6a8e313ef84ce959011291d6946a3da6797b9a67fbb82b46",
+    "development-features.npy": "4a3d342e19caea72f62c583c214495b6a3a03be15cf8023847addfb432a8197b",
+    "calibration-summary.npy": "58cd7ff76e54ef89727932591eb787fc97a4bbb38dd23c1db8ed4da4d9bfbfff",
+    "fit-features.npy": "8d8463af640debe3b55daec3104093faa609acbfa431e85d9ad11463e066f456",
+    "locked_test-summary.npy": "9e876af1e9a6f7d81f9b247093eb1367bdcf70b4daec2e35624c9081c369b3f8",
+    "locked_test-indices.npy": "cbd40f5195b29d9b4fd123dacc6086ca69becf9aa4a88a881cadc2353127824e",
+    "summary-scaler.json": "6b138c7b7922abd1fe0f73111c3f3f665d084408440711d6c405c7ecbbe32a31",
+    "development-indices.npy": "c65df4479e10c4ab4a5681453b1822791aaebe50e36c6a1d11dc0e3d5461f9ad",
+    "development-summary.npy": "747960545f37cdeea70f9ce05ad7b5e2616fed0029fbde581c31fbab583929ce",
+    "calibration-features.npy": "313fb5eb6769186e54f4226d59729323d651424fb67d611762931ba474d678f3",
+    "fit-summary.npy": "1d09ec11e2f243af6f43ac650d98dc0863d584e69cc23857bfd91666eeca2eb9",
+    "locked_test-features.npy": "6911e2899a3767be332f589b7ef162c589b59912a3b4283ad6402a8294ba9e01",
+    "fit-indices.npy": "2adcd640c4b94947a24de5941ab9843f6209d861c73c853fee187136ae7bf8c3",
+    "scaler.json": "935343cd1a6cb9a4df47901af3bc5808ffe22dfe3ee925ba40cf87dc2720a264"
+  },
+  "new_training_started": false,
+  "limitations": [
+    "Same historical provider timing/authenticity assumptions remain.",
+    "No hidden liquidity or future events recovered.",
+    "New feature definition, not proof of better predictions."
+  ]
+}

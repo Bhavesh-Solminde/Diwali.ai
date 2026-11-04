@@ -1,0 +1,67 @@
+{
+  "model": "diwali1.2",
+  "parent": {
+    "marginal": {
+      "root": "data/models/diwali0.5",
+      "mode": "near_weighted",
+      "checkpoint": "data/models/diwali0.5/near_weighted-17.pt",
+      "checkpoint_sha256": "30279c15acfab578a3af492d3fa180c8d469982d54b29e2bea31553dd23ec0ae",
+      "report_sha256": "134a711d419c8a11f84abc845d17be52dc289b50c9dcc65dc855a73b118ecc79"
+    },
+    "dependence": {
+      "root": "data/models/diwali0.7",
+      "mode": "joint_control",
+      "checkpoint": "data/models/diwali0.7/joint_control-17.pt",
+      "checkpoint_sha256": "912a009a3a7002a2a532a00d708378f7e681c513f77d899272b9cf595640c669",
+      "report_sha256": "66e63669aea2d446423b8c2688cba78d64abc5301d67dcc0d4afe5e16f2248a7"
+    }
+  },
+  "target": "15th future close > frozen reference versus <= reference; not first candle or monotone path",
+  "variants": [
+    "no_midpoint",
+    "with_midpoint"
+  ],
+  "branch": "zero-output94-input24-hidden GRU; repeated92 flow means plus two midpoint summaries, disabled or enabled; raw frozen0.5 parent",
+  "loss": "both arms: near-weighted rangeCE +.25colourCE +1.0 final binary CE from summed price bins",
+  "selection": "lowest3-seed mean development FINAL binary log loss, epoch0 allowed; fixedseed17; no_midpoint breaks ties; freeze before calibration/benchmark",
+  "calibration": "same calibration for both arms: h1-14 binNLL; h15 binary endpointNLL using full26-bin temperature; .5..2 grid; colour separate. Raw neural parents used without old fitted temperatures; calibrate new marginal pipeline once. October dates still reused in research.",
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "epochs": 20,
+  "patience": 4,
+  "batch": 128,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.0001,
+  "gradient_clip": 5,
+  "joint": "fixed unit coupling to raw0.7 transition kernel at temperature1; no old fitted temperatures",
+  "cohort": "same0.5 purged October origins; no future features or changed target labels",
+  "limitations": [
+    "Repeatedly inspected benchmark, not fresh holdout.",
+    "A correct distribution can assign probability to both sides; never erase downside after Reveal.",
+    "Direction might stay near50-50; no promise of confidence or profitable entries.",
+    "Equality belongs to down_or_unchanged, not silently pure down."
+  ],
+  "midpoint_preparation": {
+    "root": "data/btc-perp/midpoint-windows-202610-v1",
+    "manifest_sha256": "5e47e697dd41f6f1b831441cd60c1c7c35c1a307bc2501c0b28088488892c553"
+  },
+  "source_sha256": "3fec2f6963423ec26d8611b35b35f3578750d237255ead53607f95cd3799f1ae",
+  "model_source_sha256": "4bbc5354aeaaf77f62a5b8515e5e00e08c4e25f00eaef75724cd79b7cf20f748",
+  "dependency_sources": {
+    "research/diwali/directional.py": "33dc95058d082b7f790a22c7d3d3c10a488b0a74458212618f0e392b26d3a3bf",
+    "research/diwali/refined.py": "cfb116869a61e4f680a5dd4ec2f132575e68eefca7537811f5e58503f9ae766f",
+    "research/diwali/model.py": "3130d855b64bbf34f6ecf1b05c3d4ec0343f348394c9fa64e0ff472efd8412cc",
+    "research/diwali/path.py": "007e73de5e02cbee8c6e818820cf891839be9770888e4760827627cccf213f3d",
+    "research/diwali/fan.py": "a43ab2eb54c4a8e55e248e63ff4e95c284bd2f88a8f07dc6395ce2bb859bf98b",
+    "research/diwali/probability.py": "a8c878e862fbe02348f30ceef0872eb371692e8fb2191212dfe3bd1ca2208c46",
+    "research/diwali/coupled.py": "b6ecf87ea9df64511098412791ddd06b9ebe22272ca4c3e9e21f12a180805641",
+    "research/diwali/path_evaluate.py": "d6fb5aa0f27168e2ef42a24948eda95eb6907c7c881db4dc321e9ec0da5103e1"
+  },
+  "midpoint_transform_sources": {
+    "research/market_data/midpoint.py": "44547e1d045da2b6be6b97bbffe025da7d4530df75a91cab3405ede048740a7e",
+    "research/market_data/midpoint_windows.py": "24dc5552eabff3f968ad938ad967e4f73e6ef165c6e8a36fa8fea46dfd482e50"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "scope": "Paired daily descriptive differences on already-inspected benchmark; overlapping origins are not independent trials. No test-based model reselection.",
+  "days": [
+    {
+      "day": "2026-10-23",
+      "origins": 1,
+      "final_binary_log_loss": {
+        "no_midpoint": 0.657127320766449,
+        "with_midpoint": 0.6936712265014648,
+        "epoch0_parent": 0.6964555978775024
+      },
+      "midpoint_minus_control": 0.03654390573501587,
+      "midpoint_minus_epoch0": -0.0027843713760375977
+    },
+    {
+      "day": "2026-10-24",
+      "origins": 1405,
+      "final_binary_log_loss": {
+        "no_midpoint": 0.6893122792243958,
+        "with_midpoint": 0.6900100708007812,
+        "epoch0_parent": 0.6928716897964478
+      },
+      "midpoint_minus_control": 0.000697729701641947,
+      "midpoint_minus_epoch0": -0.0028616799972951412
+    },
+    {
+      "day": "2026-10-25",
+      "origins": 1394,
+      "final_binary_log_loss": {
+        "no_midpoint": 0.7018316388130188,
+        "with_midpoint": 0.7016440629959106,
+        "epoch0_parent": 0.6959320306777954
+      },
+      "midpoint_minus_control": -0.00018746477144304663,
+      "midpoint_minus_epoch0": 0.005712130106985569
+    },
+    {
+      "day": "2026-10-26",
+      "origins": 1408,
+      "final_binary_log_loss": {
+        "no_midpoint": 0.700673520565033,
+        "with_midpoint": 0.7009289264678955,
+        "epoch0_parent": 0.693213164806366
+      },
+      "midpoint_minus_control": 0.000255392340477556,
+      "midpoint_minus_epoch0": 0.007715829182416201
+    },
+    {
+      "day": "2026-10-27",
+      "origins": 1379,
+      "final_binary_log_loss": {
+        "no_midpoint": 0.6978495121002197,
+        "with_midpoint": 0.6969546675682068,
+        "epoch0_parent": 0.692828357219696
+      },
+      "midpoint_minus_control": -0.0008948250324465334,
+      "midpoint_minus_epoch0": 0.004126298241317272
+    },
+    {
+      "day": "2026-10-28",
+      "origins": 1400,
+      "final_binary_log_loss": {
+        "no_midpoint": 0.6911494731903076,
+        "with_midpoint": 0.691803514957428,
+        "epoch0_parent": 0.6930687427520752
+      },
+      "midpoint_minus_control": 0.0006539820460602641,
+      "midpoint_minus_epoch0": -0.0012652612058445811
+    },
+    {
+      "day": "2026-10-29",
+      "origins": 1414,
+      "final_binary_log_loss": {
+        "no_midpoint": 0.6902594566345215,
+        "with_midpoint": 0.6899542808532715,
+        "epoch0_parent": 0.6922783255577087
+      },
+      "midpoint_minus_control": -0.00030517473351210356,
+      "midpoint_minus_epoch0": -0.0023240584414452314
+    },
+    {
+      "day": "2026-10-30",
+      "origins": 1413,
+      "final_binary_log_loss": {
+        "no_midpoint": 0.6945440769195557,
+        "with_midpoint": 0.6929425597190857,
+        "epoch0_parent": 0.6924351453781128
+      },
+      "midpoint_minus_control": -0.0016014989232644439,
+      "midpoint_minus_epoch0": 0.0005074196378700435
+    },
+    {
+      "day": "2026-10-31",
+      "origins": 1372,
+      "final_binary_log_loss": {
+        "no_midpoint": 0.6955161094665527,
+        "with_midpoint": 0.6950791478157043,
+        "epoch0_parent": 0.6926499009132385
+      },
+      "midpoint_minus_control": -0.0004369647358544171,
+      "midpoint_minus_epoch0": 0.0024292527232319117
+    }
+  ]
+}

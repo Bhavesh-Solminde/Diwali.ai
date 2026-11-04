@@ -1,5 +1,17 @@
 # Diwali model experiments
 
+## Diwali1.2 controlled midpoint experiment
+
+Run `python -m research.diwali.anchored_serve` for the historical UI on port8752.
+Six fits compared identical correction networks with midpoint inputs enabled or
+disabled. Development selected midpoint enabled, but its October final-direction
+log loss0.694900 is worse than the unchanged parent with matching calibration
+(0.693158). Do not treat this version as an improvement in dependable probability
+quality. Source and aggregate results are retained in `results/diwali1.2`.
+Purple cells are forecasts; black dots are actual closes after Reveal.
+The new0.9-versus1.2 forward test uses at least15-minute forecast spacing and
+is pending; historical results are exploratory, not fresh confirmation.
+
 ## diwali0.4 closing-price probability ranges
 
 ```sh

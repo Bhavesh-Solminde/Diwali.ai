@@ -1,0 +1,64 @@
+{
+  "state": "recording_in_progress",
+  "diwali1.2": {
+    "state": "follower_source_prefix_verified",
+    "model": "diwali1.2",
+    "capture_complete": false,
+    "source_capture_complete": false,
+    "source_prefixes": {
+      "events-20261104T06.jsonl": {
+        "bytes": 28232710,
+        "sha256": "0eaceef57b1e3f134e6ebfd9a327d72d45bbe25a740389a686da814a24c00185"
+      }
+    },
+    "follower_prefixes": {
+      "events-20261104T06.jsonl": {
+        "bytes": 870,
+        "sha256": "cdbeb912676b7f06587a077a3ce90976cd855382ddbaf4ac87bfcb608d6191f2"
+      }
+    },
+    "follower_rows_beyond_source_prefix": 0,
+    "native_freezes_replayed": 6,
+    "forecasts_recomputed": 1,
+    "matured_outcomes_verified": 5,
+    "outcomes_beyond_source_prefix": 0,
+    "complete_joint_paths_verified": 0,
+    "joint_log_loss": null,
+    "audited_through_utc_ns": 1793772543005124000,
+    "max_recomputed_probability_difference": 0,
+    "minimum_pre_target_commit_seconds": 44.634048,
+    "scope": "Actual receiver source replay and model/forecast/outcome chronology; small correlated sample, no accuracy/calibration guarantee.",
+    "training_ready": false
+  },
+  "scope": "Prefix chronology/recomputation only; complete spaced comparison pending. No tuning on partial outcomes.",
+  "diwali0.9": {
+    "state": "follower_source_prefix_verified",
+    "model": "diwali0.9",
+    "capture_complete": false,
+    "source_capture_complete": false,
+    "source_prefixes": {
+      "events-20261104T06.jsonl": {
+        "bytes": 32342137,
+        "sha256": "98b29f450d9d0e71689a0c5d8efe778cf534b58249180864cf7d4ca2c6e26421"
+      }
+    },
+    "follower_prefixes": {
+      "events-20261104T06.jsonl": {
+        "bytes": 870,
+        "sha256": "b4929a3e8225f71f4799867e67bde5708970d85011401ae7eb93735b88e4f917"
+      }
+    },
+    "follower_rows_beyond_source_prefix": 0,
+    "native_freezes_replayed": 8,
+    "forecasts_recomputed": 1,
+    "matured_outcomes_verified": 6,
+    "outcomes_beyond_source_prefix": 0,
+    "complete_joint_paths_verified": 0,
+    "joint_log_loss": null,
+    "audited_through_utc_ns": 1793772620119742000,
+    "max_recomputed_probability_difference": 0,
+    "minimum_pre_target_commit_seconds": 44.650442,
+    "scope": "Actual receiver source replay and model/forecast/outcome chronology; small correlated sample, no accuracy/calibration guarantee.",
+    "training_ready": false
+  }
+}

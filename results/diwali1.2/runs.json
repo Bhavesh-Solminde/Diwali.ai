@@ -1,0 +1,44 @@
+[
+  {
+    "variant": "no_midpoint",
+    "seed": 17,
+    "epoch": 4,
+    "development_final_binary_log_loss": 0.691711901857472,
+    "epoch0_loss": 0.6932659670220718
+  },
+  {
+    "variant": "no_midpoint",
+    "seed": 29,
+    "epoch": 2,
+    "development_final_binary_log_loss": 0.6927592943236209,
+    "epoch0_loss": 0.6932659670220718
+  },
+  {
+    "variant": "no_midpoint",
+    "seed": 43,
+    "epoch": 3,
+    "development_final_binary_log_loss": 0.6916318740711799,
+    "epoch0_loss": 0.6932659670220718
+  },
+  {
+    "variant": "with_midpoint",
+    "seed": 17,
+    "epoch": 4,
+    "development_final_binary_log_loss": 0.6917846476824439,
+    "epoch0_loss": 0.6932659670220718
+  },
+  {
+    "variant": "with_midpoint",
+    "seed": 29,
+    "epoch": 11,
+    "development_final_binary_log_loss": 0.6921538137413508,
+    "epoch0_loss": 0.6932659670220718
+  },
+  {
+    "variant": "with_midpoint",
+    "seed": 43,
+    "epoch": 3,
+    "development_final_binary_log_loss": 0.691653822762436,
+    "epoch0_loss": 0.6932659670220718
+  }
+]

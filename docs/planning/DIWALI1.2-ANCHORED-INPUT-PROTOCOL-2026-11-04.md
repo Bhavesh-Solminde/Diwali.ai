@@ -1,6 +1,24 @@
 # Proposed next controlled model: Diwali1.2
 
-Preparation/specification only;1.2has not been trained. The midpoint input audit completed without changing the October origins. Its new fields may be largely redundant with trade VWAP; test rather than assume improvement. Do not keep adjusting1.1using the reused October benchmark or its now-inspected single upward live session.
+Training and historical evaluation completed in395.52seconds. The midpoint input audit completed without changing the October origins. The added fields are largely redundant with trade VWAP; their controlled benefit was small and did not fix probability quality. Do not keep adjusting1.1using the reused October benchmark or its now-inspected single upward live session.
+
+## Completed result and adoption decision
+
+All six fits completed. The three-seed development final-direction log loss selected `with_midpoint`:0.691864 versus0.692034 for the control. Selection preceded calibration and benchmark evaluation; fixedseed17 selectedepoch4 in both arms.
+
+On11,186 already-inspected October benchmark origins:
+
+| Method | Final-direction log loss | Brier error | Direction accuracy | Mean15 range log loss | Joint log loss |
+|---|---:|---:|---:|---:|---:|
+| Midpoint disabled |0.695124|0.250967|51.28%|2.812487|28.287489|
+| Midpoint enabled, selected |0.694900|0.250858|51.23%|2.811592|28.266297|
+| Epoch0 parent, matching calibration |0.693158|0.250006|50.59%|2.809872|28.260550|
+
+Lower loss/Brier is better. A50–50 probability has log loss0.693147 and Brier0.25. The selected correction improves slightly over its matching control but is worse than epoch0 on proper probability scores. Its279 forecasts claiming at least60% confidence were correct49.10% of the time; there were no80% claims. Higher raw accuracy does not establish better probability estimates. Do not promote1.2as a dependable direction model. Diwali0.9 remains a stronger historical reference (final log loss0.693088), itself without a proven dependable edge.
+
+The remaining observed error is overconfidence and weak transfer from development to the October benchmark. Explicit midpoint summaries alone did not solve it. No conclusion about missing hidden orders or news follows from this isolated experiment. Next model changes should test this failure directly using a fixed protocol; do not adjust this frozen checkpoint from partial forward outcomes.
+
+Verification:117 focused tests passed. Ten historical UI origins/150 horizons match saved probabilities on CPU within1.24e-7,30 joint queries are coherent, sources/parent hashes are unchanged, and actuals remain separate until Reveal. Desktop/mobile browser checks found no page errors or document overflow; black actual dots change from0 to15 after Reveal while directional probabilities stay unchanged. Aggregate evidence is in `results/diwali1.2`; private inputs and weights remain local. UI: `python -m research.diwali.anchored_serve`, port8752.
 
 ## Isolated comparison
 
