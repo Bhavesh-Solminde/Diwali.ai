@@ -1,0 +1,19 @@
+{
+  "model": "diwali0.4",
+  "source_sha256": {
+    "research/diwali/distribution.py": "5f0f665d21bb4a6c3491d683ff4813747edf9fc743ac68c2bc63b3128a29b18f",
+    "research/diwali/distribution_serve.py": "5918797bf7e258c1a120a01e3b65bf9bf342dcf511be1bc23fe7e153e75e0db9",
+    "research/diwali/probability.py": "a8c878e862fbe02348f30ceef0872eb371692e8fb2191212dfe3bd1ca2208c46",
+    "research/diwali/model.py": "3130d855b64bbf34f6ecf1b05c3d4ec0343f348394c9fa64e0ff472efd8412cc",
+    "research/diwali/train.py": "970d7c51f0d1857dcdbe2556a9c0aef454662ae045a34cf99841db59e0f439dc"
+  },
+  "artifact_sha256": {
+    "report.json": "a3ef4c7063346047851974397d29747f10cbee0a2f83c83f3d472aee26ca91a1",
+    "preprocessing.json": "18a57f26c8f235212fb98a2f054cd1e7511e9d5b15d9d9d39387bdad07965d9a",
+    "baseline-definitions.json": "926aacc786bf78c70d31c9e8f79744d956cc7512f3dd1e6d6e2847d64fdb61b0",
+    "categorical-17.pt": "e6563fa965af2a49cbfcea90c074949a09068c1ad2415e2280d5696e15c6709c"
+  },
+  "weights_private": true,
+  "recent_live_accuracy_measured": false,
+  "historical_benchmark_previously_inspected": true
+}

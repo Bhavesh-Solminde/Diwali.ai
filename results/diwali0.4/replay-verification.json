@@ -1,0 +1,9 @@
+{
+  "cases": 10,
+  "max_cpu_mps_probability_error": 3.3475309441088896e-08,
+  "probability_sum_and_direction_aggregation": true,
+  "actual_hidden_until_reveal": true,
+  "all_actual_range_labels_match": true,
+  "median_inference_ms": 0.8191455126507208,
+  "max_inference_ms": 1.1634590046014637
+}

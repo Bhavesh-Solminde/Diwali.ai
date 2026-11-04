@@ -1,0 +1,9 @@
+{
+  "mode": "categorical",
+  "seed": 17,
+  "development_three_seed_means": {
+    "categorical": 2.6576475911811572,
+    "ordinal_penalty": 2.657702097667077
+  },
+  "frozen_before_calibration": true
+}

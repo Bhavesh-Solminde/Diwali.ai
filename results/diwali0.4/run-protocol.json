@@ -1,0 +1,55 @@
+{
+  "model": "diwali0.4",
+  "target": "closing return at end of next full calendar minute relative observed snapshot VWAP",
+  "price_edges_bp": [
+    -20.0,
+    -12.0,
+    -8.0,
+    -5.0,
+    -3.0,
+    -2.0,
+    -1.0,
+    -0.5,
+    0.0,
+    0.5,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    8.0,
+    12.0,
+    20.0
+  ],
+  "tails": "first (-infinity,-20], last (20,+infinity); no clipping, invented within-bin density or finite tail mean",
+  "boundary_rule": "upper edges inclusive except +2 included in bullish bin12; directional aggregation exactly matches0.2",
+  "inputs": "exact0.2 one-day candles/60-second book/trades/reference displacement; no added long summary after negative0.3",
+  "cohort": "exact saved0.2 origins, references, primary and colour labels",
+  "models": [
+    "categorical",
+    "ordinal_penalty"
+  ],
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "loss": "18-bin cross entropy +0.25 colour cross entropy; ordinal variant adds0.5 mean17-threshold RPS",
+  "selection": "lowest three-seed mean development 18-bin log loss; seed17 fixed; checkpoint early stop on development bin log loss",
+  "max_epochs": 20,
+  "patience": 4,
+  "batch": 128,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.0001,
+  "gradient_clip": 5,
+  "split": "fitOct1-18; developmentOct19-21; calibrationOct22-23; inspected comparisonOct24-31,2026 UTC",
+  "calibration": "scalar temperature minimized on calibration bin log loss; colour separate; direction always aggregated from calibrated bins",
+  "baselines": "fit-only empirical18-bin frequencies, fit-conditional past15-minute volatility histogram; fixed fit quartiles, add-one smoothing",
+  "limitations": [
+    "Perfect market probabilities cannot be certified from a finite historical sample.",
+    "Histogram is one endpoint, not an intra-candle path, touching probability, high/low distribution or15-minute fan.",
+    "Historical candle availability assumed, original receipt clocks not verified; no prospective model accuracy.",
+    "October inspected benchmark is reused for descriptive comparisons only; new confirmation remains required."
+  ],
+  "source_sha256": "5f0f665d21bb4a6c3491d683ff4813747edf9fc743ac68c2bc63b3128a29b18f",
+  "parent_report_sha256": "6c898a0df2dcdabbe51ef9da44fbf939d9166def631f64b26c29f88daf5853e9"
+}

@@ -1,0 +1,12 @@
+{
+  "tests_passed": 64,
+  "browser_sizes": [
+    1440,
+    390
+  ],
+  "predict_reveal_range_query_case_switch_pass": true,
+  "javascript_errors": 0,
+  "horizontal_overflow": false,
+  "perfect_probability_claim": false,
+  "full_time_path_model_complete": false
+}

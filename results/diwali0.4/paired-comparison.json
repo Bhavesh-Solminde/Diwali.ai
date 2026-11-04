@@ -1,0 +1,10 @@
+{
+  "direction_log_loss_minus0.2": -0.00017085329035101745,
+  "day_block_resampling_interval95": [
+    -0.0013488938795235363,
+    0.0008180382912555285
+  ],
+  "days_improved": 3,
+  "total_days": 8,
+  "note": "Exploratory eight-day resampling; reused benchmark, no independent confirmation."
+}

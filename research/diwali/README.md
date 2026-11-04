@@ -1,5 +1,26 @@
 # Diwali model experiments
 
+## diwali0.4 closing-price probability ranges
+
+```sh
+python -m research.diwali.distribution --output data/models/NEW-DISTRIBUTION-RUN
+python -m research.diwali.distribution_serve --port 8744
+```
+
+Default completed run `data/models/diwali0.4` predicts18 next-full-minute closing
+return bins. Softmax probabilities sum toone; bearish/neutral/bullish probabilities
+are coherent sums of those bins. Open tails are retained, not clipped. Select
+adjacent bins in the UI to query their combined probability, then Reveal to see
+the actual close's bin. This is one closing-time endpoint, not a15-minute path.
+
+Categorical loss selected over ordinal-penalty alternative on three-seed mean
+development bin log loss. Historical benchmark18-bin log loss2.62078 versus
+fit-frequency2.76711 and past-volatility2.67456. Direction accuracy45.99%
+versus0.2's45.83% is a tiny, unconfirmed change. Rare80% confidence calls were
+all neutral and only7/12 correct; no dependable directional edge is established.
+The requested full time-varying probability fan and fresh validation remain
+outstanding. See `docs/planning/DIWALI0.4-PRICE-RANGE-2026-11-04.md`.
+
 ## diwali0.3 longer order-history experiment
 
 ```sh

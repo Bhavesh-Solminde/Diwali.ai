@@ -1,0 +1,1269 @@
+{
+  "groups_by_past_volatility_fit_quartiles": {
+    "0": {
+      "n": 1778,
+      "ranges": {
+        "examples": 1778,
+        "bin_log_loss": 2.4807756841358417,
+        "ranked_probability_score_mean_17_thresholds": 0.10383611808592869,
+        "bin_accuracy": 0.1361079865016873,
+        "actual_counts": [
+          0,
+          3,
+          17,
+          57,
+          133,
+          135,
+          190,
+          142,
+          186,
+          201,
+          141,
+          217,
+          142,
+          145,
+          45,
+          19,
+          2,
+          3
+        ],
+        "mean_probabilities": [
+          0.00038367254880611556,
+          0.0023009640270640185,
+          0.009486759935002906,
+          0.03199842189166064,
+          0.08278339706823196,
+          0.07672641002994766,
+          0.11000930009072649,
+          0.06492307635599937,
+          0.10785727096208572,
+          0.11185920392664365,
+          0.07306008950981432,
+          0.12112743541932341,
+          0.0804196611074417,
+          0.07692970473490615,
+          0.03742883961177773,
+          0.010229241659695474,
+          0.002124905238402119,
+          0.00035164588247053527
+        ],
+        "intervals": {
+          "0.8": {
+            "actual_coverage": 0.8925759280089989,
+            "mean_predicted_mass": 0.8782289513498748,
+            "unbounded_fraction": 0.0,
+            "note": "Equal-tail bin intervals; may exceed nominal mass due coarse bins, no conformal/live guarantee."
+          },
+          "0.95": {
+            "actual_coverage": 0.9718785151856018,
+            "mean_predicted_mass": 0.9737909730295187,
+            "unbounded_fraction": 0.0,
+            "note": "Equal-tail bin intervals; may exceed nominal mass due coarse bins, no conformal/live guarantee."
+          }
+        }
+      },
+      "conditional_range_baseline": {
+        "examples": 1778,
+        "bin_log_loss": 2.5432217173242235,
+        "ranked_probability_score_mean_17_thresholds": 0.10638682433153371,
+        "bin_accuracy": 0.11304836895388076,
+        "actual_counts": [
+          0,
+          3,
+          17,
+          57,
+          133,
+          135,
+          190,
+          142,
+          186,
+          201,
+          141,
+          217,
+          142,
+          145,
+          45,
+          19,
+          2,
+          3
+        ],
+        "mean_probabilities": [
+          0.0004980079681274897,
+          0.001162018592297526,
+          0.004980079681274825,
+          0.01958831341301442,
+          0.05710491367861793,
+          0.06756308100929681,
+          0.10657370517928014,
+          0.07154714475431855,
+          0.15338645418326985,
+          0.17297476759628078,
+          0.07768924302788996,
+          0.11420982735723587,
+          0.06972111553784634,
+          0.05312084993360119,
+          0.0214143426294817,
+          0.005976095617530153,
+          0.002158034528552537,
+          0.0003320053120849931
+        ],
+        "intervals": {
+          "0.8": {
+            "actual_coverage": 0.7615298087739033,
+            "mean_predicted_mass": 0.8336653386454186,
+            "unbounded_fraction": 0.0,
+            "note": "Equal-tail bin intervals; may exceed nominal mass due coarse bins, no conformal/live guarantee."
+          },
+          "0.95": {
+            "actual_coverage": 0.9752530933633295,
+            "mean_predicted_mass": 0.9848937583001329,
+            "unbounded_fraction": 0.0,
+            "note": "Equal-tail bin intervals; may exceed nominal mass due coarse bins, no conformal/live guarantee."
+          }
+        }
+      },
+      "direction": {
+        "examples": 1778,
+        "log_loss": 0.92576821288194,
+        "brier_score_sum_over_classes": 0.5434660989794183,
+        "accuracy": 0.6046119235095613,
+        "balanced_accuracy": 0.33334115781457024,
+        "class_counts": [
+          345,
+          1077,
+          356
+        ],
+        "confusion_actual_rows_predicted_columns": [
+          [
+            0,
+            343,
+            2
+          ],
+          [
+            3,
+            1074,
+            0
+          ],
+          [
+            0,
+            355,
+            1
+          ]
+        ],
+        "confidence_bins": [
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 40,
+            "mean_confidence": 0.37800672525960105,
+            "observed_accuracy": 0.275
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 258,
+            "mean_confidence": 0.45933794496143704,
+            "observed_accuracy": 0.4806201550387597
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 649,
+            "mean_confidence": 0.5529262022829061,
+            "observed_accuracy": 0.5808936825885979
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 620,
+            "mean_confidence": 0.6426022055208026,
+            "observed_accuracy": 0.6629032258064517
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 200,
+            "mean_confidence": 0.7366121363385573,
+            "observed_accuracy": 0.73
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 11,
+            "mean_confidence": 0.8105562693800572,
+            "observed_accuracy": 0.5454545454545454
+          }
+        ],
+        "class_reliability": {
+          "bearish": [
+            {
+              "lower": 0.0,
+              "n": 23,
+              "predicted": 0.09149424737938147,
+              "observed": 0.13043478260869565
+            },
+            {
+              "lower": 0.1,
+              "n": 864,
+              "predicted": 0.16111493166302734,
+              "observed": 0.14814814814814814
+            },
+            {
+              "lower": 0.2,
+              "n": 810,
+              "predicted": 0.2406444580550075,
+              "observed": 0.23209876543209876
+            },
+            {
+              "lower": 0.30000000000000004,
+              "n": 81,
+              "predicted": 0.31990980826087684,
+              "observed": 0.32098765432098764
+            }
+          ],
+          "neutral": [
+            {
+              "lower": 0.30000000000000004,
+              "n": 40,
+              "predicted": 0.3735217065749866,
+              "observed": 0.325
+            },
+            {
+              "lower": 0.4,
+              "n": 258,
+              "predicted": 0.45933794496143704,
+              "observed": 0.4806201550387597
+            },
+            {
+              "lower": 0.5,
+              "n": 649,
+              "predicted": 0.5529262022829061,
+              "observed": 0.5808936825885979
+            },
+            {
+              "lower": 0.6000000000000001,
+              "n": 620,
+              "predicted": 0.6426022055208026,
+              "observed": 0.6629032258064517
+            },
+            {
+              "lower": 0.7000000000000001,
+              "n": 200,
+              "predicted": 0.7366121363385573,
+              "observed": 0.73
+            },
+            {
+              "lower": 0.8,
+              "n": 11,
+              "predicted": 0.8105562693800572,
+              "observed": 0.5454545454545454
+            }
+          ],
+          "bullish": [
+            {
+              "lower": 0.0,
+              "n": 16,
+              "predicted": 0.09163817217241439,
+              "observed": 0.125
+            },
+            {
+              "lower": 0.1,
+              "n": 792,
+              "predicted": 0.16522192062151134,
+              "observed": 0.15656565656565657
+            },
+            {
+              "lower": 0.2,
+              "n": 895,
+              "predicted": 0.23745903657254258,
+              "observed": 0.2335195530726257
+            },
+            {
+              "lower": 0.30000000000000004,
+              "n": 75,
+              "predicted": 0.3207831898915241,
+              "observed": 0.28
+            }
+          ]
+        },
+        "high_confidence": {
+          "0.6": {
+            "n": 831,
+            "coverage": 0.46737907761529807,
+            "accuracy": 0.677496991576414
+          },
+          "0.7": {
+            "n": 211,
+            "coverage": 0.1186726659167604,
+            "accuracy": 0.7203791469194313
+          },
+          "0.8": {
+            "n": 11,
+            "coverage": 0.006186726659167604,
+            "accuracy": 0.5454545454545454
+          },
+          "0.9": {
+            "n": 0,
+            "coverage": 0.0,
+            "accuracy": null
+          }
+        }
+      }
+    },
+    "1": {
+      "n": 3374,
+      "ranges": {
+        "examples": 3374,
+        "bin_log_loss": 2.582222736304825,
+        "ranked_probability_score_mean_17_thresholds": 0.12325220813720739,
+        "bin_accuracy": 0.11529342027267339,
+        "actual_counts": [
+          3,
+          18,
+          69,
+          199,
+          328,
+          277,
+          346,
+          217,
+          255,
+          213,
+          173,
+          377,
+          299,
+          310,
+          204,
+          55,
+          27,
+          4
+        ],
+        "mean_probabilities": [
+          0.0011251931162112297,
+          0.006148457747146801,
+          0.020727918715422906,
+          0.057488319555176776,
+          0.10409350259412073,
+          0.0793080480210125,
+          0.10141635120547503,
+          0.05440584361501985,
+          0.07172643491934644,
+          0.0713127607229426,
+          0.058022332467797866,
+          0.10568693236606493,
+          0.08327489443193914,
+          0.09443552086015491,
+          0.06220982196967912,
+          0.02170429516646282,
+          0.005744138224614094,
+          0.0011692343014122978
+        ],
+        "intervals": {
+          "0.8": {
+            "actual_coverage": 0.8802608180201541,
+            "mean_predicted_mass": 0.8765784137465107,
+            "unbounded_fraction": 0.0,
+            "note": "Equal-tail bin intervals; may exceed nominal mass due coarse bins, no conformal/live guarantee."
+          },
+          "0.95": {
+            "actual_coverage": 0.9724362774155305,
+            "mean_predicted_mass": 0.9732021829264267,
+            "unbounded_fraction": 0.0011855364552459987,
+            "note": "Equal-tail bin intervals; may exceed nominal mass due coarse bins, no conformal/live guarantee."
+          }
+        }
+      },
+      "conditional_range_baseline": {
+        "examples": 3374,
+        "bin_log_loss": 2.6119898534402206,
+        "ranked_probability_score_mean_17_thresholds": 0.12467315885068359,
+        "bin_accuracy": 0.1025489033787789,
+        "actual_counts": [
+          3,
+          18,
+          69,
+          199,
+          328,
+          277,
+          346,
+          217,
+          255,
+          213,
+          173,
+          377,
+          299,
+          310,
+          204,
+          55,
+          27,
+          4
+        ],
+        "mean_probabilities": [
+          0.0004980906524987324,
+          0.006641208699983069,
+          0.022248049144943997,
+          0.05445791133986198,
+          0.09961813049975607,
+          0.07670596048481011,
+          0.11157230615971657,
+          0.062261331562346985,
+          0.07205711439482203,
+          0.07487962809231002,
+          0.060434999169844864,
+          0.09928607006475003,
+          0.08168686700980116,
+          0.09447119375726763,
+          0.057612485472359434,
+          0.01942553544745219,
+          0.0048148763074881175,
+          0.0013282417399966074
+        ],
+        "intervals": {
+          "0.8": {
+            "actual_coverage": 0.8283935981031417,
+            "mean_predicted_mass": 0.8329736011954177,
+            "unbounded_fraction": 0.0,
+            "note": "Equal-tail bin intervals; may exceed nominal mass due coarse bins, no conformal/live guarantee."
+          },
+          "0.95": {
+            "actual_coverage": 0.9845880260818021,
+            "mean_predicted_mass": 0.9867175826000328,
+            "unbounded_fraction": 0.0,
+            "note": "Equal-tail bin intervals; may exceed nominal mass due coarse bins, no conformal/live guarantee."
+          }
+        }
+      },
+      "direction": {
+        "examples": 3374,
+        "log_loss": 1.0392166472193751,
+        "brier_score_sum_over_classes": 0.6249290881189726,
+        "accuracy": 0.475103734439834,
+        "balanced_accuracy": 0.35826172510745935,
+        "class_counts": [
+          894,
+          1581,
+          899
+        ],
+        "confusion_actual_rows_predicted_columns": [
+          [
+            66,
+            780,
+            48
+          ],
+          [
+            41,
+            1477,
+            63
+          ],
+          [
+            50,
+            789,
+            60
+          ]
+        ],
+        "confidence_bins": [
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 862,
+            "mean_confidence": 0.3719173902871937,
+            "observed_accuracy": 0.39327146171693733
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 1407,
+            "mean_confidence": 0.4496798935632673,
+            "observed_accuracy": 0.44349680170575695
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 878,
+            "mean_confidence": 0.5430643273481305,
+            "observed_accuracy": 0.5580865603644647
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 190,
+            "mean_confidence": 0.6333112061488478,
+            "observed_accuracy": 0.6368421052631579
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 36,
+            "mean_confidence": 0.739700423750016,
+            "observed_accuracy": 0.7777777777777778
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 1,
+            "mean_confidence": 0.827187092450163,
+            "observed_accuracy": 1.0
+          }
+        ],
+        "class_reliability": {
+          "bearish": [
+            {
+              "lower": 0.0,
+              "n": 6,
+              "predicted": 0.0911486925680054,
+              "observed": 0.16666666666666666
+            },
+            {
+              "lower": 0.1,
+              "n": 360,
+              "predicted": 0.17578011455622944,
+              "observed": 0.19722222222222222
+            },
+            {
+              "lower": 0.2,
+              "n": 1975,
+              "predicted": 0.2547985198859969,
+              "observed": 0.2541772151898734
+            },
+            {
+              "lower": 0.30000000000000004,
+              "n": 1031,
+              "predicted": 0.3290941545220884,
+              "observed": 0.31037827352085356
+            },
+            {
+              "lower": 0.4,
+              "n": 2,
+              "predicted": 0.4444171153324894,
+              "observed": 0.0
+            }
+          ],
+          "neutral": [
+            {
+              "lower": 0.1,
+              "n": 2,
+              "predicted": 0.16689337672812554,
+              "observed": 0.0
+            },
+            {
+              "lower": 0.2,
+              "n": 89,
+              "predicted": 0.2742403818543319,
+              "observed": 0.29213483146067415
+            },
+            {
+              "lower": 0.30000000000000004,
+              "n": 775,
+              "predicted": 0.3617639037480006,
+              "observed": 0.37806451612903225
+            },
+            {
+              "lower": 0.4,
+              "n": 1403,
+              "predicted": 0.4497570733430524,
+              "observed": 0.44333570919458304
+            },
+            {
+              "lower": 0.5,
+              "n": 878,
+              "predicted": 0.5430643273481305,
+              "observed": 0.5580865603644647
+            },
+            {
+              "lower": 0.6000000000000001,
+              "n": 190,
+              "predicted": 0.6333112061488478,
+              "observed": 0.6368421052631579
+            },
+            {
+              "lower": 0.7000000000000001,
+              "n": 36,
+              "predicted": 0.739700423750016,
+              "observed": 0.7777777777777778
+            },
+            {
+              "lower": 0.8,
+              "n": 1,
+              "predicted": 0.827187092450163,
+              "observed": 1.0
+            }
+          ],
+          "bullish": [
+            {
+              "lower": 0.0,
+              "n": 3,
+              "predicted": 0.09244455904869901,
+              "observed": 0.3333333333333333
+            },
+            {
+              "lower": 0.1,
+              "n": 349,
+              "predicted": 0.17651958250273997,
+              "observed": 0.1318051575931232
+            },
+            {
+              "lower": 0.2,
+              "n": 2071,
+              "predicted": 0.2548772236691479,
+              "observed": 0.26219217769193626
+            },
+            {
+              "lower": 0.30000000000000004,
+              "n": 948,
+              "predicted": 0.3323888224071856,
+              "observed": 0.3227848101265823
+            },
+            {
+              "lower": 0.4,
+              "n": 3,
+              "predicted": 0.40296316142079913,
+              "observed": 1.0
+            }
+          ]
+        },
+        "high_confidence": {
+          "0.6": {
+            "n": 227,
+            "coverage": 0.06727919383521043,
+            "accuracy": 0.6607929515418502
+          },
+          "0.7": {
+            "n": 37,
+            "coverage": 0.010966212211025488,
+            "accuracy": 0.7837837837837838
+          },
+          "0.8": {
+            "n": 1,
+            "coverage": 0.0002963841138114997,
+            "accuracy": 1.0
+          },
+          "0.9": {
+            "n": 0,
+            "coverage": 0.0,
+            "accuracy": null
+          }
+        }
+      }
+    },
+    "2": {
+      "n": 2604,
+      "ranges": {
+        "examples": 2604,
+        "bin_log_loss": 2.6456664329176047,
+        "ranked_probability_score_mean_17_thresholds": 0.13906305578357245,
+        "bin_accuracy": 0.11789554531490015,
+        "actual_counts": [
+          4,
+          34,
+          99,
+          179,
+          303,
+          233,
+          223,
+          107,
+          143,
+          129,
+          108,
+          208,
+          216,
+          278,
+          213,
+          86,
+          26,
+          15
+        ],
+        "mean_probabilities": [
+          0.0027154060276481803,
+          0.013656514399758174,
+          0.03663750440945515,
+          0.07970755644040126,
+          0.11068100613010885,
+          0.07214239308621813,
+          0.08529836215534504,
+          0.04515273763829515,
+          0.05083974305758173,
+          0.04931737341717624,
+          0.046243326232037356,
+          0.0893469026609904,
+          0.07753436143463048,
+          0.10329158007570881,
+          0.08433982949459169,
+          0.03719535888906417,
+          0.01282337955341891,
+          0.0030766648975708247
+        ],
+        "intervals": {
+          "0.8": {
+            "actual_coverage": 0.8809523809523809,
+            "mean_predicted_mass": 0.879932134397703,
+            "unbounded_fraction": 0.0,
+            "note": "Equal-tail bin intervals; may exceed nominal mass due coarse bins, no conformal/live guarantee."
+          },
+          "0.95": {
+            "actual_coverage": 0.9723502304147466,
+            "mean_predicted_mass": 0.9751738302471862,
+            "unbounded_fraction": 0.004608294930875576,
+            "note": "Equal-tail bin intervals; may exceed nominal mass due coarse bins, no conformal/live guarantee."
+          }
+        }
+      },
+      "conditional_range_baseline": {
+        "examples": 2604,
+        "bin_log_loss": 2.674699219157534,
+        "ranked_probability_score_mean_17_thresholds": 0.14023502395765694,
+        "bin_accuracy": 0.11635944700460829,
+        "actual_counts": [
+          4,
+          34,
+          99,
+          179,
+          303,
+          233,
+          223,
+          107,
+          143,
+          129,
+          108,
+          208,
+          216,
+          278,
+          213,
+          86,
+          26,
+          15
+        ],
+        "mean_probabilities": [
+          0.002988047808765103,
+          0.016268260292164872,
+          0.04067065073040934,
+          0.08549136786188946,
+          0.11454183266931875,
+          0.0682270916334666,
+          0.07553120849933982,
+          0.04316069057104646,
+          0.04482071713147281,
+          0.04598273572376945,
+          0.04183266932271166,
+          0.08665338645418011,
+          0.07420318725099445,
+          0.10906374501991489,
+          0.0919654714475389,
+          0.04033864541832728,
+          0.014940239043824194,
+          0.0033200531208501696
+        ],
+        "intervals": {
+          "0.8": {
+            "actual_coverage": 0.8986175115207373,
+            "mean_predicted_mass": 0.8814741035856576,
+            "unbounded_fraction": 0.0,
+            "note": "Equal-tail bin intervals; may exceed nominal mass due coarse bins, no conformal/live guarantee."
+          },
+          "0.95": {
+            "actual_coverage": 0.9696620583717358,
+            "mean_predicted_mass": 0.9624833997343959,
+            "unbounded_fraction": 0.0,
+            "note": "Equal-tail bin intervals; may exceed nominal mass due coarse bins, no conformal/live guarantee."
+          }
+        }
+      },
+      "direction": {
+        "examples": 2604,
+        "log_loss": 1.0866348247448927,
+        "brier_score_sum_over_classes": 0.6586322085663205,
+        "accuracy": 0.38517665130568357,
+        "balanced_accuracy": 0.37768043872919704,
+        "class_counts": [
+          852,
+          918,
+          834
+        ],
+        "confusion_actual_rows_predicted_columns": [
+          [
+            218,
+            464,
+            170
+          ],
+          [
+            160,
+            584,
+            174
+          ],
+          [
+            202,
+            431,
+            201
+          ]
+        ],
+        "confidence_bins": [
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 1728,
+            "mean_confidence": 0.36987026403132245,
+            "observed_accuracy": 0.3645833333333333
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 750,
+            "mean_confidence": 0.4355027922690528,
+            "observed_accuracy": 0.408
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 107,
+            "mean_confidence": 0.5339166463309749,
+            "observed_accuracy": 0.5046728971962616
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "n": 15,
+            "mean_confidence": 0.6328726891290597,
+            "observed_accuracy": 0.8
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "n": 4,
+            "mean_confidence": 0.7267117964087358,
+            "observed_accuracy": 0.25
+          }
+        ],
+        "class_reliability": {
+          "bearish": [
+            {
+              "lower": 0.1,
+              "n": 28,
+              "predicted": 0.16404592122429926,
+              "observed": 0.14285714285714285
+            },
+            {
+              "lower": 0.2,
+              "n": 906,
+              "predicted": 0.26752850370586073,
+              "observed": 0.293598233995585
+            },
+            {
+              "lower": 0.30000000000000004,
+              "n": 1619,
+              "predicted": 0.3420849915675085,
+              "observed": 0.3477455219271155
+            },
+            {
+              "lower": 0.4,
+              "n": 51,
+              "predicted": 0.40896939815138267,
+              "observed": 0.37254901960784315
+            }
+          ],
+          "neutral": [
+            {
+              "lower": 0.1,
+              "n": 11,
+              "predicted": 0.17765639363377586,
+              "observed": 0.18181818181818182
+            },
+            {
+              "lower": 0.2,
+              "n": 493,
+              "predicted": 0.26528721475468203,
+              "observed": 0.26369168356997974
+            },
+            {
+              "lower": 0.30000000000000004,
+              "n": 1291,
+              "predicted": 0.3501914176343199,
+              "observed": 0.3415956622773044
+            },
+            {
+              "lower": 0.4,
+              "n": 683,
+              "predicted": 0.43808754780443776,
+              "observed": 0.40702781844802344
+            },
+            {
+              "lower": 0.5,
+              "n": 107,
+              "predicted": 0.5339166463309749,
+              "observed": 0.5046728971962616
+            },
+            {
+              "lower": 0.6000000000000001,
+              "n": 15,
+              "predicted": 0.6328726891290597,
+              "observed": 0.8
+            },
+            {
+              "lower": 0.7000000000000001,
+              "n": 4,
+              "predicted": 0.7267117964087358,
+              "observed": 0.25
+            }
+          ],
+          "bullish": [
+            {
+              "lower": 0.1,
+              "n": 21,
+              "predicted": 0.1753068618041596,
+              "observed": 0.09523809523809523
+            },
+            {
+              "lower": 0.2,
+              "n": 837,
+              "predicted": 0.2680722207901274,
+              "observed": 0.26762246117084826
+            },
+            {
+              "lower": 0.30000000000000004,
+              "n": 1726,
+              "predicted": 0.34327953131379096,
+              "observed": 0.3464658169177289
+            },
+            {
+              "lower": 0.4,
+              "n": 20,
+              "predicted": 0.40968670237564925,
+              "observed": 0.5
+            }
+          ]
+        },
+        "high_confidence": {
+          "0.6": {
+            "n": 19,
+            "coverage": 0.007296466973886329,
+            "accuracy": 0.6842105263157895
+          },
+          "0.7": {
+            "n": 4,
+            "coverage": 0.0015360983102918587,
+            "accuracy": 0.25
+          },
+          "0.8": {
+            "n": 0,
+            "coverage": 0.0,
+            "accuracy": null
+          },
+          "0.9": {
+            "n": 0,
+            "coverage": 0.0,
+            "accuracy": null
+          }
+        }
+      }
+    },
+    "3": {
+      "n": 3444,
+      "ranges": {
+        "examples": 3444,
+        "bin_log_loss": 2.712003734161123,
+        "ranked_probability_score_mean_17_thresholds": 0.1748595232452867,
+        "bin_accuracy": 0.10888501742160278,
+        "actual_counts": [
+          96,
+          211,
+          261,
+          316,
+          342,
+          183,
+          170,
+          90,
+          98,
+          90,
+          95,
+          196,
+          156,
+          288,
+          315,
+          276,
+          174,
+          87
+        ],
+        "mean_probabilities": [
+          0.018963226631229017,
+          0.05325436411948994,
+          0.07729717763673928,
+          0.09761120796657481,
+          0.08967078911229229,
+          0.04846132063422468,
+          0.05235016239416258,
+          0.031848093969523886,
+          0.031033130012524338,
+          0.029521491788652463,
+          0.030341332936997218,
+          0.05566520735578631,
+          0.051119709297476695,
+          0.08980611718423594,
+          0.0928023968364708,
+          0.0735093337451252,
+          0.05496599940224976,
+          0.021778938976244295
+        ],
+        "intervals": {
+          "0.8": {
+            "actual_coverage": 0.8545296167247387,
+            "mean_predicted_mass": 0.8807781763940243,
+            "unbounded_fraction": 0.023228803716608595,
+            "note": "Equal-tail bin intervals; may exceed nominal mass due coarse bins, no conformal/live guarantee."
+          },
+          "0.95": {
+            "actual_coverage": 0.9817073170731707,
+            "mean_predicted_mass": 0.9815836628884032,
+            "unbounded_fraction": 0.29006968641114983,
+            "note": "Equal-tail bin intervals; may exceed nominal mass due coarse bins, no conformal/live guarantee."
+          }
+        }
+      },
+      "conditional_range_baseline": {
+        "examples": 3444,
+        "bin_log_loss": 2.8035600169397066,
+        "ranked_probability_score_mean_17_thresholds": 0.1779723053726816,
+        "bin_accuracy": 0.09175377468060394,
+        "actual_counts": [
+          96,
+          211,
+          261,
+          316,
+          342,
+          183,
+          170,
+          90,
+          98,
+          90,
+          95,
+          196,
+          156,
+          288,
+          315,
+          276,
+          174,
+          87
+        ],
+        "mean_probabilities": [
+          0.013114209827357124,
+          0.04531872509960303,
+          0.07337317397078764,
+          0.09777556440902653,
+          0.09428950863213431,
+          0.057104913678616205,
+          0.0590969455511258,
+          0.031208499335988953,
+          0.031208499335988953,
+          0.03569057104913407,
+          0.03104249667994537,
+          0.05859893758300495,
+          0.05544488711819702,
+          0.09445551128817575,
+          0.09113545816733785,
+          0.07021912350597821,
+          0.04598273572377195,
+          0.014940239043824152
+        ],
+        "intervals": {
+          "0.8": {
+            "actual_coverage": 0.835075493612079,
+            "mean_predicted_mass": 0.880644090305445,
+            "unbounded_fraction": 0.0,
+            "note": "Equal-tail bin intervals; may exceed nominal mass due coarse bins, no conformal/live guarantee."
+          },
+          "0.95": {
+            "actual_coverage": 0.9468641114982579,
+            "mean_predicted_mass": 0.9719455511288184,
+            "unbounded_fraction": 0.0,
+            "note": "Equal-tail bin intervals; may exceed nominal mass due coarse bins, no conformal/live guarantee."
+          }
+        }
+      },
+      "direction": {
+        "examples": 3444,
+        "log_loss": 1.0438750730384472,
+        "brier_score_sum_over_classes": 0.6342362649016375,
+        "accuracy": 0.4268292682926829,
+        "balanced_accuracy": 0.38320603750016696,
+        "class_counts": [
+          1409,
+          739,
+          1296
+        ],
+        "confusion_actual_rows_predicted_columns": [
+          [
+            795,
+            64,
+            550
+          ],
+          [
+            355,
+            111,
+            273
+          ],
+          [
+            663,
+            69,
+            564
+          ]
+        ],
+        "confidence_bins": [
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "n": 1633,
+            "mean_confidence": 0.3786366975179519,
+            "observed_accuracy": 0.4139620330679731
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 1754,
+            "mean_confidence": 0.4275770335490223,
+            "observed_accuracy": 0.4372862029646522
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 57,
+            "mean_confidence": 0.5254882956846371,
+            "observed_accuracy": 0.47368421052631576
+          }
+        ],
+        "class_reliability": {
+          "bearish": [
+            {
+              "lower": 0.1,
+              "n": 3,
+              "predicted": 0.19425306175143284,
+              "observed": 0.3333333333333333
+            },
+            {
+              "lower": 0.2,
+              "n": 137,
+              "predicted": 0.27597822143268713,
+              "observed": 0.2773722627737226
+            },
+            {
+              "lower": 0.30000000000000004,
+              "n": 1822,
+              "predicted": 0.36562551798853116,
+              "observed": 0.3968166849615807
+            },
+            {
+              "lower": 0.4,
+              "n": 1481,
+              "predicted": 0.4197680528874612,
+              "observed": 0.4361917623227549
+            },
+            {
+              "lower": 0.5,
+              "n": 1,
+              "predicted": 0.59089290732828,
+              "observed": 1.0
+            }
+          ],
+          "neutral": [
+            {
+              "lower": 0.0,
+              "n": 93,
+              "predicted": 0.08538198879016828,
+              "observed": 0.06451612903225806
+            },
+            {
+              "lower": 0.1,
+              "n": 1149,
+              "predicted": 0.15911914387012438,
+              "observed": 0.15056570931244562
+            },
+            {
+              "lower": 0.2,
+              "n": 1633,
+              "predicted": 0.2458244318882313,
+              "observed": 0.2131047152480098
+            },
+            {
+              "lower": 0.30000000000000004,
+              "n": 473,
+              "predicted": 0.33656097988338024,
+              "observed": 0.3403805496828753
+            },
+            {
+              "lower": 0.4,
+              "n": 88,
+              "predicted": 0.44408122105840897,
+              "observed": 0.5113636363636364
+            },
+            {
+              "lower": 0.5,
+              "n": 8,
+              "predicted": 0.5329034615521291,
+              "observed": 0.75
+            }
+          ],
+          "bullish": [
+            {
+              "lower": 0.2,
+              "n": 150,
+              "predicted": 0.27213026446066435,
+              "observed": 0.23333333333333334
+            },
+            {
+              "lower": 0.30000000000000004,
+              "n": 2175,
+              "predicted": 0.36728554566224436,
+              "observed": 0.36091954022988504
+            },
+            {
+              "lower": 0.4,
+              "n": 1071,
+              "predicted": 0.4273309062211103,
+              "observed": 0.4257703081232493
+            },
+            {
+              "lower": 0.5,
+              "n": 48,
+              "predicted": 0.5228898386308125,
+              "observed": 0.4166666666666667
+            }
+          ]
+        },
+        "high_confidence": {
+          "0.6": {
+            "n": 0,
+            "coverage": 0.0,
+            "accuracy": null
+          },
+          "0.7": {
+            "n": 0,
+            "coverage": 0.0,
+            "accuracy": null
+          },
+          "0.8": {
+            "n": 0,
+            "coverage": 0.0,
+            "accuracy": null
+          },
+          "0.9": {
+            "n": 0,
+            "coverage": 0.0,
+            "accuracy": null
+          }
+        }
+      }
+    }
+  },
+  "high_confidence80": {
+    "n": 12,
+    "wrong": 5,
+    "wrong_actual_classes": [
+      1,
+      0,
+      4
+    ],
+    "wrong_moves_bp": [
+      7.258095990099189,
+      7.142077282300541,
+      3.8705672053040985,
+      -3.3798152631858702,
+      2.336700444511841
+    ]
+  },
+  "interpretation": "Posthoc error diagnosis only; not used to tune0.4 or select cases. Does not establish causes of future price moves."
+}
