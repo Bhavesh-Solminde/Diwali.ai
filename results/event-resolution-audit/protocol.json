@@ -1,0 +1,25 @@
+{
+  "hours": [
+    [
+      "2026-10-05",
+      "00"
+    ],
+    [
+      "2026-10-05",
+      "12"
+    ],
+    [
+      "2026-10-12",
+      "00"
+    ],
+    [
+      "2026-10-12",
+      "12"
+    ]
+  ],
+  "selection": "Fixed fit-period days and hours, no outcome or volatility-based choice",
+  "source_sha256": "b32df0adb688ef873dae9139a5eb95a9a5d018db11077e2f9918f23896a0e61b",
+  "archive_manifest_sha256": "bfc97147330ef1b0f1c838efb47da04eb9b6e1f3673adfae02ea8d4ba22b9a03",
+  "training_started": false,
+  "overwrite_existing_inputs": false
+}

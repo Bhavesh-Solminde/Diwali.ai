@@ -1,0 +1,440 @@
+{
+  "state": "complete",
+  "protocol": {
+    "hours": [
+      [
+        "2026-10-05",
+        "00"
+      ],
+      [
+        "2026-10-05",
+        "12"
+      ],
+      [
+        "2026-10-12",
+        "00"
+      ],
+      [
+        "2026-10-12",
+        "12"
+      ]
+    ],
+    "selection": "Fixed fit-period days and hours, no outcome or volatility-based choice",
+    "source_sha256": "b32df0adb688ef873dae9139a5eb95a9a5d018db11077e2f9918f23896a0e61b",
+    "archive_manifest_sha256": "bfc97147330ef1b0f1c838efb47da04eb9b6e1f3673adfae02ea8d4ba22b9a03",
+    "training_started": false,
+    "overwrite_existing_inputs": false
+  },
+  "hours": 4,
+  "files": 8,
+  "results": [
+    {
+      "UTC_hour": "2026-10-05T00",
+      "kind": "orderbook",
+      "source_sha256": "bba0e5e53b69d2fec79db547fc83f5b519dd2ac0ca594500167d2da303e0b256",
+      "quality_ok": true,
+      "prior_replay_accepted_updates": 136582,
+      "quality_clock_flags": {
+        "receipt_outside_file_hour_rows": 0,
+        "invalid_exchange_clock_rows": 0,
+        "exchange_ahead_over_1s_rows": 0,
+        "invalid_transaction_clock_rows": 0,
+        "backward_receipt_rows": 0
+      },
+      "raw_rows": 6533499,
+      "snapshot_level_rows_excluded_from_delta_statistics": 37297,
+      "events_or_market_trades": 136582,
+      "out_of_hour_events": 0,
+      "per_received_second": {
+        "count": 3600,
+        "minimum": 37.0,
+        "median": 38.0,
+        "p90": 38.0,
+        "p99": 39.0,
+        "maximum": 39.0
+      },
+      "seconds_with_multiple_events": 3600,
+      "receipt_gap_ms": {
+        "count": 136581,
+        "minimum": 0.091365,
+        "median": 26.033987,
+        "p90": 27.980837,
+        "p99": 28.400871600000006,
+        "maximum": 285.480329
+      },
+      "zero_receipt_gap_count": 0,
+      "backward_receipt_gap_count": 0,
+      "receipt_minus_exchange_ms": {
+        "count": 136582,
+        "minimum": 116.159389,
+        "median": 129.53817850000001,
+        "p90": 129.8108474,
+        "p99": 130.33488767,
+        "maximum": 387.293282
+      },
+      "delta_zero_quantity_rows": 758062,
+      "nonmarket_rows_excluded": 0,
+      "trade_id_gap_events": 0,
+      "trade_id_nonincreasing_events": 0,
+      "event_resolution_scope": "Provider-emitted L2 update batches, not individual exchange orders"
+    },
+    {
+      "UTC_hour": "2026-10-05T00",
+      "kind": "trades",
+      "source_sha256": "01c962ac7499a00809a4f16a2ef28fab2d3c9c7cf294650390bab83cdf132749",
+      "quality_ok": true,
+      "prior_replay_accepted_updates": null,
+      "quality_clock_flags": {
+        "receipt_outside_file_hour_rows": 0,
+        "invalid_exchange_clock_rows": 0,
+        "exchange_ahead_over_1s_rows": 0,
+        "invalid_transaction_clock_rows": 0,
+        "backward_receipt_rows": 0
+      },
+      "raw_rows": 142367,
+      "snapshot_level_rows_excluded_from_delta_statistics": 0,
+      "events_or_market_trades": 141691,
+      "out_of_hour_events": 0,
+      "per_received_second": {
+        "count": 3600,
+        "minimum": 0.0,
+        "median": 10.0,
+        "p90": 110.09999999999991,
+        "p99": 366.0299999999993,
+        "maximum": 1418.0
+      },
+      "seconds_with_multiple_events": 3480,
+      "receipt_gap_ms": {
+        "count": 141690,
+        "minimum": 0.002183,
+        "median": 0.006684,
+        "p90": 65.73192690000002,
+        "p99": 465.544962339996,
+        "maximum": 3098.586272
+      },
+      "zero_receipt_gap_count": 0,
+      "backward_receipt_gap_count": 0,
+      "receipt_minus_exchange_ms": {
+        "count": 141691,
+        "minimum": 120.735214,
+        "median": 122.326449,
+        "p90": 129.878372,
+        "p99": 134.3198454,
+        "maximum": 164.572765
+      },
+      "delta_zero_quantity_rows": 0,
+      "nonmarket_rows_excluded": 676,
+      "trade_id_gap_events": 0,
+      "trade_id_nonincreasing_events": 0,
+      "event_resolution_scope": "Provider-retained market trade rows, not private order intentions"
+    },
+    {
+      "UTC_hour": "2026-10-05T12",
+      "kind": "orderbook",
+      "source_sha256": "a3a106ab0cb8fb5be81c1c6f6373cac3e4c37ec7253e8276c98df2a1ce24e37f",
+      "quality_ok": true,
+      "prior_replay_accepted_updates": 136369,
+      "quality_clock_flags": {
+        "receipt_outside_file_hour_rows": 0,
+        "invalid_exchange_clock_rows": 0,
+        "exchange_ahead_over_1s_rows": 0,
+        "invalid_transaction_clock_rows": 0,
+        "backward_receipt_rows": 0
+      },
+      "raw_rows": 5264299,
+      "snapshot_level_rows_excluded_from_delta_statistics": 47970,
+      "events_or_market_trades": 136369,
+      "out_of_hour_events": 0,
+      "per_received_second": {
+        "count": 3600,
+        "minimum": 29.0,
+        "median": 38.0,
+        "p90": 38.0,
+        "p99": 39.0,
+        "maximum": 47.0
+      },
+      "seconds_with_multiple_events": 3600,
+      "receipt_gap_ms": {
+        "count": 136368,
+        "minimum": 0.061145,
+        "median": 26.039114,
+        "p90": 27.9964163,
+        "p99": 28.396548229999997,
+        "maximum": 305.261364
+      },
+      "zero_receipt_gap_count": 0,
+      "backward_receipt_gap_count": 0,
+      "receipt_minus_exchange_ms": {
+        "count": 136369,
+        "minimum": 116.132247,
+        "median": 129.27088,
+        "p90": 129.6137004,
+        "p99": 131.86170784,
+        "maximum": 408.621678
+      },
+      "delta_zero_quantity_rows": 559232,
+      "nonmarket_rows_excluded": 0,
+      "trade_id_gap_events": 0,
+      "trade_id_nonincreasing_events": 0,
+      "event_resolution_scope": "Provider-emitted L2 update batches, not individual exchange orders"
+    },
+    {
+      "UTC_hour": "2026-10-05T12",
+      "kind": "trades",
+      "source_sha256": "1b39262d2ac7c57b1d1a7cfaf8da60b9bd0b907b668587b0df588c745fae5e58",
+      "quality_ok": true,
+      "prior_replay_accepted_updates": null,
+      "quality_clock_flags": {
+        "receipt_outside_file_hour_rows": 0,
+        "invalid_exchange_clock_rows": 0,
+        "exchange_ahead_over_1s_rows": 0,
+        "invalid_transaction_clock_rows": 0,
+        "backward_receipt_rows": 0
+      },
+      "raw_rows": 87270,
+      "snapshot_level_rows_excluded_from_delta_statistics": 0,
+      "events_or_market_trades": 86725,
+      "out_of_hour_events": 0,
+      "per_received_second": {
+        "count": 3600,
+        "minimum": 0.0,
+        "median": 6.0,
+        "p90": 69.0,
+        "p99": 235.04999999999882,
+        "maximum": 1941.0
+      },
+      "seconds_with_multiple_events": 3374,
+      "receipt_gap_ms": {
+        "count": 86724,
+        "minimum": 0.002132,
+        "median": 0.006547,
+        "p90": 135.05978989999997,
+        "p99": 654.9336512300002,
+        "maximum": 2783.981992
+      },
+      "zero_receipt_gap_count": 0,
+      "backward_receipt_gap_count": 0,
+      "receipt_minus_exchange_ms": {
+        "count": 86725,
+        "minimum": 118.379492,
+        "median": 123.600311,
+        "p90": 125.6788568,
+        "p99": 130.64332328,
+        "maximum": 149.926006
+      },
+      "delta_zero_quantity_rows": 0,
+      "nonmarket_rows_excluded": 545,
+      "trade_id_gap_events": 0,
+      "trade_id_nonincreasing_events": 0,
+      "event_resolution_scope": "Provider-retained market trade rows, not private order intentions"
+    },
+    {
+      "UTC_hour": "2026-10-12T00",
+      "kind": "orderbook",
+      "source_sha256": "b51acf8427f3d3c44b9c96711652639c16806c867f2910321a872b672ada287b",
+      "quality_ok": true,
+      "prior_replay_accepted_updates": 135715,
+      "quality_clock_flags": {
+        "receipt_outside_file_hour_rows": 0,
+        "invalid_exchange_clock_rows": 0,
+        "exchange_ahead_over_1s_rows": 0,
+        "invalid_transaction_clock_rows": 0,
+        "backward_receipt_rows": 0
+      },
+      "raw_rows": 4553145,
+      "snapshot_level_rows_excluded_from_delta_statistics": 49461,
+      "events_or_market_trades": 135715,
+      "out_of_hour_events": 0,
+      "per_received_second": {
+        "count": 3600,
+        "minimum": 34.0,
+        "median": 38.0,
+        "p90": 38.0,
+        "p99": 39.0,
+        "maximum": 41.0
+      },
+      "seconds_with_multiple_events": 3600,
+      "receipt_gap_ms": {
+        "count": 135714,
+        "minimum": 0.049677,
+        "median": 26.067522500000003,
+        "p90": 28.0398405,
+        "p99": 28.501319879999997,
+        "maximum": 297.901956
+      },
+      "zero_receipt_gap_count": 0,
+      "backward_receipt_gap_count": 0,
+      "receipt_minus_exchange_ms": {
+        "count": 135715,
+        "minimum": 120.756391,
+        "median": 123.983651,
+        "p90": 126.4841484,
+        "p99": 128.8808317,
+        "maximum": 398.193178
+      },
+      "delta_zero_quantity_rows": 461405,
+      "nonmarket_rows_excluded": 0,
+      "trade_id_gap_events": 0,
+      "trade_id_nonincreasing_events": 0,
+      "event_resolution_scope": "Provider-emitted L2 update batches, not individual exchange orders"
+    },
+    {
+      "UTC_hour": "2026-10-12T00",
+      "kind": "trades",
+      "source_sha256": "47dcb14e85368684b7defe0102dfc9beb1e96bbab3db67773c6236c3afcfe68e",
+      "quality_ok": true,
+      "prior_replay_accepted_updates": null,
+      "quality_clock_flags": {
+        "receipt_outside_file_hour_rows": 0,
+        "invalid_exchange_clock_rows": 0,
+        "exchange_ahead_over_1s_rows": 0,
+        "invalid_transaction_clock_rows": 0,
+        "backward_receipt_rows": 0
+      },
+      "raw_rows": 77228,
+      "snapshot_level_rows_excluded_from_delta_statistics": 0,
+      "events_or_market_trades": 76774,
+      "out_of_hour_events": 0,
+      "per_received_second": {
+        "count": 3600,
+        "minimum": 0.0,
+        "median": 5.0,
+        "p90": 53.0,
+        "p99": 241.01999999999953,
+        "maximum": 1626.0
+      },
+      "seconds_with_multiple_events": 2954,
+      "receipt_gap_ms": {
+        "count": 76773,
+        "minimum": 0.002152,
+        "median": 0.006638,
+        "p90": 114.6832926000001,
+        "p99": 867.0279119199997,
+        "maximum": 3748.162098
+      },
+      "zero_receipt_gap_count": 0,
+      "backward_receipt_gap_count": 0,
+      "receipt_minus_exchange_ms": {
+        "count": 76774,
+        "minimum": 120.361629,
+        "median": 125.6281615,
+        "p90": 130.59372679999998,
+        "p99": 140.48481695,
+        "maximum": 171.058308
+      },
+      "delta_zero_quantity_rows": 0,
+      "nonmarket_rows_excluded": 454,
+      "trade_id_gap_events": 0,
+      "trade_id_nonincreasing_events": 0,
+      "event_resolution_scope": "Provider-retained market trade rows, not private order intentions"
+    },
+    {
+      "UTC_hour": "2026-10-12T12",
+      "kind": "orderbook",
+      "source_sha256": "5e288b7cf45ed6801ca1ae8c65b7740a54c8f8478f6c2aeb0efc417eccceffc1",
+      "quality_ok": true,
+      "prior_replay_accepted_updates": 136516,
+      "quality_clock_flags": {
+        "receipt_outside_file_hour_rows": 0,
+        "invalid_exchange_clock_rows": 0,
+        "exchange_ahead_over_1s_rows": 0,
+        "invalid_transaction_clock_rows": 0,
+        "backward_receipt_rows": 0
+      },
+      "raw_rows": 6574968,
+      "snapshot_level_rows_excluded_from_delta_statistics": 30583,
+      "events_or_market_trades": 136516,
+      "out_of_hour_events": 0,
+      "per_received_second": {
+        "count": 3600,
+        "minimum": 9.0,
+        "median": 38.0,
+        "p90": 38.0,
+        "p99": 39.0,
+        "maximum": 81.0
+      },
+      "seconds_with_multiple_events": 3600,
+      "receipt_gap_ms": {
+        "count": 136515,
+        "minimum": 0.0678,
+        "median": 26.035598,
+        "p90": 28.0205314,
+        "p99": 33.40726333999996,
+        "maximum": 619.676871
+      },
+      "zero_receipt_gap_count": 0,
+      "backward_receipt_gap_count": 0,
+      "receipt_minus_exchange_ms": {
+        "count": 136516,
+        "minimum": 116.573727,
+        "median": 122.27496,
+        "p90": 128.700539,
+        "p99": 348.0463277500009,
+        "maximum": 2269.730811
+      },
+      "delta_zero_quantity_rows": 775178,
+      "nonmarket_rows_excluded": 0,
+      "trade_id_gap_events": 0,
+      "trade_id_nonincreasing_events": 0,
+      "event_resolution_scope": "Provider-emitted L2 update batches, not individual exchange orders"
+    },
+    {
+      "UTC_hour": "2026-10-12T12",
+      "kind": "trades",
+      "source_sha256": "5c2b575d9cbe79d6a4af4b05cab692040d8481ae191cf841c8cfb467538a47eb",
+      "quality_ok": true,
+      "prior_replay_accepted_updates": null,
+      "quality_clock_flags": {
+        "receipt_outside_file_hour_rows": 0,
+        "invalid_exchange_clock_rows": 0,
+        "exchange_ahead_over_1s_rows": 0,
+        "invalid_transaction_clock_rows": 0,
+        "backward_receipt_rows": 0
+      },
+      "raw_rows": 213913,
+      "snapshot_level_rows_excluded_from_delta_statistics": 0,
+      "events_or_market_trades": 213369,
+      "out_of_hour_events": 0,
+      "per_received_second": {
+        "count": 3600,
+        "minimum": 0.0,
+        "median": 13.0,
+        "p90": 146.0999999999999,
+        "p99": 762.0999999999976,
+        "maximum": 5771.0
+      },
+      "seconds_with_multiple_events": 3457,
+      "receipt_gap_ms": {
+        "count": 213368,
+        "minimum": 0.002142,
+        "median": 0.006756,
+        "p90": 32.545576900000036,
+        "p99": 338.47837108,
+        "maximum": 2707.861851
+      },
+      "zero_receipt_gap_count": 0,
+      "backward_receipt_gap_count": 0,
+      "receipt_minus_exchange_ms": {
+        "count": 213369,
+        "minimum": 120.454371,
+        "median": 130.353324,
+        "p90": 161.25007000000005,
+        "p99": 295.50771536,
+        "maximum": 448.827055
+      },
+      "delta_zero_quantity_rows": 0,
+      "nonmarket_rows_excluded": 544,
+      "trade_id_gap_events": 0,
+      "trade_id_nonincreasing_events": 0,
+      "event_resolution_scope": "Provider-retained market trade rows, not private order intentions"
+    }
+  ],
+  "elapsed_seconds": 1.1304121017456055,
+  "training_ready": false,
+  "limitations": [
+    "Resolution diagnostic only; not a new event-book replay or proof of original receipt times.",
+    "L2 updates can batch many exchange changes; zero quantity does not identify cancellation versus execution.",
+    "No joins between book/trades, no hidden orders, no target labels inspected.",
+    "A four-hour fit-only sample does not establish month-wide continuity or forecast usefulness."
+  ]
+}
