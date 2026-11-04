@@ -4,17 +4,17 @@ import numpy as np
 INDEX_DTYPE=np.dtype([('available_ns','<i8'),('kind','u1'),('source_row','<i8'),('time_group','<i8')])
 
 
-def release_times(receipt,event):
+def release_times(receipt,event,previous_release=-1):
     receipt=np.asarray(receipt,np.int64);event=np.asarray(event,np.int64)
     if receipt.ndim!=1 or receipt.shape!=event.shape or (receipt<=0).any() or (event<=0).any() or (np.diff(receipt)<0).any():raise ValueError('Invalid source ordering/clocks')
     # A later row cannot leap over an earlier not-yet-available book transition.
-    return np.maximum.accumulate(np.maximum(receipt,event))
+    return np.maximum.accumulate(np.maximum(np.maximum(receipt,event),previous_release))
 
 
-def window(book,trades,start,cutoff,max_stale_ns=10**9):
+def window(book,trades,start,cutoff,max_stale_ns=10**9,*,book_previous_release=-1,trade_previous_release=-1):
     if start>=cutoff or max_stale_ns<=0:raise ValueError('Invalid window')
-    bt=release_times(book['receipt_ns'],book['event_ns'])
-    tt=release_times(trades['receipt_ns'],np.maximum(trades['event_ns'],trades['trade_ns']))
+    bt=release_times(book['receipt_ns'],book['event_ns'],book_previous_release)
+    tt=release_times(trades['receipt_ns'],np.maximum(trades['event_ns'],trades['trade_ns']),trade_previous_release)
     seed=int(np.searchsorted(bt,start,side='left'))-1
     if seed<0 or not book['valid'][seed]:raise ValueError('No valid pre-window book seed')
     bi=np.flatnonzero((bt>=start)&(bt<cutoff));ti=np.flatnonzero((tt>=start)&(tt<cutoff))

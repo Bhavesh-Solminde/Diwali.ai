@@ -42,3 +42,9 @@ Do not evaluate September15–29 until source/feature audits, all candidate defi
 Current engineering preflights stay on already-exposed October fit hours. New end-to-end training has not started. These dates freeze the temporal design; data quality/coverage, storage budget and actual eligible counts still need preparation. Quality rejection may reduce counts, but it must not silently change the dates or use outcomes to choose replacements.
 
 The requested first-full-candle and15-close fan remain primary outputs. Auxiliary short-horizon measurements are separately labelled. Report log loss, Brier/ordered-range scores, reliability, appropriate baselines, date variation and correlated-window caveats. No profitability, target-before-stop, hidden-liquidity or perfect-probability claim follows from this schedule.
+
+## Executable partition guard
+
+`research/diwali/event_evaluation.py` now represents these exact partitions. `eligible_origins` validates the next-full-minute target contract, assigns origins by input-freeze date and purges any origin whose15th target close is after the partition end. A target closing exactly at the boundary is allowed; a target extending beyond it is excluded. Tests cover both cases and confirm the typical105/945-second first/last close delays.
+
+Ordinary calls cannot select the reserved final scoring period. A deliberate release record must bind hashes for the run protocol, selected model, fit transforms, calibration, development selection and evaluation source. Changed artifacts are rejected. This mechanism is a programming guard, not an operating-system secrecy guarantee. The future training/evaluation runner must use it and log one final evaluation; neither a final release nor that runner's one-use enforcement exists yet. All current joined-input checks use August1, inside each development fold's fitting dates.

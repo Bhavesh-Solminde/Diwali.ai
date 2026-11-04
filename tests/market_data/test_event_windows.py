@@ -25,6 +25,16 @@ def test_later_clock_event_blocks_following_source_rows():
     assert a['events']['source_row'][a['events']['kind']==0].tolist()==[1]
 
 
+def test_cross_hour_watermark_cannot_release_blocked_rows_early():
+    np.testing.assert_array_equal(release_times([10,20,30],[10,20,30],previous_release=100),[100,100,100])
+    b,t=sources()
+    # A pending trade from the previous hour blocks this stream past the freeze.
+    a=window(b,t,20,50,max_stale_ns=20,trade_previous_release=60)
+    assert a['trade_rows']==0 and a['book_events']==3
+    with pytest.raises(ValueError,match='pre-window book seed'):
+        window(b,t,20,50,max_stale_ns=20,book_previous_release=60)
+
+
 def test_future_payload_does_not_change_window_and_markers_or_stale_rejected():
     b,t=sources();a=window(b,t,20,50,max_stale_ns=20);b['levels'][-1]=999;t['price'][-1]=999
     np.testing.assert_array_equal(a['events'],window(b,t,20,50,max_stale_ns=20)['events'])

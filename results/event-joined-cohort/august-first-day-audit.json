@@ -1,0 +1,49 @@
+{
+  "state": "complete",
+  "target_day": "2026-08-01",
+  "hours_including_warmup": 780,
+  "nonwarmup_hours": 768,
+  "compressed_bytes": 4497894857,
+  "decoded_bytes": 81644883664,
+  "book_good_seconds": 424339,
+  "book_total_seconds": 2764800,
+  "book_good_fraction": 0.1534790943287037,
+  "book_counters": {
+    "accepted_updates": 103210458,
+    "events": 103210559,
+    "rows": 3685459654,
+    "top20_outside_snapshot_bounds_seconds": 2338308,
+    "duplicate_snapshot_level_rows": 71000,
+    "snapshots": 101,
+    "receipt_outside_file_hour_rows": 982
+  },
+  "all_hourly_book_eligibility_counts_match_prior_scan": true,
+  "cold_vs_continuous_counter_difference_hours": 13,
+  "counter_difference_scope": "Only accepted/orphan classification and out-of-snapshot-bound counts; book eligibility identical.",
+  "clock_flagged_hours": {
+    "orderbook": 2,
+    "trades": 1
+  },
+  "candle_contexts": 1427,
+  "joined_input_windows": 196,
+  "labelled_candle_contexts": 1383,
+  "joined_and_labelled_origins": 181,
+  "independent_native_target_coordinates_checked": 20745,
+  "maximum_close_difference": 0.0,
+  "window_rejections": {
+    "No valid pre-window book seed": 1228,
+    "Gap/invalid marker inside window": 3
+  },
+  "window_event_rows": 507451,
+  "source_report_sha256": "d1ff2ecf891dad27ba9895402e9362822d9024537c26ef357411b8c2f011eac3",
+  "candle_report_sha256": "dc4a8a5b01a9244cc9adb5af863d5e57b887851ebe4ffc1e3e7a5d9521ab369f",
+  "join_report_sha256": "87dfcc7c51562341e54104e2a33db9158aa5c1f2243ca66729bd70fd660e4ffb",
+  "audit_source_sha256": "913dae218a8faeff24745d91954d5dfed0b18040dec8763bef3bb586d7f1afe4",
+  "training_ready": false,
+  "limitations": [
+    "Native aggregates independently check the Python candle implementation, not exchange authenticity.",
+    "Targets are retained executions observed by source-day end; later arrivals outside it remain unproven.",
+    "Historical provider timing remains an assumption; hidden liquidity is not observed.",
+    "One development day only; full-fold cohorts, transforms, baselines and training remain outstanding."
+  ]
+}

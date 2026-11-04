@@ -1,0 +1,45 @@
+{
+  "state": "engineering_check_complete",
+  "trained": false,
+  "optimizer_steps": 0,
+  "target_labels_read": false,
+  "real_event_rows": 3944,
+  "real_candle_contexts": 1440,
+  "explicit_candle_mask": true,
+  "explicit_reference_coordinate": true,
+  "device": "mps",
+  "models": [
+    {
+      "architecture": "temporal_conv",
+      "parameters": 94620,
+      "all_trainable": true,
+      "all_parameter_gradients_present_and_finite": true,
+      "output_shape": [
+        1,
+        15,
+        26
+      ],
+      "cold_forward_backward_seconds": 0.13369417190551758
+    },
+    {
+      "architecture": "attention",
+      "parameters": 98908,
+      "all_trainable": true,
+      "all_parameter_gradients_present_and_finite": true,
+      "output_shape": [
+        1,
+        15,
+        26
+      ],
+      "cold_forward_backward_seconds": 0.03256797790527344
+    }
+  ],
+  "model_source_sha256": "d23f3c55083773d0010a67f22fb3d14581975af59a885b955aa5fa1d550da9fa",
+  "input_report_sha256": "cee83b5959d409874bac7f2c5ff2c761628ad028af775df6ace5adb5d92dba1c",
+  "limitations": [
+    "Untrained engineering gradient check, not fitted probabilities or forecasting evidence.",
+    "Cold timings are not comparative training throughput.",
+    "No scaler fitted; all data are from an August fit day."
+  ],
+  "supersedes": "Earlier prototypes lacked explicit reference-coordinate input and contained mode-unused trainable parameter blocks; these were removed before fitting."
+}
