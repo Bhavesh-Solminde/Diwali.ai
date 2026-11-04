@@ -1,0 +1,14 @@
+{
+  "candle-raw.npy": {
+    "sha256": "fd7274f7d31f3393a328433546f90b325e07db26063d4c853d5595a4ab98be2b",
+    "matches_frozen": true
+  },
+  "candle-features.npy": {
+    "sha256": "d8905fdec6222059b356cca0f1123fb80c83e06b7fed7cc447a115a403842a0a",
+    "matches_frozen": true
+  },
+  "candle-content-valid.npy": {
+    "sha256": "6bbd84371b95f84ee4c8364461f5ad6f46b971c89df272e189bf3d8bf630e15f",
+    "matches_frozen": true
+  }
+}

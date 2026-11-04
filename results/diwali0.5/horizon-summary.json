@@ -1,0 +1,227 @@
+[
+  {
+    "horizon": 1,
+    "n": 11186,
+    "model_log_loss": 2.6352988777246784,
+    "prior_log_loss": 2.7819807392635627,
+    "volatility_log_loss": 2.690340122236151,
+    "model_rps": 0.0954367416534005,
+    "volatility_rps": 0.09675154971443986,
+    "directional_accuracy": 0.4570892186661899,
+    "directional_80_percent": {
+      "n": 0,
+      "coverage": 0.0,
+      "accuracy": null
+    }
+  },
+  {
+    "horizon": 2,
+    "n": 11186,
+    "model_log_loss": 2.7027537739808514,
+    "prior_log_loss": 2.833746313632811,
+    "volatility_log_loss": 2.7494701660718084,
+    "model_rps": 0.10567484980680428,
+    "volatility_rps": 0.10665081959597943,
+    "directional_accuracy": 0.4134632576434829,
+    "directional_80_percent": {
+      "n": 0,
+      "coverage": 0.0,
+      "accuracy": null
+    }
+  },
+  {
+    "horizon": 3,
+    "n": 11186,
+    "model_log_loss": 2.7424271622745597,
+    "prior_log_loss": 2.8670398675827395,
+    "volatility_log_loss": 2.7879331343281986,
+    "model_rps": 0.11258015170765041,
+    "volatility_rps": 0.11356083672810888,
+    "directional_accuracy": 0.3967459324155194,
+    "directional_80_percent": {
+      "n": 0,
+      "coverage": 0.0,
+      "accuracy": null
+    }
+  },
+  {
+    "horizon": 4,
+    "n": 11186,
+    "model_log_loss": 2.7597792653970954,
+    "prior_log_loss": 2.8868385862094175,
+    "volatility_log_loss": 2.8038302474129404,
+    "model_rps": 0.11798567518936105,
+    "volatility_rps": 0.11889097346244672,
+    "directional_accuracy": 0.4072948328267477,
+    "directional_80_percent": {
+      "n": 0,
+      "coverage": 0.0,
+      "accuracy": null
+    }
+  },
+  {
+    "horizon": 5,
+    "n": 11186,
+    "model_log_loss": 2.778793603976733,
+    "prior_log_loss": 2.9046450532376826,
+    "volatility_log_loss": 2.8215678356732767,
+    "model_rps": 0.12214431994095323,
+    "volatility_rps": 0.12312819405151713,
+    "directional_accuracy": 0.41158591096012875,
+    "directional_80_percent": {
+      "n": 0,
+      "coverage": 0.0,
+      "accuracy": null
+    }
+  },
+  {
+    "horizon": 6,
+    "n": 11186,
+    "model_log_loss": 2.7981900019296813,
+    "prior_log_loss": 2.922493761277744,
+    "volatility_log_loss": 2.8421911535906195,
+    "model_rps": 0.1257036391189224,
+    "volatility_rps": 0.1265352639981537,
+    "directional_accuracy": 0.3891471482209905,
+    "directional_80_percent": {
+      "n": 0,
+      "coverage": 0.0,
+      "accuracy": null
+    }
+  },
+  {
+    "horizon": 7,
+    "n": 11186,
+    "model_log_loss": 2.815676462366741,
+    "prior_log_loss": 2.935427023314777,
+    "volatility_log_loss": 2.8598948712737413,
+    "model_rps": 0.1290045144521805,
+    "volatility_rps": 0.12971208097931983,
+    "directional_accuracy": 0.3924548542821384,
+    "directional_80_percent": {
+      "n": 0,
+      "coverage": 0.0,
+      "accuracy": null
+    }
+  },
+  {
+    "horizon": 8,
+    "n": 11186,
+    "model_log_loss": 2.8288998729096813,
+    "prior_log_loss": 2.9431472013016187,
+    "volatility_log_loss": 2.8710986013453272,
+    "model_rps": 0.13164141610154895,
+    "volatility_rps": 0.13227750219209428,
+    "directional_accuracy": 0.40005363847666725,
+    "directional_80_percent": {
+      "n": 0,
+      "coverage": 0.0,
+      "accuracy": null
+    }
+  },
+  {
+    "horizon": 9,
+    "n": 11186,
+    "model_log_loss": 2.839258622299074,
+    "prior_log_loss": 2.9527636419687697,
+    "volatility_log_loss": 2.8811494917129368,
+    "model_rps": 0.1339446518360669,
+    "volatility_rps": 0.13470508900000952,
+    "directional_accuracy": 0.40443411407116037,
+    "directional_80_percent": {
+      "n": 0,
+      "coverage": 0.0,
+      "accuracy": null
+    }
+  },
+  {
+    "horizon": 10,
+    "n": 11186,
+    "model_log_loss": 2.8459912601666395,
+    "prior_log_loss": 2.955731386956341,
+    "volatility_log_loss": 2.8845989478037044,
+    "model_rps": 0.136484457733508,
+    "volatility_rps": 0.1369900963599377,
+    "directional_accuracy": 0.4030037546933667,
+    "directional_80_percent": {
+      "n": 0,
+      "coverage": 0.0,
+      "accuracy": null
+    }
+  },
+  {
+    "horizon": 11,
+    "n": 11186,
+    "model_log_loss": 2.8566148648081318,
+    "prior_log_loss": 2.962146121260545,
+    "volatility_log_loss": 2.8936299211805476,
+    "model_rps": 0.13849645121841833,
+    "volatility_rps": 0.13912753696027036,
+    "directional_accuracy": 0.41417843733237975,
+    "directional_80_percent": {
+      "n": 0,
+      "coverage": 0.0,
+      "accuracy": null
+    }
+  },
+  {
+    "horizon": 12,
+    "n": 11186,
+    "model_log_loss": 2.8629738922282755,
+    "prior_log_loss": 2.966473082609737,
+    "volatility_log_loss": 2.8977680731327817,
+    "model_rps": 0.14022627321234846,
+    "volatility_rps": 0.14089248162957713,
+    "directional_accuracy": 0.4208832469157876,
+    "directional_80_percent": {
+      "n": 0,
+      "coverage": 0.0,
+      "accuracy": null
+    }
+  },
+  {
+    "horizon": 13,
+    "n": 11186,
+    "model_log_loss": 2.8626710832349063,
+    "prior_log_loss": 2.965427279755369,
+    "volatility_log_loss": 2.899279861106332,
+    "model_rps": 0.1419367967433526,
+    "volatility_rps": 0.14251594552580496,
+    "directional_accuracy": 0.42016806722689076,
+    "directional_80_percent": {
+      "n": 0,
+      "coverage": 0.0,
+      "accuracy": null
+    }
+  },
+  {
+    "horizon": 14,
+    "n": 11186,
+    "model_log_loss": 2.877476864921584,
+    "prior_log_loss": 2.9730037485560494,
+    "volatility_log_loss": 2.911411249348785,
+    "model_rps": 0.14338091353395369,
+    "volatility_rps": 0.14393069304637363,
+    "directional_accuracy": 0.42177722152690866,
+    "directional_80_percent": {
+      "n": 0,
+      "coverage": 0.0,
+      "accuracy": null
+    }
+  },
+  {
+    "horizon": 15,
+    "n": 11186,
+    "model_log_loss": 2.8766130738681595,
+    "prior_log_loss": 2.9723407436823504,
+    "volatility_log_loss": 2.9126055003875373,
+    "model_rps": 0.14479273407211632,
+    "volatility_rps": 0.1454835446288596,
+    "directional_accuracy": 0.4373323797604148,
+    "directional_80_percent": {
+      "n": 0,
+      "coverage": 0.0,
+      "accuracy": null
+    }
+  }
+]

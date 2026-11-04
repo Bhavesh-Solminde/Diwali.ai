@@ -1,0 +1,26 @@
+{
+  "fit": {
+    "original": 24023,
+    "kept": 24009,
+    "split_boundary_or_outside": 14,
+    "bad_future_label_content": 0
+  },
+  "development": {
+    "original": 4040,
+    "kept": 4026,
+    "split_boundary_or_outside": 14,
+    "bad_future_label_content": 0
+  },
+  "calibration": {
+    "original": 2681,
+    "kept": 2667,
+    "split_boundary_or_outside": 14,
+    "bad_future_label_content": 0
+  },
+  "locked_test": {
+    "original": 11200,
+    "kept": 11186,
+    "split_boundary_or_outside": 14,
+    "bad_future_label_content": 0
+  }
+}

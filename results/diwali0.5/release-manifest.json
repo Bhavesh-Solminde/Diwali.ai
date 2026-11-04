@@ -1,0 +1,21 @@
+{
+  "model": "diwali0.5",
+  "source_and_aggregate_sha256": {
+    "research/diwali/fan.py": "a43ab2eb54c4a8e55e248e63ff4e95c284bd2f88a8f07dc6395ce2bb859bf98b",
+    "research/diwali/fan_serve.py": "e3fe134169e986555f281483c18742abe7379e7a2d48a99884d2c7fd1006d23b",
+    "research/diwali/prospective.py": "2390cc4ff9be3c0f0bed8b3dda45d2daaf9b3e725172d6530fd50f49acd0c0c5",
+    "tests/diwali/test_fan.py": "a5c9ce61914945d0bca0fde7139b36f38115d4914da2d5c046b0178ba0145dec",
+    "tests/diwali/test_prospective.py": "4e8b702f92ede1b1f2c8e211743d2dfe5de939e4b9ea834ccdcc6031227d92de",
+    "results/diwali0.5/report.json": "134a711d419c8a11f84abc845d17be52dc289b50c9dcc65dc855a73b118ecc79",
+    "results/diwali0.5/browser-verification.json": "a876ac2e24d6cb5913d0992291159ceb882bd04940d6c204c5a252af0612699d",
+    "results/diwali0.5/independent-source-checks.json": "c10d2f6c958ee2163cf1183986d046bcfd97d59298e75a4ed8e58d529aeef12e",
+    "results/diwali0.5/cohort-quality.json": "fcb2d9a0aab9724aee0b482f2476d361c1d78fa6dd6bb224801f1f003c590dc9",
+    "results/diwali0.5/horizon-summary.json": "799bd36986bace5712a6b41ef182df3e2d63ef1315f671bf534aeff7aa00d0ed",
+    "results/diwali0.5/selection.json": "3a8a15150aa76686826d04e503f78662363b3bf2b3786684f2b07e096fe48c6a",
+    "results/diwali0.5/replay-verification.json": "a90524b3cca6f91702233567208c09b005c89a6f614deaef3494808957dd3431",
+    "results/diwali0.5/run-protocol.json": "a04e536e9298b94bb0a90bd0359a78f8cf53faaf1332d52f48583257873cae52"
+  },
+  "checks": "76 tests passed; 150 replay horizons verified; desktop/mobile browser passed, including all-horizon result table",
+  "private_weights_and_data_included": false,
+  "checkpoint_sha256": "30279c15acfab578a3af492d3fa180c8d469982d54b29e2bea31553dd23ec0ae"
+}

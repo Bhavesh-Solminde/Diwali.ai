@@ -1,0 +1,84 @@
+{
+  "model": "diwali0.5",
+  "task": "direct distributions for each of next15 full-minute candle closes from ONE causal snapshot",
+  "horizon_definition": "h1 closes at first_target_start+60s; h15 at first_target_start+15*60s; not minutes since click",
+  "price_edges_bp": [
+    -100.0,
+    -60.0,
+    -40.0,
+    -30.0,
+    -20.0,
+    -12.0,
+    -8.0,
+    -5.0,
+    -3.0,
+    -2.0,
+    -1.0,
+    -0.5,
+    0.0,
+    0.5,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    8.0,
+    12.0,
+    20.0,
+    30.0,
+    40.0,
+    60.0,
+    100.0
+  ],
+  "tails": "unbounded first/last; no clipping or assumed within-bin density",
+  "boundary": "upper bounds inclusive except+2 goes bullish; aggregate <=-2 / (-2,2) / >=+2",
+  "inputs": "same0.4 causal candle/book/trade features once; no generated feedback, future book/trade/candle inputs or invented updates",
+  "cohort": "0.4 origins purged when any15 target spans cross split boundary; all target minute contents valid",
+  "models": [
+    "equal_horizons",
+    "near_weighted"
+  ],
+  "loss": "range CE weighted across15 outputs +0.25 h1 candle colour CE",
+  "weights": "equal1/15; near_weighted h1=.5 and each h2-15=.5/14",
+  "selection": "three-seed mean development equal-average15-horizon26-bin log loss; seed17 fixed; early stop same score",
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "max_epochs": 20,
+  "patience": 4,
+  "batch": 128,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.0001,
+  "gradient_clip": 5,
+  "splits": {
+    "fit": [
+      "2026-10-01",
+      "2026-10-19"
+    ],
+    "development": [
+      "2026-10-19",
+      "2026-10-22"
+    ],
+    "calibration": [
+      "2026-10-22",
+      "2026-10-24"
+    ],
+    "locked_test": [
+      "2026-10-24",
+      "2026-11-01"
+    ]
+  },
+  "normalization": "reuse0.2/0.4 fit-only scalers; no new outcome-normalized features",
+  "calibration": "separate scalar temperature per horizon on calibration only; colour scalar separately; same bounded grid",
+  "baselines": "fit-only per-horizon empirical26-bin histogram; fit-quartile past15-minute volatility conditional histograms; add-one smoothing",
+  "evaluation": "per-horizon range log loss, ordinal RPS, direction, reliability, bin coverage, daily results; matched h1 comparison collapsed18 bins vs0.4",
+  "limitations": [
+    "Marginal forecast columns are not a joint path distribution or target-before-stop probabilities.",
+    "Historical candle availability assumed and provider receipt clocks unverified.",
+    "October benchmark previously inspected; no prospective model validation or perfect probability claim.",
+    "Subsecond events absent from existing source features; future order arrivals remain unknown."
+  ],
+  "source_sha256": "a43ab2eb54c4a8e55e248e63ff4e95c284bd2f88a8f07dc6395ce2bb859bf98b",
+  "parent_report_sha256": "a3ef4c7063346047851974397d29747f10cbee0a2f83c83f3d472aee26ca91a1"
+}

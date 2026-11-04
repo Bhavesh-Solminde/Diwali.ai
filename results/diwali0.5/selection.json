@@ -1,0 +1,9 @@
+{
+  "mode": "near_weighted",
+  "seed": 17,
+  "development_three_seed_means": {
+    "equal_horizons": 2.820063085719852,
+    "near_weighted": 2.8194759244353094
+  },
+  "frozen_before_calibration": true
+}

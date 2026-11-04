@@ -4,6 +4,7 @@ Research on BTC next-minute candle generation, order-book forecasting and Krafer
 
 ## Start here
 
+- [Diwali0.5 direct 15-close probability fan](docs/planning/DIWALI0.5-DIRECT-PROBABILITY-FAN-2026-11-04.md) — 26 price ranges at each future close, one forecast from frozen past inputs; replay at http://127.0.0.1:8745. Range errors beat frequency/volatility baselines; reliable high-confidence direction and joint path probabilities remain unproven.
 - [Diwali0.4 closing-price ranges](docs/planning/DIWALI0.4-PRICE-RANGE-2026-11-04.md) — 18 learned endpoint price bins and coherent directional probabilities; local replay at http://127.0.0.1:8744. Range scores beat two simple baselines; directional improvement remains unproven.
 - [Diwali0.3 longer order-history experiment](docs/planning/DIWALI0.3-MULTISCALE-2026-11-04.md) — controlled comparison of 60-second inputs with additional minute/hour histories; local replay at http://127.0.0.1:8743.
 - [Diwali0.2 probability model](docs/planning/DIWALI0.2-PROBABILITY-TRAINING-2026-11-03.md) — next-full-minute bearish/neutral/bullish probabilities; local replay at http://127.0.0.1:8742.

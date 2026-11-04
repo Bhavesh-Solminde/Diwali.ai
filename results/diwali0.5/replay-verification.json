@@ -1,0 +1,11 @@
+{
+  "cases": 10,
+  "horizons_per_case": 15,
+  "bins_per_horizon": 26,
+  "max_cpu_saved_probability_difference": 9.946550988404468e-08,
+  "maximum_calculation_ms": 1.3676249946001917,
+  "median_calculation_ms": 1.015396002912894,
+  "actuals_absent_before_reveal": true,
+  "all_actual_bins_match_saved": true,
+  "model_calls_per_forecast": 1
+}

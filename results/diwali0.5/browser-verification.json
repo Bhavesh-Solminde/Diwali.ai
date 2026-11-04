@@ -1,0 +1,14 @@
+{
+  "viewports": [
+    1440,
+    390
+  ],
+  "runtime_errors": [],
+  "horizontal_page_overflow": false,
+  "probability_grid_cells": 390,
+  "actual_dots_before_reveal": 0,
+  "actual_dots_after_reveal": 15,
+  "all_bin_query": "100.00%",
+  "horizon15_selection": true,
+  "case_switch_clears_forecast": true
+}
