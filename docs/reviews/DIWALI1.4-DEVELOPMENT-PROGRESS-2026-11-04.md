@@ -47,3 +47,11 @@ The deliberately frozen final release authorizes one September 15–29 compariso
 Data remain incomplete: only quality-approved book windows are represented, older candle gaps are explicitly masked, provider receipt timing is not proven original-exchange timing, hidden liquidity is not observed, and native candle agreement does not certify every book level. Finite forecast scores cannot establish perfect probabilities or trading profitability.
 
 Evidence: `results/diwali1.4/development-report.json`, `development-artifact-audit.json`, `final-build-model-preparation.json` and `final-build-inference-preflight.json`. Individual forecasts, market inputs, fitted artifacts and paid archives remain local.
+
+## Why range quality can improve while direction does not
+
+A separate audit decomposes each 26-bin probability error into two exact parts: the error for choosing the correct side of the reference price, plus the error for choosing a price band within that side. The identity holds for every development forecast, up to floating-point rounding. This is an accounting diagnosis, not a causal explanation of feature importance.
+
+Across all 15 closes, the selected model has direction error 0.690991 and within-side range error 2.100710. The volatility-frequency baseline has direction error 0.684269 and within-side range error 2.157520. The model's gain in move-size placement is larger than its loss in up/down probability quality; the overall range metric therefore improves even while direction gets worse. These average-15 direction scores differ from the final-close-only column above.
+
+This supports separately tracking direction and conditional range quality in the next development protocol. It does not establish that another loss weight or a larger network will fix direction. The reserved September result must remain an evaluation of the already frozen 1.4 model. Evidence: `results/diwali1.4/development-error-decomposition.json`.

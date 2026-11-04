@@ -1,0 +1,16 @@
+{
+  "state": "passed",
+  "cases_checked": 10,
+  "displayed_past_candles": 400,
+  "real_input_tensor_parity": "bitwise exact for all seven inputs on all ten cases",
+  "future_actuals_absent_from_case_and_prediction": true,
+  "reveal_requires_prediction_token": true,
+  "probability_fan_unchanged_after_reveal": true,
+  "actual_closes_verified_against_hashed_cohort_targets": true,
+  "mean_prediction_ms": 4.543966703931801,
+  "weights_sha256": "20943ce23f44ee9d2244aaff0d0054aede9db132b3062e787917cd58a5a051ca",
+  "private_demo_sha256": "58946c828ca366237922030a61cf289d2a47a446f029b2d48dbd54e85674f385",
+  "source_sha256": "5165a7b40a96cb8595bcda94dc55f0adaae15ed5e109689c51237fc482912ee8",
+  "visual_browser_review": "not performed: browser use disabled by Work settings",
+  "scope": "Earlier selection examples only; UI/inference checks, not independent performance evaluation."
+}
