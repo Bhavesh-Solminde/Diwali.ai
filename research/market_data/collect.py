@@ -86,6 +86,15 @@ async def rest(store, path, **context):
     return payload
 
 
+def verified_top(book):
+    levels=book.top()
+    if not levels['top20_within_snapshot_bounds']:
+        # Price can leave a finite REST snapshot even when diff IDs stay continuous.
+        # Unknown untouched levels beyond its bounds cannot be reconstructed safely.
+        raise BookGap('top20 outside verified snapshot bounds; fresh snapshot required')
+    return levels
+
+
 async def depth_session(store, connection):
     book = Book()
     snapshot_task = None
@@ -114,7 +123,7 @@ async def depth_session(store, connection):
                     events = [row]
                 for item in events:
                     if book.apply(item['payload']):
-                        store.save('book', book.top(), connection=connection,
+                        store.save('book', verified_top(book), connection=connection,
                             exchange_event_ms=item['payload'].get('E'),
                             source_receipt_utc_ns=item['receipt_utc_ns'],
                             snapshot_id=book.snapshot_id)

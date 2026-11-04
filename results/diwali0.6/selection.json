@@ -1,0 +1,9 @@
+{
+  "mode": "markov",
+  "seed": 17,
+  "development_three_seed_means": {
+    "independent_control": 42.289386934693,
+    "markov": 28.920590470722818
+  },
+  "before_calibration": true
+}

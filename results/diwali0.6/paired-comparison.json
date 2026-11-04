@@ -1,0 +1,22 @@
+{
+  "volatility_losses": {
+    "mean_joint_log_loss_difference": -1.0159244578685702,
+    "days_better": 8,
+    "days": 8,
+    "exploratory_day_block_95_interval": [
+      -1.119156597428515,
+      -0.9224246666194567
+    ],
+    "scope": "Eight inspected dependent days; descriptive, not fresh confirmation."
+  },
+  "diwali05_joint_losses": {
+    "mean_joint_log_loss_difference": -13.930869807053565,
+    "days_better": 8,
+    "days": 8,
+    "exploratory_day_block_95_interval": [
+      -14.416996200449784,
+      -13.396652717358412
+    ],
+    "scope": "Eight inspected dependent days; descriptive, not fresh confirmation."
+  }
+}

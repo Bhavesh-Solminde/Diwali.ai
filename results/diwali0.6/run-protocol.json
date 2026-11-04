@@ -1,0 +1,60 @@
+{
+  "model": "diwali0.6",
+  "task": "joint finite-state15-close distribution conditioned on one frozen past snapshot",
+  "factorization": "P(y1|x) product_h2..15 P(yh|x,yh-1); first-order future bin dependence, not full-history dependence",
+  "price_edges_bp": [
+    -100.0,
+    -60.0,
+    -40.0,
+    -30.0,
+    -20.0,
+    -12.0,
+    -8.0,
+    -5.0,
+    -3.0,
+    -2.0,
+    -1.0,
+    -0.5,
+    0.0,
+    0.5,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    8.0,
+    12.0,
+    20.0,
+    30.0,
+    40.0,
+    60.0,
+    100.0
+  ],
+  "inputs": "exact0.5 fit/development/calibration/benchmark features; actual future labels only in likelihood training/scoring, NEVER forecasting",
+  "models": [
+    "independent_control",
+    "markov"
+  ],
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "selection": "lowest three-seed mean development joint log loss per15-step path; deploy seed17 fixed",
+  "training": "equal mean15 conditional CE + .25h1 colour CE; AdamW .0003 wd.0001 batch128 clip5 max20epochs patience4",
+  "calibration": "per-horizon scalar temperature on calibration-only conditional likelihood;161 loggrid .1..10",
+  "forecasting": "enumerate26 previous states and forward-sum exact marginals; no future actuals, random samples or Monte Carlo approximation",
+  "baselines": "0.5 independent-column product; fit-only per-horizon Markov counts add-one; fit past-volatility-quartile Markov counts add-one",
+  "path_events": "all15 closes in a bin union; at least one close in a bin union; NOT intraminute touch or stop ordering",
+  "limitations": [
+    "Already-inspected October benchmark, not fresh test.",
+    "Historical candle availability/receipt clocks remain assumed.",
+    "Coarse26-bin Markov approximation loses within-bin state and longer future dependence.",
+    "Unknown future orders and trades remain unknown; no perfect/live trading claim."
+  ],
+  "source_sha256": "007e73de5e02cbee8c6e818820cf891839be9770888e4760827627cccf213f3d",
+  "parent_report_sha256": "134a711d419c8a11f84abc845d17be52dc289b50c9dcc65dc855a73b118ecc79",
+  "references": [
+    "https://arxiv.org/abs/1704.04110",
+    "https://www.fceia.unr.edu.ar/prodivoz/Rabiner_1989.pdf"
+  ]
+}

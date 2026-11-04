@@ -1,0 +1,20 @@
+{
+  "state": "bounded_forward_prefix_verified",
+  "capture_complete": true,
+  "completed_raw_manifest_verified": true,
+  "source_prefixes": {
+    "events-20261104T02.jsonl": {
+      "bytes": 84551485,
+      "sha256": "f3b345d3b063b37c390af93f46298755be3e1b2a3c0e7bd454cf8e0207d266cf",
+      "ignored_partial_tail_bytes": 0
+    }
+  },
+  "source_records": 63963,
+  "input_snapshots_replayed": 3,
+  "pre_target_forecasts_recomputed": 3,
+  "matured_outcomes_verified": 45,
+  "max_recomputed_probability_difference": 0,
+  "minimum_committed_lead_seconds": 44.938737,
+  "scope": "Source receipt replay, immutable input/forecast bytes, frozen model recomputation and then-available outcome scoring. Not a calibration or profitability proof.",
+  "training_ready": false
+}

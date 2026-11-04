@@ -1,0 +1,24 @@
+[
+  {
+    "width": 1440,
+    "errors": [],
+    "actual_dots_before": 0,
+    "actual_dots_after": 15,
+    "all_bin_query": "100.00%",
+    "invalid_range_clears_stale_result": true,
+    "reset": "Predict first.",
+    "range_calibration_table": true,
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "errors": [],
+    "actual_dots_before": 0,
+    "actual_dots_after": 15,
+    "all_bin_query": "100.00%",
+    "invalid_range_clears_stale_result": true,
+    "reset": "Predict first.",
+    "range_calibration_table": true,
+    "overflow": false
+  }
+]

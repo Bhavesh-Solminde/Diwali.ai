@@ -1,0 +1,24 @@
+{
+  "model": "diwali0.6",
+  "source_and_aggregate_sha256": {
+    "research/diwali/path.py": "007e73de5e02cbee8c6e818820cf891839be9770888e4760827627cccf213f3d",
+    "research/diwali/path_serve.py": "91f9c573230ae32e11dd818301a30473c03d43490be587815ecb3c1bc8df0fce",
+    "research/diwali/audit_forward.py": "5b985ba2caf4972a0eb2d05a5e66f4fa0878f9f02fc24bc728e0f0b2162bafe6",
+    "research/market_data/collect.py": "21c73b40d4ca7c6614e64e9183f77f4fd7a22280b88b1c9165c2a90bc038a78f",
+    "tests/diwali/test_path.py": "c6d97ab6b2c4e9d24b6fceefed43e482124ffed8dbf221cba9db0075a9c77f38",
+    "tests/diwali/test_audit_forward.py": "cdb326ab76d4c4930345cbe4b244cb7240c49c16dc1665b286ed5049b92f5af0",
+    "tests/market_data/test_book.py": "76eee9206409e0540f8ced61379d96a9d05c73a3733b024ee0e4ad84cb1f05ac",
+    "results/diwali0.6/diwali05-forward-source-audit.json": "7401a4c3044a3aa090841d311ead3ce87c5d2be221fcb0556bea6b61c7327465",
+    "results/diwali0.6/report.json": "173ba7c7d6f05bee03659811ec34c21efbc12411a4a5dd733ed0bb39d46c92d0",
+    "results/diwali0.6/browser-verification.json": "466b0969fe2bd31b673c0f64d09d10f6b55067b76fa160288acbd86227a85e8b",
+    "results/diwali0.6/selection.json": "688d16d7105d74d48c99b5ee907515176e1eaed852ca877a9d18ffa48b3b239d",
+    "results/diwali0.6/replay-verification.json": "220208f94835e443bf1522f46adeff38223e2b6e403e9c9606a1ccd716ec563c",
+    "results/diwali0.6/parent-hashes.json": "2602d55c104491adaf065171f9810604884a8ce8ff019ea251b4addc3f712018",
+    "results/diwali0.6/paired-comparison.json": "5266fa214ca62d3a74250ac4ad5dd33ed3219e473de10ed2fcfd32ae41589cc4",
+    "results/diwali0.6/run-protocol.json": "b0277478ca6c6349f0e37c086830b7b5313b63958296f3ad69bed3a89a13ff45",
+    "results/diwali0.6/runs.json": "812b106bbf21d0724c291d3ab26fa3cc353d63e2db828c86a9d9a5a994dc03f2"
+  },
+  "checkpoint_sha256": "fd80eaf46d502591ade90fd5dd60a84729a56a43a1ccfe6cad00878b7e083181",
+  "checks": "85 tests; ten cases/150 horizons/30 exact event queries; desktop/mobile including event calibration and invalid-range clearing; completed forward raw manifest verified",
+  "private_data_or_weights_published": false
+}

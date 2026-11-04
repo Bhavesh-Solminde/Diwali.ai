@@ -4,7 +4,7 @@ from pathlib import Path
 import tempfile
 import unittest
 from research.market_data.book import Book, BookGap
-from research.market_data.collect import Store, retry
+from research.market_data.collect import Store, retry, verified_top
 from research.market_data.quality import audit
 
 
@@ -53,6 +53,16 @@ class BookTests(unittest.TestCase):
     def test_unbridgeable_snapshot_is_rejected(self):
         with self.assertRaises(BookGap):
             self.book.apply(event(200,199,200))
+
+    def test_continuous_sequences_still_require_resnapshot_outside_known_depth(self):
+        b=Book();b.snapshot({'lastUpdateId':100,'bids':[[str(100-i),'1'] for i in range(20)],'asks':[[str(101+i),'1'] for i in range(20)]})
+        b.apply(event());self.assertTrue(verified_top(b)['top20_within_snapshot_bounds'])
+        changes=[[str(101+i),'0'] for i in range(20)]+[[str(121+i),'1'] for i in range(20)]
+        b.apply(event(102,101,102,asks=changes))
+        with self.assertRaisesRegex(BookGap,'fresh snapshot required'):verified_top(b)
+        # A genuinely new snapshot establishes the new range; do not relax the old gate.
+        b.snapshot({'lastUpdateId':102,'bids':[[str(100-i),'1'] for i in range(20)],'asks':[[str(121+i),'1'] for i in range(20)]})
+        b.apply(event(103,102,102));self.assertTrue(verified_top(b)['top20_within_snapshot_bounds'])
 
 
 class RecorderTests(unittest.IsolatedAsyncioTestCase):

@@ -1,0 +1,44 @@
+[
+  {
+    "mode": "independent_control",
+    "seed": 17,
+    "epoch": 14,
+    "development_joint_log_loss": 42.26838823845261,
+    "parameters": 21308
+  },
+  {
+    "mode": "independent_control",
+    "seed": 29,
+    "epoch": 11,
+    "development_joint_log_loss": 42.28849431439104,
+    "parameters": 21308
+  },
+  {
+    "mode": "independent_control",
+    "seed": 43,
+    "epoch": 9,
+    "development_joint_log_loss": 42.31127825123535,
+    "parameters": 21308
+  },
+  {
+    "mode": "markov",
+    "seed": 17,
+    "epoch": 20,
+    "development_joint_log_loss": 28.91777617843043,
+    "parameters": 21308
+  },
+  {
+    "mode": "markov",
+    "seed": 29,
+    "epoch": 20,
+    "development_joint_log_loss": 28.945135677507917,
+    "parameters": 21308
+  },
+  {
+    "mode": "markov",
+    "seed": 43,
+    "epoch": 20,
+    "development_joint_log_loss": 28.898859556230114,
+    "parameters": 21308
+  }
+]

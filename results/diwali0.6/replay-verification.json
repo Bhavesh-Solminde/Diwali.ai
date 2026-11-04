@@ -1,0 +1,14 @@
+{
+  "cases": 10,
+  "horizons_checked": 150,
+  "bins_per_horizon": 26,
+  "fixed_path_queries_checked": 30,
+  "max_cpu_saved_probability_difference": 1.2990934898648998e-07,
+  "max_path_event_difference": 1.5689513471750516e-07,
+  "median_calculation_ms": 1.1659790034173056,
+  "maximum_calculation_ms": 1.5742499963380396,
+  "actuals_absent_before_reveal": true,
+  "reveal_does_not_change_forecast_probabilities": true,
+  "all_target_bins_match_saved": true,
+  "one_forecast_call": true
+}
