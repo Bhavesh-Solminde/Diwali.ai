@@ -1,0 +1,22 @@
+{
+  "scope": "Untrained engineering check of explicit missing-candle API. Real fit-hour event inputs, synthetic candle/mask context; no accuracy or training claim.",
+  "source_sha256": "8844cfd8d1a18fdf9c01e1b641899a495d28e259db90aba3f74586a8c35eb203",
+  "runs": [
+    {
+      "mode": "temporal_conv",
+      "parameters": 94620,
+      "finite_logits": true,
+      "events": 29965,
+      "forward_backward_passed": true,
+      "device": "mps"
+    },
+    {
+      "mode": "attention",
+      "parameters": 111260,
+      "finite_logits": true,
+      "events": 29965,
+      "forward_backward_passed": true,
+      "device": "mps"
+    }
+  ]
+}

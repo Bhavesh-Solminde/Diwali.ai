@@ -15,6 +15,15 @@ def allowed(start,stop):
     if start<datetime(2026,7,31,tzinfo=timezone.utc) or stop>datetime(2026,9,15,tzinfo=timezone.utc):raise ValueError('Outside development preparation range; final period denied')
 
 
+def initializing_hour(start,quality_root,maximum_hours=7*24):
+    for offset in range(1,maximum_hours+1):
+        stamp=start-timedelta(hours=offset);path=quality_root/f'{stamp:%Y-%m-%d}'/f'{stamp:%H}'/'BTCUSDT_orderbook.parquet.quality.json'
+        if not path.exists():continue
+        q=json.loads(path.read_text())
+        if q.get('ok') and q.get('valid_end') and q['counts'].get('snapshots',0)>0:return stamp
+    raise ValueError('No initializing snapshot in bounded warmup search')
+
+
 def store_events(path,rows):
     columns={}
     for name in rows.dtype.names:
@@ -40,19 +49,20 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('--start',required=True);p.add_argument('--days',type=int,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--resume',action='store_true');a=p.parse_args()
     start=datetime.fromisoformat(a.start).replace(tzinfo=timezone.utc);stop=start+timedelta(days=a.days);allowed(start,stop)
     out=a.output;out.mkdir(parents=True,exist_ok=a.resume);scratch=out/'scratch';scratch.mkdir(exist_ok=True);began=time.time();root=Path('data/btc-perp/cryptohftdata-monthly');manifest=root/'manifest.json';records={r['remote_file']:r for r in json.loads(manifest.read_text())}
+    warm_start=initializing_hour(start,Path('data/btc-perp/validation-v2-20261102/hours'))
     names=['event_shards.py','event_replay.py','event_scan.cpp','trade_events.py','trade_event_scan.cpp','feature_scan.cpp','archive_scan.cpp']
-    protocol={'start':start.isoformat(),'stop_exclusive':stop.isoformat(),'source_hashes':{n:file_hash(Path(__file__).with_name(n)) for n in names},'archive_manifest_sha256':file_hash(manifest),'all_rows_retained':True,'lossless':True,'final_period_denied':True,'training_started':False}
+    protocol={'start':start.isoformat(),'stop_exclusive':stop.isoformat(),'warmup_start':warm_start.isoformat(),'warmup_policy':'Latest preceding quality-verified snapshot-bearing hour within7days; replay all following hours continuously','source_hashes':{n:file_hash(Path(__file__).with_name(n)) for n in names},'archive_manifest_sha256':file_hash(manifest),'all_rows_retained':True,'lossless':True,'final_period_denied':True,'training_started':False}
     if (out/'protocol.json').exists():
         if json.loads((out/'protocol.json').read_text())!=protocol:raise ValueError('Resume contract differs')
     else:save(out/'protocol.json',protocol)
     # Recompile only in a new private build folder; interrupted builds stay intact.
     build=out/('build-'+str(time.time_ns()));build.mkdir();bb=build/'book';tt=build/'trades';bb.mkdir();tt.mkdir();binaries={'orderbook':compile_events(bb),'trades':compile_trades(tt)}
     processes={k:subprocess.Popen([str(v)],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True) for k,v in binaries.items()};ledgers=[];compressed=uncompressed=0
-    hours=[start-timedelta(hours=1)+timedelta(hours=i) for i in range(a.days*24+1)]
+    hours=[warm_start+timedelta(hours=i) for i in range(int((stop-warm_start).total_seconds()//3600))]
     try:
         for number,stamp in enumerate(hours):
             if shutil.disk_usage(out).free<30*1024**3:raise ValueError('30GiB disk reserve reached')
-            name=f'{stamp:%Y-%m-%dT%H}';h=int(stamp.timestamp())*10**9;is_warm=number==0;hourdir=out/name;hourdir.mkdir(exist_ok=True);items={};existing=None
+            name=f'{stamp:%Y-%m-%dT%H}';h=int(stamp.timestamp())*10**9;is_warm=stamp<start;hourdir=out/name;hourdir.mkdir(exist_ok=True);items={};existing=None
             if (hourdir/'manifest.json').exists():
                 existing=json.loads((hourdir/'manifest.json').read_text())
                 for part in existing['files'].values():

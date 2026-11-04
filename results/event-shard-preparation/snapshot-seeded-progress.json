@@ -1,0 +1,29 @@
+{
+  "state": "extracting",
+  "hours_done": 142,
+  "hours_total": 780,
+  "elapsed_seconds": 128.14629697799683,
+  "compressed_bytes": 765504995,
+  "uncompressed_bytes": 14544579280,
+  "protocol": {
+    "start": "2026-07-31T00:00:00+00:00",
+    "stop_exclusive": "2026-09-01T00:00:00+00:00",
+    "warmup_start": "2026-07-30T12:00:00+00:00",
+    "warmup_policy": "Latest preceding quality-verified snapshot-bearing hour within7days; replay all following hours continuously",
+    "source_hashes": {
+      "event_shards.py": "79d97122c5ec4df1c0fcf73ea1926cf53c3186612d9d5d5d97a9dbcc58dc75a5",
+      "event_replay.py": "b1867c134c9950e011232e00f4e42532702deaa04141dc8ebd72a229054659b6",
+      "event_scan.cpp": "ae04b0d59eb9e8850802bac683326d875a02b87f80241e33b2b7d87c84e57aa7",
+      "trade_events.py": "04538fb8af9c58c1d5641fc4d3b253539ba907a0fbc92f282338cb60f2b86c77",
+      "trade_event_scan.cpp": "28242c727e573e3bc9bfd1a86eeeacfce9d3c21d106215503d100cea0c4ea1ff",
+      "feature_scan.cpp": "bffbb306b27d68a1004e067846e513db957bf65b44e3652f85248a4ca61887ce",
+      "archive_scan.cpp": "c8da51f348f5b8fbcdaa8033fdf7236ab174659fa7340891ff55fd8a97baeaf4"
+    },
+    "archive_manifest_sha256": "bfc97147330ef1b0f1c838efb47da04eb9b6e1f3673adfae02ea8d4ba22b9a03",
+    "all_rows_retained": true,
+    "lossless": true,
+    "final_period_denied": true,
+    "training_started": false
+  },
+  "scope": "Observed in-progress rebuild; not final completion."
+}

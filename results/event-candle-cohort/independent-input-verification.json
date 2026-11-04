@@ -1,0 +1,8 @@
+{
+  "snapshot_cases": 10,
+  "known_minute_contexts_checked": 14372,
+  "maximum_feature_difference": 1.1368683772161603e-13,
+  "maximum_reference_price_difference": 2.1827872842550278e-11,
+  "masked_values_zero": true,
+  "scope": "Independent NumPy grouping of available raw trade rows for all valid candle coordinates in10 sampled snapshots. No final targets accessed; mask-gap policy separately unit-tested."
+}

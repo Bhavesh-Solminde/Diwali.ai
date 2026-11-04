@@ -26,7 +26,7 @@ class EventModel(nn.Module):
         super().__init__()
         if mode not in ['temporal_conv','attention']:raise ValueError('Unknown event architecture')
         self.mode=mode;self.width=width;self.block=block;self.project=nn.Linear(features,width);self.local=nn.ModuleList([CausalLayer(width,d) for d in [1,4,16]])
-        self.pool=nn.Linear(width,1);self.group_score=nn.Linear(width,1);self.candle_project=nn.Linear(8,width);self.candle_local=CausalLayer(width,4);self.seed_project=nn.Linear(80,width)
+        self.pool=nn.Linear(width,1);self.group_score=nn.Linear(width,1);self.candle_project=nn.Linear(8,width);self.candle_missing=nn.Parameter(torch.zeros(width));self.candle_local=CausalLayer(width,4);self.seed_project=nn.Linear(80,width)
         self.modality=nn.Parameter(torch.zeros(3,width));self.horizons=nn.Parameter(torch.randn(15,width)*.02)
         self.context_conv=CausalLayer(width,1)
         self.self_attention=Attention(width) if mode=='attention' else None
@@ -56,10 +56,14 @@ class EventModel(nn.Module):
         weight=weight/weight.sum(-1,keepdim=True).clamp_min(1e-12)
         tokens=(x*weight[:,:,None]).sum(1).reshape(b,blocks,self.width)
         return tokens,m.any(1).reshape(b,blocks)
-    def forward(self,events,mask,candles,seed,time_groups):
+    def forward(self,events,mask,candles,seed,time_groups,candle_mask):
         if candles.shape[1:]!=(1440,8) or seed.shape[1:]!=(80,):raise ValueError('Invalid candle/seed context')
         e,em=self.event_tokens(events,mask,time_groups)
-        cm=torch.ones(candles.shape[:2],dtype=torch.bool,device=candles.device);c=self.candle_local(self.candle_project(candles),cm)
+        if candle_mask.shape!=candles.shape[:2] or candle_mask.dtype!=torch.bool:raise ValueError('Explicit candle validity mask required')
+        cm=torch.ones(candles.shape[:2],dtype=torch.bool,device=candles.device)
+        known=candles.masked_fill(~candle_mask[:,:,None],0)
+        c=self.candle_project(known)+self.candle_missing[None,None]*(~candle_mask[:,:,None])
+        c=self.candle_local(c,cm)
         # Candle detail is processed before local15-minute pooling; retain96 tokens.
         c=c.reshape(len(c),96,15,self.width).mean(2)
         context=torch.cat([c+self.modality[0],self.seed_project(seed)[:,None]+self.modality[1],e+self.modality[2]],1)

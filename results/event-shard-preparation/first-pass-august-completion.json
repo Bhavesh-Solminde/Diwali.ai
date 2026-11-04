@@ -1,0 +1,14 @@
+{
+  "state": "first_pass_complete_but_warmup_revision_required",
+  "unique_august_target_hours": 744,
+  "book_event_rows": 100001639,
+  "trade_rows": 92869470,
+  "stored_bytes": 4280904705,
+  "uncompressed_event_bytes": 77887768808,
+  "source_reports": {
+    "data/btc-perp/event-shards-jul31-aug01-v1/report.json": "64e608b8b82a409271dcfb1abb4a3c145a317c7eec819961569f699c6f4d1d72",
+    "data/btc-perp/event-shards-aug02-31-v1/report.json": "87618be25f7e520b6c0060615240e227a38cae556b73fb72c6465dc5b6bdeff1"
+  },
+  "training_ready": false,
+  "limitation": "One preceding hour need not contain a snapshot. Preserve these first-pass shards; new continuous snapshot-seeded rebuild supersedes book initialization assumptions."
+}
