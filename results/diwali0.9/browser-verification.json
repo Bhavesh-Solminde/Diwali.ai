@@ -1,0 +1,23 @@
+{
+  "checks": [
+    {
+      "width": 1440,
+      "page_errors": [],
+      "overflow": false,
+      "direction_label_present": true,
+      "actuals_before_reveal": 0,
+      "actuals_after_reveal": 15,
+      "reveal_does_not_change_direction": true
+    },
+    {
+      "width": 390,
+      "page_errors": [],
+      "overflow": false,
+      "direction_label_present": true,
+      "actuals_before_reveal": 0,
+      "actuals_after_reveal": 15,
+      "reveal_does_not_change_direction": true
+    }
+  ],
+  "screenshots_private": true
+}

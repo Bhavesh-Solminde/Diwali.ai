@@ -1,0 +1,84 @@
+{
+  "model": "diwali0.9",
+  "parents": {
+    "marginal": {
+      "root": "data/models/diwali0.5",
+      "checkpoint": "data/models/diwali0.5/near_weighted-17.pt",
+      "checkpoint_sha256": "30279c15acfab578a3af492d3fa180c8d469982d54b29e2bea31553dd23ec0ae",
+      "report_sha256": "134a711d419c8a11f84abc845d17be52dc289b50c9dcc65dc855a73b118ecc79",
+      "temperatures": [
+        0.9716279515771067,
+        1.0292005271944284,
+        1.059253725177289,
+        1.0292005271944284,
+        1.0000000000000004,
+        1.0292005271944284,
+        1.059253725177289,
+        1.0292005271944284,
+        1.0000000000000004,
+        1.0000000000000004,
+        0.9716279515771067,
+        1.0000000000000004,
+        1.0000000000000004,
+        0.9716279515771067,
+        1.0292005271944284
+      ],
+      "colour_temperature": 0.9172759353897799
+    },
+    "dependence": {
+      "root": "data/models/diwali0.7",
+      "checkpoint": "data/models/diwali0.7/joint_control-17.pt",
+      "checkpoint_sha256": "912a009a3a7002a2a532a00d708378f7e681c513f77d899272b9cf595640c669",
+      "report_sha256": "66e63669aea2d446423b8c2688cba78d64abc5301d67dcc0d4afe5e16f2248a7",
+      "temperatures": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "colour_temperature": 0.9716279515771067
+    }
+  },
+  "hypothesis": "Recent minute-level detail lost by15-candle compression can improve individual future-close probabilities.",
+  "variants": [
+    "grouped",
+    "minute_detail"
+  ],
+  "branch": "identical8-input16-hidden GRU plus15x26 and3-colour heads; grouped averages4groups of15 and repeats each group15 times; detail receives last60 completed candles intact",
+  "initialization": "frozen selected calibrated0.5 probabilities plus zero-initialized residual output; epoch0 parent candidate",
+  "loss": "same0.5 near-weighted CE: h1=.5, h2-15=.5/14 each; plus.25colourCE",
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "epochs": 20,
+  "patience": 4,
+  "batch": 128,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.0001,
+  "gradient_clip": 5,
+  "selection": "lowest three-seed mean development equal15-horizon marginal log loss; fixedseed17; grouped wins exact ties. Save before calibration/benchmark.",
+  "calibration": "fit one bounded scalar temperature per horizon and colour on same prior calibration period; parent already used calibration, no independent calibration claim",
+  "cohort": "unchanged purged0.5 origins and scalers; verify raw/features/target parent hashes; no synthetic future inputs or extra data",
+  "joint": "after marginal selection, same0.8 unit coupling to frozen0.7; no coefficient tuning or joint-based model selection",
+  "limitations": [
+    "October benchmark repeatedly inspected; not fresh holdout.",
+    "Changes candle detail only, not book/trade granularity.",
+    "No causal attribution to detail unless matched control comparison supports it.",
+    "Perfect probabilities, 80-20 entries and profitability unproven."
+  ],
+  "source_sha256": "8bd06ae3a86857e30da5b3af6364691bcb0558cb18e4113bb6e1049ac5d44ea6",
+  "model_source_sha256": "cfb116869a61e4f680a5dd4ec2f132575e68eefca7537811f5e58503f9ae766f"
+}

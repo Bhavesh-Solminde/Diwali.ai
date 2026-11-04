@@ -1,0 +1,8 @@
+{
+  "cases": 10,
+  "horizons": 150,
+  "joint_queries": 30,
+  "maximum_cpu_replay_difference": 1.2484220518471645e-07,
+  "overall_direction_sums_same_cloud": true,
+  "future_actuals_used": false
+}

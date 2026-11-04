@@ -1,0 +1,45 @@
+{
+  "by_day": {
+    "2026-10-24": {
+      "n": 1405,
+      "range_loss_difference09_minus08": -0.0013275319943204522,
+      "joint_loss_difference09_minus08": -0.014343309290488817
+    },
+    "2026-10-25": {
+      "n": 1394,
+      "range_loss_difference09_minus08": -0.00010316819680156186,
+      "joint_loss_difference09_minus08": -0.011720289914009504
+    },
+    "2026-10-26": {
+      "n": 1408,
+      "range_loss_difference09_minus08": -0.0015862372238188982,
+      "joint_loss_difference09_minus08": -0.013112214505783716
+    },
+    "2026-10-27": {
+      "n": 1380,
+      "range_loss_difference09_minus08": 0.0019288496114313602,
+      "joint_loss_difference09_minus08": -0.008126020122444852
+    },
+    "2026-10-28": {
+      "n": 1399,
+      "range_loss_difference09_minus08": -0.00023921768297441304,
+      "joint_loss_difference09_minus08": -0.006777370587642528
+    },
+    "2026-10-29": {
+      "n": 1414,
+      "range_loss_difference09_minus08": 0.0036159108858555555,
+      "joint_loss_difference09_minus08": -0.00245987401901545
+    },
+    "2026-10-30": {
+      "n": 1413,
+      "range_loss_difference09_minus08": -0.0035132018383592367,
+      "joint_loss_difference09_minus08": -0.018213838678857827
+    },
+    "2026-10-31": {
+      "n": 1373,
+      "range_loss_difference09_minus08": -0.0005146185867488384,
+      "joint_loss_difference09_minus08": -0.010379722144624567
+    }
+  },
+  "scope": "Eight inspected days, overlapping targets, exploratory only; negative differences favour0.9."
+}

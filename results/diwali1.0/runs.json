@@ -1,0 +1,44 @@
+[
+  {
+    "variant": "range_control",
+    "seed": 17,
+    "epoch": 0,
+    "development_final_binary_log_loss": 0.6942865730578531,
+    "epoch0_loss": 0.6942865730578531
+  },
+  {
+    "variant": "range_control",
+    "seed": 29,
+    "epoch": 0,
+    "development_final_binary_log_loss": 0.6942865730578531,
+    "epoch0_loss": 0.6942865730578531
+  },
+  {
+    "variant": "range_control",
+    "seed": 43,
+    "epoch": 0,
+    "development_final_binary_log_loss": 0.6942865730578531,
+    "epoch0_loss": 0.6942865730578531
+  },
+  {
+    "variant": "direction_loss",
+    "seed": 17,
+    "epoch": 0,
+    "development_final_binary_log_loss": 0.6942865730578531,
+    "epoch0_loss": 0.6942865730578531
+  },
+  {
+    "variant": "direction_loss",
+    "seed": 29,
+    "epoch": 0,
+    "development_final_binary_log_loss": 0.6942865730578531,
+    "epoch0_loss": 0.6942865730578531
+  },
+  {
+    "variant": "direction_loss",
+    "seed": 43,
+    "epoch": 0,
+    "development_final_binary_log_loss": 0.6942865730578531,
+    "epoch0_loss": 0.6942865730578531
+  }
+]

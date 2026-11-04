@@ -1,0 +1,9 @@
+{
+  "mode": "minute_detail",
+  "seed": 17,
+  "three_seed_mean_development_loss": {
+    "grouped": 2.8185979814822595,
+    "minute_detail": 2.81834021533841
+  },
+  "frozen_before_calibration_and_benchmark": true
+}

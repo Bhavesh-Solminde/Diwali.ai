@@ -1,0 +1,8 @@
+{
+  "origins": 10,
+  "horizons": 150,
+  "joint_event_queries": 30,
+  "maximum_cpu_probability_difference": 8.24848996050509e-08,
+  "all_best_checkpoints_epoch0": true,
+  "not_deployed_over0.9": true
+}

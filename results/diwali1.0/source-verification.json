@@ -1,0 +1,9 @@
+{
+  "training_sources_unchanged": true,
+  "data_parents_unchanged": true,
+  "sources": {
+    "research/diwali/directional.py": "33dc95058d082b7f790a22c7d3d3c10a488b0a74458212618f0e392b26d3a3bf",
+    "research/diwali/directional_train.py": "f314cac6b87086356995d931276133ff26c410f9fb8c313f38a647024e2a65b8",
+    "tests/diwali/test_directional.py": "81afcba4db18caf7f0070ac776075da66732c68aeb8b1184a26a054f83dd6c93"
+  }
+}

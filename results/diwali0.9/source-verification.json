@@ -1,0 +1,13 @@
+{
+  "training_sources_unchanged": true,
+  "parent_hashes_unchanged": true,
+  "sources": {
+    "research/diwali/refined.py": "cfb116869a61e4f680a5dd4ec2f132575e68eefca7537811f5e58503f9ae766f",
+    "research/diwali/refined_train.py": "8bd06ae3a86857e30da5b3af6364691bcb0558cb18e4113bb6e1049ac5d44ea6",
+    "research/diwali/refined_serve.py": "5f74ecf0e98b0152bf1a574b3a6a4a0dc4e10f14f41057015f29a4725ce706bb",
+    "research/diwali/net_direction.py": "8bac480afd3fc4b22f14c9301846e5b2a0e6bf2aa8298543a5dbd565cfbdc283",
+    "research/diwali/price_chart.js": "3d145bdff38c33728d88c87fcf1de64c2334041b122fdf6b6e9aa5269a36ca90",
+    "tests/diwali/test_refined.py": "d3d6cba9b3f57de5b10a0396a09f3b8586c01575dbdafae5e176210492a42955",
+    "tests/diwali/test_net_direction.py": "b37a61dc9db1cfe4c5a733c1fc2654c27e9b65a78f3523e2eb3b2e67f2793f59"
+  }
+}

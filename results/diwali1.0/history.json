@@ -1,0 +1,170 @@
+[
+  {
+    "variant": "range_control",
+    "seed": 17,
+    "epoch": 1,
+    "development_final_binary_log_loss": 0.6944282716253242,
+    "training_loss": 2.869537541636811
+  },
+  {
+    "variant": "range_control",
+    "seed": 17,
+    "epoch": 2,
+    "development_final_binary_log_loss": 0.6945567713322293,
+    "training_loss": 2.869215524838624
+  },
+  {
+    "variant": "range_control",
+    "seed": 17,
+    "epoch": 3,
+    "development_final_binary_log_loss": 0.6945513224995331,
+    "training_loss": 2.8689497651330504
+  },
+  {
+    "variant": "range_control",
+    "seed": 17,
+    "epoch": 4,
+    "development_final_binary_log_loss": 0.6946347372730939,
+    "training_loss": 2.8686524371253967
+  },
+  {
+    "variant": "range_control",
+    "seed": 29,
+    "epoch": 1,
+    "development_final_binary_log_loss": 0.6943439015854129,
+    "training_loss": 2.8694885998406967
+  },
+  {
+    "variant": "range_control",
+    "seed": 29,
+    "epoch": 2,
+    "development_final_binary_log_loss": 0.6944265417912284,
+    "training_loss": 2.8691141786507393
+  },
+  {
+    "variant": "range_control",
+    "seed": 29,
+    "epoch": 3,
+    "development_final_binary_log_loss": 0.6945781105386624,
+    "training_loss": 2.8687845572144672
+  },
+  {
+    "variant": "range_control",
+    "seed": 29,
+    "epoch": 4,
+    "development_final_binary_log_loss": 0.6947429248196314,
+    "training_loss": 2.868436470547721
+  },
+  {
+    "variant": "range_control",
+    "seed": 43,
+    "epoch": 1,
+    "development_final_binary_log_loss": 0.6944167910297544,
+    "training_loss": 2.8695211981718125
+  },
+  {
+    "variant": "range_control",
+    "seed": 43,
+    "epoch": 2,
+    "development_final_binary_log_loss": 0.6944421298868517,
+    "training_loss": 2.8691991750380406
+  },
+  {
+    "variant": "range_control",
+    "seed": 43,
+    "epoch": 3,
+    "development_final_binary_log_loss": 0.694482173035055,
+    "training_loss": 2.8689641423225205
+  },
+  {
+    "variant": "range_control",
+    "seed": 43,
+    "epoch": 4,
+    "development_final_binary_log_loss": 0.694537710338987,
+    "training_loss": 2.868726307193175
+  },
+  {
+    "variant": "direction_loss",
+    "seed": 17,
+    "epoch": 1,
+    "development_final_binary_log_loss": 0.6951584769827188,
+    "training_loss": 3.5602181642593442
+  },
+  {
+    "variant": "direction_loss",
+    "seed": 17,
+    "epoch": 2,
+    "development_final_binary_log_loss": 0.6955107290107526,
+    "training_loss": 3.559561440754902
+  },
+  {
+    "variant": "direction_loss",
+    "seed": 17,
+    "epoch": 3,
+    "development_final_binary_log_loss": 0.6954839320097786,
+    "training_loss": 3.559016095270712
+  },
+  {
+    "variant": "direction_loss",
+    "seed": 17,
+    "epoch": 4,
+    "development_final_binary_log_loss": 0.69582586557959,
+    "training_loss": 3.558550963154925
+  },
+  {
+    "variant": "direction_loss",
+    "seed": 29,
+    "epoch": 1,
+    "development_final_binary_log_loss": 0.6947891394492903,
+    "training_loss": 3.5600526231863223
+  },
+  {
+    "variant": "direction_loss",
+    "seed": 29,
+    "epoch": 2,
+    "development_final_binary_log_loss": 0.695514561246052,
+    "training_loss": 3.5592529892181632
+  },
+  {
+    "variant": "direction_loss",
+    "seed": 29,
+    "epoch": 3,
+    "development_final_binary_log_loss": 0.6958618815391365,
+    "training_loss": 3.558654241944408
+  },
+  {
+    "variant": "direction_loss",
+    "seed": 29,
+    "epoch": 4,
+    "development_final_binary_log_loss": 0.6963400448660526,
+    "training_loss": 3.5581268389056486
+  },
+  {
+    "variant": "direction_loss",
+    "seed": 43,
+    "epoch": 1,
+    "development_final_binary_log_loss": 0.6949824922955142,
+    "training_loss": 3.5601825344800364
+  },
+  {
+    "variant": "direction_loss",
+    "seed": 43,
+    "epoch": 2,
+    "development_final_binary_log_loss": 0.6951251934964102,
+    "training_loss": 3.55954233427984
+  },
+  {
+    "variant": "direction_loss",
+    "seed": 43,
+    "epoch": 3,
+    "development_final_binary_log_loss": 0.6954952792741127,
+    "training_loss": 3.558979812092026
+  },
+  {
+    "variant": "direction_loss",
+    "seed": 43,
+    "epoch": 4,
+    "development_final_binary_log_loss": 0.6958146921812567,
+    "training_loss": 3.5584674456698577
+  }
+]

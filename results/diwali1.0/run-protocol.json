@@ -1,0 +1,108 @@
+{
+  "model": "diwali1.0",
+  "parent": {
+    "root": "data/models/diwali0.9",
+    "mode": "minute_detail",
+    "checkpoint": "data/models/diwali0.9/minute_detail-17.pt",
+    "checkpoint_sha256": "6aecccde614532d236e20cf305d0da1fe52e84e5e71fb95869a0f71c0926c7c1",
+    "report_sha256": "a4b139dadee269a434efb87c28a5269122348dff0fb16e6da10216155c6987d0",
+    "temperatures": [
+      1.0000000000000004,
+      1.0000000000000004,
+      1.0000000000000004,
+      1.0000000000000004,
+      1.0000000000000004,
+      1.0000000000000004,
+      1.0000000000000004,
+      1.0000000000000004,
+      1.0000000000000004,
+      1.0000000000000004,
+      1.0000000000000004,
+      1.0000000000000004,
+      1.0000000000000004,
+      1.0000000000000004,
+      1.0000000000000004
+    ],
+    "colour_temperature": 0.9716279515771067,
+    "config": {
+      "marginal": {
+        "root": "data/models/diwali0.5",
+        "checkpoint": "data/models/diwali0.5/near_weighted-17.pt",
+        "checkpoint_sha256": "30279c15acfab578a3af492d3fa180c8d469982d54b29e2bea31553dd23ec0ae",
+        "report_sha256": "134a711d419c8a11f84abc845d17be52dc289b50c9dcc65dc855a73b118ecc79",
+        "temperatures": [
+          0.9716279515771067,
+          1.0292005271944284,
+          1.059253725177289,
+          1.0292005271944284,
+          1.0000000000000004,
+          1.0292005271944284,
+          1.059253725177289,
+          1.0292005271944284,
+          1.0000000000000004,
+          1.0000000000000004,
+          0.9716279515771067,
+          1.0000000000000004,
+          1.0000000000000004,
+          0.9716279515771067,
+          1.0292005271944284
+        ],
+        "colour_temperature": 0.9172759353897799
+      },
+      "dependence": {
+        "root": "data/models/diwali0.7",
+        "checkpoint": "data/models/diwali0.7/joint_control-17.pt",
+        "checkpoint_sha256": "912a009a3a7002a2a532a00d708378f7e681c513f77d899272b9cf595640c669",
+        "report_sha256": "66e63669aea2d446423b8c2688cba78d64abc5301d67dcc0d4afe5e16f2248a7",
+        "temperatures": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "colour_temperature": 0.9716279515771067
+      }
+    }
+  },
+  "target": "15th future close > frozen reference versus <= reference; not first candle or monotone path",
+  "variants": [
+    "range_control",
+    "direction_loss"
+  ],
+  "branch": "new zero-output7929-parameter recent60-minute GRU correction to frozen calibrated0.9",
+  "loss": "0.5h1+0.5/14 other rangeCE +.25colourCE; direction_loss adds1.0 binary final-close CE from summed price-bin probabilities",
+  "selection": "lowest3-seed mean development FINAL binary log loss, epoch0 allowed; fixedseed17; range_control breaks ties; freeze before calibration/benchmark",
+  "calibration": "same calibration for both arms: h1-14 binNLL; h15 binary endpointNLL using full26-bin temperature; .5..2 grid; colour separate. Parent calibration already reused, not fresh.",
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "epochs": 20,
+  "patience": 4,
+  "batch": 128,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.0001,
+  "gradient_clip": 5,
+  "joint": "same fixed unit coupling to frozen0.7, no new dependence search",
+  "cohort": "same0.5 purged October origins; no future features or changed target labels",
+  "limitations": [
+    "Repeatedly inspected benchmark, not fresh holdout.",
+    "A correct distribution can assign probability to both sides; never erase downside after Reveal.",
+    "Direction might stay near50-50; no promise of confidence or profitable entries.",
+    "Equality belongs to down_or_unchanged, not silently pure down."
+  ],
+  "source_sha256": "f314cac6b87086356995d931276133ff26c410f9fb8c313f38a647024e2a65b8",
+  "model_source_sha256": "33dc95058d082b7f790a22c7d3d3c10a488b0a74458212618f0e392b26d3a3bf"
+}

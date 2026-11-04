@@ -1,0 +1,9 @@
+{
+  "mode": "range_control",
+  "seed": 17,
+  "means": {
+    "range_control": 0.6942865730578531,
+    "direction_loss": 0.6942865730578531
+  },
+  "frozen_before_calibration_and_benchmark": true
+}
