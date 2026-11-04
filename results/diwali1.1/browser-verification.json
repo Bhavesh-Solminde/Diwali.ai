@@ -1,0 +1,19 @@
+{
+  "checks": [
+    {
+      "width": 1440,
+      "errors": [],
+      "overflow": false,
+      "direction_present": true,
+      "actuals_separate_until_reveal": true
+    },
+    {
+      "width": 390,
+      "errors": [],
+      "overflow": false,
+      "direction_present": true,
+      "actuals_separate_until_reveal": true
+    }
+  ],
+  "screenshots_private": true
+}

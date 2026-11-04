@@ -1,0 +1,42 @@
+{
+  "state": "in_progress_not_final_accuracy",
+  "models": {
+    "diwali0.9": {
+      "state": "follower_source_prefix_verified",
+      "model": "diwali0.9",
+      "capture_complete": false,
+      "source_capture_complete": false,
+      "follower_rows_beyond_source_prefix": 0,
+      "native_freezes_replayed": 6,
+      "forecasts_recomputed": 2,
+      "matured_outcomes_verified": 0,
+      "outcomes_beyond_source_prefix": 0,
+      "complete_joint_paths_verified": 0,
+      "joint_log_loss": null,
+      "audited_through_utc_ns": 1793768997049657000,
+      "max_recomputed_probability_difference": 0,
+      "minimum_pre_target_commit_seconds": 44.543731,
+      "scope": "Actual receiver source replay and model/forecast/outcome chronology; small correlated sample, no accuracy/calibration guarantee.",
+      "training_ready": false
+    },
+    "diwali1.1": {
+      "state": "follower_source_prefix_verified",
+      "model": "diwali1.1",
+      "capture_complete": false,
+      "source_capture_complete": false,
+      "follower_rows_beyond_source_prefix": 0,
+      "native_freezes_replayed": 6,
+      "forecasts_recomputed": 2,
+      "matured_outcomes_verified": 0,
+      "outcomes_beyond_source_prefix": 0,
+      "complete_joint_paths_verified": 0,
+      "joint_log_loss": null,
+      "audited_through_utc_ns": 1793768998274245000,
+      "max_recomputed_probability_difference": 0,
+      "minimum_pre_target_commit_seconds": 44.541339,
+      "scope": "Actual receiver source replay and model/forecast/outcome chronology; small correlated sample, no accuracy/calibration guarantee.",
+      "training_ready": false
+    }
+  },
+  "frozen_models_not_retuned": true
+}

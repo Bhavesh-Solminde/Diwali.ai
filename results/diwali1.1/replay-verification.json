@@ -1,0 +1,8 @@
+{
+  "cases": 10,
+  "horizons": 150,
+  "joint_event_queries": 30,
+  "maximum_cpu_probability_difference": 1.1710182620805476e-07,
+  "coherent_net_direction_verified": true,
+  "future_actuals_used": false
+}

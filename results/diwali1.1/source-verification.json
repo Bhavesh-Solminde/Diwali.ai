@@ -1,0 +1,12 @@
+{
+  "training_sources_and_dependencies_unchanged": true,
+  "data_parent_hashes_unchanged": true,
+  "sources": {
+    "flow.py": "aed4a6f6e74dc0230550fed0c5f4ab10865553d1e82f333cb09e04f6327cd4db",
+    "flow_train.py": "2ecd28604754ff11bb20299996e8e035cc31f0b0126ab83aa6f43ad2ed1faa9f",
+    "flow_serve.py": "443f604a900ad85e9c9408bb0ecd1a0fad09ccd95b0706dada20ff8f886d1513",
+    "candidate_follower.py": "c192cb02ed6390ec77e0e174d28d401e78d3a944c97c41234f8315a0ed075311",
+    "audit_candidate.py": "d83e41c02f49d3bc8a4a382bf26baae60e22d1b966d60bbe4adb4cafee2c8667",
+    "compare_candidates.py": "f5d99e1b974eebc7a9a89272bf28809806e7bd2a3cb6c303282208d9ba3511b0"
+  }
+}

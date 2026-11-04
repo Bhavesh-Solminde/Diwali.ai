@@ -1,0 +1,11 @@
+{
+  "data/btc-perp/button-pilot-202610-v1/candle-raw.npy": "fd7274f7d31f3393a328433546f90b325e07db26063d4c853d5595a4ab98be2b",
+  "data/models/diwali0.5/fit-features.npy": "d4f2f983f9028cc6a7a3c33a4ee9b65b8a2fc90916a6dcde6cd833ee15afed4c",
+  "data/models/diwali0.5/fit-targets.npz": "5c4ea22d76ac24ca5f481669a622d4fc0a5a6296790fc60794266ed516d34765",
+  "data/models/diwali0.5/development-features.npy": "b3bc398db848a2aa92393a26f2eccc78b8ba6a8b41d51d9c6f8ae1bdaa560c62",
+  "data/models/diwali0.5/development-targets.npz": "6b902e977d161c2f6a90b08391031f5f8ddec259feedbe9ff43277311c04588e",
+  "data/models/diwali0.5/calibration-features.npy": "1970e4c7c7c4c38f3e181f1c89c5e7fab7334387713f29ebb5a9ea02a0dc2325",
+  "data/models/diwali0.5/calibration-targets.npz": "335bf42653890d928e53f240f3cdcdde4db3417778cc17fc9777d91bfaaa9b3e",
+  "data/models/diwali0.5/locked_test-features.npy": "7cfdbcc9d249be1e611b100f34d3dcd58c8c2bfe4bd892a81c473d0aaec04e48",
+  "data/models/diwali0.5/locked_test-targets.npz": "bb2f45afe36ecc75872760bafbe53ad7640afb5dcc161363d108bff5659d1f01"
+}

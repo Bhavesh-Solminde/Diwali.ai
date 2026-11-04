@@ -1,0 +1,45 @@
+{
+  "by_day": {
+    "2026-10-24": {
+      "n": 1405,
+      "final_binary_loss_difference11_minus09": -0.0017736309673637152,
+      "joint_loss_difference11_minus09": 0.10544196116706055
+    },
+    "2026-10-25": {
+      "n": 1394,
+      "final_binary_loss_difference11_minus09": 0.004579596687108278,
+      "joint_loss_difference11_minus09": 0.0959608889613776
+    },
+    "2026-10-26": {
+      "n": 1408,
+      "final_binary_loss_difference11_minus09": 0.004293394275009632,
+      "joint_loss_difference11_minus09": 0.06995290856799499
+    },
+    "2026-10-27": {
+      "n": 1380,
+      "final_binary_loss_difference11_minus09": 0.006313401274383068,
+      "joint_loss_difference11_minus09": 0.10595180692997193
+    },
+    "2026-10-28": {
+      "n": 1399,
+      "final_binary_loss_difference11_minus09": -0.002176137175410986,
+      "joint_loss_difference11_minus09": 0.07584539390993977
+    },
+    "2026-10-29": {
+      "n": 1414,
+      "final_binary_loss_difference11_minus09": 0.00514035252854228,
+      "joint_loss_difference11_minus09": 0.11075134464474855
+    },
+    "2026-10-30": {
+      "n": 1413,
+      "final_binary_loss_difference11_minus09": 7.349029328906909e-05,
+      "joint_loss_difference11_minus09": 0.11806269038100371
+    },
+    "2026-10-31": {
+      "n": 1373,
+      "final_binary_loss_difference11_minus09": 7.861144695198163e-05,
+      "joint_loss_difference11_minus09": 0.06514220658748637
+    }
+  },
+  "scope": "Exploratory reused benchmark; overlapping origins, positive means1.1 worse0.9."
+}
