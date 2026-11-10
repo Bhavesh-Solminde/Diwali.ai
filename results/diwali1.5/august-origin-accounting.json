@@ -1,0 +1,38 @@
+{
+  "period_utc": [
+    "2026-08-01",
+    "2026-08-31"
+  ],
+  "raw_days": 31,
+  "raw_hours": 744,
+  "hours_by_stream": {
+    "trades": 744,
+    "orderbook": 744
+  },
+  "preceding_replay_warmup_hours": 36,
+  "frequency": "One per minute at UTC second 15",
+  "potential_origins": 44640,
+  "unavailable_source_file_origins": 0,
+  "considered_origins": 44640,
+  "input_quality_exclusions": 39121,
+  "input_reasons": {
+    "No valid pre-window book seed": 36084,
+    "No fresh completed-second reference": 45,
+    "Gap/invalid marker inside window": 1151,
+    "Stale book coverage": 16,
+    "Insufficient99percent context or missing latest candle": 84,
+    "clock_trade_hour_intersects_input_history": 1501,
+    "clock_flagged_recent_source_hour": 240
+  },
+  "passing_inputs": 5519,
+  "target_quality_exclusions": 128,
+  "target_reasons": {
+    "missing_or_bad_target": 128
+  },
+  "sampling_or_cap_exclusions": 0,
+  "other_preparation_exclusions": 0,
+  "final_usable_examples": 5391,
+  "retained_fraction": 0.12076612903225807,
+  "cohort_report_sha256": "f93975712b8fc1b1ddcabadc247b000710b76f8d9163399277b14d8187339adc",
+  "shard_report_sha256": "d1ff2ecf891dad27ba9895402e9362822d9024537c26ef357411b8c2f011eac3"
+}

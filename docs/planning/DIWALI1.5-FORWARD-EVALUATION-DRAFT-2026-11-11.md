@@ -1,41 +1,27 @@
-# Diwali 1.5 forward evaluation: draft before any new forecast
+# Diwali 1.5 forward comparison
 
-This document specifies the proposed next evaluation. The live comparison will begin after a separate release. The 39-run development study is complete and audited. The original control won the range score, so its existing full-August artifact is retained. No forecast has been issued under these rules. Final deployment artifacts and this protocol must be hashed together before the first forecast. These durations and thresholds are our design choices, not Krafer's claimed settings.
+The comparison has three candidates. The retained original model versus the volatility histogram is the primary comparison. The lower-learning-rate candle attention model is the declared challenger against both. The constant 50–50 direction score is a reference calculated in scoring.
 
-## Scope and frozen artifacts
+| Candidate | Frozen fitting choice |
+|---|---|
+| Original control | Reuse the verified Diwali 1.4 full-August checkpoint |
+| Volatility benchmark | Reuse the matched, fit-only volatility histogram and its calibration |
+| Candle attention | C_attention_lower_lr, learning rate 0.0001, seed 17, one refit |
 
-The primary task remains15 direct distributions for future full-minute closes. Pick the neural configuration using the committed mean15-bin development rule. Do not change that choice from a later prospective result. The retained seed 17 model used all 5,391 prepared August labelled inputs, September 1–7 checkpoint selection and September 8–14 calibration; those earlier dates are development, not a new holdout. D uses the same full fitting origins and fixed settings. No new hyperparameter search is added to that refit.
+The challenger choice follows the original 15-close range objective. Its August development range log loss was 2.804723, compared with 2.832951 for the other attention setting. Both neural candidates use the same 5,391 August fitting origins, 862 September 1–7 checkpoint selection origins, and 1,476 September 8–14 calibration origins. The September 15–29 test remains consumed. [August data accounting](../reviews/DIWALI1.5-AUGUST-DATA-ACCOUNTING.md)
 
-Freeze chosen weights, selected epoch, fit-only transforms, model/source versions, cache/source identities, probability calibration,26-bin edges, reference definition, code/eligibility hashes and all comparator artifacts. Include the volatility-conditioned histogram and a constant50–50 directional baseline. Include D for the binary diagnosis, and the unmodified A control when another configuration was selected. Never compare methods on different surviving timestamps.
+## Live issuance
 
-If no neural configuration beats the volatility benchmark on development range error, explicitly retain the benchmark as the stronger development reference. A chosen neural configuration may still be examined as research; do not label that choice production promotion or a demonstrated gain.
+The forward runner collects Binance BTCUSDT perpetual individual executions and full-speed depth, recording UTC and monotonic receipt times. It requires a full 24-hour native history and at least two of three prespecified engineering input checks. This is a new continuous recorder so warmup, forecasts and scoring use the same native journal. Completed hourly files are compressed and verified against their original byte hashes. The original short preflight remains separate.
 
-## Timing and eligibility
+After warmup, the runner writes an exclusive release with the next full UTC day as the start, the ten-day stop, the model and calibration hashes, source hashes, eligibility rules and scores. It issues every 15 minutes at second 15, up to 960 slots. The same strict-before-cutoff input and reference go to all three models. The native input gate requires a valid book seed and continuity, fresh book and completed-second reference, at least 99% valid candles in the 1,440-minute context and a valid latest candle. Missed or invalid inputs are journaled as skips. The forecast file must finish writing before the first target minute opens.
 
-Use actual newly arriving public market messages, keeping native UTC receive and monotonic times. Do not replay historical records and describe them as forecasts issued in the past. Complete the24-hour context warmup before scheduling the evaluation start. Freeze a concrete UTC start/end in the release after warmup; start on the next full UTC day. Do not move the start or exclude days based on outcomes.
+At a cutoff of 10:00:15, the first target closes at 10:02:00 and the last at 10:16:00. The outcomes are written separately after the final close and a 60-second grace. All 15 native closes, base volumes and execution counts must match the exchange's closed candles. This check applies equally to every candidate. [Binance USDⓈ-M candle API](https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data#kline-candlestick-data)
 
-Run ten consecutive UTC calendar days, issuing at00:00:15,00:15:15,00:30:15,00:45:15and the equivalent slots throughout each day: at most960origins. This15-minute cadence avoids overlapping15-full-candle target sets. Mature the final issued targets after the issuance window ends. If a slot is missed, record it; do not insert a hindsight substitute.
+## Evaluation
 
-For every comparator freeze exactly the same strict-before-cutoff messages and1,440completed candle context. Apply the existing book-seed, sequence/invalid-marker, staleness, fresh-completed-second reference and masked-history gates from the canonical pipeline. The last completed candle must be valid; older context must meet the existing99%validity rule. Do not manufacture hidden orders or fill unavailable book levels. Record the input-only rejection reason for every skipped slot.
+Score the fixed window once, with a minimum of 300 matched mature origins across seven distinct UTC days. Insufficient coverage is recorded as its own result. The primary result is the paired difference in average price-bin log loss over all 15 closes, control minus volatility. Separately report attention minus control and attention minus volatility. Lower log loss is better.
 
-Record input hashes, model/calibration hashes, cutoff, reference, target interval, UTC issuance, monotonic issuance and computation duration before the first target starts. A forecast completed after its target starts is a missed forecast, not an eligible issued prediction. All comparators must meet this timing condition. Once issued, forecasts are immutable; actuals are stored separately and attached only after target maturity/quality checks. A prediction file is not evidence of timely issuance without its corresponding native-clock/source audit.
+Report final-close up/down log loss, Brier and ROC-AUC against the 50–50 reference and the other candidates, plus raw and calibrated scores at each horizon and daily paired results. Up means close above the frozen reference, with equality treated as down or unchanged. Daily groups remain related through market conditions. Individual forecast, outcome and model files remain local.
 
-The usual cutoff at10:00:15 predicts the10:01–10:02first candle and ends at10:16for the15thclose. This still leaves105seconds to the first close and945seconds to the fifteenth. Zero return is down-or-unchanged, with up computed from positive bins.
-
-## Scoring and stopping
-
-Score the full prespecified ten-day issuance window. Do not stop early for good scores, increase confidence thresholds after looking at outcomes, or extend until a model wins. Require at least300matched fully matured origins across at least seven distinct days; otherwise report insufficient coverage and plan a separate future window. Do not replace a failed window with a new one while erasing its record.
-
-Primary: mean price-bin log loss across all15closes, paired on identical eligible origins against the volatility benchmark. Secondary: final-close binary log loss/Brier and ROC-AUC against50–50and volatility/D; report all15horizons, both raw/calibrated diagnostics where available, daily paired differences, probability reliability and coverage. D/50–50do not have range scores and must not be assigned fabricated ones. An architecture or loss that improves direction while worsening range remains a stated tradeoff.
-
-Calendar blocks and neighbouring market conditions remain correlated even when the forecast target sets do not overlap. Report descriptive day variation; do not treat every endpoint as an independent trial or claim perfect conditional probabilities. AUC is undefined for a one-class slice and stays null. Keep private individual records and suppress public aggregate slices with fewer than ten origins.
-
-The ten-day test is consumed once its forecasts/outcomes inform research. Any subsequent changes require new future-issued confirmation. September15–29, the already used October benchmark and this reused August development cohort remain unavailable as fresh holdouts. There is no trading, PnL guarantee, target-before-stop entry estimate or news model in this protocol.
-
-## Work still required
-
-The retained model and the final volatility and direct binary comparators passed artifact verification. The forecast adapter matched the historical inference path on ten development inputs, with a maximum probability difference of 1.17 × 10⁻⁷.
-
-The warmup uses Binance's individual execution and full-speed depth feeds, the same stream types documented by the historical archive provider. A 140-second native capture recorded 2,855 individual trades and 5,306 depth updates. Two complete 60-second input windows matched the reference feature builder and had a valid completed-second price reference. The existing recorder's aggregate trades were unsuitable for the original feature definitions. [CryptoHFTData wire format](https://www.cryptohftdata.com/docs/wire-format-binance-futures)
-
-A separate bounded native recording is collecting the candle history. Its verification worker checks three prespecified input cutoffs after 24 hours and keeps the results local until reviewed. This verifies input assembly and probability output using recorded receipts. The next release still needs a verified warmup, concrete UTC dates, an on-time issuance journal and maturity scoring on matched timestamps. No prospective forecasts have been issued. None of these remaining steps may be reported as already completed by a development-score table.
+The runner starts in warmup. The first eligible UTC day and exact stop are recorded by the release only after readiness passes. The readiness checks and any later scoring output belong to separate stages.

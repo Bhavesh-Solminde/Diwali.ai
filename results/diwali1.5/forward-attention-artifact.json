@@ -1,0 +1,68 @@
+{
+  "state": "fitted_calibrated_reload_verified",
+  "configuration": "C_attention_lower_lr",
+  "settings": {
+    "family": "C",
+    "lr": 0.0001,
+    "direction_weight": 0.0,
+    "candle_attention": true
+  },
+  "seed": 17,
+  "fit_origins": 5391,
+  "selection_origins": 862,
+  "calibration_origins": 1476,
+  "fit_dates": [
+    "2026-08-01",
+    "2026-08-31"
+  ],
+  "selection_dates": [
+    "2026-09-01",
+    "2026-09-07"
+  ],
+  "calibration_dates": [
+    "2026-09-08",
+    "2026-09-14"
+  ],
+  "data_hashes": {
+    "august_fit": {
+      "cohort": "f93975712b8fc1b1ddcabadc247b000710b76f8d9163399277b14d8187339adc",
+      "features": "ea57e963451ec5b63c592981774c7dddd7c248b9b69025899a77e489d5b46ae1",
+      "content_audit": "d8c72638fc670537197c62b6eae2c4f8a8c6fd8c071d23584d4edc5f4d2429ca",
+      "exact_window_ledger": "dac4b7d0ad981ff52b905b89e2383fb58067dc4e0e01f0a2de745dfa17b5b8d9"
+    },
+    "september_selection_calibration": {
+      "cohort": "7691a8ef885c990fac62c6ebfd0402715f2d4a7a7cd2165bb1d813eb1af40cd3",
+      "features": "7396ddf89db0d4743e46800f3e4dfd5d82a612bc52891939909c1b96256de2bd",
+      "content_audit": "b250ac9d430ad3cb6e4e1073eae98657753f2cf1d7e9d098e5f573c1f9e39994",
+      "exact_window_ledger": "c668d833fbd9f762f9f1b8f2a77f7bfdbcd2ef6c9e589f46755643210af2cb97"
+    }
+  },
+  "source_hashes": {
+    "comparison15.py": "b42e7017b133e05582954fa6eb20b834fdf223ff4ff6b358f7571203e1f4d060",
+    "comparison15_train.py": "7c1ebbb0130ff2c5d3965c35d5110fbe32c6100cac989dd8167140be79bebb1c",
+    "comparison15_study.py": "9866b91bb2d98683d829a83a375a31433aaf9cc02f6ba364abcac6d7bb18e8e5",
+    "event_model.py": "d23f3c55083773d0010a67f22fb3d14581975af59a885b955aa5fa1d550da9fa",
+    "event_data.py": "566240853809e680d82f725e633cd123879b2afe62ae57df8cf68979463c811e",
+    "event_data_exact.py": "a59eb2be64d30424f556a4dddcf9cfb3b5a08734ba67b91997f63b8122774111",
+    "event_train.py": "33952e008e911f0d8fb19c181f7097983b5739c9f132ba8f299955fada4ffe89",
+    "event_evaluation.py": "f8cbd04560384bb95b6058989c1045f8454a83fc167ab2878cb4a588d89bbd71",
+    "event_baselines.py": "96ac22b64cf6b4c8099da7b579b84a75269be3dafaae873d3917663084f02571",
+    "event_protocol.py": "0d896f7a3c0807f5c24ddbfc11ad19ab1976054bf3526df74f9c1509a4053b7c",
+    "event_direction_diagnostic.py": "f572ee8907333e263680f9141ba9de97a47f9829456197b8e99ed137fd485367",
+    "event_lifetime.py": "7690c3d01b46b829517a63217e3a65c3e9dd9570351e45fe3fa2e0bb217f738d"
+  },
+  "trainer_sha256": "7cdbe69b02a169d87b231f8d6f9e2b5d0fae204de14a5194ed1874de17c37507",
+  "reserved_september_data_read": false,
+  "best_epoch": 6,
+  "selection_loss": 2.84704439833127,
+  "cpu_probability_max_difference": 1.0123522195537582e-07,
+  "artifact_hashes": {
+    "calibration.json": "3874111f0815db0eb0235b81ec94ce4ad5c28cfb983110d0433583762e45022b",
+    "weights.pt": "921c0f6d9e7392c77fe0fd1f933434107e54c4c5f4dc08d85a1ebe1c44d3515c",
+    "fit-transforms.json": "3692bc46b2c93760de9bc86a43313f3f5db89c5b70e361f071e47b20f6e4105c",
+    "history.json": "bf5d47b13a67d6a311b5ff454ed404c4358bb57eba208605fb81d75541f9c83f",
+    "protocol.json": "85d98605fb261685c4031f7837c76f4a01e1b09422950bbbd141b66414061e5e"
+  },
+  "report_sha256": "a50acb801926c353fdeedb21f8d29f8c3a8c25c401b621c871aff524e1157b4f",
+  "role": "Declared challenger. Primary comparison remains original control versus volatility."
+}
