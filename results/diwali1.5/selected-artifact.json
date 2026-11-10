@@ -1,0 +1,50 @@
+{
+  "state": "existing_control_retained_after_bounded_development",
+  "version": "diwali1.5 research comparison; retained 1.4 control artifact",
+  "selected_configuration": "A_original",
+  "new_upgraded_weights_created": false,
+  "reason": "The exact existing architecture/objective/learning rate won the frozen 39-run range selection. Reuse its fixed-seed full-August artifact rather than imply a new model improved it.",
+  "model_directory": "data/models/diwali1.4-final-v1",
+  "artifacts": {
+    "weights.pt": "20943ce23f44ee9d2244aaff0d0054aede9db132b3062e787917cd58a5a051ca",
+    "fit-transforms.json": "3692bc46b2c93760de9bc86a43313f3f5db89c5b70e361f071e47b20f6e4105c",
+    "calibration.json": "1308910bafcb183d5f2899b5583e781e1fe35d2bc46375d0808e1feb8d57d027",
+    "selection.json": "ff27ee6daa7be80e0505ebe39fea0e48686b020c61531c096a043e200a27da8f",
+    "run-protocol.json": "21b7057b95147558f7ef29c5f21419437e8416752b1f350cafa5d37c6375fdb1",
+    "report.json": "38b6b269a81af389b2409f8653c517bbb94a956068a59ec604e9fb45cafde84c"
+  },
+  "fitting_origins": 5391,
+  "selection_origins": 862,
+  "calibration_origins": 1476,
+  "seed": 17,
+  "fit_dates": [
+    "2026-08-01",
+    "2026-08-31"
+  ],
+  "selection_dates": [
+    "2026-09-01",
+    "2026-09-07"
+  ],
+  "calibration_dates": [
+    "2026-09-08",
+    "2026-09-14"
+  ],
+  "development_report_sha256": "6afdaaf05a7f4bdadcf7a6462eda795906e2f6228262b4fee22fa6b385d4e9b8",
+  "artifact_audit_sha256": "59a065ca411034a54404687a123fdbb503bd417e6db3bebe86d599e7bec22f84",
+  "original_control_reproduced_all_six_runs": true,
+  "original_final_build_sources_unchanged": true,
+  "existing_nonfinal_inference_preflight_matches": true,
+  "prospective_release_complete": false,
+  "new_15_future_forecasts_issued": 0,
+  "remaining": [
+    "Build the final matched D baseline for a future comparison.",
+    "Verify native live input and inference parity for this model; existing 0.5/0.6 prospective code is not a 1.5 adapter.",
+    "Freeze an actual future UTC window and complete release before any new forecasts.",
+    "Record and score a fresh fixed future window on identical eligible timestamps."
+  ],
+  "limitations": [
+    "This is an existing retained control, not newly improved weights.",
+    "August and September development/consumed outcomes do not establish fresh efficacy.",
+    "The historical input timing assumptions remain."
+  ]
+}

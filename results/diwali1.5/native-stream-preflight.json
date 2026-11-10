@@ -1,0 +1,14 @@
+{
+  "state": "raw_stream_and_window_preflight_passed",
+  "windows_checked": 2,
+  "source_individual_trades": 2855,
+  "source_depth_updates": 5306,
+  "verified_book_states": 5300,
+  "observed_trade_gaps": 0,
+  "clock_steps": 0,
+  "event_features_match_reference": true,
+  "fresh_completed_second_reference_available": true,
+  "full_1440_live_candles_checked": false,
+  "forecasts_issued": 0,
+  "capture_manifest_sha256": "392743c53afd043e01645ac833bc2a915b5f2d6903be50b61d97245d98e008f5"
+}

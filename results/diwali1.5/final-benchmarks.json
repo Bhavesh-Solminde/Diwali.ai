@@ -1,0 +1,53 @@
+{
+  "state": "matched_final_benchmarks_verified",
+  "binary": {
+    "state": "fitted_calibrated_and_reload_verified",
+    "fit_origins": 5391,
+    "calibration_origins": 1476,
+    "iterations": [
+      338,
+      347,
+      418,
+      336,
+      374,
+      347,
+      349,
+      362,
+      381,
+      370,
+      373,
+      395,
+      359,
+      368,
+      352
+    ],
+    "artifact_hashes": {
+      "calibration.json": "f42ee939e0575df86f18d7e5965a7d7810704ec2aa9f08eaf90461465f2d51d6",
+      "fit-transforms.json": "9bd9ca69a0bc64c01a1468554cb907d28ee16215609366170a1e9cf551c445de",
+      "horizon-01.joblib": "7a039f9be14d688637b499e5efd816dec8606093c0cc15f7679d14ccfcbbb03c",
+      "horizon-02.joblib": "c09152424d71792637206b49bc4e2ab96884055618e72219f6da22380d00e350",
+      "horizon-03.joblib": "acdd8b5697aac2bca575ede2fd4f01f315b964148392d4553e6949f3667a12f9",
+      "horizon-04.joblib": "f607e115fb4c6fb37aeaf50231bc4b6745d0af92e23b9ecf7ae418ae24ec956b",
+      "horizon-05.joblib": "9fb7a36a42264d53904808d0fc69444badd3734e428c046f515c497e55c840e4",
+      "horizon-06.joblib": "920cf239fa1a8cfea6f07946d651aef57e568d2013652bb4c4e2da81cb2c0ecd",
+      "horizon-07.joblib": "f0df354f1ca101112d78d9fedcc4a0d847948bd4deafd55f68b5d7cac68454e1",
+      "horizon-08.joblib": "51a1666bdeef856c2ea67480e3f098c0d1649ee1f2689bedee2781f4c9ecc87d",
+      "horizon-09.joblib": "43e7feaf6391746970c41bf7b689eab8a1dcc4b56d988acdb0a8ef76401713f5",
+      "horizon-10.joblib": "e63fcadbe094e8fec2ba518192e3bdaead8c3af9b97f1bbf42cf7007ac10cd34",
+      "horizon-11.joblib": "ada8db62faa2af791bc873c06066575b327d374b50c421f59727e7620ebf836e",
+      "horizon-12.joblib": "cfc94cc9b31d683471328362b67883eb764abbf41d6fef1825c54ea045f635a4",
+      "horizon-13.joblib": "1c1e86bd6ee7a48e6ff774114de2b715b69ac8de2b89c1837df5e25ad413912b",
+      "horizon-14.joblib": "dd65db2ee836be33cc14ba5fe22f6a521e8db6e44f13ef8e19739cd0418b510c",
+      "horizon-15.joblib": "292ede98c595d0dda8b13cb0f31445291c3282a02dbf4252808210b4b4cfb397",
+      "protocol.json": "23099d2ea034567ef4df2243f74160c48fb898a995d43a66122023f3fff89cef"
+    },
+    "source_sha256": "f281ec43db8cf88a8b48f0659ab56b290ebb6fb01b9e5970134995c95819847b"
+  },
+  "binary_report_sha256": "26bf38db52ae0fc8bf3a7bb6f7fd0376ebc6586408d3ea1d87f50ff248525020",
+  "volatility_report_sha256": "b33bd0d5856c3ccddc26e3bd31b07c89e486343e5ad5e5d97c1e275c72195de3",
+  "scope": "Verified calibration and reload; no prospective performance scored.",
+  "historical_prediction_parity": {
+    "origins": 10,
+    "maximum_control_probability_difference": 1.1616164065364476e-07
+  }
+}

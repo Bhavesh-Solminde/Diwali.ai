@@ -95,12 +95,12 @@ def verified_top(book):
     return levels
 
 
-async def depth_session(store, connection):
+async def depth_session(store, connection, *, endpoint=DEPTH):
     book = Book()
     snapshot_task = None
     pending = []
     try:
-        async with connect(DEPTH, open_timeout=12, ping_interval=20, ping_timeout=20) as ws:
+        async with connect(endpoint, open_timeout=12, ping_interval=20, ping_timeout=20) as ws:
             store.save('connection', dict(stream='depth', connection=connection))
             while True:
                 raw = await asyncio.wait_for(ws.recv(), 15)

@@ -60,3 +60,11 @@ Tests check coherent binary loss, zero-weight equivalence, A/C input-branch equi
 After the bounded comparison, freeze the selected checkpoint, transforms, calibration, baselines, eligibility policy and forward evaluation rules **before** issuing new future forecasts. Score only common eligible timestamps with the volatility benchmark and50–50. No newly generated forecast may be backdated. A completed development report alone does not complete that future evaluation or prove profitability.
 
 Only code and aggregate evidence may be pushed. Paid raw records, individual inputs/forecasts, fitted model files and API keys remain local. Public metric groups smaller than ten origins are suppressed.
+
+## User clarification received during the study
+
+The user's subsequent detailed plan confirms the existing A/B/C/D experiment; it does not request a different target or a new search. The deliverable remains 26 probabilities for each of 15 future closes, with up probability obtained from the same positive bins. These are separate closing-price distributions, not probabilities for a complete rise/reversal path. C runs regardless of whether B succeeds. A combined attention-plus-direction candidate would be a later experiment, not an extra trial silently added to this budget.
+
+Two factual corrections to the pasted plan are recorded here: the actual parent candle branch uses temporal convolutions rather than a GRU, and training had already started when the clarification arrived. Neither correction changes the agreed purpose. A selected configuration, a reproducible final artifact, and a completed fresh future evaluation are separate milestones; completion of the first must not imply completion of the others.
+
+The machine-readable frozen protocol inherits a parent `limitations` sentence saying the September final evaluation remains sealed. That inherited sentence is stale. The explicit 1.5 stage, exposure section above, and prospective rule control: September 15–29 is already consumed, and this comparison does not reopen it. The original frozen file is retained unchanged to preserve the actual pre-fit record.

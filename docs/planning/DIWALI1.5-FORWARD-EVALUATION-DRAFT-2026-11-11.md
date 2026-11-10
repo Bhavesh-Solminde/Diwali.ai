@@ -1,10 +1,10 @@
 # Diwali 1.5 forward evaluation: draft before any new forecast
 
-This document specifies the proposed next evaluation. It does not authorize an already-started live comparison or claim that a selected final model exists. The bounded39-run development study is still running. No forecast has been issued under these rules. Final deployment artifacts and this protocol must be hashed together before the first forecast. These durations and thresholds are our design choices, not Krafer's claimed settings.
+This document specifies the proposed next evaluation. The live comparison will begin after a separate release. The 39-run development study is complete and audited. The original control won the range score, so its existing full-August artifact is retained. No forecast has been issued under these rules. Final deployment artifacts and this protocol must be hashed together before the first forecast. These durations and thresholds are our design choices, not Krafer's claimed settings.
 
 ## Scope and frozen artifacts
 
-The primary task remains15 direct distributions for future full-minute closes. Pick the neural configuration using the committed mean15-bin development rule. Do not change that choice from a later prospective result. A later single fixedseed17 refit would use all5,391 prepared August labelled inputs, the previously used September1–7checkpoint-selection dates, and September8–14calibration dates; those earlier dates are development, not a new holdout. D uses the same full fitting origins and fixed settings. No new hyperparameter search is added to that refit.
+The primary task remains15 direct distributions for future full-minute closes. Pick the neural configuration using the committed mean15-bin development rule. Do not change that choice from a later prospective result. The retained seed 17 model used all 5,391 prepared August labelled inputs, September 1–7 checkpoint selection and September 8–14 calibration; those earlier dates are development, not a new holdout. D uses the same full fitting origins and fixed settings. No new hyperparameter search is added to that refit.
 
 Freeze chosen weights, selected epoch, fit-only transforms, model/source versions, cache/source identities, probability calibration,26-bin edges, reference definition, code/eligibility hashes and all comparator artifacts. Include the volatility-conditioned histogram and a constant50–50 directional baseline. Include D for the binary diagnosis, and the unmodified A control when another configuration was selected. Never compare methods on different surviving timestamps.
 
@@ -34,4 +34,8 @@ The ten-day test is consumed once its forecasts/outcomes inform research. Any su
 
 ## Work still required
 
-Finish/audit the bounded comparison, inspect the tradeoffs, prepare the single chosen-model build and all comparators, verify actual live input/inference parity, then freeze a release containing a concrete future UTC window and complete source/clock audit rules. None of these remaining steps may be reported as already completed by a development-score table.
+The retained model and the final volatility and direct binary comparators passed artifact verification. The forecast adapter matched the historical inference path on ten development inputs, with a maximum probability difference of 1.17 × 10⁻⁷.
+
+The warmup uses Binance's individual execution and full-speed depth feeds, the same stream types documented by the historical archive provider. A 140-second native capture recorded 2,855 individual trades and 5,306 depth updates. Two complete 60-second input windows matched the reference feature builder and had a valid completed-second price reference. The existing recorder's aggregate trades were unsuitable for the original feature definitions. [CryptoHFTData wire format](https://www.cryptohftdata.com/docs/wire-format-binance-futures)
+
+A separate bounded native recording is collecting the candle history. Its verification worker checks three prespecified input cutoffs after 24 hours and keeps the results local until reviewed. This verifies input assembly and probability output using recorded receipts. The next release still needs a verified warmup, concrete UTC dates, an on-time issuance journal and maturity scoring on matched timestamps. No prospective forecasts have been issued. None of these remaining steps may be reported as already completed by a development-score table.
