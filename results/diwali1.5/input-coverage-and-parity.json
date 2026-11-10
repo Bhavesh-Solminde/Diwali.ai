@@ -1,0 +1,96 @@
+{
+  "state": "complete",
+  "version": "diwali1.5-input-cache",
+  "origins": 5391,
+  "cohort_scope": "All5391 prepared quality-approved August labelled origins; not a diagnostic subsample and not the full twelve-month archive.",
+  "counts": {
+    "A": {
+      "fit": {
+        "origins": 1638,
+        "first_freeze_utc": "2026-08-01T12:29:15.000000000",
+        "last_freeze_utc": "2026-08-10T12:14:15.000000000",
+        "distinct_days": 10
+      },
+      "select": {
+        "origins": 420,
+        "first_freeze_utc": "2026-08-11T11:55:15.000000000",
+        "last_freeze_utc": "2026-08-13T15:25:15.000000000",
+        "distinct_days": 3
+      },
+      "calibrate": {
+        "origins": 352,
+        "first_freeze_utc": "2026-08-14T13:12:15.000000000",
+        "last_freeze_utc": "2026-08-15T20:47:15.000000000",
+        "distinct_days": 2
+      },
+      "score": {
+        "origins": 896,
+        "first_freeze_utc": "2026-08-16T00:00:15.000000000",
+        "last_freeze_utc": "2026-08-18T14:14:15.000000000",
+        "distinct_days": 3
+      }
+    },
+    "B": {
+      "fit": {
+        "origins": 3314,
+        "first_freeze_utc": "2026-08-01T12:29:15.000000000",
+        "last_freeze_utc": "2026-08-18T14:14:15.000000000",
+        "distinct_days": 18
+      },
+      "select": {
+        "origins": 260,
+        "first_freeze_utc": "2026-08-19T04:31:15.000000000",
+        "last_freeze_utc": "2026-08-21T21:22:15.000000000",
+        "distinct_days": 3
+      },
+      "calibrate": {
+        "origins": 1343,
+        "first_freeze_utc": "2026-08-22T00:49:15.000000000",
+        "last_freeze_utc": "2026-08-23T18:09:15.000000000",
+        "distinct_days": 2
+      },
+      "score": {
+        "origins": 249,
+        "first_freeze_utc": "2026-08-24T01:52:15.000000000",
+        "last_freeze_utc": "2026-08-26T22:57:15.000000000",
+        "distinct_days": 3
+      }
+    },
+    "C": {
+      "fit": {
+        "origins": 4917,
+        "first_freeze_utc": "2026-08-01T12:29:15.000000000",
+        "last_freeze_utc": "2026-08-23T18:09:15.000000000",
+        "distinct_days": 23
+      },
+      "select": {
+        "origins": 249,
+        "first_freeze_utc": "2026-08-24T01:52:15.000000000",
+        "last_freeze_utc": "2026-08-26T22:57:15.000000000",
+        "distinct_days": 3
+      },
+      "calibrate": {
+        "origins": 25,
+        "first_freeze_utc": "2026-08-27T17:37:15.000000000",
+        "last_freeze_utc": "2026-08-28T17:34:15.000000000",
+        "distinct_days": 2
+      },
+      "score": {
+        "origins": 200,
+        "first_freeze_utc": "2026-08-29T00:27:15.000000000",
+        "last_freeze_utc": "2026-08-31T22:18:15.000000000",
+        "distinct_days": 3
+      }
+    }
+  },
+  "source_data_hashes": {
+    "cohort": "f93975712b8fc1b1ddcabadc247b000710b76f8d9163399277b14d8187339adc",
+    "features": "ea57e963451ec5b63c592981774c7dddd7c248b9b69025899a77e489d5b46ae1",
+    "content_audit": "d8c72638fc670537197c62b6eae2c4f8a8c6fd8c071d23584d4edc5f4d2429ca",
+    "exact_window_ledger": "dac4b7d0ad981ff52b905b89e2383fb58067dc4e0e01f0a2de745dfa17b5b8d9"
+  },
+  "input_tensor_parity": "30 per-fold origin checks, seven tensors each: bitwise exact.",
+  "all_fold_fit_transforms_equal_original": true,
+  "preparer_sha256": "b42e7017b133e05582954fa6eb20b834fdf223ff4ff6b358f7571203e1f4d060",
+  "future_inputs_or_targets_used_in_features": false
+}
