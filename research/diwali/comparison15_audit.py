@@ -4,10 +4,15 @@ import json
 from pathlib import Path
 
 import numpy as np
+import joblib
+import torch
 
-from .comparison15 import ComparisonData, source_hashes
+from .comparison15 import ComparisonData, CandleAttentionModel, source_hashes
 from .comparison15_study import aggregate, public_metrics
 from .comparison15_train import score_direction
+from .event_data import normalize
+from .event_model import EventModel
+from .event_lifetime import sigmoid
 from .event_evaluation import eligible_origins
 from .event_train import metrics, probabilities
 from ..market_data.validate_archive import file_hash, save
@@ -22,7 +27,8 @@ def main():
     if aggregate(report['runs']) != report['decision']:
         raise ValueError('Selection rule does not reproduce')
     data = {f: ComparisonData(a.cache, f) for f in ['A', 'B', 'C']}
-    results = []; maximum = 0.
+    torch.set_num_threads(4)
+    results = []; maximum = 0.; maximum_inference_difference = 0.
     for run in report['runs']:
         f = run['fold']; name = run['configuration']; seed = run['seed']; root = a.study/f'{f}-{name}-seed{seed}'
         d = data[f]; rp = json.loads((root/'run-protocol.json').read_text())
@@ -45,6 +51,10 @@ def main():
             weights = {p.name: file_hash(p) for p in sorted(root.glob('horizon-*.joblib'))}
             if len(weights) != 15:
                 raise ValueError('Missing binary heads')
+        model = None
+        if name != 'D_binary_logistic':
+            model = CandleAttentionModel() if rp['settings']['configurations'][name]['candle_attention'] else EventModel()
+            model.load_state_dict(torch.load(root/'weights.pt', weights_only=True, map_location='cpu')); model.eval()
         for part in ['select', 'calibrate', 'score']:
             keep, _ = eligible_origins(d.cutoffs, d.starts, f, part); ids = np.flatnonzero(keep)
             path = root/(part+'-predictions.npz')
@@ -53,6 +63,11 @@ def main():
                 binary = d.y[ids] >= 13
                 if name == 'D_binary_logistic':
                     raw_up = z['up_raw']; up = z['up_calibrated']
+                    if part == 'score':
+                        x = normalize(d.arrays['summaries'][ids], d.transform['summary'])
+                        logits = np.stack([joblib.load(root/f'horizon-{h+1:02d}.joblib').decision_function(x) for h in range(15)], 1)
+                        np.testing.assert_allclose(sigmoid(logits), raw_up, atol=1e-12, rtol=0)
+                        np.testing.assert_allclose(sigmoid(logits/t[None]), up, atol=1e-12, rtol=0)
                 else:
                     raw = z['probabilities_raw']; prob = z['probabilities']
                     if prob.shape != (len(ids), 15, 26) or not np.isfinite(prob).all() or (prob <= 0).any():
@@ -66,6 +81,15 @@ def main():
                         if difference > 1e-12:
                             raise ValueError('Range report differs from retained forecast')
                     raw_up = raw[:, :, 13:].sum(-1); up = prob[:, :, 13:].sum(-1)
+                    if part == 'score':
+                        for j in np.linspace(0, len(ids)-1, 3, dtype=int):
+                            args, _ = d.batch(ids[j:j+1], d.transform, 'cpu')
+                            with torch.inference_mode():
+                                actual = probabilities(model(*args).numpy())[0]
+                            difference = float(np.max(np.abs(actual-raw[j])))
+                            maximum_inference_difference = max(maximum_inference_difference, difference)
+                            if difference > 2e-6:
+                                raise ValueError('Saved neural raw forecast differs from selected checkpoint inference')
                 for mode, value in [('raw_direction', raw_up), ('calibrated_direction', up)]:
                     if value.shape != binary.shape or not np.isfinite(value).all() or ((value < 0) | (value > 1)).any():
                         raise ValueError('Invalid directional probability')
@@ -83,6 +107,8 @@ def main():
         results.append({'fold': f, 'configuration': name, 'seed': seed, 'weights': weights,
                         'saved_forecast_metrics_verified': True, 'cohort_identity_verified': True})
     save(a.output, public_metrics({'state': 'complete', 'runs_verified': len(results), 'maximum_metric_difference': maximum,
+                                   'maximum_cpu_saved_neural_probability_difference': maximum_inference_difference,
+                                   'neural_checkpoint_samples_per_run': 3, 'direct_binary_all_transfer_inference_verified': True,
                                    'selection_recomputed': report['decision'], 'runs': results,
                                    'study_report_sha256': file_hash(a.study/'report.json'),
                                    'cache_report_sha256': file_hash(a.cache/'report.json'),

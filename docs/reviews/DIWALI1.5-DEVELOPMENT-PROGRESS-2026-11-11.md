@@ -16,7 +16,7 @@ All rows below score the same896 August16–18 origins. Neural scores average se
 | fit_histogram | 2.843222 | 0.687545 | See diagnostic |
 | fit_volatility_histogram | 2.684924 | 0.687359 | See diagnostic |
 
-On this period the original control is the strongest neural range model; objective weighting and candle attention have not improved that result. The direct binary model changes the objective as requested, but it does not win probability error here. This is not a reason to terminate the already bounded comparison or increase its search budget: later folds must complete under the frozen rule.
+On this period the lower-learning-rate candle-attention candidate narrowly improves the original control on range and final-direction error. The direction-penalty candidates do not improve the original control here. The direct binary model changes the objective as requested, but it does not win probability error here. An earlier narrative said the original control was strongest before correctly accounting for both lower-learning-rate attention seeds; that sentence was wrong and is corrected here. The table retains the actual completed two-seed results. This is not a reason to terminate the already bounded comparison or increase its search budget: later folds must complete under the frozen rule.
 
 The original control reproduces both seeds' selected epochs and retained range scores exactly. Cache input checks also passed: all fold fit-only transforms equal the original transforms, and all seven input tensors are bitwise equal on30 per-fold sample checks. Reused benchmark row IDs and scores were verified before fitting.
 
