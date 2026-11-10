@@ -1,5 +1,7 @@
 # August order-book recovery investigation
 
+**Later result:** independent CandleFeed snapshots recovered 963 additional labelled August 1 origins. The original attempts and their zero-recovery results below remain part of the record. See the [completed partial-recovery report](DIWALI1.5-AUGUST-CANDLEFEED-RECOVERY.md) for the new evidence and the remaining account-access limit.
+
 The predetermined sample contained 20 UTC time strata across August 1, 8, 15, 22 and 29, at hours 00, 06, 12 and 18. Within each stratum, the sample rule selected the first minute originally rejected for an invalid pre-window book seed. Five strata contained no such eligible rejection and received no replacements. Fifteen rejected origins remained.
 
 | Sample result | Count |
