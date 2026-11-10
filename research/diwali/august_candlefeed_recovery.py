@@ -3,11 +3,15 @@
 No model fitting or changes to frozen replay sources. Raw sources stay private.
 """
 import argparse
+from collections import Counter, defaultdict
+import csv
 from datetime import datetime, timezone
 from decimal import Decimal
+import io
 import json
 from pathlib import Path
 import subprocess
+import zipfile
 
 import numpy as np
 import pyarrow as pa
@@ -50,7 +54,7 @@ def select_anchor(table, window_start):
     return anchor
 
 
-def replay_origin(anchor, cutoff, original, records, output, binary):
+def replay_origin(anchor, cutoff, original, records, output, binary, *, first_cutoff=None):
     output.mkdir()
     at = pc.max(anchor['recv_time']).as_py()
     seq = anchor['final_update_id'][0].as_py()
@@ -119,16 +123,33 @@ def replay_origin(anchor, cutoff, original, records, output, binary):
     if process.returncode:
         raise ValueError('Replay did not finish normally')
     book = np.concatenate(all_events)
-    book = book[book['receipt_ns'] >= cutoff-120*SECOND]
+    book = book[book['receipt_ns'] >= (first_cutoff or cutoff)-120*SECOND]
     store_events(output/'book-events.parquet', book)
     save(output/'audit.json', {'snapshot_receipt_ns': at, 'snapshot_native_id': seq,
                               'source_hashes': sources, 'hour_audits': audits})
     return book
 
 
+def remaining_august1():
+    base = Path('data/btc-perp')
+    paths = [base/name/'candles/input-metadata.json' for name in
+             ('event-month-cohort-august-v1', 'august-recovered-v1')]
+    covered = set()
+    for path in paths:
+        report = json.loads(path.with_name('report.json').read_text())
+        if file_hash(path) != report['artifact_sha256'][path.name]:
+            raise ValueError('Changed existing input ledger')
+        covered.update(row['input_cutoff_ns'] for row in json.loads(path.read_text()))
+    start = hour_ns('2026-08-01T00')
+    return [{'cutoff_ns': cutoff, 'stratum': datetime.fromtimestamp(cutoff//SECOND, timezone.utc).strftime('%Y-%m-%dT%H%M')}
+            for cutoff in range(start+15*SECOND, start+24*HOUR, MINUTE) if cutoff not in covered], paths
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--remaining-august1', action='store_true',
+                        help='Retry all first-day origins missing from both frozen input ledgers')
     args = parser.parse_args()
     out = args.output
     out.mkdir(parents=True, exist_ok=False)
@@ -142,6 +163,9 @@ def main():
     snapshots = pq.read_table(snapshot_path)
     sample = [r for r in json.loads(fixed.read_text())['strata']
               if r['cutoff_ns'] is not None and r['stratum'].startswith('2026-08-01')]
+    ledgers = []
+    if args.remaining_august1:
+        sample, ledgers = remaining_august1()
     source = Path('data/btc-perp/event-shards-snapshot-seeded-august-v2')
     sr = json.loads((source/'report.json').read_text())
     original = Path('data/btc-perp/cryptohftdata-monthly')
@@ -149,6 +173,9 @@ def main():
     save(out/'protocol.json', {
         'fixed_sample_sha256': file_hash(fixed), 'snapshot_sha256': expected['sha256'],
         'source_report_sha256': file_hash(source/'report.json'),
+        'selection': 'August 1 origins missing from both input ledgers' if ledgers else 'Previously fixed August 1 origins',
+        'existing_input_ledgers': {str(path): file_hash(path) for path in ledgers},
+        'candidate_count': len(sample),
         'book_policy': 'Latest clean/straddle independent snapshot strictly before window start. Original native deltas with u>=snapshot ID, buffered availability max(original receipt, snapshot receipt). Existing exact-decimal replay, native bridge, verified bounds and window gates unchanged. Original smaller snapshots are not needed to reset a continuous derived chain; sequence failures still reject.',
         'clock_policy': 'CandleFeed receipt clock (millisecond precision in August) combined with original provider clocks. Max availability preserves causality under these historical clocks, not proof of synchronized original receipt timing.',
         'inputs_frozen_before_labels': True, 'original_sources_modified': False,
@@ -158,18 +185,33 @@ def main():
     binary = compile_events(build)
     results = []
     books = {}
+    grouped = defaultdict(list)
     for row in sample:
         cutoff = row['cutoff_ns']
         result = {'input_cutoff_ns': cutoff, 'stratum': row['stratum'], 'accepted': False}
         try:
             anchor = select_anchor(snapshots, cutoff-60*SECOND)
-            books[cutoff] = replay_origin(anchor, cutoff, original, records,
-                                          out/row['stratum'], binary)
+            grouped[anchor['recv_time'][0].as_py()].append((result, anchor))
         except ValueError as exc:
             result['first_failed_gate'] = str(exc)
         results.append(result)
-        save(out/'status.json', {'state': 'replaying_fixed_sample', 'origins_processed': len(results)})
-        print(row['stratum'], 'book replay complete' if cutoff in books else result['first_failed_gate'], flush=True)
+    (out/'anchors').mkdir()
+    for index, (received, group) in enumerate(grouped.items(), 1):
+        cutoffs = [result['input_cutoff_ns'] for result, _ in group]
+        folder = out/'anchors'/str(received)
+        book = replay_origin(group[0][1], max(cutoffs), original, records, folder, binary,
+                             first_cutoff=min(cutoffs))
+        availability = source_release(book, 'orderbook', -1)
+        for result, _ in group:
+            cutoff = result['input_cutoff_ns']
+            first = np.searchsorted(availability, cutoff-120*SECOND, side='left')
+            last = np.searchsorted(availability, cutoff, side='left')
+            books[cutoff] = book[first:last]
+            result['snapshot_receipt_ns'] = received
+        save(out/'status.json', {'state':'replaying', 'anchors_processed':index,
+                                 'anchors_total':len(grouped), 'candidate_count':len(sample)})
+        if index == len(grouped) or index % 20 == 0:
+            print('Replayed anchors', index, '/', len(grouped), flush=True)
     # Reconstruct the original trade tape once. Save every input before inspecting any labels.
     exclusions = clock_exclusions(source, sr['hours'])
     tape = CandleTape()
@@ -214,14 +256,15 @@ def main():
                 if previous['entry']['files']['orderbook']['clock_bad'] or entry['files']['orderbook']['clock_bad']:
                     raise ValueError('clock_flagged_recent_book_source_hour')
                 trades = np.concatenate([previous['rows'], rows])
-                trades = trades[released(trades, previous['before']) < cutoff]
-                books[cutoff] = books[cutoff][source_release(books[cutoff], 'orderbook', -1) < cutoff]
+                trade_times = released(trades, previous['before'])
+                trades = trades[(trade_times >= cutoff-120*SECOND) & (trade_times < cutoff)]
                 chosen = join_selection(books[cutoff], trades, cutoff, -1, previous['before'])
                 snapshot = tape.snapshot(cutoff, mask_context=True)
             except ValueError as exc:
                 result['first_failed_gate'] = str(exc)
                 continue
             folder = out/result['stratum']
+            folder.mkdir()
             b = books[cutoff]
             store_events(folder/'frozen-book.parquet', b)
             store_events(folder/'frozen-trades.parquet', trades)
@@ -241,6 +284,13 @@ def main():
         previous = current
     save(out/'input-ledger.json', results)
     save(out/'input-source-hashes.json', trade_hashes)
+    reference = fixed.with_name('august-klines.zip')
+    if file_hash(reference) != reference.with_suffix('.zip.CHECKSUM').read_text().split()[0]:
+        raise ValueError('Official candle checksum mismatch')
+    with zipfile.ZipFile(reference) as archive:
+        with archive.open(archive.namelist()[0]) as stream:
+            official = {int(row['open_time'])*10**6: row for row in csv.DictReader(io.TextIOWrapper(stream))}
+    checked = 0
     for result in results:
         cutoff = result['input_cutoff_ns']
         if cutoff not in frozen:
@@ -252,13 +302,20 @@ def main():
             result['first_failed_gate'] = 'clock_trade_hour_intersects_target'
         elif any(b is None or not b['n'] or b['bad'] for b in bars):
             result['first_failed_gate'] = 'missing_or_bad_target'
+        elif any(Decimal(bar['c'])/SCALE != Decimal(ref['close']) or
+                 Decimal(bar['v'])/SCALE != Decimal(ref['volume']) or bar['n'] != int(ref['count'])
+                 for bar, ref in zip(bars, (official[start+i*MINUTE] for i in range(15)))):
+            result['first_failed_gate'] = 'official_close_volume_or_count_mismatch'
         else:
             save(out/result['stratum']/'targets.json', {
                 'target_start_ns': start, 'closes': [b['c']/SCALE for b in bars],
                 'returns_bp': [(b['c']/SCALE/metadata['reference']-1)*10000 for b in bars]})
             result['accepted'] = True
-    report = {'state': 'complete', 'fixed_origins_tested': len(results),
+            checked += 15
+    report = {'state': 'complete', 'origins_tested': len(results),
               'inputs_passed': len(frozen), 'accepted_examples': sum(r['accepted'] for r in results),
+              'rejections': dict(Counter(r['first_failed_gate'] for r in results if not r['accepted'])),
+              'official_target_coordinates_verified':checked,
               'origins': results, 'training_started': False,
               'clock_limitations': 'Historical cross-provider receipts, including millisecond snapshot precision; not proven original live availability.'}
     save(out/'report.json', report)

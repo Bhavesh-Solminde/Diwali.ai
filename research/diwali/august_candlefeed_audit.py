@@ -1,4 +1,5 @@
 """Finalize unpublished source metadata and audit the recovered cohort contents."""
+import argparse
 from collections import Counter
 import csv
 from datetime import datetime, timezone
@@ -11,7 +12,12 @@ import zipfile
 import numpy as np
 
 from .august_candlefeed_day import finalize_metadata
+from ..market_data.candle_tape import released
 from ..market_data.event_cohort_audit import combine_bar
+from ..market_data.event_join_cohort import join_selection, source_release
+from ..market_data.event_replay import DTYPE as BOOK
+from ..market_data.event_shards import read_events
+from ..market_data.trade_events import DTYPE as TRADE
 from ..market_data.validate_archive import file_hash, save
 
 
@@ -62,7 +68,79 @@ def final_metadata(source, cohort):
         'unchanged_window_ledger_sha256':wr['ledger_sha256']})
 
 
+def audit_prewindow(root):
+    base = Path('data/btc-perp')
+    index_path = base/'august-recovered-v1/combined-origin-index.json'
+    index = json.loads(index_path.read_text())
+    for cohort, path in index['sources'].items():
+        if file_hash(Path(path)/'report.json') != index['source_report_sha256'][cohort]:
+            raise ValueError('Changed existing cohort')
+    report = json.loads((root/'report.json').read_text())
+    protocol = json.loads((root/'protocol.json').read_text())
+    if report['state'] != 'complete' or len(report['origins']) != protocol['candidate_count']:
+        raise ValueError('Incomplete pre-window replay')
+    for path, digest in protocol['existing_input_ledgers'].items():
+        if file_hash(Path(path)) != digest:
+            raise ValueError('Changed existing input ledger')
+    additions = []
+    for row in report['origins']:
+        if not row['accepted']:
+            continue
+        cutoff = row['input_cutoff_ns']
+        if row['snapshot_receipt_ns'] >= cutoff-60*10**9:
+            raise ValueError('Snapshot arrived during or after the input window')
+        folder = root/row['stratum']
+        metadata = json.loads((folder/'frozen-input.json').read_text())
+        for file, field in [('frozen-input.npz','input_file_sha256'), ('frozen-book.parquet','book_sha256'),
+                            ('frozen-trades.parquet','trades_sha256')]:
+            if file_hash(folder/file) != metadata[field]:
+                raise ValueError('Changed frozen input')
+        book = read_events(folder/'frozen-book.parquet', BOOK)
+        trades = read_events(folder/'frozen-trades.parquet', TRADE)
+        if (source_release(book, 'orderbook', -1) >= cutoff).any() or (released(trades) >= cutoff).any():
+            raise ValueError('Future source rows in frozen inputs')
+        selection = join_selection(book, trades, cutoff)
+        with np.load(folder/'frozen-input.npz', allow_pickle=False) as saved:
+            np.testing.assert_array_equal(saved['events'], selection['events'])
+            if saved['candles'].shape != (1440, 8) or saved['candle_mask'].mean() < .99 or not saved['candle_mask'][-1]:
+                raise ValueError('Incomplete causal candle context')
+        if metadata['book_seed_row'] != selection['book_seed_row'] or metadata['input_cutoff_ns'] != cutoff:
+            raise ValueError('Changed book seed or input cutoff')
+        targets = folder/'targets.json'
+        label = json.loads(targets.read_text())
+        if label['target_start_ns'] != metadata['target_start_ns'] or len(label['closes']) != 15:
+            raise ValueError('Misaligned labels')
+        additions.append({'input_cutoff_ns':cutoff, 'cohort':'prewindow_recovery',
+                          'directory':row['stratum'], 'targets_sha256':file_hash(targets)})
+    if len(additions) != report['accepted_examples'] or 15*len(additions) != report['official_target_coordinates_verified']:
+        raise ValueError('Audit totals disagree')
+    origins = sorted(index['origins']+additions, key=lambda row: row['input_cutoff_ns'])
+    if len({row['input_cutoff_ns'] for row in origins}) != len(origins):
+        raise ValueError('Duplicate origin in updated research index')
+    save(root/'combined-origin-index.json', {
+        **index, 'origins':origins, 'previous_index_sha256':file_hash(index_path),
+        'sources':{**index['sources'], 'prewindow_recovery':str(root)},
+        'source_report_sha256':{**index['source_report_sha256'], 'prewindow_recovery':file_hash(root/'report.json')},
+        'policy':'Preserve original inputs, then add only absent, verified origins from each recovery.'})
+    result = {key:value for key,value in report.items() if key != 'origins'}
+    result.update(previous_unique_examples=len(index['origins']), unique_examples=len(origins),
+                  frozen_inputs_rechecked=len(additions), duplicate_origins=0,
+                  earlier_cohorts_preserved=True, combined_index_training_ready=False,
+                  combined_index_sha256=file_hash(root/'combined-origin-index.json'),
+                  private_protocol_sha256=file_hash(root/'protocol.json'),
+                  private_report_sha256=file_hash(root/'report.json'))
+    save(root/'recovery-audit.json', result)
+    save(Path('results/diwali1.5/august-candlefeed-prewindow-recovery.json'), result)
+    print(result, flush=True)
+
+
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--prewindow', type=Path, help='Audit the additional pre-window recovery instead')
+    args = parser.parse_args()
+    if args.prewindow:
+        audit_prewindow(args.prewindow)
+        return
     source = Path('data/btc-perp/event-shards-august-candlefeed-recovered-v1')
     cohort = Path('data/btc-perp/august-recovered-v1')
     parent = Path('data/btc-perp/event-month-cohort-august-v1')

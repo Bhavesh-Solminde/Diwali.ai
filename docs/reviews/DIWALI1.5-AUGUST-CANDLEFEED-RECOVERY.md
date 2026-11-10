@@ -52,3 +52,13 @@ The 963 additions fall across the day's available hours. Among additions with a 
 CandleFeed's August book receipt times have millisecond precision, and the providers' clocks lack a shared offset calibration. Availability remains a stated historical assumption, not proof of exactly what our live system would have received. The data observes public depth, not hidden liquidity. More usable examples do not establish improved directional accuracy or profitability. The active forward study's models and rules remain unchanged.
 
 [Recovery plan](../planning/DIWALI1.5-AUGUST-RECOVERY-PLAN.md) · [Aggregate audit](../../results/diwali1.5/august-candlefeed-recovery.json)
+
+## Follow-up replay with a snapshot before each input window
+
+The follow-up selected all 271 August 1 forecast times missing from both existing input ledgers. Each replay used the latest eligible snapshot received strictly before the start of the 60-second input window and carried that book forward with the original updates. This avoids introducing a new snapshot reset during the window. The original sequence, freshness, book depth, trade and candle checks still apply.
+
+Of the 271 retries, 238 passed the input checks and 237 passed the target checks. All 3,555 accepted target candles matched Binance's official close, base volume and trade count. A separate check reconstructed the event index from each frozen input and confirmed that its source rows were available before the cutoff. Of the 34 remaining failures in this pass, 22 involved invalid book states or missing book seeds, 11 lacked a fresh reference price, and one lacked a valid target. Two of the 22 book failures occurred before CandleFeed's first eligible snapshot.
+
+The new combined research index contains **6,591 unique forecast times**, including all 5,391 original examples, the 963 first-pass additions and the 237 follow-up additions. It records which source version supplied each input. The historical timestamp limitation and the CandleFeed access restriction still apply. A follow-up request for August 15 returned `403 tier_restricted` with the existing key.
+
+[Follow-up aggregate audit](../../results/diwali1.5/august-candlefeed-prewindow-recovery.json)

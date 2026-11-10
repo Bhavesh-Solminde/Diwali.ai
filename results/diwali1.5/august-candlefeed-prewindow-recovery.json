@@ -1,0 +1,25 @@
+{
+  "state": "complete",
+  "origins_tested": 271,
+  "inputs_passed": 238,
+  "accepted_examples": 237,
+  "rejections": {
+    "No independently received snapshot before input window": 2,
+    "No fresh completed-second reference": 11,
+    "Gap/invalid marker inside window": 11,
+    "No valid pre-window book seed": 9,
+    "missing_or_bad_target": 1
+  },
+  "official_target_coordinates_verified": 3555,
+  "training_started": false,
+  "clock_limitations": "Historical cross-provider receipts, including millisecond snapshot precision; not proven original live availability.",
+  "previous_unique_examples": 6354,
+  "unique_examples": 6591,
+  "frozen_inputs_rechecked": 237,
+  "duplicate_origins": 0,
+  "earlier_cohorts_preserved": true,
+  "combined_index_training_ready": false,
+  "combined_index_sha256": "9cc9073bbed1835ab99624354d365d03320a2d4142effe3c8976bfeb029d46f3",
+  "private_protocol_sha256": "532ec94e46b3d3f982f5c533e99909e045bd13f8d0b88d03070070c1dfa0ec87",
+  "private_report_sha256": "273c35f5a08f77e64f25ccdd90ebe02bb7b6bab9b81e19dd7e7a5b943c173cfb"
+}

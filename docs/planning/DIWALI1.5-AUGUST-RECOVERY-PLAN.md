@@ -43,3 +43,5 @@ The month-wide authenticated request confirmed August 2–31 are plan-restricted
 ```
 
 Request July 31 separately for midnight continuity. The current replay scripts deliberately implement August 1 only; extend them to the newly authorized dates and rerun the fixed tests before claiming further recovery. No new model fit or forward-study modification is part of this command.
+
+August 1 received a second pass using the most recent eligible snapshot before each input window. It recovered 237 of the 271 origins missing from both earlier input ledgers. The updated research index contains 6,591 unique examples. Use the same causal replay and target verification when access to the other dates becomes available. [Follow-up result](../reviews/DIWALI1.5-AUGUST-CANDLEFEED-RECOVERY.md#follow-up-replay-with-a-snapshot-before-each-input-window)
