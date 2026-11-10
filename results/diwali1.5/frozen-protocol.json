@@ -1,0 +1,273 @@
+{
+  "state": "frozen_before_first_fit",
+  "settings": {
+    "version": "diwali1.5",
+    "stage": "Reused August development only; September final interval consumed",
+    "folds": {
+      "A": {
+        "fit": [
+          "08-01",
+          "08-10"
+        ],
+        "select": [
+          "08-11",
+          "08-13"
+        ],
+        "calibrate": [
+          "08-14",
+          "08-15"
+        ],
+        "score": [
+          "08-16",
+          "08-18"
+        ]
+      },
+      "B": {
+        "fit": [
+          "08-01",
+          "08-18"
+        ],
+        "select": [
+          "08-19",
+          "08-21"
+        ],
+        "calibrate": [
+          "08-22",
+          "08-23"
+        ],
+        "score": [
+          "08-24",
+          "08-26"
+        ]
+      },
+      "C": {
+        "fit": [
+          "08-01",
+          "08-23"
+        ],
+        "select": [
+          "08-24",
+          "08-26"
+        ],
+        "calibrate": [
+          "08-27",
+          "08-28"
+        ],
+        "score": [
+          "08-29",
+          "08-31"
+        ]
+      },
+      "final": {
+        "fit": [
+          "08-01",
+          "08-31"
+        ],
+        "select": [
+          "09-01",
+          "09-07"
+        ],
+        "calibrate": [
+          "09-08",
+          "09-14"
+        ],
+        "score": [
+          "09-15",
+          "09-29"
+        ]
+      }
+    },
+    "development_folds": [
+      "A",
+      "B",
+      "C"
+    ],
+    "task": "Direct26-bin distributions for15 future full-minute closes",
+    "price_edges_bp": [
+      -100.0,
+      -60.0,
+      -40.0,
+      -30.0,
+      -20.0,
+      -12.0,
+      -8.0,
+      -5.0,
+      -3.0,
+      -2.0,
+      -1.0,
+      -0.5,
+      0.0,
+      0.5,
+      1.0,
+      2.0,
+      3.0,
+      5.0,
+      8.0,
+      12.0,
+      20.0,
+      30.0,
+      40.0,
+      60.0,
+      100.0
+    ],
+    "zero_return": "down_or_unchanged; positive return is up",
+    "primary_selection": "Equal-fold/equal-seed calibrated mean15-bin transfer log loss; tie within1e-4 favours A then B then C, and earlier configuration.",
+    "checkpoint_selection": "Uncalibrated selection-period mean15-bin log loss; earliest best epoch; no calibration/transfer labels for early stopping.",
+    "final_build_seed": 17,
+    "neural_candidates": [
+      "A",
+      "B",
+      "C"
+    ],
+    "neural_width": 64,
+    "event_block_groups": 128,
+    "seeds": [
+      17,
+      29
+    ],
+    "max_epochs": 12,
+    "patience": 3,
+    "batch_size": 8,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "gradient_clip": 5.0,
+    "loss": "Equal15-close categorical CE + lambda * equal15-close binary CE from summed positive/negative bin logits.",
+    "normalization": "Per-fold fit-only streaming mean/std. Masked candle values excluded; no clipping or test-fitted scale.",
+    "event_coverage": "Every accepted event enters learned projection; no fixed event count cap.",
+    "one_second_control": "103-channel per-second means, last book state and log event counts. Explicit early compression, not identical to the earlier0.5 architecture.",
+    "baselines": [
+      "constant_half",
+      "fit_histogram",
+      "fit_volatility_histogram",
+      "D_binary_logistic"
+    ],
+    "logistic": {
+      "epochs": 40,
+      "patience": 5,
+      "batch_size": 128,
+      "learning_rate": 0.001,
+      "weight_decay": 0.001,
+      "seed": 17
+    },
+    "boosted_trees": {
+      "max_iter": 100,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 30,
+      "l2_regularization": 1.0,
+      "early_stopping": false,
+      "random_state": 17
+    },
+    "calibration": "Neural: unchanged26-way horizon temperatures minimizing range loss. D: binary temperatures minimizing binary loss. Same49-point grid/minimum100 origins. Report raw and calibrated.",
+    "minimum_calibration_origins": 100,
+    "minimum_partition_origins": {
+      "fit": 200,
+      "select": 100,
+      "calibrate": 1,
+      "score": 100
+    },
+    "temperature_grid": {
+      "min": 0.5,
+      "max": 4.0,
+      "log_points": 49
+    },
+    "metrics": [
+      "per_horizon_bin_log_loss",
+      "mean15_bin_log_loss",
+      "ranked_probability_score",
+      "binary_net_direction_log_loss",
+      "binary_brier",
+      "direction_accuracy",
+      "confidence_reliability",
+      "daily_paired_scores"
+    ],
+    "scope": "Marginal probability fan, not a joint path distribution or entry-before-stop estimate.",
+    "limitations": [
+      "Historical provider timing is assumed, not independently proven original receipt timing.",
+      "Limited valid top20 coverage and masked older candles remain explicit.",
+      "August scores are development evidence; final September evaluation stays sealed.",
+      "Finite tests cannot certify perfect conditional probabilities or profitability."
+    ],
+    "signal_lifetime": "Keep105..945-second full-candle primary outputs; separately prepared5/15/30/60-second availability-price labels are auxiliary only.",
+    "lifetime_baseline": {
+      "horizons_seconds": [
+        5,
+        15,
+        30,
+        60,
+        105,
+        345,
+        945
+      ],
+      "estimator": "Independent binary logistic regressions on identical origins with fit-only normalization; C1, lbfgs, max_iter1000.",
+      "calibration": "Per-horizon scalar temperature on separate calibration dates; same0.5..4 grid.",
+      "selection": "Fixed estimator settings; do not tune from lifetime scores.",
+      "reference": "Original frozen trade reference. Auxiliary endpoint availability-price differs from full-candle execution close; report the distinction."
+    },
+    "configurations": {
+      "A_original": {
+        "family": "A",
+        "lr": 0.0003,
+        "direction_weight": 0.0,
+        "candle_attention": false
+      },
+      "A_lower_lr": {
+        "family": "A",
+        "lr": 0.0001,
+        "direction_weight": 0.0,
+        "candle_attention": false
+      },
+      "B_direction025": {
+        "family": "B",
+        "lr": 0.0003,
+        "direction_weight": 0.25,
+        "candle_attention": false
+      },
+      "B_direction100": {
+        "family": "B",
+        "lr": 0.0003,
+        "direction_weight": 1.0,
+        "candle_attention": false
+      },
+      "C_attention_original_lr": {
+        "family": "C",
+        "lr": 0.0003,
+        "direction_weight": 0.0,
+        "candle_attention": true
+      },
+      "C_attention_lower_lr": {
+        "family": "C",
+        "lr": 0.0001,
+        "direction_weight": 0.0,
+        "candle_attention": true
+      }
+    },
+    "tuning_budget": "Two fixed configurations per neural family, same two seeds/three folds, 12 epochs/patience3. All trials retained.",
+    "secondary_direction": "Final-close binary log loss/Brier/AUC against 50\u201350 and volatility baseline. Report tradeoffs; never replace the range primary.",
+    "candle_change": "C retains local candle processing and identical96 compressed tokens; adds one width64 four-head Transformer layer, feedforward128, dropout0, fixed positional encoding, only in the candle branch.",
+    "direct_binary": "D:15 independent sklearn logistic heads on identical447-value summary inputs used by old flow_logistic; C1, lbfgs, max_iter1000, seed17. No range model; not eligible for primary range selection.",
+    "prospective": "Freeze selected artifacts/rules before any new future-issued forecasts. Match all candidate/baseline eligible timestamps. No prospective efficacy claim from this development study."
+  },
+  "source_hashes": {
+    "comparison15.py": "b42e7017b133e05582954fa6eb20b834fdf223ff4ff6b358f7571203e1f4d060",
+    "comparison15_train.py": "7c1ebbb0130ff2c5d3965c35d5110fbe32c6100cac989dd8167140be79bebb1c",
+    "comparison15_study.py": "9866b91bb2d98683d829a83a375a31433aaf9cc02f6ba364abcac6d7bb18e8e5",
+    "event_model.py": "d23f3c55083773d0010a67f22fb3d14581975af59a885b955aa5fa1d550da9fa",
+    "event_data.py": "566240853809e680d82f725e633cd123879b2afe62ae57df8cf68979463c811e",
+    "event_data_exact.py": "a59eb2be64d30424f556a4dddcf9cfb3b5a08734ba67b91997f63b8122774111",
+    "event_train.py": "33952e008e911f0d8fb19c181f7097983b5739c9f132ba8f299955fada4ffe89",
+    "event_evaluation.py": "f8cbd04560384bb95b6058989c1045f8454a83fc167ab2878cb4a588d89bbd71",
+    "event_baselines.py": "96ac22b64cf6b4c8099da7b579b84a75269be3dafaae873d3917663084f02571",
+    "event_protocol.py": "0d896f7a3c0807f5c24ddbfc11ad19ab1976054bf3526df74f9c1509a4053b7c",
+    "event_direction_diagnostic.py": "f572ee8907333e263680f9141ba9de97a47f9829456197b8e99ed137fd485367",
+    "event_lifetime.py": "7690c3d01b46b829517a63217e3a65c3e9dd9570351e45fe3fa2e0bb217f738d"
+  },
+  "engineering_checks": {
+    "focused_tests_passed": 6,
+    "mac_mps_transformer_backward_and_eval": "passed",
+    "cpu_mps_parity": "passed within rtol2e-4/atol2e-5 on synthetic engineering inputs; no accuracy claim"
+  },
+  "reserved_september_data_read": false,
+  "new_model_training_started": false
+}
