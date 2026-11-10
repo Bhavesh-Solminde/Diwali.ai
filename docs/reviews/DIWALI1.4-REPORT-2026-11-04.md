@@ -172,3 +172,7 @@ The local historical demo at **http://127.0.0.1:8754/** contains ten evenly spac
 - `docs/planning/DIWALI1.4-TRAINING-PROTOCOL-2026-11-04.md` and `DIWALI1.4-FINAL-EVALUATION-PROTOCOL-2026-11-04.md`: frozen protocols and their historical implementation notes.
 
 Raw paid data, individual predictions, fitted weights and the private demo artifact stay local. Source and aggregate research may be published. The objective is not achieved; further experiments are paused pending the user's examination and decision.
+
+## Follow-up: directional ranking audit, November 11
+
+The later development-only audit checks the distinction between preferred side and ranking, raw versus calibrated probabilities, every horizon/period/day, and the exact sign/reference mapping. See [DIWALI1.4-DIRECTION-DIAGNOSTIC-2026-11-11.md](DIWALI1.4-DIRECTION-DIAGNOSTIC-2026-11-11.md). It finds weak final-horizon ranking with reversals across folds, some shorter-horizon ranking, and no zero-bin mapping mismatch. No 1.5 model or calibration correction was trained by that audit. September 15–29 remains consumed.
