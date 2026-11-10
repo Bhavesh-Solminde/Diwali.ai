@@ -43,3 +43,28 @@ A useful additional source must provide an applicable, timely historical snapsho
 After a seed passes, rerun every existing input and target gate. Record each later failure instead of counting the recovered book as a complete training example. Accepted examples will belong to the separate august-recovered-v1 dataset, with source identities, availability assumptions and gate outcomes. The matched original/attention training comparison begins only after that dataset contains accepted examples. The active three-model forward comparison uses its frozen artifacts.
 
 [Aggregate investigation evidence](../../results/diwali1.5/august-recovery-investigation.json)
+
+## Follow-up: the existing API keys were used
+
+All five existing CryptoHFTData credentials authenticated successfully. Four download workers, each assigned a different credential, fetched the selected rejected hours and their preceding hours into a separate local directory. The predetermined 15 origins required 30 unique hourly files. Every request succeeded. The refreshed files were compared both with the original manifest hashes and with hashes freshly calculated from the original local files.
+
+| Authenticated refresh result | Count |
+|---|---:|
+| Existing credentials authenticated | 5 / 5 |
+| Unique hourly files requested and downloaded | 30 / 30 |
+| Refreshed files identical to original local bytes | 30 / 30 |
+| Changed files | 0 |
+| Files containing no snapshot rows | 29 / 30 |
+| Additional usable examples recovered | 0 |
+
+The remaining file contained 2,000 snapshot price-level rows, grouped into two receipt/native-ID groups with 500 bids and 500 asks each. Those rows were already in the original archive. These groups must not be interpreted as two independently captured full books. No new snapshot or update was obtained. The unchanged bytes retain the outcome of the earlier continuous, snapshot-seeded replay; repeating that same replay would not supply additional information.
+
+In plain language, a file can download successfully while still lacking the starting picture needed to interpret its changes. If an existing order never changed, an update stream alone need not tell us that order's quantity. Once the required nearest levels leave the snapshot's verified price range, a connected sequence of updates is insufficient to certify our required book input. Earlier hours have already been replayed continuously; this is not simply a failure to download the preceding hour.
+
+The provider documents snapshots and updates within the same hourly order-book files, and says an hour can omit a checkpoint when it cannot prove the book current. Its documented flat-file interface accesses the shared dataset bucket; it does not establish a separate richer snapshot history. Corrections replace the same object key, making a fresh byte comparison a useful check. The provider's corrections page still marks the October quality release as not deployed when checked. These statements describe the documented interfaces, not proof that the provider has no additional internal recordings. [Order-book access](https://www.cryptohftdata.com/docs/rest-orderbook), [flat-file access](https://www.cryptohftdata.com/docs/flat-file-introduction), [corrections policy](https://www.cryptohftdata.com/docs/data-gaps-and-corrections).
+
+The authorization failures in the earlier section were from **Tardis, a different provider**. They were not failures of these CryptoHFTData keys. No CryptoHFTData credential was sent to Tardis. Buying or supplying another credential for the same unchanged CryptoHFTData files would not, by itself, repair these tested windows.
+
+The next useful recovery evidence is an additional historical snapshot or corrected file for the same exchange and contract, available before the applicable input window, with sufficient depth and native IDs to bridge the updates. Provider confirmation of such recordings, or a verified independent archive, is needed before expanding this attempt. Do not replace absent order quantities with guesses or waive the existing gates. This bounded sample does not establish that all August rejections are unrecoverable. No provider messages were sent, no original files were overwritten, and no forward model or eligibility rule changed.
+
+[Aggregate authenticated refresh evidence](../../results/diwali1.5/august-authenticated-refresh.json). The refresh downloaded files solely for this recovery check; it did not create an expanded training dataset.

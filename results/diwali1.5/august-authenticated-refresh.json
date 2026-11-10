@@ -1,0 +1,49 @@
+{
+  "state": "authenticated_refresh_complete_no_new_records",
+  "checked_utc": "2026-11-10T22:17:33.306747+00:00",
+  "venue": "Binance USD-M BTCUSDT perpetual",
+  "scope": "Each fixed rejected origin hour and preceding hour; four nonempty sample dates; original archive retained",
+  "authentication_attempts": 5,
+  "authentication_successes": 5,
+  "download_workers": 4,
+  "credential_assignment": "One distinct existing credential per worker; no retry through another credential",
+  "requested_unique_files": 30,
+  "successful_downloads": 30,
+  "downloaded_bytes": 476184807,
+  "downloaded_rows": 120455060,
+  "byte_identical_to_original_manifest": 30,
+  "byte_identical_to_original_local_files": 30,
+  "changed_files": 0,
+  "sampled_rejected_origins": 15,
+  "files_without_snapshot_rows": 29,
+  "files_with_snapshot_rows": 1,
+  "snapshot_price_level_rows": 2000,
+  "snapshot_groups_by_receipt_and_native_id": 2,
+  "snapshot_group_levels": [
+    {
+      "rows": 1000,
+      "bid_levels": 500,
+      "ask_levels": 500
+    },
+    {
+      "rows": 1000,
+      "bid_levels": 500,
+      "ask_levels": 500
+    }
+  ],
+  "new_snapshot_rows": 0,
+  "additional_quality_accepted_examples": 0,
+  "recovery_conclusion": "The canonical authenticated downloads return the existing records for all sampled hours. Identical bytes cannot repair the earlier snapshot-seeded replay failures. This does not establish that every August file or another archive is unrecoverable.",
+  "required_additional_information": "Timely historical snapshot with sufficient verified depth and native IDs for a continuous bridge into rejected windows, or provider-corrected files containing it. No fabricated levels or relaxed gates.",
+  "original_archive_modified": false,
+  "forward_models_modified": false,
+  "private_report_sha256": "0a02f53878375b4e9f73c2dfda5fc86690b5c8772ab06e3d3cc5e492c3f40a83",
+  "private_content_audit_sha256": "6c41cda550a796c9538f44a3710bd7a0c85f980a57fa94570d8ffaceb911f1e5",
+  "fixed_sample_sha256": "949fe66daddac322db5ba533d6e7426bb680c22e8f2ce923e5849dfeb229eb3e",
+  "source_references": [
+    "https://www.cryptohftdata.com/docs/rest-orderbook",
+    "https://www.cryptohftdata.com/docs/data-gaps-and-corrections",
+    "https://www.cryptohftdata.com/docs/flat-file-introduction"
+  ],
+  "secrets_or_paid_raw_records_published": false
+}
