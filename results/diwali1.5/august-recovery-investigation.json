@@ -1,0 +1,122 @@
+{
+  "state": "bounded_recovery_investigation_complete",
+  "fixed_strata": 20,
+  "fixed_sample_rule": "First origin whose original first failed gate is no valid pre-window book seed in each UTC hour 00, 06, 12, and 18 on August 1, 8, 15, 22, and 29, 2026. Empty strata remain empty. No replacement.",
+  "fixed_sample_protocol_sha256": "16f06e8a11b846f8264cca274829d3e660f3288111b9dbe819ee40efb002658e",
+  "sampled_rejected_origins": 15,
+  "empty_strata": 5,
+  "independent_snapshot_windows_tested": 4,
+  "source_access_unresolved": 11,
+  "recovered_quality_accepted": 0,
+  "continuous_native_updates_replayed": 2546473,
+  "native_sequence_gaps": 0,
+  "invalid_events": 0,
+  "coverage": {
+    "potential_volatility_quartiles": [
+      11145,
+      11145,
+      11144,
+      11145
+    ],
+    "retained_volatility_quartiles": [
+      1679,
+      1550,
+      1609,
+      553
+    ],
+    "volatility_thresholds_bp": [
+      2.1464667763985323,
+      3.3327101648004063,
+      5.065599662834856
+    ],
+    "retained_by_day": {
+      "2026-08-01": 181,
+      "2026-08-02": 120,
+      "2026-08-03": 254,
+      "2026-08-04": 216,
+      "2026-08-05": 171,
+      "2026-08-06": 251,
+      "2026-08-07": 153,
+      "2026-08-08": 5,
+      "2026-08-09": 156,
+      "2026-08-10": 131,
+      "2026-08-11": 52,
+      "2026-08-12": 221,
+      "2026-08-13": 147,
+      "2026-08-14": 30,
+      "2026-08-15": 330,
+      "2026-08-16": 570,
+      "2026-08-17": 84,
+      "2026-08-18": 242,
+      "2026-08-19": 230,
+      "2026-08-20": 23,
+      "2026-08-21": 7,
+      "2026-08-22": 661,
+      "2026-08-23": 682,
+      "2026-08-24": 121,
+      "2026-08-25": 66,
+      "2026-08-26": 62,
+      "2026-08-27": 2,
+      "2026-08-28": 23,
+      "2026-08-29": 40,
+      "2026-08-30": 97,
+      "2026-08-31": 63
+    },
+    "retained_by_utc_hour": [
+      160,
+      265,
+      197,
+      111,
+      113,
+      286,
+      302,
+      302,
+      314,
+      335,
+      145,
+      113,
+      338,
+      234,
+      209,
+      298,
+      221,
+      250,
+      223,
+      281,
+      209,
+      200,
+      179,
+      106
+    ],
+    "original_quality_retention": 0.12076612903225807,
+    "retained_share_by_volatility_quartile": [
+      0.31144500092747174,
+      0.28751623075496197,
+      0.2984603969578928,
+      0.10257837135967353
+    ],
+    "retention_rate_within_volatility_quartile": [
+      0.1506505159264244,
+      0.13907581875280395,
+      0.14438262742282842,
+      0.04961866307761328
+    ],
+    "fixed_rejected_sample_quartiles_suppressed": "Four groups each have fewer than ten sample origins"
+  },
+  "binance_bookDepth_schema": [
+    "timestamp",
+    "percentage",
+    "depth",
+    "notional"
+  ],
+  "binance_bookDepth_compatible_with_native_snapshot_splice": false,
+  "source_references": [
+    "https://docs.tardis.dev/historical-data-details/binance-futures",
+    "https://docs.tardis.dev/api/http-api-reference",
+    "https://data.binance.vision/?prefix=data/futures/um/daily/bookDepth/BTCUSDT/"
+  ],
+  "next_training_dataset_version": "august-recovered-v1 reserved until examples pass every original gate",
+  "next_training_condition": "Paired original and attention fits on the identical expanded chronological origins after validated recovery",
+  "current_forward_models_modified": false,
+  "artifact_manifest_sha256": "d81bc85d1c7d4d3371ed218c6c834c24b7e7dca2197ae4a4b24c61eb80952c34"
+}

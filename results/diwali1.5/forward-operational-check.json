@@ -1,0 +1,19 @@
+{
+  "state": "warming_up",
+  "checked_utc_ns": 1794348060299995000,
+  "last_health_utc_ns": 1794348002815174000,
+  "health_age_seconds": 57.484821,
+  "issued_forecasts": 0,
+  "skipped_slots": 0,
+  "verified_outcomes": 0,
+  "rejected_outcomes": 0,
+  "alerts": [],
+  "pending_outcomes": 0,
+  "native_counts": {
+    "depth": 47854,
+    "book": 47848,
+    "individual_trade": 19506
+  },
+  "readiness_clarification_sha256": "c73168bb63f957ecc08a6e783cba3ce4af23435c8e9738c0b8c06ce420493a75",
+  "active_forward_source_hashes_unchanged": true
+}

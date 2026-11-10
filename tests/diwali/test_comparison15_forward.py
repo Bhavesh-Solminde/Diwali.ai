@@ -47,3 +47,24 @@ def test_hour_compression_preserves_bytes(tmp_path):
     archive = path.with_suffix('.jsonl.gz')
     assert gzip.decompress(archive.read_bytes()) == contents
     assert forward.file_hash(archive) == record['gzip_sha256']
+
+
+@pytest.mark.parametrize('reason', [
+    'Gap/invalid marker inside window',
+    'No fresh completed-second reference',
+    'Expected a strict-before-cutoff view at second 15',
+])
+def test_readiness_success_never_overrides_an_origin_gate(tmp_path, monkeypatch, reason):
+    store = forward.Forward(tmp_path/'capture', SimpleNamespace())
+    cutoff = 15*forward.SECOND
+    store.release = {'stop_utc_ns': cutoff+1}
+    store.release_hash = 'release'
+    store.slot = cutoff
+    store.warmup = [{'passed': True} for _ in range(3)]
+    def reject(at):
+        raise ValueError(reason)
+    monkeypatch.setattr(store.inputs, 'freeze', reject)
+    store.tick(cutoff)
+    assert not store.pending
+    assert not list((store.root/'committed').glob('*.json'))
+    assert (store.root/'skipped'/f'{cutoff}.json').exists()
